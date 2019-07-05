@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri Jul  5 13:53:15 2019
+# Process ID: 8744
+# Current directory: C:/Users/Grzywna/Desktop/frogger
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3948 C:\Users\Grzywna\Desktop\frogger\frogger.xpr
+# Log file: C:/Users/Grzywna/Desktop/frogger/vivado.log
+# Journal file: C:/Users/Grzywna/Desktop/frogger\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Grzywna/Desktop/frogger/frogger.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Grzywna/Desktop/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board  [get_bd_intf_pins axi_uartlite_0/UART]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files C:/Users/Grzywna/Desktop/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -top
+add_files -norecurse C:/Users/Grzywna/Desktop/frogger/frogger.srcs/sources_1/bd/microblaze/hdl/microblaze_wrapper.v
+save_bd_design
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+file mkdir C:/Users/Grzywna/Desktop/frogger/frogger.srcs/constrs_1
+file mkdir C:/Users/Grzywna/Desktop/frogger/frogger.srcs/constrs_1/new
+close [ open C:/Users/Grzywna/Desktop/frogger/frogger.srcs/constrs_1/new/microblaze.xdc w ]
+add_files -fileset constrs_1 C:/Users/Grzywna/Desktop/frogger/frogger.srcs/constrs_1/new/microblaze.xdc
+startgroup
+endgroup
+set_property name uart_rtl [get_bd_intf_ports uart_rtl_0]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Grzywna/Desktop/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+refresh_design

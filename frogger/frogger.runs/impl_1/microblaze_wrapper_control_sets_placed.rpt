@@ -1,0 +1,42 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date         : Fri Jul  5 14:51:11 2019
+| Host         : DESKTOP-KM8U176 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -file microblaze_wrapper_control_sets_placed.rpt
+| Design       : microblaze_wrapper
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+
+1. Summary
+----------
+
++-------------------------------+-------+
+|             Status            | Count |
++-------------------------------+-------+
+| Number of unique control sets |   123 |
++-------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             266 |          102 |
+| No           | No                    | Yes                    |              30 |            7 |
+| No           | Yes                   | No                     |             441 |          182 |
+| Yes          | No                    | No                     |             494 |          135 |
+| Yes          | No                    | Yes                    |              15 |            8 |
+| Yes          | Yes                   | No                     |             775 |          250 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
