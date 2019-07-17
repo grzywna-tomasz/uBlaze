@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Jul  5 13:59:27 2019
-| Host         : DESKTOP-KM8U176 running 64-bit major release  (build 9200)
+| Date         : Sat Jul 13 16:13:31 2019
+| Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file microblaze_xbar_0_utilization_synth.rpt -pb microblaze_xbar_0_utilization_synth.pb
 | Design       : microblaze_xbar_0
 | Device       : 7a35tcpg236-1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  284 |     0 |     20800 |  1.37 |
-|   LUT as Logic          |  284 |     0 |     20800 |  1.37 |
+| Slice LUTs*             |  273 |     0 |     20800 |  1.31 |
+|   LUT as Logic          |  273 |     0 |     20800 |  1.31 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  141 |     0 |     41600 |  0.34 |
-|   Register as Flip Flop |  141 |     0 |     41600 |  0.34 |
+| Slice Registers         |  142 |     0 |     41600 |  0.34 |
+|   Register as Flip Flop |  142 |     0 |     41600 |  0.34 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 140   |          Yes |       Reset |            - |
+| 141   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,12 +149,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  140 |        Flop & Latch |
-| LUT4     |  127 |                 LUT |
-| LUT5     |   89 |                 LUT |
-| LUT6     |   55 |                 LUT |
-| LUT2     |   26 |                 LUT |
-| LUT3     |    8 |                 LUT |
+| FDRE     |  141 |        Flop & Latch |
+| LUT5     |  122 |                 LUT |
+| LUT4     |   96 |                 LUT |
+| LUT3     |   42 |                 LUT |
+| LUT6     |   28 |                 LUT |
+| LUT2     |   27 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+

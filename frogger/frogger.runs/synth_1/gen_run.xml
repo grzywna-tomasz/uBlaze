@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1562330940">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1563395377">
   <File Type="PA-TCL" Name="microblaze_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="microblaze_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="microblaze_wrapper_reports.tcl"/>
@@ -55,7 +55,9 @@
   <BlockFileSet Type="BlockSrcs" Name="microblaze_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_v_tc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_lmb_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_Video_Controller_4regs_0_0"/>
 </GenRun>

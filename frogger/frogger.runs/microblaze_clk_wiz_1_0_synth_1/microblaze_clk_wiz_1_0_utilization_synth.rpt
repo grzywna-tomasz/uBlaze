@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Jul  5 13:58:05 2019
-| Host         : DESKTOP-KM8U176 running 64-bit major release  (build 9200)
+| Date         : Wed Jul 17 20:55:55 2019
+| Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file microblaze_clk_wiz_1_0_utilization_synth.rpt -pb microblaze_clk_wiz_1_0_utilization_synth.pb
 | Design       : microblaze_clk_wiz_1_0
 | Device       : 7a35tcpg236-1
@@ -115,7 +115,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
+| BUFGCTRL   |    3 |     0 |        32 |  9.38 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    1 |     0 |         5 | 20.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
@@ -149,7 +149,7 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| BUFG       |    2 |               Clock |
+| BUFG       |    3 |               Clock |
 | MMCME2_ADV |    1 |               Clock |
 | LUT1       |    1 |                 LUT |
 | IBUF       |    1 |                  IO |

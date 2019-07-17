@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="microblaze_mdm_1_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_rst_clk_wiz_1_100M_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_rst_clk_wiz_1_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_dlmb_v10_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_ilmb_v10_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_dlmb_v10_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_lmb_bram_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_axi_uartlite_0_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_Video_Timing_0_0_synth_1" LaunchDir="C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_Video_Timing_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

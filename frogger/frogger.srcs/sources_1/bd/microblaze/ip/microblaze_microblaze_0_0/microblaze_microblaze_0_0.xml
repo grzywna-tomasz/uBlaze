@@ -13498,11 +13498,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 11:56:50 UTC 2019</spirit:value>
+            <spirit:value>Sat Jul 13 13:50:32 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:280dda76</spirit:value>
+            <spirit:value>7:01af1768</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -13516,11 +13516,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 11:56:50 UTC 2019</spirit:value>
+            <spirit:value>Sat Jul 13 14:11:45 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:280dda76</spirit:value>
+            <spirit:value>7:01af1768</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -13535,11 +13535,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 11:56:50 UTC 2019</spirit:value>
+            <spirit:value>Sat Jul 13 14:11:45 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:280dda76</spirit:value>
+            <spirit:value>7:01af1768</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -13554,11 +13554,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 11:56:50 UTC 2019</spirit:value>
+            <spirit:value>Sat Jul 13 13:50:32 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7c72709f</spirit:value>
+            <spirit:value>7:1853dd7f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -13573,11 +13573,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 11:56:50 UTC 2019</spirit:value>
+            <spirit:value>Sat Jul 13 14:11:45 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7c72709f</spirit:value>
+            <spirit:value>7:1853dd7f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -13591,11 +13591,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 12:00:05 UTC 2019</spirit:value>
+            <spirit:value>Sat Jul 13 14:14:40 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:280dda76</spirit:value>
+            <spirit:value>7:01af1768</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -24386,12 +24386,12 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_ICACHE_BASEADDR</spirit:name>
         <spirit:displayName>Base Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ICACHE_BASEADDR" spirit:bitStringLength="64">0x0000000000000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ICACHE_BASEADDR" spirit:bitStringLength="64">0x0000000044a00000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_ICACHE_HIGHADDR</spirit:name>
         <spirit:displayName>High Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ICACHE_HIGHADDR" spirit:bitStringLength="64">0x000000003fffffff</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ICACHE_HIGHADDR" spirit:bitStringLength="64">0x0000000044a0ffff</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_USE_ICACHE</spirit:name>
@@ -24405,7 +24405,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADDR_TAG_BITS</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_TAG_BITS" spirit:minimum="0" spirit:maximum="26" spirit:rangeType="long">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADDR_TAG_BITS" spirit:minimum="0" spirit:maximum="26" spirit:rangeType="long">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_CACHE_BYTE_SIZE</spirit:name>
@@ -24565,12 +24565,12 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_DCACHE_BASEADDR</spirit:name>
         <spirit:displayName>Base Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DCACHE_BASEADDR" spirit:bitStringLength="64">0x0000000000000000</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DCACHE_BASEADDR" spirit:bitStringLength="64">0x0000000044a00000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>C_DCACHE_HIGHADDR</spirit:name>
         <spirit:displayName>High Address</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DCACHE_HIGHADDR" spirit:bitStringLength="64">0x000000003fffffff</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DCACHE_HIGHADDR" spirit:bitStringLength="64">0x0000000044a0ffff</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_USE_DCACHE</spirit:name>
@@ -24584,7 +24584,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DCACHE_ADDR_TAG</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DCACHE_ADDR_TAG" spirit:minimum="0" spirit:maximum="58" spirit:rangeType="long">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DCACHE_ADDR_TAG" spirit:minimum="0" spirit:maximum="58" spirit:rangeType="long">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DCACHE_BYTE_SIZE</spirit:name>
@@ -24963,12 +24963,6 @@
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>data/mb_bootloop_le.elf</spirit:name>
-        <spirit:userFileType>elf</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-      </spirit:file>
       <spirit:file>
         <spirit:name>microblaze_microblaze_0_0.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
@@ -26865,7 +26859,7 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
     <spirit:parameter>
       <spirit:name>C_ICACHE_BASEADDR</spirit:name>
       <spirit:displayName>Base Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ICACHE_BASEADDR" spirit:order="3040" spirit:configGroups="3 Instruction Cache Feature" spirit:bitStringLength="64">0x0000000000000000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ICACHE_BASEADDR" spirit:order="3040" spirit:configGroups="3 Instruction Cache Feature" spirit:bitStringLength="64">0x0000000044A00000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -26877,7 +26871,7 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
     <spirit:parameter>
       <spirit:name>C_ICACHE_HIGHADDR</spirit:name>
       <spirit:displayName>High Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ICACHE_HIGHADDR" spirit:order="3030" spirit:configGroups="3 Instruction Cache Feature" spirit:bitStringLength="64">0x000000003FFFFFFF</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ICACHE_HIGHADDR" spirit:order="3030" spirit:configGroups="3 Instruction Cache Feature" spirit:bitStringLength="64">0x0000000044A0FFFF</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -26913,7 +26907,7 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
     <spirit:parameter>
       <spirit:name>C_ADDR_TAG_BITS</spirit:name>
       <spirit:displayName>Set number of I-cache address tag bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_TAG_BITS" spirit:order="3200" spirit:configGroups="3 NoDisplay">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ADDR_TAG_BITS" spirit:order="3200" spirit:configGroups="3 NoDisplay">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -27097,7 +27091,7 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
     <spirit:parameter>
       <spirit:name>C_DCACHE_BASEADDR</spirit:name>
       <spirit:displayName>Base Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DCACHE_BASEADDR" spirit:order="3140" spirit:configGroups="3 Data Cache Feature" spirit:bitStringLength="64">0x0000000000000000</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DCACHE_BASEADDR" spirit:order="3140" spirit:configGroups="3 Data Cache Feature" spirit:bitStringLength="64">0x0000000044A00000</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -27109,7 +27103,7 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
     <spirit:parameter>
       <spirit:name>C_DCACHE_HIGHADDR</spirit:name>
       <spirit:displayName>High Address</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DCACHE_HIGHADDR" spirit:order="3130" spirit:configGroups="3 Data Cache Feature" spirit:bitStringLength="64">0x000000003FFFFFFF</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DCACHE_HIGHADDR" spirit:order="3130" spirit:configGroups="3 Data Cache Feature" spirit:bitStringLength="64">0x0000000044A0FFFF</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -27145,7 +27139,7 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
     <spirit:parameter>
       <spirit:name>C_DCACHE_ADDR_TAG</spirit:name>
       <spirit:displayName>Set number of D-cache address tag bits</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DCACHE_ADDR_TAG" spirit:order="3230" spirit:configGroups="3 NoDisplay">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DCACHE_ADDR_TAG" spirit:order="3230" spirit:configGroups="3 NoDisplay">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -27592,13 +27586,17 @@ It is highly recommended to create MicroBlaze systems within Vivado IP Integrato
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ASYNC_WAKEUP" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_CACHE_BYTE_SIZE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DCACHE_ALWAYS_USED" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DCACHE_BASEADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DCACHE_BYTE_SIZE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DCACHE_HIGHADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_DEBUG_ENABLED" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_D_AXI" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_D_LMB" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_EDGE_IS_POSITIVE" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_FREQ" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ICACHE_ALWAYS_USED" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ICACHE_BASEADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_ICACHE_HIGHADDR" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_INTERRUPT_IS_EDGE" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_I_LMB" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_M_AXI_DC_USER_SIGNALS" xilinx:valueSource="propagated"/>

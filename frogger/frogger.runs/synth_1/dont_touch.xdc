@@ -42,6 +42,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_lmb_
 # IP: bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_axi_uartlite_0_0 || ORIG_REF_NAME==microblaze_axi_uartlite_0_0} -quiet] -quiet
 
+# IP: bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_Video_Controller_4regs_0_0 || ORIG_REF_NAME==microblaze_Video_Controller_4regs_0_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_v_tc_0_0/microblaze_v_tc_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_v_tc_0_0 || ORIG_REF_NAME==microblaze_v_tc_0_0} -quiet] -quiet
+
 # IP: bd/microblaze/ip/microblaze_auto_pc_1/microblaze_auto_pc_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_auto_pc_1 || ORIG_REF_NAME==microblaze_auto_pc_1} -quiet] -quiet
 

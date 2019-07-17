@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Jul  5 14:00:00 2019
-| Host         : DESKTOP-KM8U176 running 64-bit major release  (build 9200)
+| Date         : Sat Jul 13 16:14:37 2019
+| Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file microblaze_microblaze_0_0_utilization_synth.rpt -pb microblaze_microblaze_0_0_utilization_synth.pb
 | Design       : microblaze_microblaze_0_0
 | Device       : 7a35tcpg236-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1806 |     0 |     20800 |  8.68 |
-|   LUT as Logic             | 1504 |     0 |     20800 |  7.23 |
+| Slice LUTs*                | 1790 |     0 |     20800 |  8.61 |
+|   LUT as Logic             | 1488 |     0 |     20800 |  7.15 |
 |   LUT as Memory            |  302 |     0 |      9600 |  3.15 |
 |     LUT as Distributed RAM |  128 |     0 |           |       |
 |     LUT as Shift Register  |  174 |     0 |           |       |
-| Slice Registers            | 2057 |     0 |     41600 |  4.94 |
-|   Register as Flip Flop    | 2053 |     0 |     41600 |  4.94 |
+| Slice Registers            | 2001 |     0 |     41600 |  4.81 |
+|   Register as Flip Flop    | 1997 |     0 |     41600 |  4.80 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 |   Register as AND/OR       |    4 |     0 |     41600 | <0.01 |
 | F7 Muxes                   |  114 |     0 |     16300 |  0.70 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 143   |          Yes |           - |        Reset |
 | 61    |          Yes |         Set |            - |
-| 1849  |          Yes |       Reset |            - |
+| 1793  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,18 +153,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1849 |        Flop & Latch |
-| LUT6     |  531 |                 LUT |
-| LUT5     |  422 |                 LUT |
-| LUT3     |  308 |                 LUT |
-| LUT4     |  293 |                 LUT |
+| FDRE     | 1793 |        Flop & Latch |
+| LUT6     |  544 |                 LUT |
+| LUT5     |  392 |                 LUT |
+| LUT3     |  321 |                 LUT |
+| LUT4     |  259 |                 LUT |
 | SRL16E   |  166 |  Distributed Memory |
 | RAMD32   |  160 |  Distributed Memory |
+| LUT2     |  153 |                 LUT |
 | FDCE     |  143 |        Flop & Latch |
 | MUXF7    |  114 |               MuxFx |
-| LUT2     |  112 |                 LUT |
 | FDSE     |   61 |        Flop & Latch |
-| CARRY4   |   48 |          CarryLogic |
+| CARRY4   |   45 |          CarryLogic |
 | RAMS32   |   32 |  Distributed Memory |
 | LUT1     |   32 |                 LUT |
 | RAMB36E1 |   10 |        Block Memory |

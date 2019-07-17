@@ -2,34 +2,184 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Jul  5 15:16:31 2019
-# Process ID: 6364
-# Current directory: C:/Users/Grzywna/Desktop/frogger
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent660 C:\Users\Grzywna\Desktop\frogger\frogger.xpr
-# Log file: C:/Users/Grzywna/Desktop/frogger/vivado.log
-# Journal file: C:/Users/Grzywna/Desktop/frogger\vivado.jou
+# Start of session at: Wed Jul 17 20:29:10 2019
+# Process ID: 9692
+# Current directory: C:/Users/Trait/Documents/uBlaze/frogger
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15904 C:\Users\Trait\Documents\uBlaze\frogger\frogger.xpr
+# Log file: C:/Users/Trait/Documents/uBlaze/frogger/vivado.log
+# Journal file: C:/Users/Trait/Documents/uBlaze/frogger\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Grzywna/Desktop/frogger/frogger.xpr
+open_project C:/Users/Trait/Documents/uBlaze/frogger/frogger.xpr
+open_bd_design {C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd}
 update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Grzywna/Desktop/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd}
+delete_bd_objs [get_bd_nets Net]
+disconnect_bd_net /reset_rtl_0_1 [get_bd_pins Video_Timing_0/reset]
+delete_bd_objs [get_bd_nets Video_Timing_0_hcount] [get_bd_nets Video_Timing_0_hsync] [get_bd_nets Video_Timing_0_hblnk] [get_bd_nets Video_Timing_0_vcount] [get_bd_nets Video_Timing_0_vsync] [get_bd_nets Video_Timing_0_vblnk] [get_bd_nets temp_control_0_hsync_out] [get_bd_nets temp_control_0_vsync_out] [get_bd_nets temp_control_0_rgb_out] [get_bd_cells temp_control_0]
+set_property location {6 1925 124} [get_bd_cells Video_Timing_0]
+update_compile_order -fileset sources_1
 startgroup
 create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0
 endgroup
-set_property -dict [list CONFIG.enable_detection {false} CONFIG.vertical_blank_generation {true} CONFIG.horizontal_blank_detection {true} CONFIG.horizontal_sync_detection {true} CONFIG.vertical_blank_detection {true} CONFIG.vertical_sync_detection {true} CONFIG.active_video_detection {true}] [get_bd_cells v_tc_0]
+set_property -dict [list CONFIG.HAS_AXI4_LITE {false} CONFIG.VIDEO_MODE {1024x768p} CONFIG.GEN_F0_VSYNC_VSTART {770} CONFIG.GEN_F1_VSYNC_VSTART {770} CONFIG.GEN_HACTIVE_SIZE {1024} CONFIG.GEN_HSYNC_END {1184} CONFIG.GEN_HFRAME_SIZE {1344} CONFIG.GEN_F0_VSYNC_HSTART {1024} CONFIG.GEN_F1_VSYNC_HSTART {1024} CONFIG.GEN_F0_VSYNC_HEND {1024} CONFIG.GEN_F1_VSYNC_HEND {1024} CONFIG.GEN_F0_VFRAME_SIZE {806} CONFIG.GEN_F1_VFRAME_SIZE {806} CONFIG.GEN_F0_VSYNC_VEND {776} CONFIG.GEN_F1_VSYNC_VEND {776} CONFIG.GEN_F0_VBLANK_HEND {1024} CONFIG.GEN_F1_VBLANK_HEND {1024} CONFIG.GEN_HSYNC_START {1048} CONFIG.GEN_VACTIVE_SIZE {768} CONFIG.GEN_F0_VBLANK_HSTART {1024} CONFIG.GEN_F1_VBLANK_HSTART {1024} CONFIG.enable_detection {false}] [get_bd_cells v_tc_0]
+set_property location {5 1675 146} [get_bd_cells v_tc_0]
+connect_bd_net [get_bd_pins v_tc_0/clk] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins v_tc_0/resetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins v_tc_0/hblank_out] [get_bd_pins Video_Controller_4regs_0/hblank_in]
+connect_bd_net [get_bd_pins v_tc_0/hsync_out] [get_bd_pins Video_Controller_4regs_0/hsync_in]
+connect_bd_net [get_bd_pins v_tc_0/vblank_out] [get_bd_pins Video_Controller_4regs_0/vblank_in]
+connect_bd_net [get_bd_pins v_tc_0/vsync_out] [get_bd_pins Video_Controller_4regs_0/vsync_in]
+connect_bd_net [get_bd_pins v_tc_0/fsync_out] [get_bd_pins Video_Controller_4regs_0/pclk]
+delete_bd_objs [get_bd_nets v_tc_0_fsync_out]
 startgroup
-connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins v_tc_0/resetn]
+connect_bd_net [get_bd_pins v_tc_0/fsync_out] [get_bd_pins Video_Controller_4regs_0/fsync_in]
+connect_bd_net [get_bd_pins v_tc_0/fsync_out] [get_bd_pins Video_Controller_4regs_0/pclk]
 endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins v_tc_0/ctrl]
-connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins v_tc_0/clk]
-startgroup
-set_property -dict [list CONFIG.VIDEO_MODE {800x600p} CONFIG.GEN_F0_VSYNC_VSTART {600} CONFIG.GEN_F1_VSYNC_VSTART {600} CONFIG.GEN_HACTIVE_SIZE {800} CONFIG.GEN_HSYNC_END {968} CONFIG.GEN_HFRAME_SIZE {1056} CONFIG.GEN_F0_VSYNC_HSTART {800} CONFIG.GEN_F1_VSYNC_HSTART {800} CONFIG.GEN_F0_VSYNC_HEND {800} CONFIG.GEN_F1_VSYNC_HEND {800} CONFIG.GEN_F0_VFRAME_SIZE {628} CONFIG.GEN_F1_VFRAME_SIZE {628} CONFIG.GEN_F0_VSYNC_VEND {604} CONFIG.GEN_F1_VSYNC_VEND {604} CONFIG.GEN_F0_VBLANK_HEND {800} CONFIG.GEN_F1_VBLANK_HEND {800} CONFIG.GEN_HSYNC_START {840} CONFIG.GEN_VACTIVE_SIZE {600} CONFIG.GEN_F0_VBLANK_HSTART {800} CONFIG.GEN_F1_VBLANK_HSTART {800}] [get_bd_cells v_tc_0]
-endgroup
+disconnect_bd_net /v_tc_0_fsync_out [get_bd_pins Video_Controller_4regs_0/pclk]
+connect_bd_net [get_bd_pins Video_Controller_4regs_0/pclk] [get_bd_pins clk_wiz_1/clk_out1]
+set_property location {6 2025 490} [get_bd_cells Video_Controller_4regs_0]
+update_module_reference microblaze_Video_Timing_0_0
+update_module_reference microblaze_Video_Timing_0_0
+ipx::edit_ip_in_project -upgrade true -name Video_Controller_4regs_v1_project -directory C:/Users/Trait/Documents/uBlaze/frogger/frogger.tmp/Video_Controller_4regs_v1_project c:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1/component.xml
+update_compile_order -fileset sources_1
+close [ open C:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1/hdl/Timing_counter.v w ]
+add_files C:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1/hdl/Timing_counter.v
+update_compile_order -fileset sources_1
+current_project frogger
+current_project Video_Controller_4regs_v1_project
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 14 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:Video_Controller_4regs:1 [get_ips  microblaze_Video_Controller_4regs_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips microblaze_Video_Controller_4regs_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+catch { config_ip_cache -export [get_ips -all microblaze_Video_Controller_4regs_0_0] }
+catch { config_ip_cache -export [get_ips -all microblaze_v_tc_0_0] }
+catch { config_ip_cache -export [get_ips -all microblaze_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all microblaze_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+launch_runs -jobs 8 {microblaze_Video_Controller_4regs_0_0_synth_1 microblaze_Video_Timing_0_0_synth_1 microblaze_v_tc_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -directory C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files -ipstatic_source_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/modelsim} {questa=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/questa} {riviera=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/riviera} {activehdl=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_cells Video_Timing_0]
+update_compile_order -fileset sources_1
+set_property location {2172 472} [get_bd_ports VGA_RGB]
+set_property location {2146 511} [get_bd_ports Vsync]
+set_property location {2145 497} [get_bd_ports Hsync]
+connect_bd_net [get_bd_ports VGA_RGB] [get_bd_pins Video_Controller_4regs_0/rgb_out]
+set_property location {2173 569} [get_bd_ports Vsync]
+connect_bd_net [get_bd_ports Hsync] [get_bd_pins Video_Controller_4regs_0/hsync_out]
+connect_bd_net [get_bd_ports Vsync] [get_bd_pins Video_Controller_4regs_0/vsync_out]
+set_property location {2129 531} [get_bd_ports Vsync]
+report_ip_status -name ip_status 
 save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:v_frmbuf_wr:2.0 v_frmbuf_wr_0
+set_property -dict [list CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {75} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9.750} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.750} CONFIG.MMCM_CLKOUT1_DIVIDE {13} CONFIG.CLKOUT1_JITTER {130.067} CONFIG.CLKOUT1_PHASE_ERROR {99.281} CONFIG.CLKOUT2_JITTER {138.050} CONFIG.CLKOUT2_PHASE_ERROR {99.281}] [get_bd_cells clk_wiz_1]
 endgroup
-set_property location {3.5 596 437} [get_bd_cells v_frmbuf_wr_0]
-delete_bd_objs [get_bd_cells v_frmbuf_wr_0]
-delete_bd_objs [get_bd_intf_nets microblaze_0_axi_periph_M02_AXI] [get_bd_cells v_tc_0]
+disconnect_bd_net /clk_wiz_1_clk_out1 [get_bd_pins Video_Controller_4regs_0/pclk]
+connect_bd_net [get_bd_pins Video_Controller_4regs_0/pclk] [get_bd_pins clk_wiz_1/pclk]
+generate_target all [get_files  C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+catch { config_ip_cache -export [get_ips -all microblaze_clk_wiz_1_0] }
+catch { config_ip_cache -export [get_ips -all microblaze_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all microblaze_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+launch_runs -jobs 8 microblaze_clk_wiz_1_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -directory C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files -ipstatic_source_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/modelsim} {questa=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/questa} {riviera=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/riviera} {activehdl=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd}
+startgroup
+set_property -dict [list CONFIG.VIDEO_MODE {800x600p} CONFIG.GEN_F0_VSYNC_VSTART {600} CONFIG.GEN_F1_VSYNC_VSTART {600} CONFIG.GEN_HACTIVE_SIZE {800} CONFIG.GEN_HSYNC_END {968} CONFIG.GEN_HFRAME_SIZE {1056} CONFIG.GEN_F0_VSYNC_HSTART {800} CONFIG.GEN_F1_VSYNC_HSTART {800} CONFIG.GEN_F0_VSYNC_HEND {800} CONFIG.GEN_F1_VSYNC_HEND {800} CONFIG.GEN_F0_VFRAME_SIZE {628} CONFIG.GEN_F1_VFRAME_SIZE {628} CONFIG.GEN_F0_VSYNC_VEND {604} CONFIG.GEN_F1_VSYNC_VEND {604} CONFIG.GEN_F0_VBLANK_HEND {800} CONFIG.GEN_F1_VBLANK_HEND {800} CONFIG.GEN_HSYNC_START {840} CONFIG.GEN_VACTIVE_SIZE {600} CONFIG.GEN_F0_VBLANK_HSTART {800} CONFIG.GEN_F1_VBLANK_HSTART {800} CONFIG.enable_detection {false} CONFIG.frame_syncs {1}] [get_bd_cells v_tc_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.VIDEO_MODE {1024x768p} CONFIG.GEN_F0_VSYNC_VSTART {770} CONFIG.GEN_F1_VSYNC_VSTART {770} CONFIG.GEN_HACTIVE_SIZE {1024} CONFIG.GEN_HSYNC_END {1184} CONFIG.GEN_HFRAME_SIZE {1344} CONFIG.GEN_F0_VSYNC_HSTART {1024} CONFIG.GEN_F1_VSYNC_HSTART {1024} CONFIG.GEN_F0_VSYNC_HEND {1024} CONFIG.GEN_F1_VSYNC_HEND {1024} CONFIG.GEN_F0_VFRAME_SIZE {806} CONFIG.GEN_F1_VFRAME_SIZE {806} CONFIG.GEN_F0_VSYNC_VEND {776} CONFIG.GEN_F1_VSYNC_VEND {776} CONFIG.GEN_F0_VBLANK_HEND {1024} CONFIG.GEN_F1_VBLANK_HEND {1024} CONFIG.GEN_HSYNC_START {1048} CONFIG.GEN_VACTIVE_SIZE {768} CONFIG.GEN_F0_VBLANK_HSTART {1024} CONFIG.GEN_F1_VBLANK_HSTART {1024}] [get_bd_cells v_tc_0]
+endgroup
+disconnect_bd_net /clk_wiz_1_clk_out1 [get_bd_pins v_tc_0/clk]
+connect_bd_net [get_bd_pins clk_wiz_1/pclk] [get_bd_pins v_tc_0/clk]
 save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+reset_run microblaze_v_tc_0_0_synth_1
+ipx::edit_ip_in_project -upgrade true -name Video_Controller_4regs_v1_project -directory C:/Users/Trait/Documents/uBlaze/frogger/frogger.tmp/Video_Controller_4regs_v1_project c:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1/component.xml
+update_compile_order -fileset sources_1
+current_project frogger
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+current_project Video_Controller_4regs_v1_project
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 15 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1
+open_bd_design {C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:Video_Controller_4regs:1 [get_ips  microblaze_Video_Controller_4regs_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips microblaze_Video_Controller_4regs_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+catch { config_ip_cache -export [get_ips -all microblaze_Video_Controller_4regs_0_0] }
+catch { config_ip_cache -export [get_ips -all microblaze_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all microblaze_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd]
+launch_runs -jobs 8 microblaze_Video_Controller_4regs_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd] -directory C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files -ipstatic_source_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/modelsim} {questa=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/questa} {riviera=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/riviera} {activehdl=C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+file mkdir C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk
+file copy -force C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.sysdef C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk -hwspec C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/microblaze_wrapper.hdf
+export_ip_user_files -of_objects  [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/new/Video_Timing.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/new/Video_Timing.v
+file delete -force C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/new/Video_Timing.v
+export_ip_user_files -of_objects  [get_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/new/temp_control.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/new/temp_control.v
+file delete -force C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/new/temp_control.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_bd_design {C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd}
