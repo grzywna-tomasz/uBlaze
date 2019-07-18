@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-//Date        : Wed Jul 17 21:16:24 2019
+//Date        : Thu Jul 18 16:09:46 2019
 //Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 //Command     : generate_target microblaze.bd
 //Design      : microblaze
@@ -985,7 +985,7 @@ module microblaze
         .gen_clken(1'b1),
         .hblank_out(v_tc_0_hblank_out),
         .hsync_out(v_tc_0_hsync_out),
-        .resetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .resetn(reset_rtl_0_1),
         .vblank_out(v_tc_0_vblank_out),
         .vsync_out(v_tc_0_vsync_out));
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Jul 17 22:33:30 2019
+| Date             : Thu Jul 18 16:14:02 2019
 | Host             : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command          : report_power -file microblaze_wrapper_power_routed.rpt -pb microblaze_wrapper_power_summary_routed.pb -rpx microblaze_wrapper_power_routed.rpx
 | Design           : microblaze_wrapper
@@ -54,14 +54,14 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        8 |       --- |             --- |
 | Slice Logic              |     0.007 |     6658 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     2431 |     20800 |           11.69 |
+|   LUT as Logic           |     0.005 |     2434 |     20800 |           11.70 |
 |   LUT as Distributed RAM |    <0.001 |       96 |      9600 |            1.00 |
 |   Register               |    <0.001 |     2497 |     41600 |            6.00 |
 |   CARRY4                 |    <0.001 |       84 |      8150 |            1.03 |
 |   F7/F8 Muxes            |    <0.001 |      114 |     32600 |            0.35 |
 |   LUT as Shift Register  |    <0.001 |      203 |      9600 |            2.11 |
 |   Others                 |    <0.001 |      621 |       --- |             --- |
-| Signals                  |     0.010 |     4717 |       --- |             --- |
+| Signals                  |     0.010 |     4715 |       --- |             --- |
 | Block RAM                |     0.044 |       14 |        50 |           28.00 |
 | MMCM                     |     0.121 |        1 |         5 |           20.00 |
 | I/O                      |    <0.001 |       18 |       106 |           16.98 |
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.082 |       0.071 |      0.010 |
+| Vccint    |       1.000 |     0.081 |       0.071 |      0.010 |
 | Vccaux    |       1.800 |     0.079 |       0.067 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -151,7 +151,7 @@ Table of Contents
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
 | microblaze_wrapper                                                                 |     0.195 |
-|   microblaze_i                                                                     |     0.195 |
+|   microblaze_i                                                                     |     0.194 |
 |     Video_Controller_4regs_0                                                       |     0.001 |
 |       inst                                                                         |     0.001 |
 |         Video_Controller_4regs_v1_S00_AXI_inst                                     |     0.001 |
@@ -236,7 +236,7 @@ Table of Contents
 |       U0                                                                           |     0.061 |
 |         MicroBlaze_Core_I                                                          |     0.061 |
 |           Performance.Core                                                         |     0.061 |
-|             Data_Flow_I                                                            |     0.007 |
+|             Data_Flow_I                                                            |     0.006 |
 |               ALU_I                                                                |     0.001 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                  |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                             |    <0.001 |
@@ -616,8 +616,8 @@ Table of Contents
 |                 OF_EX_MSR_Bits[28].Using_FDR.MSR_ex_I                              |    <0.001 |
 |                 OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                              |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_ex_I                              |    <0.001 |
-|             Decode_I                                                               |     0.007 |
-|               PC_Module_I                                                          |     0.001 |
+|             Decode_I                                                               |     0.006 |
+|               PC_Module_I                                                          |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].Gen_Instr_DFF                          |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].PC_Mux_MUXF7                           |    <0.001 |
 |                 Instruction_Prefetch_Mux[10].Gen_Instr_DFF                         |    <0.001 |
@@ -886,7 +886,7 @@ Table of Contents
 |                 MUXCY_I                                                            |    <0.001 |
 |             Use_DBUS.DAXI_Interface_I1                                             |    <0.001 |
 |             Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1                               |    <0.001 |
-|             Use_Debug_Logic.Master_Core.Debug_Perf                                 |     0.002 |
+|             Use_Debug_Logic.Master_Core.Debug_Perf                                 |     0.001 |
 |               Serial_Dbg_Intf.SRL16E_1                                             |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_3                                             |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_4                                             |    <0.001 |
@@ -931,7 +931,7 @@ Table of Contents
 |                 Compare[7].SRLC16E_I                                               |    <0.001 |
 |                 The_First_BreakPoints.MUXCY_Post                                   |    <0.001 |
 |               sync_trig_out_0                                                      |     0.000 |
-|             Using_DCache.Using_WriteThrough.DCache_I1                              |     0.023 |
+|             Using_DCache.Using_WriteThrough.DCache_I1                              |     0.024 |
 |               DATA_RAM_Module                                                      |     0.017 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[0].RAMB36_I1                  |     0.004 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[1].RAMB36_I1                  |     0.004 |
@@ -1244,10 +1244,10 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                                |    <0.001 |
 |         SEQ                                                                        |    <0.001 |
 |           SEQ_COUNTER                                                              |    <0.001 |
-|     v_tc_0                                                                         |    <0.001 |
-|       U0                                                                           |    <0.001 |
-|         U_TC_TOP                                                                   |    <0.001 |
-|           GEN_GENERATOR.U_TC_GEN                                                   |    <0.001 |
+|     v_tc_0                                                                         |     0.001 |
+|       U0                                                                           |     0.001 |
+|         U_TC_TOP                                                                   |     0.001 |
+|           GEN_GENERATOR.U_TC_GEN                                                   |     0.001 |
 |         U_VIDEO_CTRL                                                               |     0.000 |
 +------------------------------------------------------------------------------------+-----------+
 

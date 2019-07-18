@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
 // Date        : Wed Jul 17 20:55:55 2019
 // Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top microblaze_clk_wiz_1_0 -prefix
+//               microblaze_clk_wiz_1_0_ microblaze_clk_wiz_1_0_stub.v
 // Design      : microblaze_clk_wiz_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

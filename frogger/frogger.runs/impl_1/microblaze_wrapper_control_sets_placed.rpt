@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Jul 17 22:32:38 2019
+| Date         : Thu Jul 18 16:13:11 2019
 | Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file microblaze_wrapper_control_sets_placed.rpt
 | Design       : microblaze_wrapper
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             302 |          122 |
-| No           | No                    | Yes                    |              30 |            7 |
-| No           | Yes                   | No                     |             571 |          226 |
-| Yes          | No                    | No                     |             600 |          157 |
+| No           | No                    | No                     |             302 |          116 |
+| No           | No                    | Yes                    |              30 |           10 |
+| No           | Yes                   | No                     |             571 |          224 |
+| Yes          | No                    | No                     |             600 |          166 |
 | Yes          | No                    | Yes                    |              15 |            8 |
-| Yes          | Yes                   | No                     |             975 |          311 |
+| Yes          | Yes                   | No                     |             975 |          312 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

@@ -2,11 +2,11 @@
 # Webtalk v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # 
-# Start of session at: Wed Jul 17 22:27:22 2019
-# Process ID: 4728
-# Current directory: C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/webtalk
+# Start of session at: Thu Jul 18 16:15:26 2019
+# Process ID: 7948
+# Current directory: C:/Users/Trait/Documents/Frogger_game/frogger/frogger.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/Trait/Documents/Frogger_game/frogger/frogger.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Trait/Documents/Frogger_game/frogger/frogger.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl
