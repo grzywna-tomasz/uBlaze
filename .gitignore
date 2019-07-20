@@ -117,6 +117,7 @@ dkms.conf
 !*.txt
 !*.vdi
 #C-files
+!*.cc
 !*.c
 !*.h
 !*.elf
