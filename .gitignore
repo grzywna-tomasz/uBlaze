@@ -1,38 +1,3 @@
-
-# Created by https://www.gitignore.io/api/c,c++,xilinx,eclipse
-# Edit at https://www.gitignore.io/?templates=c,c++,xilinx,eclipse
-
-### C ###
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
 # Executables
 *.exe
 *.out
@@ -40,109 +5,6 @@
 *.i*86
 *.x86_64
 *.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-### C++ ###
-# Prerequisites
-
-# Compiled Object files
-*.slo
-
-# Precompiled Headers
-
-# Compiled Dynamic libraries
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-
-# Executables
-
-### Eclipse ###
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
-
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
-
-# CDT-specific (C/C++ Development Tooling)
-.cproject
-
-# CDT- autotools
-.autotools
-
-# Java annotation processor (APT)
-.factorypath
-
-# PDT-specific (PHP Development Tools)
-.buildpath
-
-# sbteclipse plugin
-.target
-
-# Tern plugin
-.tern-project
-
-# TeXlipse plugin
-.texlipse
-
-# STS (Spring Tool Suite)
-.springBeans
-
-# Code Recommenders
-.recommenders/
-
-# Annotation Processing
-.apt_generated/
-
-# Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
-
-### Eclipse Patch ###
-# Eclipse Core
-.project
-
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
-# Annotation Processing
-.apt_generated
-
-.sts4-cache/
 
 ### Xilinx ###
 # gitignore template for Xilinx Vivado Design Suite
@@ -159,7 +21,7 @@ local.properties
 *.js
 *.pb
 *.dcp
-*.hwdef
+!*.hwdef
 *.vds
 *.veo
 *.wdf
@@ -219,33 +81,5 @@ local.properties
 *.runs/impl*/*.tcl
 *.runs/impl*/*.bat
 !*.runs/impl*/*utilization*.rpt
-
-### block design
-*/*/bd/*/hdl
-*/*/*/bd/*/hdl
-
-*/*/bd/*/*.xdc
-*/*/*/bd/*/*.xdc
-
-*/*/bd/*/ip/*/*.xdc
-*/*/*/bd/*/ip/*/*.xdc
-
-*/*/bd/*/ip/*/*/
-*/*/*/bd/*/ip/*/*/
-
-*/*/bd/*/ip/*/*.vhd
-*/*/*/bd/*/ip/*/*.vhd
-
-*/*/bd/*/ip/*/*.xml
-*/*/*/bd/*/ip/*/*.xml
-
-*.c
-*.h
-*.vho
-*.html
-*/*/bd/*/ip/*/*.tcl
-*/*/*/bd/*/ip/*/*.tcl
-hw_handoff
-ipshared
 
 # End of https://www.gitignore.io/api/c,c++,xilinx,eclipse
