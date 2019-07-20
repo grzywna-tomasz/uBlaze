@@ -2,11 +2,11 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Thu Jul 18 16:11:38 2019
-# Process ID: 11472
-# Current directory: C:/Users/Trait/Documents/Frogger_game/frogger/frogger.runs/impl_1
+# Start of session at: Sat Jul 20 04:56:13 2019
+# Process ID: 15124
+# Current directory: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1
 # Command line: vivado.exe -log microblaze_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source microblaze_wrapper.tcl -notrace
-# Log file: C:/Users/Trait/Documents/Frogger_game/frogger/frogger.runs/impl_1/microblaze_wrapper.vdi
-# Journal file: C:/Users/Trait/Documents/Frogger_game/frogger/frogger.runs/impl_1\vivado.jou
+# Log file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.vdi
+# Journal file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source microblaze_wrapper.tcl -notrace

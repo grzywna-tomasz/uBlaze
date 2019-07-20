@@ -68,18 +68,18 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Trait/Documents/Frogger_game/frogger/frogger.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Trait/Documents/Frogger_game/frogger/frogger.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Trait/Documents/Frogger_game/ip_repo/Video_Controller_4regs_1 [current_project]
-  set_property ip_output_repo C:/Users/Trait/Documents/Frogger_game/frogger/frogger.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Trait/Documents/uBlaze/frogger/frogger.xpr [current_project]
+  set_property ip_repo_paths C:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1 [current_project]
+  set_property ip_output_repo C:/Users/Trait/Documents/uBlaze/frogger/frogger.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Trait/Documents/Frogger_game/frogger/frogger.runs/synth_1/microblaze_wrapper.dcp
+  add_files -quiet C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/synth_1/microblaze_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Trait/Documents/Frogger_game/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd
+  add_files C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/microblaze.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/Trait/Documents/Frogger_game/frogger/frogger.srcs/constrs_1/new/microblaze.xdc
+  read_xdc C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/constrs_1/new/microblaze.xdc
   set_param project.isImplRun true
   link_design -top microblaze_wrapper -part xc7a35tcpg236-1
   set_param project.isImplRun false

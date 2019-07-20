@@ -2,13 +2,16 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Thu Jul 18 16:19:50 2019
-# Process ID: 6612
+# Start of session at: Thu Jul 18 16:36:27 2019
+# Process ID: 8560
 # Current directory: C:/Users/Trait/Documents/uBlaze/frogger
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14376 C:\Users\Trait\Documents\uBlaze\frogger\frogger.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8728 C:\Users\Trait\Documents\uBlaze\frogger\frogger.xpr
 # Log file: C:/Users/Trait/Documents/uBlaze/frogger/vivado.log
 # Journal file: C:/Users/Trait/Documents/uBlaze/frogger\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Trait/Documents/uBlaze/frogger/frogger.xpr
 update_compile_order -fileset sources_1
+file copy -force C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.sysdef C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/microblaze_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk -hwspec C:/Users/Trait/Documents/uBlaze/frogger/frogger.sdk/microblaze_wrapper.hdf
