@@ -28,10 +28,6 @@
 *.dmp
 *.rpx
 *.rpt
-*_stub.v
-*_stub.vhdl
-*_funcsim.v
-*_funcsim.vhdl
 
 # [dir]
 *.cache

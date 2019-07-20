@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Sat Jul 20 16:29:38 2019
+-- Date        : Sat Jul 20 16:29:37 2019
 -- Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_Video_Controller_4regs_0_0 -prefix
+--               microblaze_Video_Controller_4regs_0_0_ microblaze_Video_Controller_4regs_0_0_sim_netlist.vhdl
 -- Design      : microblaze_Video_Controller_4regs_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity microblaze_Video_Controller_4regs_0_0_Background_drawer is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     pclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Background_drawer : entity is "Background_drawer";
 end microblaze_Video_Controller_4regs_0_0_Background_drawer;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Background_drawer is
@@ -320,8 +318,6 @@ entity microblaze_Video_Controller_4regs_0_0_Frog_drawer is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     pclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Frog_drawer : entity is "Frog_drawer";
 end microblaze_Video_Controller_4regs_0_0_Frog_drawer;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Frog_drawer is
@@ -580,8 +576,6 @@ entity microblaze_Video_Controller_4regs_0_0_Timing_counter is
     \bg_reg5_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     pclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Timing_counter : entity is "Timing_counter";
 end microblaze_Video_Controller_4regs_0_0_Timing_counter;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Timing_counter is
@@ -2365,8 +2359,6 @@ entity microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI i
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI : entity is "Video_Controller_4regs_v1_S00_AXI";
 end microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI is
@@ -7003,8 +6995,6 @@ entity microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 : entity is "Video_Controller_4regs_v1";
 end microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 is
