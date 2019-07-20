@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/c,vivado,xilinxvivado
-# Edit at https://www.gitignore.io/?templates=c,vivado,xilinxvivado
+# Created by https://www.gitignore.io/api/c,c++,xilinx,eclipse
+# Edit at https://www.gitignore.io/?templates=c,c++,xilinx,eclipse
 
 ### C ###
 # Prerequisites
@@ -56,77 +56,196 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-### Vivado ###
-#########################################################################################################
-##	This is an example .gitignore file for Vivado, please treat it as an example as
-##	it might not be complete. In addition, XAPP 1165 should be followed.
-#########
-#Exclude all
-*
-!*/
-!.gitignore
-###########################################################################
-##	VIVADO
-#Source files:
-#Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
-!*.vhd
-!*.v
-!*.sv
-!*.bd
-!*.edif
-#IP files
-#.xci: synthesis and implemented not possible - you need to return back to the previous version to generate output products
-#.xci + .dcp: implementation possible but not re-synthesis
-#*.xci(www.spiritconsortium.org)
-!*.xci
-#.xcix: Core container file
-#.xcix: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2016_2/ug896-vivado-ip.pdf (Page 41)
-!*.xcix
-#*.dcp(checkpoint files)
-!*.dcp
-!*.vds
-!*.pb
-#All bd comments and layout coordinates are stored within .ui
-!*.ui
-!*.ooc
-#System Generator
-!*.mdl
-!*.slx
-!*.bxml
-#Simulation logic analyzer
-!*.wcfg
-!*.coe
-#MIG
-!*.prj
-!*.mem
-#Project files
-#XPR  +  *.XML ? XPR (Files are merged into a single XPR file for 2014.1 version)
-#Do NOT ignore *.xpr files
-!*.xpr
-#Include *.xml files for 2013.4 or earlier version
-!*.xml
-#Constraint files
-#Do NOT ignore *.xdc files
-!*.xdc
-#TCL - files
-!*.tcl
-#Journal - files
-!*.jou
-#Reports
-!*.rpt
-!*.txt
-!*.vdi
-#C-files
-!*.cc
-!*.c
-!*.h
-!*.elf
-!*.bmm
-!*.xmp
+### C++ ###
+# Prerequisites
 
-### XilinxVivado ###
-#.xci: IP-core property file with core container disabled
-#*.dcp (checkpoint files: better be ignored!)
-#!*.dcp
+# Compiled Object files
+*.slo
 
-# End of https://www.gitignore.io/api/c,vivado,xilinxvivado
+# Precompiled Headers
+
+# Compiled Dynamic libraries
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+
+# Executables
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+### Eclipse Patch ###
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Annotation Processing
+.apt_generated
+
+.sts4-cache/
+
+### Xilinx ###
+# gitignore template for Xilinx Vivado Design Suite
+# website: https://www.xilinx.com/support/download.html
+
+# [home]
+*.jou
+*.log
+*.debug
+*.str
+*.zip
+*.rst
+*.os
+*.js
+*.pb
+*.dcp
+*.hwdef
+*.vds
+*.veo
+*.wdf
+*.vdi
+*.dmp
+*.rpx
+*.rpt
+*_stub.v
+*_stub.vhdl
+*_funcsim.v
+*_funcsim.vhdl
+
+# [dir]
+*.cache
+*.data
+*.ipdefs
+.Xil
+*.sdk
+*.hw
+*.ip_user_files
+
+### IP synth
+*_synth_*
+
+.jobs
+
+### project synth
+*/*.runs/synth*/*.xml
+*/*.runs/synth*/*.txt
+*/*.runs/synth*/*.sh
+*/*.runs/synth*/*.tcl
+*/*.runs/synth*/*.bat
+*/*.runs/synth*/*.xdc
+!*/*.runs/synth*/*utilization*.rpt
+
+*.runs/synth*/*.xml
+*.runs/synth*/*.txt
+*.runs/synth*/*.sh
+*.runs/synth*/*.tcl
+*.runs/synth*/*.bat
+*.runs/synth*/*.xdc
+!*.runs/synth*/*utilization*.rpt
+
+### project impl
+*/*.runs/impl*/*.xml
+*/*.runs/impl*/*.html
+*/*.runs/impl*/*.txt
+*/*.runs/impl*/*.sh
+*/*.runs/impl*/*.tcl
+*/*.runs/impl*/*.bat
+!*/*.runs/impl*/*utilization*.rpt
+
+*.runs/impl*/*.xml
+*.runs/impl*/*.html
+*.runs/impl*/*.txt
+*.runs/impl*/*.sh
+*.runs/impl*/*.tcl
+*.runs/impl*/*.bat
+!*.runs/impl*/*utilization*.rpt
+
+### block design
+*/*/bd/*/hdl
+*/*/*/bd/*/hdl
+
+*/*/bd/*/*.xdc
+*/*/*/bd/*/*.xdc
+
+*/*/bd/*/ip/*/*.xdc
+*/*/*/bd/*/ip/*/*.xdc
+
+*/*/bd/*/ip/*/*/
+*/*/*/bd/*/ip/*/*/
+
+*/*/bd/*/ip/*/*.vhd
+*/*/*/bd/*/ip/*/*.vhd
+
+*/*/bd/*/ip/*/*.xml
+*/*/*/bd/*/ip/*/*.xml
+
+*.c
+*.h
+*.vho
+*.html
+*/*/bd/*/ip/*/*.tcl
+*/*/*/bd/*/ip/*/*.tcl
+hw_handoff
+ipshared
+
+# End of https://www.gitignore.io/api/c,c++,xilinx,eclipse
