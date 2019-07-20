@@ -1,0 +1,23 @@
+/*
+ * Frog.h
+ *
+ *  Created on: 18.07.2019
+ *      Author: Trait
+ */
+
+#ifndef SRC_FROG_H_
+#define SRC_FROG_H_
+
+class Frog {
+public:
+	Frog();
+	virtual ~Frog();
+
+private:
+	
+	unsigned int pos_x;
+	unsigned int pos_y;
+	
+};
+
+#endif /* SRC_FROG_H_ */

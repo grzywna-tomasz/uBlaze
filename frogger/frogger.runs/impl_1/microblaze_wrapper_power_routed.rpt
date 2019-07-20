@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Sat Jul 20 04:58:40 2019
+| Date             : Sat Jul 20 16:33:51 2019
 | Host             : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command          : report_power -file microblaze_wrapper_power_routed.rpt -pb microblaze_wrapper_power_summary_routed.pb -rpx microblaze_wrapper_power_routed.rpx
 | Design           : microblaze_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.270        |
+| Total On-Chip Power (W)  | 0.269        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.197        |
+| Dynamic (W)              | 0.196        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.7         |
@@ -53,10 +53,10 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        8 |       --- |             --- |
-| Slice Logic              |     0.007 |     6879 |       --- |             --- |
+| Slice Logic              |     0.007 |     6873 |       --- |             --- |
 |   LUT as Logic           |     0.005 |     2493 |     20800 |           11.99 |
 |   LUT as Distributed RAM |    <0.001 |       96 |      9600 |            1.00 |
-|   Register               |    <0.001 |     2601 |     41600 |            6.25 |
+|   Register               |    <0.001 |     2595 |     41600 |            6.24 |
 |   CARRY4                 |    <0.001 |       84 |      8150 |            1.03 |
 |   F7/F8 Muxes            |    <0.001 |      114 |     32600 |            0.35 |
 |   LUT as Shift Register  |    <0.001 |      219 |      9600 |            2.28 |
@@ -66,7 +66,7 @@ Table of Contents
 | MMCM                     |     0.121 |        1 |         5 |           20.00 |
 | I/O                      |     0.002 |       18 |       106 |           16.98 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.270 |          |           |                 |
+| Total                    |     0.269 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.082 |       0.072 |      0.010 |
+| Vccint    |       1.000 |     0.081 |       0.071 |      0.010 |
 | Vccaux    |       1.800 |     0.080 |       0.067 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,8 +150,8 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| microblaze_wrapper                                                                 |     0.197 |
-|   microblaze_i                                                                     |     0.195 |
+| microblaze_wrapper                                                                 |     0.196 |
+|   microblaze_i                                                                     |     0.194 |
 |     Video_Controller_4regs_0                                                       |     0.002 |
 |       inst                                                                         |     0.002 |
 |         Video_Controller_4regs_v1_S00_AXI_inst                                     |     0.002 |
@@ -237,7 +237,7 @@ Table of Contents
 |       U0                                                                           |     0.061 |
 |         MicroBlaze_Core_I                                                          |     0.061 |
 |           Performance.Core                                                         |     0.061 |
-|             Data_Flow_I                                                            |     0.007 |
+|             Data_Flow_I                                                            |     0.006 |
 |               ALU_I                                                                |     0.001 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                  |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                             |    <0.001 |
@@ -887,7 +887,7 @@ Table of Contents
 |                 MUXCY_I                                                            |    <0.001 |
 |             Use_DBUS.DAXI_Interface_I1                                             |    <0.001 |
 |             Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1                               |    <0.001 |
-|             Use_Debug_Logic.Master_Core.Debug_Perf                                 |     0.002 |
+|             Use_Debug_Logic.Master_Core.Debug_Perf                                 |     0.001 |
 |               Serial_Dbg_Intf.SRL16E_1                                             |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_3                                             |    <0.001 |
 |               Serial_Dbg_Intf.SRL16E_4                                             |    <0.001 |
@@ -932,7 +932,7 @@ Table of Contents
 |                 Compare[7].SRLC16E_I                                               |    <0.001 |
 |                 The_First_BreakPoints.MUXCY_Post                                   |    <0.001 |
 |               sync_trig_out_0                                                      |     0.000 |
-|             Using_DCache.Using_WriteThrough.DCache_I1                              |     0.024 |
+|             Using_DCache.Using_WriteThrough.DCache_I1                              |     0.023 |
 |               DATA_RAM_Module                                                      |     0.017 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[0].RAMB36_I1                  |     0.004 |
 |                 Not_Using_XPM.Using_B36_S9.The_BRAMs[1].RAMB36_I1                  |     0.004 |
@@ -1176,7 +1176,7 @@ Table of Contents
 |                 cmd_translator_0                                                   |    <0.001 |
 |                   incr_cmd_0                                                       |    <0.001 |
 |                   wrap_cmd_0                                                       |    <0.001 |
-|               RD.r_channel_0                                                       |     0.001 |
+|               RD.r_channel_0                                                       |    <0.001 |
 |                 rd_data_fifo_0                                                     |    <0.001 |
 |                 transaction_fifo_0                                                 |    <0.001 |
 |               SI_REG                                                               |    <0.001 |

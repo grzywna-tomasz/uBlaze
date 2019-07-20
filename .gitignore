@@ -21,7 +21,6 @@
 *.js
 *.pb
 *.dcp
-!*.hwdef
 *.vds
 *.veo
 *.wdf
@@ -39,7 +38,6 @@
 *.data
 *.ipdefs
 .Xil
-*.sdk
 *.hw
 *.ip_user_files
 

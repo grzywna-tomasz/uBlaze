@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sat Jul 20 04:54:42 2019
+| Date         : Sat Jul 20 16:29:38 2019
 | Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file microblaze_Video_Controller_4regs_0_0_utilization_synth.rpt -pb microblaze_Video_Controller_4regs_0_0_utilization_synth.pb
 | Design       : microblaze_Video_Controller_4regs_0_0
@@ -35,8 +35,8 @@ Table of Contents
 |   LUT as Memory            |   28 |     0 |      9600 |  0.29 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   28 |     0 |           |       |
-| Slice Registers            |  332 |     0 |     41600 |  0.80 |
-|   Register as Flip Flop    |  332 |     0 |     41600 |  0.80 |
+| Slice Registers            |  326 |     0 |     41600 |  0.78 |
+|   Register as Flip Flop    |  326 |     0 |     41600 |  0.78 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 331   |          Yes |       Reset |            - |
+| 325   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,7 +151,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  331 |        Flop & Latch |
+| FDRE     |  325 |        Flop & Latch |
 | LUT4     |   81 |                 LUT |
 | LUT6     |   65 |                 LUT |
 | LUT2     |   65 |                 LUT |

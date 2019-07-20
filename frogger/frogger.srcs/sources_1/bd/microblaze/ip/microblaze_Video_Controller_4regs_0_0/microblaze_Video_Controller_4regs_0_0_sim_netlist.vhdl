@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Sat Jul 20 04:54:41 2019
+-- Date        : Sat Jul 20 16:29:38 2019
 -- Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_Video_Controller_4regs_0_0 -prefix
---               microblaze_Video_Controller_4regs_0_0_ microblaze_Video_Controller_4regs_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0_sim_netlist.vhdl
 -- Design      : microblaze_Video_Controller_4regs_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity microblaze_Video_Controller_4regs_0_0_Background_drawer is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     pclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Background_drawer : entity is "Background_drawer";
 end microblaze_Video_Controller_4regs_0_0_Background_drawer;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Background_drawer is
@@ -318,6 +320,8 @@ entity microblaze_Video_Controller_4regs_0_0_Frog_drawer is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     pclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Frog_drawer : entity is "Frog_drawer";
 end microblaze_Video_Controller_4regs_0_0_Frog_drawer;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Frog_drawer is
@@ -567,15 +571,17 @@ entity microblaze_Video_Controller_4regs_0_0_Timing_counter is
     \vc_reg[9]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \hc_reg[10]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \vc_reg[10]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \slv_reg3_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \bg_reg1_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \bg_reg2_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \bg_reg0_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \bg_reg3_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \bg_reg2_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \bg_reg1_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \bg_reg5_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \bg_reg6_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \bg_reg4_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \bg_reg5_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     pclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Timing_counter : entity is "Timing_counter";
 end microblaze_Video_Controller_4regs_0_0_Timing_counter;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Timing_counter is
@@ -891,7 +897,7 @@ begin
       INIT => X"0CAEFFAE"
     )
         port map (
-      I0 => \bg_reg0_reg[3]\(0),
+      I0 => \slv_reg3_reg[3]\(0),
       I1 => \bg_type[3]_i_3_n_0\,
       I2 => \bg_type[0]_i_2_n_0\,
       I3 => \bg_type[3]_i_5_n_0\,
@@ -900,28 +906,28 @@ begin
     );
 \bg_type[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000B1BBFFFFB1BB"
+      INIT => X"7747004777477747"
     )
         port map (
-      I0 => \bg_type[3]_i_8_n_0\,
-      I1 => \bg_reg5_reg[3]\(0),
-      I2 => \bg_type[3]_i_9_n_0\,
-      I3 => \bg_reg6_reg[3]\(0),
-      I4 => \bg_type[3]_i_10_n_0\,
-      I5 => \bg_reg4_reg[3]\(0),
+      I0 => \bg_reg3_reg[3]\(0),
+      I1 => \bg_type[3]_i_10_n_0\,
+      I2 => \bg_reg4_reg[3]\(0),
+      I3 => \bg_type[3]_i_8_n_0\,
+      I4 => \bg_type[3]_i_9_n_0\,
+      I5 => \bg_reg5_reg[3]\(0),
       O => \bg_type[0]_i_2_n_0\
     );
 \bg_type[0]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000A2F7F7F7A2F7"
+      INIT => X"0000B1BBFFFFB1BB"
     )
         port map (
       I0 => \bg_type[3]_i_12_n_0\,
-      I1 => \bg_reg3_reg[3]\(0),
+      I1 => \bg_reg1_reg[3]\(0),
       I2 => \bg_type[3]_i_3_n_0\,
       I3 => \bg_reg2_reg[3]\(0),
       I4 => \bg_type[3]_i_13_n_0\,
-      I5 => \bg_reg1_reg[3]\(0),
+      I5 => \bg_reg0_reg[3]\(0),
       O => \bg_type[0]_i_3_n_0\
     );
 \bg_type[1]_i_1\: unisim.vcomponents.LUT5
@@ -929,7 +935,7 @@ begin
       INIT => X"0CAEFFAE"
     )
         port map (
-      I0 => \bg_reg0_reg[3]\(1),
+      I0 => \slv_reg3_reg[3]\(1),
       I1 => \bg_type[3]_i_3_n_0\,
       I2 => \bg_type[1]_i_2_n_0\,
       I3 => \bg_type[3]_i_5_n_0\,
@@ -938,28 +944,28 @@ begin
     );
 \bg_type[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000B1BBFFFFB1BB"
+      INIT => X"7747004777477747"
     )
         port map (
-      I0 => \bg_type[3]_i_8_n_0\,
-      I1 => \bg_reg5_reg[3]\(1),
-      I2 => \bg_type[3]_i_9_n_0\,
-      I3 => \bg_reg6_reg[3]\(1),
-      I4 => \bg_type[3]_i_10_n_0\,
-      I5 => \bg_reg4_reg[3]\(1),
+      I0 => \bg_reg3_reg[3]\(1),
+      I1 => \bg_type[3]_i_10_n_0\,
+      I2 => \bg_reg4_reg[3]\(1),
+      I3 => \bg_type[3]_i_8_n_0\,
+      I4 => \bg_type[3]_i_9_n_0\,
+      I5 => \bg_reg5_reg[3]\(1),
       O => \bg_type[1]_i_2_n_0\
     );
 \bg_type[1]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000B1BBFFFFB1BB"
+      INIT => X"0000A2F7F7F7A2F7"
     )
         port map (
       I0 => \bg_type[3]_i_12_n_0\,
       I1 => \bg_reg2_reg[3]\(1),
       I2 => \bg_type[3]_i_3_n_0\,
-      I3 => \bg_reg3_reg[3]\(1),
+      I3 => \bg_reg1_reg[3]\(1),
       I4 => \bg_type[3]_i_13_n_0\,
-      I5 => \bg_reg1_reg[3]\(1),
+      I5 => \bg_reg0_reg[3]\(1),
       O => \bg_type[1]_i_3_n_0\
     );
 \bg_type[2]_i_1\: unisim.vcomponents.LUT5
@@ -967,7 +973,7 @@ begin
       INIT => X"0CAEFFAE"
     )
         port map (
-      I0 => \bg_reg0_reg[3]\(2),
+      I0 => \slv_reg3_reg[3]\(2),
       I1 => \bg_type[3]_i_3_n_0\,
       I2 => \bg_type[2]_i_2_n_0\,
       I3 => \bg_type[3]_i_5_n_0\,
@@ -976,15 +982,15 @@ begin
     );
 \bg_type[2]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000B1BBFFFFB1BB"
+      INIT => X"7747004777477747"
     )
         port map (
-      I0 => \bg_type[3]_i_8_n_0\,
-      I1 => \bg_reg5_reg[3]\(2),
-      I2 => \bg_type[3]_i_9_n_0\,
-      I3 => \bg_reg6_reg[3]\(2),
-      I4 => \bg_type[3]_i_10_n_0\,
-      I5 => \bg_reg4_reg[3]\(2),
+      I0 => \bg_reg3_reg[3]\(2),
+      I1 => \bg_type[3]_i_10_n_0\,
+      I2 => \bg_reg4_reg[3]\(2),
+      I3 => \bg_type[3]_i_8_n_0\,
+      I4 => \bg_type[3]_i_9_n_0\,
+      I5 => \bg_reg5_reg[3]\(2),
       O => \bg_type[2]_i_2_n_0\
     );
 \bg_type[2]_i_3\: unisim.vcomponents.LUT6
@@ -993,11 +999,11 @@ begin
     )
         port map (
       I0 => \bg_type[3]_i_12_n_0\,
-      I1 => \bg_reg2_reg[3]\(2),
+      I1 => \bg_reg1_reg[3]\(2),
       I2 => \bg_type[3]_i_3_n_0\,
-      I3 => \bg_reg3_reg[3]\(2),
+      I3 => \bg_reg2_reg[3]\(2),
       I4 => \bg_type[3]_i_13_n_0\,
-      I5 => \bg_reg1_reg[3]\(2),
+      I5 => \bg_reg0_reg[3]\(2),
       O => \bg_type[2]_i_3_n_0\
     );
 \bg_type[3]_i_10\: unisim.vcomponents.LUT6
@@ -1112,7 +1118,7 @@ begin
       INIT => X"0CAEFFAE"
     )
         port map (
-      I0 => \bg_reg0_reg[3]\(3),
+      I0 => \slv_reg3_reg[3]\(3),
       I1 => \bg_type[3]_i_3_n_0\,
       I2 => \bg_type[3]_i_4_n_0\,
       I3 => \bg_type[3]_i_5_n_0\,
@@ -1138,11 +1144,11 @@ begin
     )
         port map (
       I0 => \bg_type[3]_i_8_n_0\,
-      I1 => \bg_reg5_reg[3]\(3),
+      I1 => \bg_reg4_reg[3]\(3),
       I2 => \bg_type[3]_i_9_n_0\,
-      I3 => \bg_reg6_reg[3]\(3),
+      I3 => \bg_reg5_reg[3]\(3),
       I4 => \bg_type[3]_i_10_n_0\,
-      I5 => \bg_reg4_reg[3]\(3),
+      I5 => \bg_reg3_reg[3]\(3),
       O => \bg_type[3]_i_4_n_0\
     );
 \bg_type[3]_i_5\: unisim.vcomponents.LUT5
@@ -1163,11 +1169,11 @@ begin
     )
         port map (
       I0 => \bg_type[3]_i_12_n_0\,
-      I1 => \bg_reg2_reg[3]\(3),
+      I1 => \bg_reg1_reg[3]\(3),
       I2 => \bg_type[3]_i_3_n_0\,
-      I3 => \bg_reg3_reg[3]\(3),
+      I3 => \bg_reg2_reg[3]\(3),
       I4 => \bg_type[3]_i_13_n_0\,
-      I5 => \bg_reg1_reg[3]\(3),
+      I5 => \bg_reg0_reg[3]\(3),
       O => \bg_type[3]_i_6_n_0\
     );
 \bg_type[3]_i_7\: unisim.vcomponents.LUT2
@@ -2359,6 +2365,8 @@ entity microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI i
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI : entity is "Video_Controller_4regs_v1_S00_AXI";
 end microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI is
@@ -2395,98 +2403,95 @@ architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Video_Controller
   signal bg_reg1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal bg_reg1_reg_r_n_0 : STD_LOGIC;
   signal bg_reg2 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\ : STD_LOGIC;
   signal bg_reg2_reg_r_n_0 : STD_LOGIC;
   signal bg_reg3 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__0_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__10_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__11_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__12_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__13_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__14_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__15_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__16_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__17_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__18_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__19_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__1_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__20_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__21_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__22_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__23_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__24_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__25_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__26_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__2_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__3_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__4_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__5_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__6_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__7_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__8_n_0\ : STD_LOGIC;
+  signal \bg_reg3_reg_gate__9_n_0\ : STD_LOGIC;
+  signal bg_reg3_reg_gate_n_0 : STD_LOGIC;
   signal bg_reg3_reg_r_n_0 : STD_LOGIC;
-  signal bg_reg4 : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\ : STD_LOGIC;
-  signal bg_reg4_reg_r_n_0 : STD_LOGIC;
+  signal bg_reg4 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal bg_reg5 : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__0_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__10_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__11_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__12_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__13_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__14_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__15_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__16_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__17_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__18_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__19_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__1_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__20_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__21_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__22_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__23_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__24_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__25_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__26_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__2_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__3_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__4_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__5_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__6_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__7_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__8_n_0\ : STD_LOGIC;
-  signal \bg_reg5_reg_gate__9_n_0\ : STD_LOGIC;
-  signal bg_reg5_reg_gate_n_0 : STD_LOGIC;
-  signal bg_reg5_reg_r_n_0 : STD_LOGIC;
-  signal bg_reg6 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \buff_reg1_reg_n_0_[10]\ : STD_LOGIC;
   signal \buff_reg1_reg_n_0_[11]\ : STD_LOGIC;
   signal \buff_reg1_reg_n_0_[12]\ : STD_LOGIC;
@@ -2613,91 +2618,91 @@ architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Video_Controller
   attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair21";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
+  attribute srl_bus_name of \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
   attribute srl_name : string;
-  attribute srl_name of \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute srl_bus_name of \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg ";
-  attribute srl_name of \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r ";
-  attribute SOFT_HLUTNM of bg_reg5_reg_gate : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__10\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__11\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__12\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__13\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__14\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__15\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__16\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__17\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__18\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__19\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__2\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__20\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__21\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__22\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__23\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__24\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__25\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__26\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__3\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__4\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__5\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__6\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__7\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__8\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \bg_reg5_reg_gate__9\ : label is "soft_lutpair32";
+  attribute srl_name of \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute srl_bus_name of \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg ";
+  attribute srl_name of \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\ : label is "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r ";
+  attribute SOFT_HLUTNM of bg_reg3_reg_gate : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__10\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__11\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__12\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__13\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__14\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__15\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__16\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__17\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__18\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__19\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__2\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__20\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__21\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__22\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__23\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__24\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__25\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__26\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__3\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__4\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__5\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__6\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__7\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__8\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \bg_reg3_reg_gate__9\ : label is "soft_lutpair32";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -3088,417 +3093,417 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     );
 \axi_rdata[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(0),
-      I1 => slv_reg0(0),
+      I0 => slv_reg0(0),
+      I1 => slv_reg1(0),
       I2 => slv_reg3(0),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(0),
       O => reg_data_out(0)
     );
 \axi_rdata[10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(10),
-      I1 => slv_reg0(10),
-      I2 => slv_reg3(10),
+      I0 => slv_reg0(10),
+      I1 => slv_reg1(10),
+      I2 => slv_reg2(10),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(10),
+      I5 => slv_reg3(10),
       O => reg_data_out(10)
     );
 \axi_rdata[11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(11),
-      I1 => slv_reg0(11),
+      I0 => slv_reg0(11),
+      I1 => slv_reg1(11),
       I2 => slv_reg3(11),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(11),
       O => reg_data_out(11)
     );
 \axi_rdata[12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(12),
-      I1 => slv_reg0(12),
+      I0 => slv_reg0(12),
+      I1 => slv_reg1(12),
       I2 => slv_reg3(12),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(12),
       O => reg_data_out(12)
     );
 \axi_rdata[13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(13),
-      I1 => slv_reg0(13),
+      I0 => slv_reg0(13),
+      I1 => slv_reg1(13),
       I2 => slv_reg3(13),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(13),
       O => reg_data_out(13)
     );
 \axi_rdata[14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(14),
-      I1 => slv_reg0(14),
-      I2 => slv_reg3(14),
+      I0 => slv_reg0(14),
+      I1 => slv_reg1(14),
+      I2 => slv_reg2(14),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(14),
+      I5 => slv_reg3(14),
       O => reg_data_out(14)
     );
 \axi_rdata[15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(15),
-      I1 => slv_reg0(15),
+      I0 => slv_reg0(15),
+      I1 => slv_reg1(15),
       I2 => slv_reg3(15),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(15),
       O => reg_data_out(15)
     );
 \axi_rdata[16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCAAF000CCAAF0"
     )
         port map (
       I0 => slv_reg1(16),
-      I1 => slv_reg0(16),
-      I2 => slv_reg3(16),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
-      I5 => slv_reg2(16),
+      I1 => slv_reg2(16),
+      I2 => slv_reg0(16),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
+      I5 => slv_reg3(16),
       O => reg_data_out(16)
     );
 \axi_rdata[17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(17),
-      I1 => slv_reg0(17),
+      I0 => slv_reg0(17),
+      I1 => slv_reg1(17),
       I2 => slv_reg3(17),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(17),
       O => reg_data_out(17)
     );
 \axi_rdata[18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(18),
-      I1 => slv_reg0(18),
-      I2 => slv_reg3(18),
+      I0 => slv_reg0(18),
+      I1 => slv_reg1(18),
+      I2 => slv_reg2(18),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(18),
+      I5 => slv_reg3(18),
       O => reg_data_out(18)
     );
 \axi_rdata[19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(19),
-      I1 => slv_reg0(19),
+      I0 => slv_reg0(19),
+      I1 => slv_reg1(19),
       I2 => slv_reg3(19),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(19),
       O => reg_data_out(19)
     );
 \axi_rdata[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"CCFFAAF0CC00AAF0"
     )
         port map (
       I0 => slv_reg1(1),
-      I1 => slv_reg0(1),
-      I2 => slv_reg3(1),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I1 => slv_reg3(1),
+      I2 => slv_reg0(1),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(1),
       O => reg_data_out(1)
     );
 \axi_rdata[20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(20),
-      I1 => slv_reg0(20),
+      I0 => slv_reg0(20),
+      I1 => slv_reg1(20),
       I2 => slv_reg3(20),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(20),
       O => reg_data_out(20)
     );
 \axi_rdata[21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(21),
-      I1 => slv_reg0(21),
+      I0 => slv_reg0(21),
+      I1 => slv_reg1(21),
       I2 => slv_reg3(21),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(21),
       O => reg_data_out(21)
     );
 \axi_rdata[22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(22),
-      I1 => slv_reg0(22),
-      I2 => slv_reg3(22),
+      I0 => slv_reg0(22),
+      I1 => slv_reg1(22),
+      I2 => slv_reg2(22),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(22),
+      I5 => slv_reg3(22),
       O => reg_data_out(22)
     );
 \axi_rdata[23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(23),
-      I1 => slv_reg0(23),
+      I0 => slv_reg0(23),
+      I1 => slv_reg1(23),
       I2 => slv_reg3(23),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(23),
       O => reg_data_out(23)
     );
 \axi_rdata[24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCAAF000CCAAF0"
     )
         port map (
       I0 => slv_reg1(24),
-      I1 => slv_reg0(24),
-      I2 => slv_reg3(24),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
-      I5 => slv_reg2(24),
+      I1 => slv_reg2(24),
+      I2 => slv_reg0(24),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
+      I5 => slv_reg3(24),
       O => reg_data_out(24)
     );
 \axi_rdata[25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(25),
-      I1 => slv_reg0(25),
+      I0 => slv_reg0(25),
+      I1 => slv_reg1(25),
       I2 => slv_reg3(25),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(25),
       O => reg_data_out(25)
     );
 \axi_rdata[26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(26),
-      I1 => slv_reg0(26),
-      I2 => slv_reg3(26),
+      I0 => slv_reg0(26),
+      I1 => slv_reg1(26),
+      I2 => slv_reg2(26),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(26),
+      I5 => slv_reg3(26),
       O => reg_data_out(26)
     );
 \axi_rdata[27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(27),
-      I1 => slv_reg0(27),
+      I0 => slv_reg0(27),
+      I1 => slv_reg1(27),
       I2 => slv_reg3(27),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(27),
       O => reg_data_out(27)
     );
 \axi_rdata[28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(28),
-      I1 => slv_reg0(28),
+      I0 => slv_reg0(28),
+      I1 => slv_reg1(28),
       I2 => slv_reg3(28),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(28),
       O => reg_data_out(28)
     );
 \axi_rdata[29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(29),
-      I1 => slv_reg0(29),
+      I0 => slv_reg0(29),
+      I1 => slv_reg1(29),
       I2 => slv_reg3(29),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(29),
       O => reg_data_out(29)
     );
 \axi_rdata[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCAAF000CCAAF0"
     )
         port map (
       I0 => slv_reg1(2),
-      I1 => slv_reg0(2),
-      I2 => slv_reg3(2),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
-      I5 => slv_reg2(2),
+      I1 => slv_reg2(2),
+      I2 => slv_reg0(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
+      I5 => slv_reg3(2),
       O => reg_data_out(2)
     );
 \axi_rdata[30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(30),
-      I1 => slv_reg0(30),
-      I2 => slv_reg3(30),
+      I0 => slv_reg0(30),
+      I1 => slv_reg1(30),
+      I2 => slv_reg2(30),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(30),
+      I5 => slv_reg3(30),
       O => reg_data_out(30)
     );
 \axi_rdata[31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(31),
-      I1 => slv_reg0(31),
-      I2 => slv_reg3(31),
+      I0 => slv_reg0(31),
+      I1 => slv_reg1(31),
+      I2 => slv_reg2(31),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(31),
+      I5 => slv_reg3(31),
       O => reg_data_out(31)
     );
 \axi_rdata[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(3),
-      I1 => slv_reg0(3),
+      I0 => slv_reg0(3),
+      I1 => slv_reg1(3),
       I2 => slv_reg3(3),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(3),
       O => reg_data_out(3)
     );
 \axi_rdata[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(4),
-      I1 => slv_reg0(4),
+      I0 => slv_reg0(4),
+      I1 => slv_reg1(4),
       I2 => slv_reg3(4),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(4),
       O => reg_data_out(4)
     );
 \axi_rdata[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(5),
-      I1 => slv_reg0(5),
+      I0 => slv_reg0(5),
+      I1 => slv_reg1(5),
       I2 => slv_reg3(5),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(5),
       O => reg_data_out(5)
     );
 \axi_rdata[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCF0AA00CCF0AA"
     )
         port map (
-      I0 => slv_reg1(6),
-      I1 => slv_reg0(6),
-      I2 => slv_reg3(6),
+      I0 => slv_reg0(6),
+      I1 => slv_reg1(6),
+      I2 => slv_reg2(6),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg2(6),
+      I5 => slv_reg3(6),
       O => reg_data_out(6)
     );
 \axi_rdata[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(7),
-      I1 => slv_reg0(7),
+      I0 => slv_reg0(7),
+      I1 => slv_reg1(7),
       I2 => slv_reg3(7),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(7),
       O => reg_data_out(7)
     );
 \axi_rdata[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"FFCCAAF000CCAAF0"
     )
         port map (
       I0 => slv_reg1(8),
-      I1 => slv_reg0(8),
-      I2 => slv_reg3(8),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
-      I5 => slv_reg2(8),
+      I1 => slv_reg2(8),
+      I2 => slv_reg0(8),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
+      I5 => slv_reg3(8),
       O => reg_data_out(8)
     );
 \axi_rdata[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"F0FFCCAAF000CCAA"
     )
         port map (
-      I0 => slv_reg1(9),
-      I1 => slv_reg0(9),
+      I0 => slv_reg0(9),
+      I1 => slv_reg1(9),
       I2 => slv_reg3(9),
-      I3 => axi_araddr(3),
-      I4 => axi_araddr(2),
+      I3 => axi_araddr(2),
+      I4 => axi_araddr(3),
       I5 => slv_reg2(9),
       O => reg_data_out(9)
     );
@@ -3815,10 +3820,10 @@ bg_filled_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => bg_filled_i_4_n_0,
-      I1 => bg_reg6(27),
-      I2 => bg_reg6(24),
-      I3 => bg_reg6(5),
-      I4 => bg_reg6(4),
+      I1 => bg_reg4(29),
+      I2 => bg_reg4(3),
+      I3 => bg_reg4(31),
+      I4 => bg_reg4(24),
       I5 => bg_filled_i_5_n_0,
       O => bg_filled_i_2_n_0
     );
@@ -3828,10 +3833,10 @@ bg_filled_i_3: unisim.vcomponents.LUT6
     )
         port map (
       I0 => bg_filled_i_6_n_0,
-      I1 => bg_reg6(30),
-      I2 => bg_reg6(16),
-      I3 => bg_reg6(12),
-      I4 => bg_reg6(10),
+      I1 => bg_reg4(30),
+      I2 => bg_reg4(16),
+      I3 => bg_reg4(12),
+      I4 => bg_reg4(10),
       I5 => bg_filled_i_7_n_0,
       O => bg_filled_i_3_n_0
     );
@@ -3840,10 +3845,10 @@ bg_filled_i_4: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => bg_reg6(29),
-      I1 => bg_reg6(7),
-      I2 => bg_reg6(31),
-      I3 => bg_reg6(3),
+      I0 => bg_reg4(14),
+      I1 => bg_reg4(9),
+      I2 => bg_reg4(8),
+      I3 => bg_reg4(7),
       O => bg_filled_i_4_n_0
     );
 bg_filled_i_5: unisim.vcomponents.LUT5
@@ -3851,10 +3856,10 @@ bg_filled_i_5: unisim.vcomponents.LUT5
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => bg_reg6(6),
-      I1 => bg_reg6(9),
-      I2 => bg_reg6(15),
-      I3 => bg_reg6(23),
+      I0 => bg_reg4(0),
+      I1 => bg_reg4(23),
+      I2 => bg_reg4(1),
+      I3 => bg_reg4(17),
       I4 => bg_filled_i_8_n_0,
       O => bg_filled_i_5_n_0
     );
@@ -3863,10 +3868,10 @@ bg_filled_i_6: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => bg_reg6(28),
-      I1 => bg_reg6(11),
-      I2 => bg_reg6(20),
-      I3 => bg_reg6(18),
+      I0 => bg_reg4(28),
+      I1 => bg_reg4(11),
+      I2 => bg_reg4(20),
+      I3 => bg_reg4(18),
       O => bg_filled_i_6_n_0
     );
 bg_filled_i_7: unisim.vcomponents.LUT5
@@ -3874,10 +3879,10 @@ bg_filled_i_7: unisim.vcomponents.LUT5
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => bg_reg6(8),
-      I1 => bg_reg6(14),
-      I2 => bg_reg6(19),
-      I3 => bg_reg6(21),
+      I0 => bg_reg4(6),
+      I1 => bg_reg4(15),
+      I2 => bg_reg4(19),
+      I3 => bg_reg4(21),
       I4 => bg_filled_i_9_n_0,
       O => bg_filled_i_7_n_0
     );
@@ -3886,10 +3891,10 @@ bg_filled_i_8: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => bg_reg6(2),
-      I1 => bg_reg6(1),
-      I2 => bg_reg6(17),
-      I3 => bg_reg6(0),
+      I0 => bg_reg4(27),
+      I1 => bg_reg4(5),
+      I2 => bg_reg4(4),
+      I3 => bg_reg4(2),
       O => bg_filled_i_8_n_0
     );
 bg_filled_i_9: unisim.vcomponents.LUT4
@@ -3897,10 +3902,10 @@ bg_filled_i_9: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => bg_reg6(26),
-      I1 => bg_reg6(13),
-      I2 => bg_reg6(25),
-      I3 => bg_reg6(22),
+      I0 => bg_reg4(26),
+      I1 => bg_reg4(13),
+      I2 => bg_reg4(25),
+      I3 => bg_reg4(22),
       O => bg_filled_i_9_n_0
     );
 bg_filled_reg: unisim.vcomponents.FDRE
@@ -4042,6 +4047,146 @@ bg_reg1_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg2(0),
       R => \_rgb_out[11]_i_1_n_0\
     );
+\bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(10),
+      Q => \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(11),
+      Q => \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(12),
+      Q => \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(13),
+      Q => \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(14),
+      Q => \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(15),
+      Q => \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(16),
+      Q => \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(17),
+      Q => \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(18),
+      Q => \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(19),
+      Q => \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
 \bg_reg2_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -4052,6 +4197,146 @@ bg_reg1_reg_r: unisim.vcomponents.FDRE
       D => bg_reg1(1),
       Q => bg_reg2(1),
       R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(20),
+      Q => \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(21),
+      Q => \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(22),
+      Q => \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(23),
+      Q => \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(24),
+      Q => \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(25),
+      Q => \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(26),
+      Q => \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(27),
+      Q => \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(28),
+      Q => \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(29),
+      Q => \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
     );
 \bg_reg2_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -4064,6 +4349,34 @@ bg_reg1_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg2(2),
       R => \_rgb_out[11]_i_1_n_0\
     );
+\bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(30),
+      Q => \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(31),
+      Q => \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
 \bg_reg2_reg[3]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -4074,6 +4387,90 @@ bg_reg1_reg_r: unisim.vcomponents.FDRE
       D => bg_reg1(3),
       Q => bg_reg2(3),
       R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(4),
+      Q => \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(5),
+      Q => \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(6),
+      Q => \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(7),
+      Q => \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(8),
+      Q => \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
+    );
+\bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => bg_reg0_0,
+      CLK => s00_axi_aclk,
+      D => slv_reg3(9),
+      Q => \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\
     );
 bg_reg2_reg_r: unisim.vcomponents.FDRE
      port map (
@@ -4094,6 +4491,86 @@ bg_reg2_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg3(0),
       R => \_rgb_out[11]_i_1_n_0\
     );
+\bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
 \bg_reg3_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -4104,6 +4581,86 @@ bg_reg2_reg_r: unisim.vcomponents.FDRE
       D => bg_reg2(1),
       Q => bg_reg3(1),
       R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
     );
 \bg_reg3_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -4116,6 +4673,22 @@ bg_reg2_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg3(2),
       R => \_rgb_out[11]_i_1_n_0\
     );
+\bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
 \bg_reg3_reg[3]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -4126,6 +4699,306 @@ bg_reg2_reg_r: unisim.vcomponents.FDRE
       D => bg_reg2(3),
       Q => bg_reg3(3),
       R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+\bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0\,
+      Q => \bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      R => '0'
+    );
+bg_reg3_reg_gate: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => bg_reg3_reg_gate_n_0
+    );
+\bg_reg3_reg_gate__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__0_n_0\
+    );
+\bg_reg3_reg_gate__1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__1_n_0\
+    );
+\bg_reg3_reg_gate__10\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__10_n_0\
+    );
+\bg_reg3_reg_gate__11\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__11_n_0\
+    );
+\bg_reg3_reg_gate__12\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__12_n_0\
+    );
+\bg_reg3_reg_gate__13\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__13_n_0\
+    );
+\bg_reg3_reg_gate__14\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__14_n_0\
+    );
+\bg_reg3_reg_gate__15\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__15_n_0\
+    );
+\bg_reg3_reg_gate__16\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__16_n_0\
+    );
+\bg_reg3_reg_gate__17\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__17_n_0\
+    );
+\bg_reg3_reg_gate__18\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__18_n_0\
+    );
+\bg_reg3_reg_gate__19\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__19_n_0\
+    );
+\bg_reg3_reg_gate__2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__2_n_0\
+    );
+\bg_reg3_reg_gate__20\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__20_n_0\
+    );
+\bg_reg3_reg_gate__21\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__21_n_0\
+    );
+\bg_reg3_reg_gate__22\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__22_n_0\
+    );
+\bg_reg3_reg_gate__23\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__23_n_0\
+    );
+\bg_reg3_reg_gate__24\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__24_n_0\
+    );
+\bg_reg3_reg_gate__25\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__25_n_0\
+    );
+\bg_reg3_reg_gate__26\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__26_n_0\
+    );
+\bg_reg3_reg_gate__3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__3_n_0\
+    );
+\bg_reg3_reg_gate__4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__4_n_0\
+    );
+\bg_reg3_reg_gate__5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__5_n_0\
+    );
+\bg_reg3_reg_gate__6\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__6_n_0\
+    );
+\bg_reg3_reg_gate__7\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__7_n_0\
+    );
+\bg_reg3_reg_gate__8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__8_n_0\
+    );
+\bg_reg3_reg_gate__9\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0\,
+      I1 => bg_reg3_reg_r_n_0,
+      O => \bg_reg3_reg_gate__9_n_0\
     );
 bg_reg3_reg_r: unisim.vcomponents.FDRE
      port map (
@@ -4146,145 +5019,85 @@ bg_reg3_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg4(0),
       R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(10),
-      Q => \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__20_n_0\,
+      Q => bg_reg4(10),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(11),
-      Q => \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__19_n_0\,
+      Q => bg_reg4(11),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(12),
-      Q => \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__18_n_0\,
+      Q => bg_reg4(12),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(13),
-      Q => \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__17_n_0\,
+      Q => bg_reg4(13),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(14),
-      Q => \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__16_n_0\,
+      Q => bg_reg4(14),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(15),
-      Q => \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__15_n_0\,
+      Q => bg_reg4(15),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(16),
-      Q => \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__14_n_0\,
+      Q => bg_reg4(16),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[17]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(17),
-      Q => \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__13_n_0\,
+      Q => bg_reg4(17),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[18]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(18),
-      Q => \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__12_n_0\,
+      Q => bg_reg4(18),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[19]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(19),
-      Q => \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__11_n_0\,
+      Q => bg_reg4(19),
+      R => \_rgb_out[11]_i_1_n_0\
     );
 \bg_reg4_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -4297,145 +5110,85 @@ bg_reg3_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg4(1),
       R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[20]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(20),
-      Q => \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__10_n_0\,
+      Q => bg_reg4(20),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[21]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(21),
-      Q => \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__9_n_0\,
+      Q => bg_reg4(21),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[22]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(22),
-      Q => \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__8_n_0\,
+      Q => bg_reg4(22),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[23]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(23),
-      Q => \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__7_n_0\,
+      Q => bg_reg4(23),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[24]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(24),
-      Q => \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__6_n_0\,
+      Q => bg_reg4(24),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[25]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(25),
-      Q => \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__5_n_0\,
+      Q => bg_reg4(25),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[26]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(26),
-      Q => \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__4_n_0\,
+      Q => bg_reg4(26),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[27]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(27),
-      Q => \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__3_n_0\,
+      Q => bg_reg4(27),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[28]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(28),
-      Q => \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__2_n_0\,
+      Q => bg_reg4(28),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[29]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(29),
-      Q => \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__1_n_0\,
+      Q => bg_reg4(29),
+      R => \_rgb_out[11]_i_1_n_0\
     );
 \bg_reg4_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -4448,33 +5201,21 @@ bg_reg3_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg4(2),
       R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[30]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(30),
-      Q => \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => \bg_reg3_reg_gate__0_n_0\,
+      Q => bg_reg4(30),
+      R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
+\bg_reg4_reg[31]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
       CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(31),
-      Q => \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
+      D => bg_reg3_reg_gate_n_0,
+      Q => bg_reg4(31),
+      R => \_rgb_out[11]_i_1_n_0\
     );
 \bg_reg4_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -4487,96 +5228,52 @@ bg_reg3_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg4(3),
       R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
-      CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(4),
-      Q => \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
-    );
-\bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
-      CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(5),
-      Q => \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
-    );
-\bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
-      CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(6),
-      Q => \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
-    );
-\bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
-      CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(7),
-      Q => \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
-    );
-\bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
-      CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(8),
-      Q => \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
-    );
-\bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r\: unisim.vcomponents.SRL16E
-    generic map(
-      INIT => X"0000"
-    )
-        port map (
-      A0 => '0',
-      A1 => '0',
-      A2 => '1',
-      A3 => '0',
-      CE => bg_reg0_0,
-      CLK => s00_axi_aclk,
-      D => slv_reg3(9),
-      Q => \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\
-    );
-bg_reg4_reg_r: unisim.vcomponents.FDRE
+\bg_reg4_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => bg_reg0_0,
-      D => bg_reg3_reg_r_n_0,
-      Q => bg_reg4_reg_r_n_0,
+      D => \bg_reg3_reg_gate__26_n_0\,
+      Q => bg_reg4(4),
+      R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg4_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg3_reg_gate__25_n_0\,
+      Q => bg_reg4(5),
+      R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg4_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg3_reg_gate__24_n_0\,
+      Q => bg_reg4(6),
+      R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg4_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg3_reg_gate__23_n_0\,
+      Q => bg_reg4(7),
+      R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg4_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg3_reg_gate__22_n_0\,
+      Q => bg_reg4(8),
+      R => \_rgb_out[11]_i_1_n_0\
+    );
+\bg_reg4_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => bg_reg0_0,
+      D => \bg_reg3_reg_gate__21_n_0\,
+      Q => bg_reg4(9),
       R => \_rgb_out[11]_i_1_n_0\
     );
 \bg_reg5_reg[0]\: unisim.vcomponents.FDRE
@@ -4590,86 +5287,6 @@ bg_reg4_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg5(0),
       R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
 \bg_reg5_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -4680,86 +5297,6 @@ bg_reg4_reg_r: unisim.vcomponents.FDRE
       D => bg_reg4(1),
       Q => bg_reg5(1),
       R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
     );
 \bg_reg5_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -4772,22 +5309,6 @@ bg_reg4_reg_r: unisim.vcomponents.FDRE
       Q => bg_reg5(2),
       R => \_rgb_out[11]_i_1_n_0\
     );
-\bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
 \bg_reg5_reg[3]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -4797,582 +5318,6 @@ bg_reg4_reg_r: unisim.vcomponents.FDRE
       CE => bg_reg0_0,
       D => bg_reg4(3),
       Q => bg_reg5(3),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-\bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0\,
-      Q => \bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      R => '0'
-    );
-bg_reg5_reg_gate: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => bg_reg5_reg_gate_n_0
-    );
-\bg_reg5_reg_gate__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__0_n_0\
-    );
-\bg_reg5_reg_gate__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__1_n_0\
-    );
-\bg_reg5_reg_gate__10\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__10_n_0\
-    );
-\bg_reg5_reg_gate__11\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__11_n_0\
-    );
-\bg_reg5_reg_gate__12\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__12_n_0\
-    );
-\bg_reg5_reg_gate__13\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__13_n_0\
-    );
-\bg_reg5_reg_gate__14\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__14_n_0\
-    );
-\bg_reg5_reg_gate__15\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__15_n_0\
-    );
-\bg_reg5_reg_gate__16\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__16_n_0\
-    );
-\bg_reg5_reg_gate__17\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__17_n_0\
-    );
-\bg_reg5_reg_gate__18\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__18_n_0\
-    );
-\bg_reg5_reg_gate__19\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__19_n_0\
-    );
-\bg_reg5_reg_gate__2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__2_n_0\
-    );
-\bg_reg5_reg_gate__20\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__20_n_0\
-    );
-\bg_reg5_reg_gate__21\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__21_n_0\
-    );
-\bg_reg5_reg_gate__22\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__22_n_0\
-    );
-\bg_reg5_reg_gate__23\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__23_n_0\
-    );
-\bg_reg5_reg_gate__24\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__24_n_0\
-    );
-\bg_reg5_reg_gate__25\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__25_n_0\
-    );
-\bg_reg5_reg_gate__26\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__26_n_0\
-    );
-\bg_reg5_reg_gate__3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__3_n_0\
-    );
-\bg_reg5_reg_gate__4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__4_n_0\
-    );
-\bg_reg5_reg_gate__5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__5_n_0\
-    );
-\bg_reg5_reg_gate__6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__6_n_0\
-    );
-\bg_reg5_reg_gate__7\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__7_n_0\
-    );
-\bg_reg5_reg_gate__8\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__8_n_0\
-    );
-\bg_reg5_reg_gate__9\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0\,
-      I1 => bg_reg5_reg_r_n_0,
-      O => \bg_reg5_reg_gate__9_n_0\
-    );
-bg_reg5_reg_r: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => bg_reg4_reg_r_n_0,
-      Q => bg_reg5_reg_r_n_0,
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => bg_reg5(0),
-      Q => bg_reg6(0),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__20_n_0\,
-      Q => bg_reg6(10),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__19_n_0\,
-      Q => bg_reg6(11),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__18_n_0\,
-      Q => bg_reg6(12),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__17_n_0\,
-      Q => bg_reg6(13),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__16_n_0\,
-      Q => bg_reg6(14),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__15_n_0\,
-      Q => bg_reg6(15),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__14_n_0\,
-      Q => bg_reg6(16),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__13_n_0\,
-      Q => bg_reg6(17),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__12_n_0\,
-      Q => bg_reg6(18),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__11_n_0\,
-      Q => bg_reg6(19),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => bg_reg5(1),
-      Q => bg_reg6(1),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__10_n_0\,
-      Q => bg_reg6(20),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__9_n_0\,
-      Q => bg_reg6(21),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__8_n_0\,
-      Q => bg_reg6(22),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__7_n_0\,
-      Q => bg_reg6(23),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__6_n_0\,
-      Q => bg_reg6(24),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__5_n_0\,
-      Q => bg_reg6(25),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__4_n_0\,
-      Q => bg_reg6(26),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__3_n_0\,
-      Q => bg_reg6(27),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__2_n_0\,
-      Q => bg_reg6(28),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__1_n_0\,
-      Q => bg_reg6(29),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => bg_reg5(2),
-      Q => bg_reg6(2),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__0_n_0\,
-      Q => bg_reg6(30),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => bg_reg5_reg_gate_n_0,
-      Q => bg_reg6(31),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => bg_reg5(3),
-      Q => bg_reg6(3),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__26_n_0\,
-      Q => bg_reg6(4),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__25_n_0\,
-      Q => bg_reg6(5),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__24_n_0\,
-      Q => bg_reg6(6),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__23_n_0\,
-      Q => bg_reg6(7),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__22_n_0\,
-      Q => bg_reg6(8),
-      R => \_rgb_out[11]_i_1_n_0\
-    );
-\bg_reg6_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => bg_reg0_0,
-      D => \bg_reg5_reg_gate__21_n_0\,
-      Q => bg_reg6(9),
       R => \_rgb_out[11]_i_1_n_0\
     );
 \buff_reg1_reg[0]\: unisim.vcomponents.FDRE
@@ -5710,7 +5655,6 @@ pixel_counter: entity work.microblaze_Video_Controller_4regs_0_0_Timing_counter
       \bg_reg3_reg[3]\(3 downto 0) => bg_reg3(3 downto 0),
       \bg_reg4_reg[3]\(3 downto 0) => bg_reg4(3 downto 0),
       \bg_reg5_reg[3]\(3 downto 0) => bg_reg5(3 downto 0),
-      \bg_reg6_reg[3]\(3 downto 0) => bg_reg6(3 downto 0),
       \bg_type_reg[3]\(3) => pixel_counter_n_61,
       \bg_type_reg[3]\(2) => pixel_counter_n_62,
       \bg_type_reg[3]\(1) => pixel_counter_n_63,
@@ -5720,6 +5664,7 @@ pixel_counter: entity work.microblaze_Video_Controller_4regs_0_0_Timing_counter
       \hc_reg[2]_0\(1 downto 0) => hc(1 downto 0),
       pclk => pclk,
       s00_axi_aresetn => s00_axi_aresetn,
+      \slv_reg3_reg[3]\(3 downto 0) => slv_reg3(3 downto 0),
       \vc_reg[10]_0\(2) => vc(10),
       \vc_reg[10]_0\(1 downto 0) => vc(1 downto 0),
       \vc_reg[10]_1\(0) => nxt_pixel3,
@@ -7058,6 +7003,8 @@ entity microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 : entity is "Video_Controller_4regs_v1";
 end microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1;
 
 architecture STRUCTURE of microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 is

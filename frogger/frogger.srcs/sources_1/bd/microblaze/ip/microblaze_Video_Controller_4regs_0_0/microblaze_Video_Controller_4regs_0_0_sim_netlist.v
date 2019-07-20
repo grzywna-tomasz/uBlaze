@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Sat Jul 20 04:54:41 2019
+// Date        : Sat Jul 20 16:29:38 2019
 // Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top microblaze_Video_Controller_4regs_0_0 -prefix
-//               microblaze_Video_Controller_4regs_0_0_ microblaze_Video_Controller_4regs_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0_sim_netlist.v
 // Design      : microblaze_Video_Controller_4regs_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,137 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "microblaze_Video_Controller_4regs_0_0,Video_Controller_4regs_v1,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "Video_Controller_4regs_v1,Vivado 2017.3" *) 
+(* NotValidForBitStream *)
+module microblaze_Video_Controller_4regs_0_0
+   (rgb_out,
+    hsync_out,
+    vsync_out,
+    pclk,
+    fsync_in,
+    hsync_in,
+    vsync_in,
+    hblank_in,
+    vblank_in,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready,
+    s00_axi_aclk,
+    s00_axi_aresetn);
+  output [11:0]rgb_out;
+  output hsync_out;
+  output vsync_out;
+  input pclk;
+  input fsync_in;
+  input hsync_in;
+  input vsync_in;
+  input hblank_in;
+  input vblank_in;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [3:0]s00_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s00_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input s00_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
+
+  wire \<const0> ;
+  wire fsync_in;
+  wire hblank_in;
+  wire hsync_in;
+  wire hsync_out;
+  wire pclk;
+  wire [10:1]\^rgb_out ;
+  wire s00_axi_aclk;
+  wire [3:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [3:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+  wire vblank_in;
+  wire vsync_in;
+  wire vsync_out;
+
+  assign rgb_out[11] = \^rgb_out [2];
+  assign rgb_out[10:1] = \^rgb_out [10:1];
+  assign rgb_out[0] = \^rgb_out [2];
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 inst
+       (.S_AXI_ARREADY(s00_axi_arready),
+        .S_AXI_AWREADY(s00_axi_awready),
+        .S_AXI_WREADY(s00_axi_wready),
+        .fsync_in(fsync_in),
+        .hblank_in(hblank_in),
+        .hsync_in(hsync_in),
+        .hsync_out(hsync_out),
+        .pclk(pclk),
+        .rgb_out({\^rgb_out [2],\^rgb_out [10:3],\^rgb_out [1]}),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[3:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .vblank_in(vblank_in),
+        .vsync_in(vsync_in),
+        .vsync_out(vsync_out));
+endmodule
+
+(* ORIG_REF_NAME = "Background_drawer" *) 
 module microblaze_Video_Controller_4regs_0_0_Background_drawer
    (Q,
     s00_axi_aresetn,
@@ -226,6 +357,7 @@ module microblaze_Video_Controller_4regs_0_0_Background_drawer
         .R(\bg_type[3]_i_1_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "Frog_drawer" *) 
 module microblaze_Video_Controller_4regs_0_0_Frog_drawer
    (CO,
     \_rgb_pixel_reg[4]_0 ,
@@ -450,6 +582,7 @@ module microblaze_Video_Controller_4regs_0_0_Frog_drawer
         .S({1'b0,1'b0,\buff_reg1_reg[20] }));
 endmodule
 
+(* ORIG_REF_NAME = "Timing_counter" *) 
 module microblaze_Video_Controller_4regs_0_0_Timing_counter
    (S,
     \hc_reg[2]_0 ,
@@ -482,13 +615,13 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
     \vc_reg[9]_0 ,
     \hc_reg[10]_0 ,
     \vc_reg[10]_1 ,
+    \slv_reg3_reg[3] ,
+    \bg_reg1_reg[3] ,
+    \bg_reg2_reg[3] ,
     \bg_reg0_reg[3] ,
     \bg_reg3_reg[3] ,
-    \bg_reg2_reg[3] ,
-    \bg_reg1_reg[3] ,
-    \bg_reg5_reg[3] ,
-    \bg_reg6_reg[3] ,
     \bg_reg4_reg[3] ,
+    \bg_reg5_reg[3] ,
     pclk);
   output [3:0]S;
   output [1:0]\hc_reg[2]_0 ;
@@ -521,13 +654,13 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
   input [0:0]\vc_reg[9]_0 ;
   input [0:0]\hc_reg[10]_0 ;
   input [0:0]\vc_reg[10]_1 ;
+  input [3:0]\slv_reg3_reg[3] ;
+  input [3:0]\bg_reg1_reg[3] ;
+  input [3:0]\bg_reg2_reg[3] ;
   input [3:0]\bg_reg0_reg[3] ;
   input [3:0]\bg_reg3_reg[3] ;
-  input [3:0]\bg_reg2_reg[3] ;
-  input [3:0]\bg_reg1_reg[3] ;
-  input [3:0]\bg_reg5_reg[3] ;
-  input [3:0]\bg_reg6_reg[3] ;
   input [3:0]\bg_reg4_reg[3] ;
+  input [3:0]\bg_reg5_reg[3] ;
   input pclk;
 
   wire [0:0]CO;
@@ -559,7 +692,6 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
   wire [3:0]\bg_reg3_reg[3] ;
   wire [3:0]\bg_reg4_reg[3] ;
   wire [3:0]\bg_reg5_reg[3] ;
-  wire [3:0]\bg_reg6_reg[3] ;
   wire \bg_type[0]_i_2_n_0 ;
   wire \bg_type[0]_i_3_n_0 ;
   wire \bg_type[1]_i_2_n_0 ;
@@ -605,6 +737,7 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
   wire [1:0]\hc_reg[2]_0 ;
   wire pclk;
   wire s00_axi_aresetn;
+  wire [3:0]\slv_reg3_reg[3] ;
   wire [9:2]vc;
   wire \vc[0]_i_1_n_0 ;
   wire \vc[10]_i_1_n_0 ;
@@ -781,89 +914,89 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
   LUT5 #(
     .INIT(32'h0CAEFFAE)) 
     \bg_type[0]_i_1 
-       (.I0(\bg_reg0_reg[3] [0]),
+       (.I0(\slv_reg3_reg[3] [0]),
         .I1(\bg_type[3]_i_3_n_0 ),
         .I2(\bg_type[0]_i_2_n_0 ),
         .I3(\bg_type[3]_i_5_n_0 ),
         .I4(\bg_type[0]_i_3_n_0 ),
         .O(\bg_type_reg[3] [0]));
   LUT6 #(
-    .INIT(64'h0000B1BBFFFFB1BB)) 
+    .INIT(64'h7747004777477747)) 
     \bg_type[0]_i_2 
-       (.I0(\bg_type[3]_i_8_n_0 ),
-        .I1(\bg_reg5_reg[3] [0]),
-        .I2(\bg_type[3]_i_9_n_0 ),
-        .I3(\bg_reg6_reg[3] [0]),
-        .I4(\bg_type[3]_i_10_n_0 ),
-        .I5(\bg_reg4_reg[3] [0]),
+       (.I0(\bg_reg3_reg[3] [0]),
+        .I1(\bg_type[3]_i_10_n_0 ),
+        .I2(\bg_reg4_reg[3] [0]),
+        .I3(\bg_type[3]_i_8_n_0 ),
+        .I4(\bg_type[3]_i_9_n_0 ),
+        .I5(\bg_reg5_reg[3] [0]),
         .O(\bg_type[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000A2F7F7F7A2F7)) 
+    .INIT(64'h0000B1BBFFFFB1BB)) 
     \bg_type[0]_i_3 
        (.I0(\bg_type[3]_i_12_n_0 ),
-        .I1(\bg_reg3_reg[3] [0]),
+        .I1(\bg_reg1_reg[3] [0]),
         .I2(\bg_type[3]_i_3_n_0 ),
         .I3(\bg_reg2_reg[3] [0]),
         .I4(\bg_type[3]_i_13_n_0 ),
-        .I5(\bg_reg1_reg[3] [0]),
+        .I5(\bg_reg0_reg[3] [0]),
         .O(\bg_type[0]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'h0CAEFFAE)) 
     \bg_type[1]_i_1 
-       (.I0(\bg_reg0_reg[3] [1]),
+       (.I0(\slv_reg3_reg[3] [1]),
         .I1(\bg_type[3]_i_3_n_0 ),
         .I2(\bg_type[1]_i_2_n_0 ),
         .I3(\bg_type[3]_i_5_n_0 ),
         .I4(\bg_type[1]_i_3_n_0 ),
         .O(\bg_type_reg[3] [1]));
   LUT6 #(
-    .INIT(64'h0000B1BBFFFFB1BB)) 
+    .INIT(64'h7747004777477747)) 
     \bg_type[1]_i_2 
-       (.I0(\bg_type[3]_i_8_n_0 ),
-        .I1(\bg_reg5_reg[3] [1]),
-        .I2(\bg_type[3]_i_9_n_0 ),
-        .I3(\bg_reg6_reg[3] [1]),
-        .I4(\bg_type[3]_i_10_n_0 ),
-        .I5(\bg_reg4_reg[3] [1]),
+       (.I0(\bg_reg3_reg[3] [1]),
+        .I1(\bg_type[3]_i_10_n_0 ),
+        .I2(\bg_reg4_reg[3] [1]),
+        .I3(\bg_type[3]_i_8_n_0 ),
+        .I4(\bg_type[3]_i_9_n_0 ),
+        .I5(\bg_reg5_reg[3] [1]),
         .O(\bg_type[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000B1BBFFFFB1BB)) 
+    .INIT(64'h0000A2F7F7F7A2F7)) 
     \bg_type[1]_i_3 
        (.I0(\bg_type[3]_i_12_n_0 ),
         .I1(\bg_reg2_reg[3] [1]),
         .I2(\bg_type[3]_i_3_n_0 ),
-        .I3(\bg_reg3_reg[3] [1]),
+        .I3(\bg_reg1_reg[3] [1]),
         .I4(\bg_type[3]_i_13_n_0 ),
-        .I5(\bg_reg1_reg[3] [1]),
+        .I5(\bg_reg0_reg[3] [1]),
         .O(\bg_type[1]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'h0CAEFFAE)) 
     \bg_type[2]_i_1 
-       (.I0(\bg_reg0_reg[3] [2]),
+       (.I0(\slv_reg3_reg[3] [2]),
         .I1(\bg_type[3]_i_3_n_0 ),
         .I2(\bg_type[2]_i_2_n_0 ),
         .I3(\bg_type[3]_i_5_n_0 ),
         .I4(\bg_type[2]_i_3_n_0 ),
         .O(\bg_type_reg[3] [2]));
   LUT6 #(
-    .INIT(64'h0000B1BBFFFFB1BB)) 
+    .INIT(64'h7747004777477747)) 
     \bg_type[2]_i_2 
-       (.I0(\bg_type[3]_i_8_n_0 ),
-        .I1(\bg_reg5_reg[3] [2]),
-        .I2(\bg_type[3]_i_9_n_0 ),
-        .I3(\bg_reg6_reg[3] [2]),
-        .I4(\bg_type[3]_i_10_n_0 ),
-        .I5(\bg_reg4_reg[3] [2]),
+       (.I0(\bg_reg3_reg[3] [2]),
+        .I1(\bg_type[3]_i_10_n_0 ),
+        .I2(\bg_reg4_reg[3] [2]),
+        .I3(\bg_type[3]_i_8_n_0 ),
+        .I4(\bg_type[3]_i_9_n_0 ),
+        .I5(\bg_reg5_reg[3] [2]),
         .O(\bg_type[2]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h0000B1BBFFFFB1BB)) 
     \bg_type[2]_i_3 
        (.I0(\bg_type[3]_i_12_n_0 ),
-        .I1(\bg_reg2_reg[3] [2]),
+        .I1(\bg_reg1_reg[3] [2]),
         .I2(\bg_type[3]_i_3_n_0 ),
-        .I3(\bg_reg3_reg[3] [2]),
+        .I3(\bg_reg2_reg[3] [2]),
         .I4(\bg_type[3]_i_13_n_0 ),
-        .I5(\bg_reg1_reg[3] [2]),
+        .I5(\bg_reg0_reg[3] [2]),
         .O(\bg_type[2]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h5555555545555555)) 
@@ -952,7 +1085,7 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
   LUT5 #(
     .INIT(32'h0CAEFFAE)) 
     \bg_type[3]_i_2 
-       (.I0(\bg_reg0_reg[3] [3]),
+       (.I0(\slv_reg3_reg[3] [3]),
         .I1(\bg_type[3]_i_3_n_0 ),
         .I2(\bg_type[3]_i_4_n_0 ),
         .I3(\bg_type[3]_i_5_n_0 ),
@@ -972,11 +1105,11 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
     .INIT(64'h0000B1BBFFFFB1BB)) 
     \bg_type[3]_i_4 
        (.I0(\bg_type[3]_i_8_n_0 ),
-        .I1(\bg_reg5_reg[3] [3]),
+        .I1(\bg_reg4_reg[3] [3]),
         .I2(\bg_type[3]_i_9_n_0 ),
-        .I3(\bg_reg6_reg[3] [3]),
+        .I3(\bg_reg5_reg[3] [3]),
         .I4(\bg_type[3]_i_10_n_0 ),
-        .I5(\bg_reg4_reg[3] [3]),
+        .I5(\bg_reg3_reg[3] [3]),
         .O(\bg_type[3]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
@@ -991,11 +1124,11 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
     .INIT(64'h0000B1BBFFFFB1BB)) 
     \bg_type[3]_i_6 
        (.I0(\bg_type[3]_i_12_n_0 ),
-        .I1(\bg_reg2_reg[3] [3]),
+        .I1(\bg_reg1_reg[3] [3]),
         .I2(\bg_type[3]_i_3_n_0 ),
-        .I3(\bg_reg3_reg[3] [3]),
+        .I3(\bg_reg2_reg[3] [3]),
         .I4(\bg_type[3]_i_13_n_0 ),
-        .I5(\bg_reg1_reg[3] [3]),
+        .I5(\bg_reg0_reg[3] [3]),
         .O(\bg_type[3]_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
@@ -1856,6 +1989,7 @@ module microblaze_Video_Controller_4regs_0_0_Timing_counter
         .R(\vc[10]_i_1_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "Video_Controller_4regs_v1" *) 
 module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1
    (S_AXI_AWREADY,
     S_AXI_WREADY,
@@ -1966,6 +2100,7 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1
         .vsync_out(vsync_out));
 endmodule
 
+(* ORIG_REF_NAME = "Video_Controller_4regs_v1_S00_AXI" *) 
 module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
    (S_AXI_AWREADY,
     S_AXI_WREADY,
@@ -2053,98 +2188,95 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
   wire [3:0]bg_reg1;
   wire bg_reg1_reg_r_n_0;
   wire [3:0]bg_reg2;
+  wire \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
+  wire \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ;
   wire bg_reg2_reg_r_n_0;
   wire [3:0]bg_reg3;
+  wire \bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire \bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ;
+  wire bg_reg3_reg_gate__0_n_0;
+  wire bg_reg3_reg_gate__10_n_0;
+  wire bg_reg3_reg_gate__11_n_0;
+  wire bg_reg3_reg_gate__12_n_0;
+  wire bg_reg3_reg_gate__13_n_0;
+  wire bg_reg3_reg_gate__14_n_0;
+  wire bg_reg3_reg_gate__15_n_0;
+  wire bg_reg3_reg_gate__16_n_0;
+  wire bg_reg3_reg_gate__17_n_0;
+  wire bg_reg3_reg_gate__18_n_0;
+  wire bg_reg3_reg_gate__19_n_0;
+  wire bg_reg3_reg_gate__1_n_0;
+  wire bg_reg3_reg_gate__20_n_0;
+  wire bg_reg3_reg_gate__21_n_0;
+  wire bg_reg3_reg_gate__22_n_0;
+  wire bg_reg3_reg_gate__23_n_0;
+  wire bg_reg3_reg_gate__24_n_0;
+  wire bg_reg3_reg_gate__25_n_0;
+  wire bg_reg3_reg_gate__26_n_0;
+  wire bg_reg3_reg_gate__2_n_0;
+  wire bg_reg3_reg_gate__3_n_0;
+  wire bg_reg3_reg_gate__4_n_0;
+  wire bg_reg3_reg_gate__5_n_0;
+  wire bg_reg3_reg_gate__6_n_0;
+  wire bg_reg3_reg_gate__7_n_0;
+  wire bg_reg3_reg_gate__8_n_0;
+  wire bg_reg3_reg_gate__9_n_0;
+  wire bg_reg3_reg_gate_n_0;
   wire bg_reg3_reg_r_n_0;
-  wire [3:0]bg_reg4;
-  wire \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ;
-  wire bg_reg4_reg_r_n_0;
+  wire [31:0]bg_reg4;
   wire [3:0]bg_reg5;
-  wire \bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire \bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ;
-  wire bg_reg5_reg_gate__0_n_0;
-  wire bg_reg5_reg_gate__10_n_0;
-  wire bg_reg5_reg_gate__11_n_0;
-  wire bg_reg5_reg_gate__12_n_0;
-  wire bg_reg5_reg_gate__13_n_0;
-  wire bg_reg5_reg_gate__14_n_0;
-  wire bg_reg5_reg_gate__15_n_0;
-  wire bg_reg5_reg_gate__16_n_0;
-  wire bg_reg5_reg_gate__17_n_0;
-  wire bg_reg5_reg_gate__18_n_0;
-  wire bg_reg5_reg_gate__19_n_0;
-  wire bg_reg5_reg_gate__1_n_0;
-  wire bg_reg5_reg_gate__20_n_0;
-  wire bg_reg5_reg_gate__21_n_0;
-  wire bg_reg5_reg_gate__22_n_0;
-  wire bg_reg5_reg_gate__23_n_0;
-  wire bg_reg5_reg_gate__24_n_0;
-  wire bg_reg5_reg_gate__25_n_0;
-  wire bg_reg5_reg_gate__26_n_0;
-  wire bg_reg5_reg_gate__2_n_0;
-  wire bg_reg5_reg_gate__3_n_0;
-  wire bg_reg5_reg_gate__4_n_0;
-  wire bg_reg5_reg_gate__5_n_0;
-  wire bg_reg5_reg_gate__6_n_0;
-  wire bg_reg5_reg_gate__7_n_0;
-  wire bg_reg5_reg_gate__8_n_0;
-  wire bg_reg5_reg_gate__9_n_0;
-  wire bg_reg5_reg_gate_n_0;
-  wire bg_reg5_reg_r_n_0;
-  wire [31:0]bg_reg6;
   wire \buff_reg1_reg_n_0_[10] ;
   wire \buff_reg1_reg_n_0_[11] ;
   wire \buff_reg1_reg_n_0_[12] ;
@@ -2576,323 +2708,323 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .Q(s00_axi_bvalid),
         .R(\_rgb_out[11]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[0]_i_1 
-       (.I0(slv_reg1[0]),
-        .I1(slv_reg0[0]),
+       (.I0(slv_reg0[0]),
+        .I1(slv_reg1[0]),
         .I2(slv_reg3[0]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[0]),
         .O(reg_data_out[0]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[10]_i_1 
-       (.I0(slv_reg1[10]),
-        .I1(slv_reg0[10]),
-        .I2(slv_reg3[10]),
+       (.I0(slv_reg0[10]),
+        .I1(slv_reg1[10]),
+        .I2(slv_reg2[10]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[10]),
+        .I5(slv_reg3[10]),
         .O(reg_data_out[10]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[11]_i_1 
-       (.I0(slv_reg1[11]),
-        .I1(slv_reg0[11]),
+       (.I0(slv_reg0[11]),
+        .I1(slv_reg1[11]),
         .I2(slv_reg3[11]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[11]),
         .O(reg_data_out[11]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[12]_i_1 
-       (.I0(slv_reg1[12]),
-        .I1(slv_reg0[12]),
+       (.I0(slv_reg0[12]),
+        .I1(slv_reg1[12]),
         .I2(slv_reg3[12]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[12]),
         .O(reg_data_out[12]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[13]_i_1 
-       (.I0(slv_reg1[13]),
-        .I1(slv_reg0[13]),
+       (.I0(slv_reg0[13]),
+        .I1(slv_reg1[13]),
         .I2(slv_reg3[13]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[13]),
         .O(reg_data_out[13]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[14]_i_1 
-       (.I0(slv_reg1[14]),
-        .I1(slv_reg0[14]),
-        .I2(slv_reg3[14]),
+       (.I0(slv_reg0[14]),
+        .I1(slv_reg1[14]),
+        .I2(slv_reg2[14]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[14]),
+        .I5(slv_reg3[14]),
         .O(reg_data_out[14]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[15]_i_1 
-       (.I0(slv_reg1[15]),
-        .I1(slv_reg0[15]),
+       (.I0(slv_reg0[15]),
+        .I1(slv_reg1[15]),
         .I2(slv_reg3[15]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[15]),
         .O(reg_data_out[15]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCAAF000CCAAF0)) 
     \axi_rdata[16]_i_1 
        (.I0(slv_reg1[16]),
-        .I1(slv_reg0[16]),
-        .I2(slv_reg3[16]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(slv_reg2[16]),
+        .I1(slv_reg2[16]),
+        .I2(slv_reg0[16]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
+        .I5(slv_reg3[16]),
         .O(reg_data_out[16]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[17]_i_1 
-       (.I0(slv_reg1[17]),
-        .I1(slv_reg0[17]),
+       (.I0(slv_reg0[17]),
+        .I1(slv_reg1[17]),
         .I2(slv_reg3[17]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[17]),
         .O(reg_data_out[17]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[18]_i_1 
-       (.I0(slv_reg1[18]),
-        .I1(slv_reg0[18]),
-        .I2(slv_reg3[18]),
+       (.I0(slv_reg0[18]),
+        .I1(slv_reg1[18]),
+        .I2(slv_reg2[18]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[18]),
+        .I5(slv_reg3[18]),
         .O(reg_data_out[18]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[19]_i_1 
-       (.I0(slv_reg1[19]),
-        .I1(slv_reg0[19]),
+       (.I0(slv_reg0[19]),
+        .I1(slv_reg1[19]),
         .I2(slv_reg3[19]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[19]),
         .O(reg_data_out[19]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hCCFFAAF0CC00AAF0)) 
     \axi_rdata[1]_i_1 
        (.I0(slv_reg1[1]),
-        .I1(slv_reg0[1]),
-        .I2(slv_reg3[1]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I1(slv_reg3[1]),
+        .I2(slv_reg0[1]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[1]),
         .O(reg_data_out[1]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[20]_i_1 
-       (.I0(slv_reg1[20]),
-        .I1(slv_reg0[20]),
+       (.I0(slv_reg0[20]),
+        .I1(slv_reg1[20]),
         .I2(slv_reg3[20]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[20]),
         .O(reg_data_out[20]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[21]_i_1 
-       (.I0(slv_reg1[21]),
-        .I1(slv_reg0[21]),
+       (.I0(slv_reg0[21]),
+        .I1(slv_reg1[21]),
         .I2(slv_reg3[21]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[21]),
         .O(reg_data_out[21]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[22]_i_1 
-       (.I0(slv_reg1[22]),
-        .I1(slv_reg0[22]),
-        .I2(slv_reg3[22]),
+       (.I0(slv_reg0[22]),
+        .I1(slv_reg1[22]),
+        .I2(slv_reg2[22]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[22]),
+        .I5(slv_reg3[22]),
         .O(reg_data_out[22]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[23]_i_1 
-       (.I0(slv_reg1[23]),
-        .I1(slv_reg0[23]),
+       (.I0(slv_reg0[23]),
+        .I1(slv_reg1[23]),
         .I2(slv_reg3[23]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[23]),
         .O(reg_data_out[23]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCAAF000CCAAF0)) 
     \axi_rdata[24]_i_1 
        (.I0(slv_reg1[24]),
-        .I1(slv_reg0[24]),
-        .I2(slv_reg3[24]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(slv_reg2[24]),
+        .I1(slv_reg2[24]),
+        .I2(slv_reg0[24]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
+        .I5(slv_reg3[24]),
         .O(reg_data_out[24]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[25]_i_1 
-       (.I0(slv_reg1[25]),
-        .I1(slv_reg0[25]),
+       (.I0(slv_reg0[25]),
+        .I1(slv_reg1[25]),
         .I2(slv_reg3[25]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[25]),
         .O(reg_data_out[25]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[26]_i_1 
-       (.I0(slv_reg1[26]),
-        .I1(slv_reg0[26]),
-        .I2(slv_reg3[26]),
+       (.I0(slv_reg0[26]),
+        .I1(slv_reg1[26]),
+        .I2(slv_reg2[26]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[26]),
+        .I5(slv_reg3[26]),
         .O(reg_data_out[26]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[27]_i_1 
-       (.I0(slv_reg1[27]),
-        .I1(slv_reg0[27]),
+       (.I0(slv_reg0[27]),
+        .I1(slv_reg1[27]),
         .I2(slv_reg3[27]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[27]),
         .O(reg_data_out[27]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[28]_i_1 
-       (.I0(slv_reg1[28]),
-        .I1(slv_reg0[28]),
+       (.I0(slv_reg0[28]),
+        .I1(slv_reg1[28]),
         .I2(slv_reg3[28]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[28]),
         .O(reg_data_out[28]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[29]_i_1 
-       (.I0(slv_reg1[29]),
-        .I1(slv_reg0[29]),
+       (.I0(slv_reg0[29]),
+        .I1(slv_reg1[29]),
         .I2(slv_reg3[29]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[29]),
         .O(reg_data_out[29]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCAAF000CCAAF0)) 
     \axi_rdata[2]_i_1 
        (.I0(slv_reg1[2]),
-        .I1(slv_reg0[2]),
-        .I2(slv_reg3[2]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(slv_reg2[2]),
+        .I1(slv_reg2[2]),
+        .I2(slv_reg0[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
+        .I5(slv_reg3[2]),
         .O(reg_data_out[2]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[30]_i_1 
-       (.I0(slv_reg1[30]),
-        .I1(slv_reg0[30]),
-        .I2(slv_reg3[30]),
+       (.I0(slv_reg0[30]),
+        .I1(slv_reg1[30]),
+        .I2(slv_reg2[30]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[30]),
+        .I5(slv_reg3[30]),
         .O(reg_data_out[30]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[31]_i_1 
-       (.I0(slv_reg1[31]),
-        .I1(slv_reg0[31]),
-        .I2(slv_reg3[31]),
+       (.I0(slv_reg0[31]),
+        .I1(slv_reg1[31]),
+        .I2(slv_reg2[31]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[31]),
+        .I5(slv_reg3[31]),
         .O(reg_data_out[31]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[3]_i_1 
-       (.I0(slv_reg1[3]),
-        .I1(slv_reg0[3]),
+       (.I0(slv_reg0[3]),
+        .I1(slv_reg1[3]),
         .I2(slv_reg3[3]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[3]),
         .O(reg_data_out[3]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[4]_i_1 
-       (.I0(slv_reg1[4]),
-        .I1(slv_reg0[4]),
+       (.I0(slv_reg0[4]),
+        .I1(slv_reg1[4]),
         .I2(slv_reg3[4]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[4]),
         .O(reg_data_out[4]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[5]_i_1 
-       (.I0(slv_reg1[5]),
-        .I1(slv_reg0[5]),
+       (.I0(slv_reg0[5]),
+        .I1(slv_reg1[5]),
         .I2(slv_reg3[5]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[5]),
         .O(reg_data_out[5]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCF0AA00CCF0AA)) 
     \axi_rdata[6]_i_1 
-       (.I0(slv_reg1[6]),
-        .I1(slv_reg0[6]),
-        .I2(slv_reg3[6]),
+       (.I0(slv_reg0[6]),
+        .I1(slv_reg1[6]),
+        .I2(slv_reg2[6]),
         .I3(axi_araddr[3]),
         .I4(axi_araddr[2]),
-        .I5(slv_reg2[6]),
+        .I5(slv_reg3[6]),
         .O(reg_data_out[6]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[7]_i_1 
-       (.I0(slv_reg1[7]),
-        .I1(slv_reg0[7]),
+       (.I0(slv_reg0[7]),
+        .I1(slv_reg1[7]),
         .I2(slv_reg3[7]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[7]),
         .O(reg_data_out[7]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hFFCCAAF000CCAAF0)) 
     \axi_rdata[8]_i_1 
        (.I0(slv_reg1[8]),
-        .I1(slv_reg0[8]),
-        .I2(slv_reg3[8]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(slv_reg2[8]),
+        .I1(slv_reg2[8]),
+        .I2(slv_reg0[8]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
+        .I5(slv_reg3[8]),
         .O(reg_data_out[8]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[9]_i_1 
-       (.I0(slv_reg1[9]),
-        .I1(slv_reg0[9]),
+       (.I0(slv_reg0[9]),
+        .I1(slv_reg1[9]),
         .I2(slv_reg3[9]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
+        .I3(axi_araddr[2]),
+        .I4(axi_araddr[3]),
         .I5(slv_reg2[9]),
         .O(reg_data_out[9]));
   FDRE \axi_rdata_reg[0] 
@@ -3130,71 +3262,71 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     bg_filled_i_2
        (.I0(bg_filled_i_4_n_0),
-        .I1(bg_reg6[27]),
-        .I2(bg_reg6[24]),
-        .I3(bg_reg6[5]),
-        .I4(bg_reg6[4]),
+        .I1(bg_reg4[29]),
+        .I2(bg_reg4[3]),
+        .I3(bg_reg4[31]),
+        .I4(bg_reg4[24]),
         .I5(bg_filled_i_5_n_0),
         .O(bg_filled_i_2_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     bg_filled_i_3
        (.I0(bg_filled_i_6_n_0),
-        .I1(bg_reg6[30]),
-        .I2(bg_reg6[16]),
-        .I3(bg_reg6[12]),
-        .I4(bg_reg6[10]),
+        .I1(bg_reg4[30]),
+        .I2(bg_reg4[16]),
+        .I3(bg_reg4[12]),
+        .I4(bg_reg4[10]),
         .I5(bg_filled_i_7_n_0),
         .O(bg_filled_i_3_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     bg_filled_i_4
-       (.I0(bg_reg6[29]),
-        .I1(bg_reg6[7]),
-        .I2(bg_reg6[31]),
-        .I3(bg_reg6[3]),
+       (.I0(bg_reg4[14]),
+        .I1(bg_reg4[9]),
+        .I2(bg_reg4[8]),
+        .I3(bg_reg4[7]),
         .O(bg_filled_i_4_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     bg_filled_i_5
-       (.I0(bg_reg6[6]),
-        .I1(bg_reg6[9]),
-        .I2(bg_reg6[15]),
-        .I3(bg_reg6[23]),
+       (.I0(bg_reg4[0]),
+        .I1(bg_reg4[23]),
+        .I2(bg_reg4[1]),
+        .I3(bg_reg4[17]),
         .I4(bg_filled_i_8_n_0),
         .O(bg_filled_i_5_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     bg_filled_i_6
-       (.I0(bg_reg6[28]),
-        .I1(bg_reg6[11]),
-        .I2(bg_reg6[20]),
-        .I3(bg_reg6[18]),
+       (.I0(bg_reg4[28]),
+        .I1(bg_reg4[11]),
+        .I2(bg_reg4[20]),
+        .I3(bg_reg4[18]),
         .O(bg_filled_i_6_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     bg_filled_i_7
-       (.I0(bg_reg6[8]),
-        .I1(bg_reg6[14]),
-        .I2(bg_reg6[19]),
-        .I3(bg_reg6[21]),
+       (.I0(bg_reg4[6]),
+        .I1(bg_reg4[15]),
+        .I2(bg_reg4[19]),
+        .I3(bg_reg4[21]),
         .I4(bg_filled_i_9_n_0),
         .O(bg_filled_i_7_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     bg_filled_i_8
-       (.I0(bg_reg6[2]),
-        .I1(bg_reg6[1]),
-        .I2(bg_reg6[17]),
-        .I3(bg_reg6[0]),
+       (.I0(bg_reg4[27]),
+        .I1(bg_reg4[5]),
+        .I2(bg_reg4[4]),
+        .I3(bg_reg4[2]),
         .O(bg_filled_i_8_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     bg_filled_i_9
-       (.I0(bg_reg6[26]),
-        .I1(bg_reg6[13]),
-        .I2(bg_reg6[25]),
-        .I3(bg_reg6[22]),
+       (.I0(bg_reg4[26]),
+        .I1(bg_reg4[13]),
+        .I2(bg_reg4[25]),
+        .I3(bg_reg4[22]),
         .O(bg_filled_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -3298,6 +3430,136 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg1[0]),
         .Q(bg_reg2[0]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[10]),
+        .Q(\bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[11]),
+        .Q(\bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[12]),
+        .Q(\bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[13]),
+        .Q(\bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[14]),
+        .Q(\bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[15]),
+        .Q(\bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[16]),
+        .Q(\bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[17]),
+        .Q(\bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[18]),
+        .Q(\bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[19]),
+        .Q(\bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg2_reg[1] 
@@ -3306,6 +3568,136 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg1[1]),
         .Q(bg_reg2[1]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[20]),
+        .Q(\bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[21]),
+        .Q(\bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[22]),
+        .Q(\bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[23]),
+        .Q(\bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[24]),
+        .Q(\bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[25]),
+        .Q(\bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[26]),
+        .Q(\bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[27]),
+        .Q(\bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[28]),
+        .Q(\bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[29]),
+        .Q(\bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg2_reg[2] 
@@ -3314,6 +3706,32 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg1[2]),
         .Q(bg_reg2[2]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[30]),
+        .Q(\bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[31]),
+        .Q(\bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg2_reg[3] 
@@ -3322,6 +3740,84 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg1[3]),
         .Q(bg_reg2[3]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[4]),
+        .Q(\bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[5]),
+        .Q(\bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[6]),
+        .Q(\bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[7]),
+        .Q(\bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[8]),
+        .Q(\bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
+  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg " *) 
+  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r 
+       (.A0(1'b0),
+        .A1(1'b1),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(bg_reg0_0),
+        .CLK(s00_axi_aclk),
+        .D(slv_reg3[9]),
+        .Q(\bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ));
   FDRE bg_reg2_reg_r
        (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
@@ -3336,6 +3832,66 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg2[0]),
         .Q(bg_reg3[0]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[10]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[11]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[12]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[13]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[14]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[15]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[16]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[17]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[18]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[19]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg3_reg[1] 
@@ -3344,6 +3900,66 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg2[1]),
         .Q(bg_reg3[1]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[20]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[21]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[22]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[23]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[24]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[25]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[26]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[28]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[29]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg3_reg[2] 
@@ -3352,6 +3968,18 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg2[2]),
         .Q(bg_reg3[2]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[30]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[31]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg3_reg[3] 
@@ -3360,6 +3988,238 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg2[3]),
         .Q(bg_reg3[3]),
         .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[4]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[5]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[6]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[7]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[8]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  FDRE \bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(\bg_reg2_reg[9]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r_n_0 ),
+        .Q(\bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate
+       (.I0(\bg_reg3_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__0
+       (.I0(\bg_reg3_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__0_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__1
+       (.I0(\bg_reg3_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__10
+       (.I0(\bg_reg3_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__10_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__11
+       (.I0(\bg_reg3_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__11_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__12
+       (.I0(\bg_reg3_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__12_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__13
+       (.I0(\bg_reg3_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__13_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__14
+       (.I0(\bg_reg3_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__14_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__15
+       (.I0(\bg_reg3_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__15_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__16
+       (.I0(\bg_reg3_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__16_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__17
+       (.I0(\bg_reg3_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__17_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__18
+       (.I0(\bg_reg3_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__18_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__19
+       (.I0(\bg_reg3_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__19_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__2
+       (.I0(\bg_reg3_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__20
+       (.I0(\bg_reg3_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__20_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__21
+       (.I0(\bg_reg3_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__21_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__22
+       (.I0(\bg_reg3_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__22_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__23
+       (.I0(\bg_reg3_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__23_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__24
+       (.I0(\bg_reg3_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__24_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__25
+       (.I0(\bg_reg3_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__25_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__26
+       (.I0(\bg_reg3_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__26_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__3
+       (.I0(\bg_reg3_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__4
+       (.I0(\bg_reg3_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__4_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__5
+       (.I0(\bg_reg3_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__5_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__6
+       (.I0(\bg_reg3_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__6_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__7
+       (.I0(\bg_reg3_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__7_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__8
+       (.I0(\bg_reg3_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    bg_reg3_reg_gate__9
+       (.I0(\bg_reg3_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg3_reg_r_n_0 ),
+        .I1(bg_reg3_reg_r_n_0),
+        .O(bg_reg3_reg_gate__9_n_0));
   FDRE bg_reg3_reg_r
        (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
@@ -3374,136 +4234,66 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg3[0]),
         .Q(bg_reg4[0]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+  FDRE \bg_reg4_reg[10] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[10]),
-        .Q(\bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__20_n_0),
+        .Q(bg_reg4[10]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[11] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[11]),
-        .Q(\bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__19_n_0),
+        .Q(bg_reg4[11]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[12] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[12]),
-        .Q(\bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__18_n_0),
+        .Q(bg_reg4[12]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[13] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[13]),
-        .Q(\bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__17_n_0),
+        .Q(bg_reg4[13]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[14] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[14]),
-        .Q(\bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__16_n_0),
+        .Q(bg_reg4[14]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[15] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[15]),
-        .Q(\bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__15_n_0),
+        .Q(bg_reg4[15]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[16] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[16]),
-        .Q(\bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__14_n_0),
+        .Q(bg_reg4[16]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[17] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[17]),
-        .Q(\bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__13_n_0),
+        .Q(bg_reg4[17]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[18] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[18]),
-        .Q(\bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__12_n_0),
+        .Q(bg_reg4[18]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[19] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[19]),
-        .Q(\bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
+        .D(bg_reg3_reg_gate__11_n_0),
+        .Q(bg_reg4[19]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg4_reg[1] 
@@ -3512,136 +4302,66 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg3[1]),
         .Q(bg_reg4[1]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+  FDRE \bg_reg4_reg[20] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[20]),
-        .Q(\bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__10_n_0),
+        .Q(bg_reg4[20]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[21] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[21]),
-        .Q(\bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__9_n_0),
+        .Q(bg_reg4[21]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[22] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[22]),
-        .Q(\bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__8_n_0),
+        .Q(bg_reg4[22]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[23] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[23]),
-        .Q(\bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__7_n_0),
+        .Q(bg_reg4[23]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[24] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[24]),
-        .Q(\bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__6_n_0),
+        .Q(bg_reg4[24]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[25] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[25]),
-        .Q(\bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__5_n_0),
+        .Q(bg_reg4[25]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[26] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[26]),
-        .Q(\bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__4_n_0),
+        .Q(bg_reg4[26]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[27] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[27]),
-        .Q(\bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__3_n_0),
+        .Q(bg_reg4[27]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[28] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[28]),
-        .Q(\bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__2_n_0),
+        .Q(bg_reg4[28]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[29] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[29]),
-        .Q(\bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
+        .D(bg_reg3_reg_gate__1_n_0),
+        .Q(bg_reg4[29]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg4_reg[2] 
@@ -3650,32 +4370,18 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg3[2]),
         .Q(bg_reg4[2]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+  FDRE \bg_reg4_reg[30] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[30]),
-        .Q(\bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
+        .D(bg_reg3_reg_gate__0_n_0),
+        .Q(bg_reg4[30]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[31] 
+       (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[31]),
-        .Q(\bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
+        .D(bg_reg3_reg_gate_n_0),
+        .Q(bg_reg4[31]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg4_reg[3] 
@@ -3684,89 +4390,41 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg3[3]),
         .Q(bg_reg4[3]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
-        .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[4]),
-        .Q(\bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
-        .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[5]),
-        .Q(\bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
-        .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[6]),
-        .Q(\bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
-        .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[7]),
-        .Q(\bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
-        .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[8]),
-        .Q(\bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  (* srl_bus_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg " *) 
-  (* srl_name = "\inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r 
-       (.A0(1'b0),
-        .A1(1'b0),
-        .A2(1'b1),
-        .A3(1'b0),
-        .CE(bg_reg0_0),
-        .CLK(s00_axi_aclk),
-        .D(slv_reg3[9]),
-        .Q(\bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ));
-  FDRE bg_reg4_reg_r
+  FDRE \bg_reg4_reg[4] 
        (.C(s00_axi_aclk),
         .CE(bg_reg0_0),
-        .D(bg_reg3_reg_r_n_0),
-        .Q(bg_reg4_reg_r_n_0),
+        .D(bg_reg3_reg_gate__26_n_0),
+        .Q(bg_reg4[4]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[5] 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(bg_reg3_reg_gate__25_n_0),
+        .Q(bg_reg4[5]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[6] 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(bg_reg3_reg_gate__24_n_0),
+        .Q(bg_reg4[6]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[7] 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(bg_reg3_reg_gate__23_n_0),
+        .Q(bg_reg4[7]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(bg_reg3_reg_gate__22_n_0),
+        .Q(bg_reg4[8]),
+        .R(\_rgb_out[11]_i_1_n_0 ));
+  FDRE \bg_reg4_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(bg_reg0_0),
+        .D(bg_reg3_reg_gate__21_n_0),
+        .Q(bg_reg4[9]),
         .R(\_rgb_out[11]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -3776,66 +4434,6 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg4[0]),
         .Q(bg_reg5[0]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[10]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[11]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[12]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[13]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[14]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[15]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[16]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[17]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[18]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[19]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg5_reg[1] 
@@ -3844,66 +4442,6 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg4[1]),
         .Q(bg_reg5[1]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[20]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[21]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[22]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[23]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[24]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[25]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[26]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[27]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[28]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[29]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg5_reg[2] 
@@ -3912,18 +4450,6 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .D(bg_reg4[2]),
         .Q(bg_reg5[2]),
         .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[30]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[31]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \bg_reg5_reg[3] 
@@ -3931,444 +4457,6 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .CE(bg_reg0_0),
         .D(bg_reg4[3]),
         .Q(bg_reg5[3]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[4]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[5]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[6]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[7]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[8]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  FDRE \bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(\bg_reg4_reg[9]_srl5___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg4_reg_r_n_0 ),
-        .Q(\bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate
-       (.I0(\bg_reg5_reg[31]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__0
-       (.I0(\bg_reg5_reg[30]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__1
-       (.I0(\bg_reg5_reg[29]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__10
-       (.I0(\bg_reg5_reg[20]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__10_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__11
-       (.I0(\bg_reg5_reg[19]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__11_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__12
-       (.I0(\bg_reg5_reg[18]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__12_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__13
-       (.I0(\bg_reg5_reg[17]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__13_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__14
-       (.I0(\bg_reg5_reg[16]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__14_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__15
-       (.I0(\bg_reg5_reg[15]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__16
-       (.I0(\bg_reg5_reg[14]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__16_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__17
-       (.I0(\bg_reg5_reg[13]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__18
-       (.I0(\bg_reg5_reg[12]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__18_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__19
-       (.I0(\bg_reg5_reg[11]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__19_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__2
-       (.I0(\bg_reg5_reg[28]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__20
-       (.I0(\bg_reg5_reg[10]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__20_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__21
-       (.I0(\bg_reg5_reg[9]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__21_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__22
-       (.I0(\bg_reg5_reg[8]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__22_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__23
-       (.I0(\bg_reg5_reg[7]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__23_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__24
-       (.I0(\bg_reg5_reg[6]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__24_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__25
-       (.I0(\bg_reg5_reg[5]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__25_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__26
-       (.I0(\bg_reg5_reg[4]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__26_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__3
-       (.I0(\bg_reg5_reg[27]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__4
-       (.I0(\bg_reg5_reg[26]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__5
-       (.I0(\bg_reg5_reg[25]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__6
-       (.I0(\bg_reg5_reg[24]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__7
-       (.I0(\bg_reg5_reg[23]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__8
-       (.I0(\bg_reg5_reg[22]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    bg_reg5_reg_gate__9
-       (.I0(\bg_reg5_reg[21]_inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg5_reg_r_n_0 ),
-        .I1(bg_reg5_reg_r_n_0),
-        .O(bg_reg5_reg_gate__9_n_0));
-  FDRE bg_reg5_reg_r
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg4_reg_r_n_0),
-        .Q(bg_reg5_reg_r_n_0),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bg_reg6_reg[0] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5[0]),
-        .Q(bg_reg6[0]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[10] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__20_n_0),
-        .Q(bg_reg6[10]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[11] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__19_n_0),
-        .Q(bg_reg6[11]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[12] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__18_n_0),
-        .Q(bg_reg6[12]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[13] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__17_n_0),
-        .Q(bg_reg6[13]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[14] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__16_n_0),
-        .Q(bg_reg6[14]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[15] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__15_n_0),
-        .Q(bg_reg6[15]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[16] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__14_n_0),
-        .Q(bg_reg6[16]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[17] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__13_n_0),
-        .Q(bg_reg6[17]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[18] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__12_n_0),
-        .Q(bg_reg6[18]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[19] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__11_n_0),
-        .Q(bg_reg6[19]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bg_reg6_reg[1] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5[1]),
-        .Q(bg_reg6[1]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[20] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__10_n_0),
-        .Q(bg_reg6[20]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[21] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__9_n_0),
-        .Q(bg_reg6[21]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[22] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__8_n_0),
-        .Q(bg_reg6[22]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[23] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__7_n_0),
-        .Q(bg_reg6[23]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[24] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__6_n_0),
-        .Q(bg_reg6[24]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[25] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__5_n_0),
-        .Q(bg_reg6[25]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[26] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__4_n_0),
-        .Q(bg_reg6[26]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[27] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__3_n_0),
-        .Q(bg_reg6[27]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[28] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__2_n_0),
-        .Q(bg_reg6[28]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[29] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__1_n_0),
-        .Q(bg_reg6[29]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bg_reg6_reg[2] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5[2]),
-        .Q(bg_reg6[2]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[30] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__0_n_0),
-        .Q(bg_reg6[30]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[31] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate_n_0),
-        .Q(bg_reg6[31]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bg_reg6_reg[3] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5[3]),
-        .Q(bg_reg6[3]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[4] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__26_n_0),
-        .Q(bg_reg6[4]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[5] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__25_n_0),
-        .Q(bg_reg6[5]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[6] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__24_n_0),
-        .Q(bg_reg6[6]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[7] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__23_n_0),
-        .Q(bg_reg6[7]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[8] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__22_n_0),
-        .Q(bg_reg6[8]),
-        .R(\_rgb_out[11]_i_1_n_0 ));
-  FDRE \bg_reg6_reg[9] 
-       (.C(s00_axi_aclk),
-        .CE(bg_reg0_0),
-        .D(bg_reg5_reg_gate__21_n_0),
-        .Q(bg_reg6[9]),
         .R(\_rgb_out[11]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -4572,15 +4660,15 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .\bg_reg1_reg[3] (bg_reg1),
         .\bg_reg2_reg[3] (bg_reg2),
         .\bg_reg3_reg[3] (bg_reg3),
-        .\bg_reg4_reg[3] (bg_reg4),
+        .\bg_reg4_reg[3] (bg_reg4[3:0]),
         .\bg_reg5_reg[3] (bg_reg5),
-        .\bg_reg6_reg[3] (bg_reg6[3:0]),
         .\bg_type_reg[3] ({pixel_counter_n_61,pixel_counter_n_62,pixel_counter_n_63,pixel_counter_n_64}),
         .fsync_in(fsync_in),
         .\hc_reg[10]_0 (nxt_pixel40_in),
         .\hc_reg[2]_0 (hc),
         .pclk(pclk),
         .s00_axi_aresetn(s00_axi_aresetn),
+        .\slv_reg3_reg[3] (slv_reg3[3:0]),
         .\vc_reg[10]_0 ({vc[10],vc[1:0]}),
         .\vc_reg[10]_1 (nxt_pixel3),
         .\vc_reg[9]_0 (player_frog_n_2));
@@ -5524,136 +5612,6 @@ module microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1_S00_AXI
         .I1(s00_axi_arvalid),
         .I2(S_AXI_ARREADY),
         .O(slv_reg_rden__0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "microblaze_Video_Controller_4regs_0_0,Video_Controller_4regs_v1,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "Video_Controller_4regs_v1,Vivado 2017.3" *) 
-(* NotValidForBitStream *)
-module microblaze_Video_Controller_4regs_0_0
-   (rgb_out,
-    hsync_out,
-    vsync_out,
-    pclk,
-    fsync_in,
-    hsync_in,
-    vsync_in,
-    hblank_in,
-    vblank_in,
-    s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready,
-    s00_axi_aclk,
-    s00_axi_aresetn);
-  output [11:0]rgb_out;
-  output hsync_out;
-  output vsync_out;
-  input pclk;
-  input fsync_in;
-  input hsync_in;
-  input vsync_in;
-  input hblank_in;
-  input vblank_in;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [3:0]s00_axi_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s00_axi_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input s00_axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
-
-  wire \<const0> ;
-  wire fsync_in;
-  wire hblank_in;
-  wire hsync_in;
-  wire hsync_out;
-  wire pclk;
-  wire [10:1]\^rgb_out ;
-  wire s00_axi_aclk;
-  wire [3:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [3:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-  wire vblank_in;
-  wire vsync_in;
-  wire vsync_out;
-
-  assign rgb_out[11] = \^rgb_out [2];
-  assign rgb_out[10:1] = \^rgb_out [10:1];
-  assign rgb_out[0] = \^rgb_out [2];
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  microblaze_Video_Controller_4regs_0_0_Video_Controller_4regs_v1 inst
-       (.S_AXI_ARREADY(s00_axi_arready),
-        .S_AXI_AWREADY(s00_axi_awready),
-        .S_AXI_WREADY(s00_axi_wready),
-        .fsync_in(fsync_in),
-        .hblank_in(hblank_in),
-        .hsync_in(hsync_in),
-        .hsync_out(hsync_out),
-        .pclk(pclk),
-        .rgb_out({\^rgb_out [2],\^rgb_out [10:3],\^rgb_out [1]}),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[3:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid),
-        .vblank_in(vblank_in),
-        .vsync_in(vsync_in),
-        .vsync_out(vsync_out));
 endmodule
 `ifndef GLBL
 `define GLBL

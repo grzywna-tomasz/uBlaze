@@ -28,16 +28,13 @@ void setFrogPosition(uint16_t pos_x, uint16_t pos_y){
 
 void setupBackground(){
 	//tiles displayed
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile7
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, TRAINWAY_TILE); //tile7
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, WATER_TILE); //tile6
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, WATER_TILE); //tile5
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile4
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile3
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile2
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile1
-
-	//fills weird outscreen buffer of size 1, no idea where it is
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE);
 }
 
 int main()
