@@ -553,11 +553,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jul 20 14:28:29 UTC 2019</spirit:value>
+            <spirit:value>Sun Jul 28 20:47:11 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:188e0831</spirit:value>
+            <spirit:value>7:46c59d71</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -572,11 +572,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jul 20 14:28:29 UTC 2019</spirit:value>
+            <spirit:value>Sun Jul 28 20:47:11 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:188e0831</spirit:value>
+            <spirit:value>7:46c59d71</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -591,11 +591,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jul 20 14:28:29 UTC 2019</spirit:value>
+            <spirit:value>Sun Jul 28 20:47:11 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:39df5cf6</spirit:value>
+            <spirit:value>7:87cedc12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -610,11 +610,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jul 20 14:28:29 UTC 2019</spirit:value>
+            <spirit:value>Sun Jul 28 20:47:11 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:39df5cf6</spirit:value>
+            <spirit:value>7:87cedc12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -628,11 +628,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Jul 20 14:29:38 UTC 2019</spirit:value>
+            <spirit:value>Sun Jul 28 20:48:45 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:188e0831</spirit:value>
+            <spirit:value>7:46c59d71</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1099,23 +1099,27 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Background_drawer.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Background_drawer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Frog_drawer.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Car_drawer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Timing_counter.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Frog_drawer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Video_Controller_4regs_v1_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Timing_counter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Video_Controller_4regs_v1.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Video_Controller_4regs_v1_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7040/hdl/Video_Controller_4regs_v1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1130,23 +1134,27 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Background_drawer.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Background_drawer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Frog_drawer.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Car_drawer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Timing_counter.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Frog_drawer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Video_Controller_4regs_v1_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Timing_counter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/91f5/hdl/Video_Controller_4regs_v1.v</spirit:name>
+        <spirit:name>../../ipshared/7040/hdl/Video_Controller_4regs_v1_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/7040/hdl/Video_Controller_4regs_v1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1255,7 +1263,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>Video_Controller_4regs_v1</xilinx:displayName>
-      <xilinx:coreRevision>23</xilinx:coreRevision>
+      <xilinx:coreRevision>27</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:Video_Controller_4regs:1_ARCHIVE_LOCATION">c:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1</xilinx:tag>
       </xilinx:tags>
@@ -1294,7 +1302,7 @@
       <xilinx:xilinxVersion>2017.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b1c5cd83"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0271e2fd"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="47c94d62"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="cacb7a22"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6992ea72"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="98a97afa"/>

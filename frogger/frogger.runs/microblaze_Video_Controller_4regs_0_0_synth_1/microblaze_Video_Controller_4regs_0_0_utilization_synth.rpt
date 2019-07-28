@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sat Jul 20 16:29:38 2019
+| Date         : Sun Jul 28 22:48:45 2019
 | Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file microblaze_Video_Controller_4regs_0_0_utilization_synth.rpt -pb microblaze_Video_Controller_4regs_0_0_utilization_synth.pb
 | Design       : microblaze_Video_Controller_4regs_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  216 |     0 |     20800 |  1.04 |
-|   LUT as Logic             |  188 |     0 |     20800 |  0.90 |
+| Slice LUTs*                |  224 |     0 |     20800 |  1.08 |
+|   LUT as Logic             |  196 |     0 |     20800 |  0.94 |
 |   LUT as Memory            |   28 |     0 |      9600 |  0.29 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   28 |     0 |           |       |
@@ -152,14 +152,14 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  325 |        Flop & Latch |
-| LUT4     |   81 |                 LUT |
-| LUT6     |   65 |                 LUT |
-| LUT2     |   65 |                 LUT |
+| LUT6     |   90 |                 LUT |
+| LUT4     |   77 |                 LUT |
+| LUT2     |   62 |                 LUT |
 | SRL16E   |   28 |  Distributed Memory |
-| LUT5     |   25 |                 LUT |
-| LUT3     |   10 |                 LUT |
+| LUT3     |   17 |                 LUT |
+| LUT5     |   11 |                 LUT |
 | CARRY4   |   10 |          CarryLogic |
-| LUT1     |    5 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 

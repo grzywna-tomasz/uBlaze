@@ -15,8 +15,9 @@
 //Background tiles
 #define GRASS_TILE 1
 #define HIGHWAY_TILE 2
-#define TRAINWAY_TILE 3
-#define WATER_TILE 4
+#define WATER_TILE 3
+#define TRAINWAY_TILE 4
+
 
 void setFrogPosition(uint16_t pos_x, uint16_t pos_y){
 	uint32_t pos_data;
@@ -29,7 +30,7 @@ void setFrogPosition(uint16_t pos_x, uint16_t pos_y){
 void setupBackground(){
 	//tiles displayed
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, TRAINWAY_TILE); //tile7
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, WATER_TILE); //tile6
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile6
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, WATER_TILE); //tile5
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile4
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile3
@@ -40,22 +41,22 @@ void setupBackground(){
 int main()
 {
 	setupBackground();
-	uint16_t frog_x = 100;
-	uint16_t frog_y = 100;
+	uint16_t frog_x = 12;
+	uint16_t frog_y = 56;
 	setFrogPosition(frog_x, frog_y);
 
 	while(1){
 
-		if((frog_x<900) && (frog_y == 100))
+		if((frog_x<912) && (frog_y == 56))
 			frog_x += 1;
-		else if((frog_x==900) && (frog_y < 600))
+		else if((frog_x==912) && (frog_y < 656))
 			frog_y += 1;
-		else if((frog_x>100) && (frog_y == 600))
+		else if((frog_x>12) && (frog_y == 656))
 			frog_x -= 1;
 		else
 			frog_y -= 1;
 
 		setFrogPosition(frog_x, frog_y);
-		usleep(1000);
+		usleep(2000);
 	}
 }

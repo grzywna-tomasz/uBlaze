@@ -233,14 +233,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports {reset_rtl_0}]
 
 
 ##VGA Connector
-set_property PACKAGE_PIN G19 [get_ports {VGA_RGB[0]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[0]}]
-set_property PACKAGE_PIN H19 [get_ports {VGA_RGB[1]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[1]}]
-set_property PACKAGE_PIN J19 [get_ports {VGA_RGB[2]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[2]}]
-set_property PACKAGE_PIN N19 [get_ports {VGA_RGB[3]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[3]}]
+#RED
+set_property PACKAGE_PIN G19 [get_ports {VGA_RGB[8]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[8]}]
+set_property PACKAGE_PIN H19 [get_ports {VGA_RGB[9]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[9]}]
+set_property PACKAGE_PIN J19 [get_ports {VGA_RGB[10]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[10]}]
+set_property PACKAGE_PIN N19 [get_ports {VGA_RGB[11]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[11]}]
+#GREEN
 set_property PACKAGE_PIN J17 [get_ports {VGA_RGB[4]}]				
 set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[4]}]
 set_property PACKAGE_PIN H17 [get_ports {VGA_RGB[5]}]        
@@ -249,14 +251,19 @@ set_property PACKAGE_PIN G17 [get_ports {VGA_RGB[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[6]}]
 set_property PACKAGE_PIN D17 [get_ports {VGA_RGB[7]}]        
 set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[7]}]
-set_property PACKAGE_PIN N18 [get_ports {VGA_RGB[8]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[8]}]
-set_property PACKAGE_PIN L18 [get_ports {VGA_RGB[9]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[9]}]
-set_property PACKAGE_PIN K18 [get_ports {VGA_RGB[10]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[10]}]
-set_property PACKAGE_PIN J18 [get_ports {VGA_RGB[11]}]				
-set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[11]}]
+#BLUE
+set_property PACKAGE_PIN N18 [get_ports {VGA_RGB[0]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[0]}]
+set_property PACKAGE_PIN L18 [get_ports {VGA_RGB[1]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[1]}]
+set_property PACKAGE_PIN K18 [get_ports {VGA_RGB[2]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[2]}]
+set_property PACKAGE_PIN J18 [get_ports {VGA_RGB[3]}]				
+set_property IOSTANDARD LVCMOS33 [get_ports {VGA_RGB[3]}]
+
+
+
+
 set_property PACKAGE_PIN P19 [get_ports Hsync]						
 set_property IOSTANDARD LVCMOS33 [get_ports Hsync]
 set_property PACKAGE_PIN R19 [get_ports Vsync]						
