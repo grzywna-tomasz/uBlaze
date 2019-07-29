@@ -1,0 +1,94 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "xparameters.h"
+#include "xil_io.h"
+#include "sleep.h"
+
+//Reg and control offsets
+#define VGA_CONTROL_BASEADDR XPAR_VIDEO_CONTROLLER_4REGS_0_S00_AXI_BASEADDR
+#define REG0_OFFSET 0
+#define REG1_OFFSET 4
+#define REG2_OFFSET 8
+#define REG3_OFFSET 12
+
+//Position offsets
+#define FRAME_SIZE_OFFSET 12
+#define TILE1_HEIGHT_OFFSET 56
+#define TILE2_HEIGHT_OFFSET 156
+#define TILE3_HEIGHT_OFFSET 256
+#define TILE4_HEIGHT_OFFSET 356
+#define TILE5_HEIGHT_OFFSET 456
+#define TILE6_HEIGHT_OFFSET 556
+#define TILE7_HEIGHT_OFFSET 656
+
+//Background tiles
+#define GRASS_TILE 1
+#define HIGHWAY_TILE 2
+#define WATER_TILE 3
+#define TRAINWAY_TILE 4
+
+
+void setFrogPosition(uint16_t pos_x, uint16_t pos_y){
+	uint32_t pos_data;
+	pos_x &= 0x7FF;
+	pos_y &= 0x3FF;
+	pos_data = (pos_x<<10) | pos_y;
+  	Xil_Out32(VGA_CONTROL_BASEADDR + REG1_OFFSET, pos_data);
+}
+
+void setupBackground(){
+	//tiles displayed
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, TRAINWAY_TILE); //tile7
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile6
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, WATER_TILE); //tile5
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile4
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile3
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile2
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile1
+}
+
+void setupCar(uint16_t pos_x, uint16_t pos_y, uint8_t index){
+	uint8_t module_id = 2;
+	uint32_t obj_data;
+	pos_x &= 0x7FF; //11bits
+	pos_y &= 0x3FF; //10bits
+	index &= 0x3F; //6bits
+	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
+  	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
+}
+
+int main()
+{
+	setupBackground();
+	uint16_t frog_x = 12;
+	uint16_t frog_y = 56;
+	setFrogPosition(frog_x, frog_y);
+
+	uint16_t car1_x = FRAME_SIZE_OFFSET+110;
+
+	setupCar(FRAME_SIZE_OFFSET+10,TILE3_HEIGHT_OFFSET+10, 0);
+	setupCar(FRAME_SIZE_OFFSET+210,TILE4_HEIGHT_OFFSET+10, 2);
+	setupCar(FRAME_SIZE_OFFSET+310,TILE3_HEIGHT_OFFSET+10, 3);
+	setupCar(FRAME_SIZE_OFFSET+510,TILE4_HEIGHT_OFFSET+10, 4);
+
+	while(1){
+
+		if(car1_x != 1112)
+			car1_x += 1;
+
+		if((frog_x<912) && (frog_y == 56))
+			frog_x += 1;
+		else if((frog_x==912) && (frog_y < 656))
+			frog_y += 1;
+		else if((frog_x>12) && (frog_y == 656))
+			frog_x -= 1;
+		else
+			frog_y -= 1;
+
+		setupCar(car1_x,TILE1_HEIGHT_OFFSET+10, 1);
+		setFrogPosition(frog_x, frog_y);
+		usleep(2000);
+	}
+}

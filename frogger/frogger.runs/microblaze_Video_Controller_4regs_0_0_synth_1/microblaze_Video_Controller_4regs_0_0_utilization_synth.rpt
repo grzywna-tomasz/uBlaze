@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sun Jul 28 22:48:45 2019
+| Date         : Mon Jul 29 19:29:30 2019
 | Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file microblaze_Video_Controller_4regs_0_0_utilization_synth.rpt -pb microblaze_Video_Controller_4regs_0_0_utilization_synth.pb
 | Design       : microblaze_Video_Controller_4regs_0_0
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  224 |     0 |     20800 |  1.08 |
-|   LUT as Logic             |  196 |     0 |     20800 |  0.94 |
+| Slice LUTs*                |  435 |     0 |     20800 |  2.09 |
+|   LUT as Logic             |  407 |     0 |     20800 |  1.96 |
 |   LUT as Memory            |   28 |     0 |      9600 |  0.29 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   28 |     0 |           |       |
-| Slice Registers            |  326 |     0 |     41600 |  0.78 |
-|   Register as Flip Flop    |  326 |     0 |     41600 |  0.78 |
+| Slice Registers            |  546 |     0 |     41600 |  1.31 |
+|   Register as Flip Flop    |  546 |     0 |     41600 |  1.31 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 325   |          Yes |       Reset |            - |
+| 545   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,15 +151,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  325 |        Flop & Latch |
-| LUT6     |   90 |                 LUT |
-| LUT4     |   77 |                 LUT |
-| LUT2     |   62 |                 LUT |
+| FDRE     |  545 |        Flop & Latch |
+| LUT4     |  236 |                 LUT |
+| LUT2     |  188 |                 LUT |
+| LUT6     |  105 |                 LUT |
+| CARRY4   |   60 |          CarryLogic |
+| LUT3     |   37 |                 LUT |
 | SRL16E   |   28 |  Distributed Memory |
-| LUT3     |   17 |                 LUT |
-| LUT5     |   11 |                 LUT |
-| CARRY4   |   10 |          CarryLogic |
-| LUT1     |    2 |                 LUT |
+| LUT5     |   17 |                 LUT |
+| LUT1     |    7 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
