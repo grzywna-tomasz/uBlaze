@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Mon Jul 29 19:32:24 2019
-| Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
+| Date         : Tue Aug  6 15:37:42 2019
+| Host         : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file microblaze_wrapper_control_sets_placed.rpt
 | Design       : microblaze_wrapper
 | Device       : xc7a35t
@@ -21,7 +21,7 @@ Table of Contents
 +-------------------------------+-------+
 |             Status            | Count |
 +-------------------------------+-------+
-| Number of unique control sets |   160 |
+| Number of unique control sets |   166 |
 +-------------------------------+-------+
 
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             297 |          119 |
+| No           | No                    | No                     |             298 |          111 |
 | No           | No                    | Yes                    |              30 |           10 |
-| No           | Yes                   | No                     |             598 |          257 |
-| Yes          | No                    | No                     |             838 |          226 |
+| No           | Yes                   | No                     |             586 |          234 |
+| Yes          | No                    | No                     |            1090 |          332 |
 | Yes          | No                    | Yes                    |              15 |            8 |
-| Yes          | Yes                   | No                     |            1031 |          332 |
+| Yes          | Yes                   | No                     |            1031 |          340 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

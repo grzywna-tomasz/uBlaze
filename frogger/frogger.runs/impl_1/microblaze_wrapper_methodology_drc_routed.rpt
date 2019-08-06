@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Mon Jul 29 19:33:12 2019
-| Host         : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
+| Date         : Tue Aug  6 15:38:32 2019
+| Host         : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 | Command      : report_methodology -file microblaze_wrapper_methodology_drc_routed.rpt -pb microblaze_wrapper_methodology_drc_routed.pb -rpx microblaze_wrapper_methodology_drc_routed.rpx
 | Design       : microblaze_wrapper
 | Device       : xc7a35tcpg236-1
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 25
+             Violations found: 4
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | TIMING-9  | Warning  | Unknown CDC Logic             | 1          |
-| TIMING-17 | Warning  | Non-clocked sequential cell   | 21         |
 | TIMING-18 | Warning  | Missing input or output delay | 3          |
 +-----------+----------+-------------------------------+------------+
 
@@ -37,111 +36,6 @@ Table of Contents
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
-Related violations: <none>
-
-TIMING-17#1 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#2 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#3 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#4 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#5 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#6 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#7 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#8 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#9 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#10 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#11 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#12 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#13 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#14 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#15 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#16 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#17 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#18 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#19 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#20 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#21 Warning
-Non-clocked sequential cell  
-The clock pin microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/buff_reg1_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-18#1 Warning

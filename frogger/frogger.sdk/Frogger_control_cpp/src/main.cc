@@ -6,12 +6,12 @@
 #include "xil_io.h"
 #include "sleep.h"
 
-//Reg and control offsets
+//Registers and control offsets
 #define VGA_CONTROL_BASEADDR XPAR_VIDEO_CONTROLLER_4REGS_0_S00_AXI_BASEADDR
-#define REG0_OFFSET 0
-#define REG1_OFFSET 4
-#define REG2_OFFSET 8
-#define REG3_OFFSET 12
+#define REG0_OFFSET 0 	//main control register
+#define REG1_OFFSET 4 	//not used register
+#define REG2_OFFSET 8 	//object position control register
+#define REG3_OFFSET 12 	//background control register
 
 //Position offsets
 #define FRAME_SIZE_OFFSET 12
@@ -29,14 +29,9 @@
 #define WATER_TILE 3
 #define TRAINWAY_TILE 4
 
-
-void setFrogPosition(uint16_t pos_x, uint16_t pos_y){
-	uint32_t pos_data;
-	pos_x &= 0x7FF;
-	pos_y &= 0x3FF;
-	pos_data = (pos_x<<10) | pos_y;
-  	Xil_Out32(VGA_CONTROL_BASEADDR + REG1_OFFSET, pos_data);
-}
+//Void off-screen position
+#define VOID_X 1024
+#define VOID_Y 0
 
 void setupBackground(){
 	//tiles displayed
@@ -49,6 +44,16 @@ void setupBackground(){
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile1
 }
 
+void setupFrog(uint16_t pos_x, uint16_t pos_y, uint8_t index){
+	uint8_t module_id = 1;
+	uint32_t obj_data;
+	pos_x &= 0x7FF; //11bits
+	pos_y &= 0x3FF; //10bits
+	index &= 0x3F; //6bits
+	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
+  	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
+}
+
 void setupCar(uint16_t pos_x, uint16_t pos_y, uint8_t index){
 	uint8_t module_id = 2;
 	uint32_t obj_data;
@@ -59,12 +64,28 @@ void setupCar(uint16_t pos_x, uint16_t pos_y, uint8_t index){
   	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
 }
 
+void setupTruck(uint16_t pos_x, uint16_t pos_y, uint8_t index){
+	uint8_t module_id = 3;
+	uint32_t obj_data;
+	pos_x &= 0x7FF; //11bits
+	pos_y &= 0x3FF; //10bits
+	index &= 0x3F; //6bits
+	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
+  	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
+}
+
+void setupAllOnBlank(){
+	setupFrog(VOID_X, VOID_Y, 1);
+	for(uint8_t i = 1; i<6; i++){
+		setupCar(VOID_X,VOID_Y, i);
+		setupTruck(VOID_X,VOID_Y, i);
+	}
+}
+
 int main()
 {
-	setupBackground();
 	uint16_t frog_x = 12;
 	uint16_t frog_y = 56;
-	setFrogPosition(frog_x, frog_y);
 
 	uint16_t car0_x = FRAME_SIZE_OFFSET+10;
 	uint16_t car1_x = FRAME_SIZE_OFFSET+110;
@@ -72,8 +93,11 @@ int main()
 	uint16_t car3_x = FRAME_SIZE_OFFSET+610;
 	uint16_t car4_x = FRAME_SIZE_OFFSET+510;
 
+	setupBackground();
+	setupAllOnBlank();
 
 	while(1){
+
 
 		if(car0_x != 0) car0_x -= 1;
 		else car0_x = 1112;
@@ -100,13 +124,13 @@ int main()
 		else
 			frog_y -= 1;
 
-		setupCar(car0_x,TILE3_HEIGHT_OFFSET+10, 0);
-		setupCar(car1_x,TILE1_HEIGHT_OFFSET+10, 1);
+		setupCar(car0_x,TILE3_HEIGHT_OFFSET+10, 1);
+		setupTruck(car1_x,TILE1_HEIGHT_OFFSET+10, 1);
 		setupCar(car2_x,TILE4_HEIGHT_OFFSET+10, 2);
 		setupCar(car3_x,TILE4_HEIGHT_OFFSET+10, 3);
-		setupCar(car4_x,TILE3_HEIGHT_OFFSET+10, 4);
+		setupTruck(car4_x,TILE3_HEIGHT_OFFSET+10, 2);
 
-		setFrogPosition(frog_x, frog_y);
+		setupFrog(frog_x, frog_y, 1);
 		usleep(2000);
 	}
 }
