@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source microblaze_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# keyboard_reciever
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -242,6 +249,8 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set Hsync [ create_bd_port -dir O -type data Hsync ]
+  set PS2Clk [ create_bd_port -dir I PS2Clk ]
+  set PS2Data [ create_bd_port -dir I PS2Data ]
   set VGA_RGB [ create_bd_port -dir O -from 11 -to 0 -type data VGA_RGB ]
   set Vsync [ create_bd_port -dir O -type data Vsync ]
   set clk_100MHz [ create_bd_port -dir I -type clk clk_100MHz ]
@@ -255,6 +264,13 @@ proc create_root_design { parentCell } {
 
   # Create instance: Video_Controller_4regs_0, and set properties
   set Video_Controller_4regs_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Video_Controller_4regs:1 Video_Controller_4regs_0 ]
+
+  # Create instance: axi_gpio_0, and set properties
+  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+   CONFIG.C_GPIO_WIDTH {5} \
+ ] $axi_gpio_0
 
   # Create instance: axi_uartlite_0, and set properties
   set axi_uartlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 ]
@@ -284,6 +300,17 @@ proc create_root_design { parentCell } {
    CONFIG.USE_INCLK_SWITCHOVER {false} \
  ] $clk_wiz_1
 
+  # Create instance: keyboard_reciever_0, and set properties
+  set block_name keyboard_reciever
+  set block_cell_name keyboard_reciever_0
+  if { [catch {set keyboard_reciever_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $keyboard_reciever_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: mdm_1, and set properties
   set mdm_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mdm:3.2 mdm_1 ]
   set_property -dict [ list \
@@ -293,28 +320,26 @@ proc create_root_design { parentCell } {
   # Create instance: microblaze_0, and set properties
   set microblaze_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0 ]
   set_property -dict [ list \
-   CONFIG.C_CACHE_BYTE_SIZE {16384} \
-   CONFIG.C_DCACHE_BYTE_SIZE {16384} \
    CONFIG.C_DEBUG_ENABLED {1} \
    CONFIG.C_D_AXI {1} \
    CONFIG.C_D_LMB {1} \
    CONFIG.C_I_LMB {1} \
-   CONFIG.C_USE_DCACHE {1} \
-   CONFIG.C_USE_ICACHE {1} \
  ] $microblaze_0
 
   # Create instance: microblaze_0_axi_periph, and set properties
   set microblaze_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 microblaze_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {3} \
-   CONFIG.NUM_SI {3} \
+   CONFIG.NUM_MI {4} \
  ] $microblaze_0_axi_periph
 
   # Create instance: microblaze_0_local_memory
   create_hier_cell_microblaze_0_local_memory [current_bd_instance .] microblaze_0_local_memory
 
-  # Create instance: rst_clk_wiz_1_100M, and set properties
-  set rst_clk_wiz_1_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_wiz_1_100M ]
+  # Create instance: rst_clk_100MHz, and set properties
+  set rst_clk_100MHz [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_clk_100MHz ]
+
+  # Create instance: rst_pclk_75MHz, and set properties
+  set rst_pclk_75MHz [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_pclk_75MHz ]
 
   # Create instance: v_tc_0, and set properties
   set v_tc_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0 ]
@@ -346,47 +371,59 @@ proc create_root_design { parentCell } {
    CONFIG.frame_syncs {1} \
  ] $v_tc_0
 
+  # Create instance: xlconcat_0, and set properties
+  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+  set_property -dict [ list \
+   CONFIG.NUM_PORTS {5} \
+ ] $xlconcat_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports uart_rtl] [get_bd_intf_pins axi_uartlite_0/UART]
-  connect_bd_intf_net -intf_net microblaze_0_M_AXI_DC [get_bd_intf_pins microblaze_0/M_AXI_DC] [get_bd_intf_pins microblaze_0_axi_periph/S01_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_M_AXI_IC [get_bd_intf_pins microblaze_0/M_AXI_IC] [get_bd_intf_pins microblaze_0_axi_periph/S02_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_dp [get_bd_intf_pins microblaze_0/M_AXI_DP] [get_bd_intf_pins microblaze_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_axi_periph_M01_AXI [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M02_AXI [get_bd_intf_pins Video_Controller_4regs_0/S00_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M02_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M02_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M03_AXI [get_bd_intf_pins Video_Controller_4regs_0/S00_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M03_AXI]
   connect_bd_intf_net -intf_net microblaze_0_debug [get_bd_intf_pins mdm_1/MBDEBUG_0] [get_bd_intf_pins microblaze_0/DEBUG]
   connect_bd_intf_net -intf_net microblaze_0_dlmb_1 [get_bd_intf_pins microblaze_0/DLMB] [get_bd_intf_pins microblaze_0_local_memory/DLMB]
   connect_bd_intf_net -intf_net microblaze_0_ilmb_1 [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
   connect_bd_intf_net -intf_net microblaze_0_mdm_axi [get_bd_intf_pins mdm_1/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M00_AXI]
 
   # Create port connections
+  connect_bd_net -net PS2Clk_1 [get_bd_ports PS2Clk] [get_bd_pins keyboard_reciever_0/PS2Clk]
+  connect_bd_net -net PS2Data_1 [get_bd_ports PS2Data] [get_bd_pins keyboard_reciever_0/PS2Data]
   connect_bd_net -net Video_Controller_4regs_0_hsync_out [get_bd_ports Hsync] [get_bd_pins Video_Controller_4regs_0/hsync_out]
   connect_bd_net -net Video_Controller_4regs_0_rgb_out [get_bd_ports VGA_RGB] [get_bd_pins Video_Controller_4regs_0/rgb_out]
   connect_bd_net -net Video_Controller_4regs_0_vsync_out [get_bd_ports Vsync] [get_bd_pins Video_Controller_4regs_0/vsync_out]
-  connect_bd_net -net clk_100MHz_1 [get_bd_ports clk_100MHz] [get_bd_pins clk_wiz_1/clk_in1]
-  connect_bd_net -net clk_wiz_1_clk_out1 [get_bd_pins Video_Controller_4regs_0/s00_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_axi_periph/S01_ACLK] [get_bd_pins microblaze_0_axi_periph/S02_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
-  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
-  connect_bd_net -net clk_wiz_1_pclk [get_bd_pins Video_Controller_4regs_0/pclk] [get_bd_pins clk_wiz_1/pclk] [get_bd_pins v_tc_0/clk]
-  connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
-  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset_rtl_0] [get_bd_pins clk_wiz_1/resetn] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in] [get_bd_pins v_tc_0/resetn]
-  connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/bus_struct_reset]
-  connect_bd_net -net rst_clk_wiz_1_100M_interconnect_aresetn [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins rst_clk_wiz_1_100M/interconnect_aresetn]
-  connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_wiz_1_100M/mb_reset]
-  connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn [get_bd_pins Video_Controller_4regs_0/s00_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins microblaze_0_axi_periph/S01_ARESETN] [get_bd_pins microblaze_0_axi_periph/S02_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+  connect_bd_net -net clk_100MHz_1 [get_bd_ports clk_100MHz] [get_bd_pins clk_wiz_1/clk_in1] [get_bd_pins keyboard_reciever_0/clk]
+  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins rst_clk_100MHz/dcm_locked] [get_bd_pins rst_pclk_75MHz/dcm_locked]
+  connect_bd_net -net clk_wiz_1_pclk [get_bd_pins Video_Controller_4regs_0/pclk] [get_bd_pins clk_wiz_1/pclk] [get_bd_pins rst_pclk_75MHz/slowest_sync_clk] [get_bd_pins v_tc_0/clk]
+  connect_bd_net -net keyboard_reciever_0_Down [get_bd_pins keyboard_reciever_0/Down] [get_bd_pins xlconcat_0/In3]
+  connect_bd_net -net keyboard_reciever_0_Enter [get_bd_pins keyboard_reciever_0/Enter] [get_bd_pins xlconcat_0/In4]
+  connect_bd_net -net keyboard_reciever_0_Left [get_bd_pins keyboard_reciever_0/Left] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net keyboard_reciever_0_Right [get_bd_pins keyboard_reciever_0/Right] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net keyboard_reciever_0_Up [get_bd_pins keyboard_reciever_0/Up] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_100MHz/mb_debug_sys_rst]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins Video_Controller_4regs_0/s00_axi_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_100MHz/slowest_sync_clk]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins rst_pclk_75MHz/peripheral_aresetn] [get_bd_pins v_tc_0/resetn]
+  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset_rtl_0] [get_bd_pins clk_wiz_1/resetn] [get_bd_pins rst_clk_100MHz/ext_reset_in] [get_bd_pins rst_pclk_75MHz/ext_reset_in]
+  connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_100MHz/bus_struct_reset]
+  connect_bd_net -net rst_clk_wiz_1_100M_interconnect_aresetn [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins rst_clk_100MHz/interconnect_aresetn]
+  connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_100MHz/mb_reset]
+  connect_bd_net -net rst_clk_wiz_1_100M_peripheral_aresetn1 [get_bd_pins Video_Controller_4regs_0/s00_axi_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins rst_clk_100MHz/peripheral_aresetn]
   connect_bd_net -net v_tc_0_fsync_out [get_bd_pins Video_Controller_4regs_0/fsync_in] [get_bd_pins v_tc_0/fsync_out]
   connect_bd_net -net v_tc_0_hblank_out [get_bd_pins Video_Controller_4regs_0/hblank_in] [get_bd_pins v_tc_0/hblank_out]
   connect_bd_net -net v_tc_0_hsync_out [get_bd_pins Video_Controller_4regs_0/hsync_in] [get_bd_pins v_tc_0/hsync_out]
   connect_bd_net -net v_tc_0_vblank_out [get_bd_pins Video_Controller_4regs_0/vblank_in] [get_bd_pins v_tc_0/vblank_out]
   connect_bd_net -net v_tc_0_vsync_out [get_bd_pins Video_Controller_4regs_0/vsync_in] [get_bd_pins v_tc_0/vsync_out]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins xlconcat_0/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs Video_Controller_4regs_0/S00_AXI/S00_AXI_reg] SEG_Video_Controller_4regs_0_S00_AXI_reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs Video_Controller_4regs_0/S00_AXI/S00_AXI_reg] SEG_Video_Controller_4regs_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x40600000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] SEG_axi_uartlite_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x40600000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] SEG_axi_uartlite_0_Reg
-  create_bd_addr_seg -range 0x00004000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
-  create_bd_addr_seg -range 0x00004000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] SEG_ilmb_bram_if_cntlr_Mem
+  create_bd_addr_seg -range 0x00020000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
+  create_bd_addr_seg -range 0x00020000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] SEG_ilmb_bram_if_cntlr_Mem
   create_bd_addr_seg -range 0x00001000 -offset 0x41400000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs mdm_1/S_AXI/Reg] SEG_mdm_1_Reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x41400000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs mdm_1/S_AXI/Reg] SEG_mdm_1_Reg
 
 
   # Restore current instance

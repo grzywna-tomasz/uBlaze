@@ -6,38 +6,8 @@
 # Block Designs: bd/microblaze/microblaze.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze || ORIG_REF_NAME==microblaze} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_0 || ORIG_REF_NAME==microblaze_microblaze_0_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_0/microblaze_microblaze_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_mdm_1_0 || ORIG_REF_NAME==microblaze_mdm_1_0} -quiet] -quiet
-
 # IP: bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_clk_wiz_1_0 || ORIG_REF_NAME==microblaze_clk_wiz_1_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_rst_clk_wiz_1_100M_0 || ORIG_REF_NAME==microblaze_rst_clk_wiz_1_100M_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_xbar_0/microblaze_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xbar_0 || ORIG_REF_NAME==microblaze_xbar_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_dlmb_v10_0 || ORIG_REF_NAME==microblaze_dlmb_v10_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_ilmb_v10_0 || ORIG_REF_NAME==microblaze_ilmb_v10_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_0/microblaze_dlmb_bram_if_cntlr_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_dlmb_bram_if_cntlr_0 || ORIG_REF_NAME==microblaze_dlmb_bram_if_cntlr_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_ilmb_bram_if_cntlr_0 || ORIG_REF_NAME==microblaze_ilmb_bram_if_cntlr_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_lmb_bram_0/microblaze_lmb_bram_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_lmb_bram_0 || ORIG_REF_NAME==microblaze_lmb_bram_0} -quiet] -quiet
 
 # IP: bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_axi_uartlite_0_0 || ORIG_REF_NAME==microblaze_axi_uartlite_0_0} -quiet] -quiet
@@ -48,10 +18,46 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_Vide
 # IP: bd/microblaze/ip/microblaze_v_tc_0_0/microblaze_v_tc_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_v_tc_0_0 || ORIG_REF_NAME==microblaze_v_tc_0_0} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_auto_pc_1/microblaze_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_auto_pc_1 || ORIG_REF_NAME==microblaze_auto_pc_1} -quiet] -quiet
+# IP: bd/microblaze/ip/microblaze_keyboard_reciever_0_0/microblaze_keyboard_reciever_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_keyboard_reciever_0_0 || ORIG_REF_NAME==microblaze_keyboard_reciever_0_0} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_auto_pc_0/microblaze_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_auto_pc_0 || ORIG_REF_NAME==microblaze_auto_pc_0} -quiet] -quiet
+# IP: bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_axi_gpio_0_0 || ORIG_REF_NAME==microblaze_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_xlconcat_0_0/microblaze_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xlconcat_0_0 || ORIG_REF_NAME==microblaze_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_1/microblaze_microblaze_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_1 || ORIG_REF_NAME==microblaze_microblaze_0_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_1/microblaze_microblaze_0_axi_periph_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_1 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_mdm_1_1/microblaze_mdm_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_mdm_1_1 || ORIG_REF_NAME==microblaze_mdm_1_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/microblaze_rst_clk_wiz_1_100M_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_rst_clk_wiz_1_100M_1 || ORIG_REF_NAME==microblaze_rst_clk_wiz_1_100M_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_xbar_1/microblaze_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_xbar_1 || ORIG_REF_NAME==microblaze_xbar_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_dlmb_v10_2/microblaze_dlmb_v10_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_dlmb_v10_2 || ORIG_REF_NAME==microblaze_dlmb_v10_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_ilmb_v10_2/microblaze_ilmb_v10_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_ilmb_v10_2 || ORIG_REF_NAME==microblaze_ilmb_v10_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_2/microblaze_dlmb_bram_if_cntlr_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_dlmb_bram_if_cntlr_2 || ORIG_REF_NAME==microblaze_dlmb_bram_if_cntlr_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_2/microblaze_ilmb_bram_if_cntlr_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_ilmb_bram_if_cntlr_2 || ORIG_REF_NAME==microblaze_ilmb_bram_if_cntlr_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_lmb_bram_2/microblaze_lmb_bram_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_lmb_bram_2 || ORIG_REF_NAME==microblaze_lmb_bram_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_proc_sys_reset_0_0/microblaze_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==microblaze_proc_sys_reset_0_0 || ORIG_REF_NAME==microblaze_proc_sys_reset_0_0} -quiet] -quiet
 
 # XDC: bd/microblaze/microblaze_ooc.xdc

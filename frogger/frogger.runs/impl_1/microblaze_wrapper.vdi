@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Tue Aug  6 15:35:57 2019
-# Process ID: 12104
+# Start of session at: Fri Aug 16 15:54:44 2019
+# Process ID: 13620
 # Current directory: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1
 # Command line: vivado.exe -log microblaze_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source microblaze_wrapper.tcl -notrace
 # Log file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper.vdi
@@ -13,75 +13,85 @@ source microblaze_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Trait/Documents/uBlaze/ip_repo/Video_Controller_4regs_1'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'microblaze_dlmb_v10_0' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'microblaze_ilmb_v10_0' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'microblaze_dlmb_bram_if_cntlr_0' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'microblaze_ilmb_bram_if_cntlr_0' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'microblaze_auto_pc_1' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_auto_pc_1/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'microblaze_auto_pc_0' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_auto_pc_0/stats.txt'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 272.344 ; gain = 35.945
+WARNING: [IP_Flow 19-3664] IP 'microblaze_mdm_1_1' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_1/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'microblaze_rst_clk_wiz_1_100M_1' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'microblaze_dlmb_v10_2' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_2/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'microblaze_ilmb_v10_2' generated file not found 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_2/stats.txt'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 275.500 ; gain = 38.707
 Command: link_design -top microblaze_wrapper -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0.dcp' for cell 'microblaze_i/Video_Controller_4regs_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0.dcp' for cell 'microblaze_i/axi_gpio_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.dcp' for cell 'microblaze_i/axi_uartlite_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.dcp' for cell 'microblaze_i/clk_wiz_1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.dcp' for cell 'microblaze_i/mdm_1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.dcp' for cell 'microblaze_i/microblaze_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0.dcp' for cell 'microblaze_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_keyboard_reciever_0_0/microblaze_keyboard_reciever_0_0.dcp' for cell 'microblaze_i/keyboard_reciever_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_1/microblaze_mdm_1_1.dcp' for cell 'microblaze_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_1/microblaze_microblaze_0_1.dcp' for cell 'microblaze_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/microblaze_rst_clk_wiz_1_100M_1.dcp' for cell 'microblaze_i/rst_clk_100MHz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_proc_sys_reset_0_0/microblaze_proc_sys_reset_0_0.dcp' for cell 'microblaze_i/rst_pclk_75MHz'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_v_tc_0_0/microblaze_v_tc_0_0.dcp' for cell 'microblaze_i/v_tc_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_xbar_0/microblaze_xbar_0.dcp' for cell 'microblaze_i/microblaze_0_axi_periph/xbar'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_auto_pc_0/microblaze_auto_pc_0.dcp' for cell 'microblaze_i/microblaze_0_axi_periph/s01_couplers/auto_pc'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_auto_pc_1/microblaze_auto_pc_1.dcp' for cell 'microblaze_i/microblaze_0_axi_periph/s02_couplers/auto_pc'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_0/microblaze_dlmb_bram_if_cntlr_0.dcp' for cell 'microblaze_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0.dcp' for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0.dcp' for cell 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0.dcp' for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_0/microblaze_lmb_bram_0.dcp' for cell 'microblaze_i/microblaze_0_local_memory/lmb_bram'
-INFO: [Netlist 29-17] Analyzing 459 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_xlconcat_0_0/microblaze_xlconcat_0_0.dcp' for cell 'microblaze_i/xlconcat_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_xbar_1/microblaze_xbar_1.dcp' for cell 'microblaze_i/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_2/microblaze_dlmb_bram_if_cntlr_2.dcp' for cell 'microblaze_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_2/microblaze_dlmb_v10_2.dcp' for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_2/microblaze_ilmb_bram_if_cntlr_2.dcp' for cell 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_2/microblaze_ilmb_v10_2.dcp' for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_2/microblaze_lmb_bram_2.dcp' for cell 'microblaze_i/microblaze_0_local_memory/lmb_bram'
+INFO: [Netlist 29-17] Analyzing 528 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.3
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.xdc] for cell 'microblaze_i/microblaze_0/U0'
-Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.xdc] for cell 'microblaze_i/microblaze_0/U0'
-Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xdc] for cell 'microblaze_i/mdm_1/U0'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1128.688 ; gain = 515.188
-Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xdc] for cell 'microblaze_i/mdm_1/U0'
 Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_board.xdc] for cell 'microblaze_i/clk_wiz_1/inst'
 Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_board.xdc] for cell 'microblaze_i/clk_wiz_1/inst'
 Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xdc] for cell 'microblaze_i/clk_wiz_1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1125.414 ; gain = 515.191
 Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xdc] for cell 'microblaze_i/clk_wiz_1/inst'
-Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0_board.xdc] for cell 'microblaze_i/rst_clk_wiz_1_100M/U0'
-Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0_board.xdc] for cell 'microblaze_i/rst_clk_wiz_1_100M/U0'
-Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0.xdc] for cell 'microblaze_i/rst_clk_wiz_1_100M/U0'
-Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0.xdc] for cell 'microblaze_i/rst_clk_wiz_1_100M/U0'
-Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10/U0'
-Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10/U0'
-Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10/U0'
-Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10/U0'
 Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0_board.xdc] for cell 'microblaze_i/axi_uartlite_0/U0'
 Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0_board.xdc] for cell 'microblaze_i/axi_uartlite_0/U0'
 Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.xdc] for cell 'microblaze_i/axi_uartlite_0/U0'
 Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.xdc] for cell 'microblaze_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0_board.xdc] for cell 'microblaze_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0_board.xdc] for cell 'microblaze_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0.xdc] for cell 'microblaze_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0.xdc] for cell 'microblaze_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_1/microblaze_microblaze_0_1.xdc] for cell 'microblaze_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_1/microblaze_microblaze_0_1.xdc] for cell 'microblaze_i/microblaze_0/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_1/microblaze_mdm_1_1.xdc] for cell 'microblaze_i/mdm_1/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_mdm_1_1/microblaze_mdm_1_1.xdc] for cell 'microblaze_i/mdm_1/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/microblaze_rst_clk_wiz_1_100M_1_board.xdc] for cell 'microblaze_i/rst_clk_100MHz/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/microblaze_rst_clk_wiz_1_100M_1_board.xdc] for cell 'microblaze_i/rst_clk_100MHz/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/microblaze_rst_clk_wiz_1_100M_1.xdc] for cell 'microblaze_i/rst_clk_100MHz/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/microblaze_rst_clk_wiz_1_100M_1.xdc] for cell 'microblaze_i/rst_clk_100MHz/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_2/microblaze_dlmb_v10_2.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_2/microblaze_dlmb_v10_2.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_2/microblaze_ilmb_v10_2.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_2/microblaze_ilmb_v10_2.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_proc_sys_reset_0_0/microblaze_proc_sys_reset_0_0_board.xdc] for cell 'microblaze_i/rst_pclk_75MHz/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_proc_sys_reset_0_0/microblaze_proc_sys_reset_0_0_board.xdc] for cell 'microblaze_i/rst_pclk_75MHz/U0'
+Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_proc_sys_reset_0_0/microblaze_proc_sys_reset_0_0.xdc] for cell 'microblaze_i/rst_pclk_75MHz/U0'
+Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_proc_sys_reset_0_0/microblaze_proc_sys_reset_0_0.xdc] for cell 'microblaze_i/rst_pclk_75MHz/U0'
 Parsing XDC File [C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/constrs_1/new/microblaze.xdc]
 Finished Parsing XDC File [C:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/constrs_1/new/microblaze.xdc]
 Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_v_tc_0_0/microblaze_v_tc_0_0_clocks.xdc] for cell 'microblaze_i/v_tc_0/U0'
 Finished Parsing XDC File [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_v_tc_0_0/microblaze_v_tc_0_0_clocks.xdc] for cell 'microblaze_i/v_tc_0/U0'
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+WARNING: [Opt 31-35] Removing redundant IBUF, microblaze_i/clk_wiz_1/inst/clkin1_ibufg, from the path connected to top-level port: clk_100MHz 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'microblaze_wrapper'...
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_1/data/mb_bootloop_le.elf 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 112 instances were transformed.
-  LUT6_2 => LUT6_2 (LUT5, LUT6): 64 instances
+  A total of 96 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
-  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
 
-28 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1128.688 ; gain = 856.344
+link_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1126.418 ; gain = 850.918
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -92,93 +102,93 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1128.688 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1126.418 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 4 inverter(s) to 6 load pin(s).
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1bf1ec4b0
+Phase 1 Retarget | Checksum: 17ff5226a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1134.082 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 214 cells and removed 280 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1131.184 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 151 cells and removed 247 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Phase 2 Constant propagation | Checksum: 18d804e87
+Phase 2 Constant propagation | Checksum: f327e813
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1134.082 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 195 cells and removed 592 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1131.184 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 65 cells and removed 243 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 16dc5703c
+Phase 3 Sweep | Checksum: 17b44dd8d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1134.082 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1276 cells
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1131.184 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 675 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 16dc5703c
+Phase 4 BUFG optimization | Checksum: 17b44dd8d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1134.082 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1131.184 ; gain = 0.000
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 16dc5703c
+Phase 5 Shift Register Optimization | Checksum: 17b44dd8d
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1134.082 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1131.184 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1134.082 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 201bcfa6e
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1131.184 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 15f699a58
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1134.082 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1131.184 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.080 | TNS=-0.080 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.085 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 14 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 4 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 8 Total Ports: 28
-Ending PowerOpt Patch Enables Task | Checksum: 13149ba14
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 32 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 32 newly gated: 0 Total Ports: 64
+Ending PowerOpt Patch Enables Task | Checksum: 22b93373c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 13149ba14
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.457 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 22b93373c
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1373.043 ; gain = 238.961
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1350.578 ; gain = 219.395
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 1 Remap
-Phase 1 Remap | Checksum: 1c1967d51
+Phase 1 Remap | Checksum: 2099b489c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1373.043 ; gain = 0.000
-INFO: [Opt 31-389] Phase Remap created 4 cells and removed 8 cells
-Ending Logic Optimization Task | Checksum: 1c1967d51
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1350.578 ; gain = 0.000
+INFO: [Opt 31-389] Phase Remap created 32 cells and removed 96 cells
+Ending Logic Optimization Task | Checksum: 2099b489c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-51 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1373.043 ; gain = 244.355
+opt_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1350.578 ; gain = 224.160
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file microblaze_wrapper_drc_opted.rpt -pb microblaze_wrapper_drc_opted.pb -rpx microblaze_wrapper_drc_opted.rpx
 Command: report_drc -file microblaze_wrapper_drc_opted.rpt -pb microblaze_wrapper_drc_opted.pb -rpx microblaze_wrapper_drc_opted.rpx
@@ -205,92 +215,77 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11d41ae29
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e9666611
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e847d20c
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 110000dcf
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 19f90048a
+Phase 1.3 Build Placer Netlist Model | Checksum: 1a070cc0e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 19f90048a
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1a070cc0e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 19f90048a
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1a070cc0e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 2052bb4c9
+Phase 2 Global Placement | Checksum: 248e1b176
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 2052bb4c9
+Phase 3.1 Commit Multi Column Macros | Checksum: 248e1b176
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1fa77fe66
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1f52dcdf9
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1e225ff3d
+Phase 3.3 Area Swap Optimization | Checksum: 1e17e0dc3
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1866e4f34
+Phase 3.4 Pipeline Register Optimization | Checksum: 2088ffc65
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
-Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 1866e4f34
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 2859a02f3
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
-Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 208c18e12
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 22c75b066
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
-Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 14a9c20c5
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 22c75b066
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 22c75b066
 
-Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 1f2da6cc3
-
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 1373.043 ; gain = 0.000
-
-Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 1f2da6cc3
-
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 1373.043 ; gain = 0.000
-
-Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 1f2da6cc3
-
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1f2da6cc3
-
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -298,58 +293,58 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 19f632a6c
+Post Placement Optimization Initialization | Checksum: 1ac74088d
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 19f632a6c
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1ac74088d
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:22 . Memory (MB): peak = 1373.043 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.389. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 16fd7f446
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 1350.578 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.383. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1152e5607
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 16fd7f446
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1152e5607
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 16fd7f446
+Phase 4.2 Post Placement Cleanup | Checksum: 1152e5607
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 16fd7f446
+Phase 4.3 Placer Reporting | Checksum: 1152e5607
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1315906be
+Phase 4.4 Final Placement Cleanup | Checksum: 1dfaaa14b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1315906be
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1dfaaa14b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Ending Placer Task | Checksum: 334a8b1b
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Ending Placer Task | Checksum: 125762a31
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-72 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:31 . Memory (MB): peak = 1373.043 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:25 . Memory (MB): peak = 1350.578 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.895 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.844 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file microblaze_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1373.043 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file microblaze_wrapper_utilization_placed.rpt -pb microblaze_wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1373.043 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.120 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -file microblaze_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1373.043 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1350.578 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -361,110 +356,110 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 2ae30fe4 ConstDB: 0 ShapeSum: 8677b37 RouteDB: 0
+Checksum: PlaceDB: 3188bd95 ConstDB: 0 ShapeSum: f3ed6c9c RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 180e486df
+Phase 1 Build RT Design | Checksum: c52c8d1a
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Post Restoration Checksum: NetGraph: a7d1e9de NumContArr: d9129d01 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 89dab905 NumContArr: 3b51d415 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 180e486df
+Phase 2.1 Create Timer | Checksum: c52c8d1a
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 180e486df
+Phase 2.2 Fix Topology Constraints | Checksum: c52c8d1a
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 180e486df
+Phase 2.3 Pre Route Cleanup | Checksum: c52c8d1a
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1350.578 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 17169be81
+Phase 2.4 Update Timing | Checksum: e7c2e521
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:28 . Memory (MB): peak = 1373.043 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.389  | TNS=0.000  | WHS=-0.400 | THS=-128.659|
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1350.578 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.478  | TNS=0.000  | WHS=-0.375 | THS=-169.346|
 
-Phase 2 Router Initialization | Checksum: 150b5db16
+Phase 2 Router Initialization | Checksum: 1353569b9
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 215333489
+Phase 3 Initial Routing | Checksum: 146f332be
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 506
+ Number of Nodes with overlaps = 433
  Number of Nodes with overlaps = 32
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.094  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1ff957e9c
+Phase 4.1 Global Iteration 0 | Checksum: 1d8f61329
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:35 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.159  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.189  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 157364fc1
+Phase 4.2 Global Iteration 1 | Checksum: 248ab2321
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 157364fc1
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 248ab2321
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 157364fc1
+Phase 5.1 Delay CleanUp | Checksum: 248ab2321
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 157364fc1
+Phase 5.2 Clock Skew Optimization | Checksum: 248ab2321
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 157364fc1
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 248ab2321
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 14c9625da
+Phase 6.1.1 Update Timing | Checksum: 2d5cc14dc
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:36 . Memory (MB): peak = 1373.043 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.159  | TNS=0.000  | WHS=0.040  | THS=0.000  |
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.189  | TNS=0.000  | WHS=0.021  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 16f45f565
+Phase 6.1 Hold Fix Iter | Checksum: 250515913
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:36 . Memory (MB): peak = 1373.043 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 16f45f565
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 250515913
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:36 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.00064 %
-  Global Horizontal Routing Utilization  = 2.58121 %
+  Global Vertical Routing Utilization    = 2.34617 %
+  Global Horizontal Routing Utilization  = 2.73881 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -473,43 +468,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 17675e0f9
+Phase 7 Route finalize | Checksum: 204d2ddfb
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:36 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 17675e0f9
+Phase 8 Verifying routed nets | Checksum: 204d2ddfb
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:36 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1554d834f
+Phase 9 Depositing Routes | Checksum: 1d6daf88a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:39 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.159  | TNS=0.000  | WHS=0.040  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.189  | TNS=0.000  | WHS=0.021  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1554d834f
+Phase 10 Post Router Timing | Checksum: 1d6daf88a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:39 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:39 . Memory (MB): peak = 1350.578 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-89 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:39 . Memory (MB): peak = 1373.043 ; gain = 0.000
+route_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:41 . Memory (MB): peak = 1350.578 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1373.043 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1350.578 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/microblaze_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file microblaze_wrapper_drc_routed.rpt -pb microblaze_wrapper_drc_routed.pb -rpx microblaze_wrapper_drc_routed.rpx
 Command: report_drc -file microblaze_wrapper_drc_routed.rpt -pb microblaze_wrapper_drc_routed.pb -rpx microblaze_wrapper_drc_routed.rpx
@@ -531,7 +526,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-100 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+103 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file microblaze_wrapper_route_status.rpt -pb microblaze_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -file microblaze_wrapper_timing_summary_routed.rpt -warn_on_violation  -rpx microblaze_wrapper_timing_summary_routed.rpx
@@ -558,9 +553,9 @@ Creating bitstream...
 Writing bitstream ./microblaze_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Aug  6 15:39:03 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Aug 16 15:57:53 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2017.3/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-117 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+120 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 1693.344 ; gain = 320.301
-INFO: [Common 17-206] Exiting Vivado at Tue Aug  6 15:39:03 2019...
+write_bitstream: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1688.883 ; gain = 337.645
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 15:57:53 2019...

@@ -1,0 +1,17 @@
+/*
+ * Car.h
+ *
+ *  Created on: 10.08.2019
+ *      Author: Trait
+ */
+
+#ifndef SRC_CAR_H_
+#define SRC_CAR_H_
+
+class Car {
+public:
+	Car();
+	virtual ~Car();
+};
+
+#endif /* SRC_CAR_H_ */

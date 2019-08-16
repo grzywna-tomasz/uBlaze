@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Frogger_control/src/Definitions.cc&apos; to &apos;definitions.cc&apos;" description="Rename resource &apos;Definitions.cc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Definitions.cc" name="definitions.cc" stamp="1565966905048" updateReferences="true"/>
+</session>

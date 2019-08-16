@@ -35,3 +35,7 @@ set_property src_info {type:XDC file:1 line:274 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN B18 [get_ports uart_rtl_rxd]
 set_property src_info {type:XDC file:1 line:276 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A18 [get_ports uart_rtl_txd]
+set_property src_info {type:XDC file:1 line:281 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN C17 [get_ports PS2Clk]
+set_property src_info {type:XDC file:1 line:284 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B17 [get_ports PS2Data]
