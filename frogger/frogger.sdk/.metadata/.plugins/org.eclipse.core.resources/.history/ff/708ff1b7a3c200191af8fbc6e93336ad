@@ -1,0 +1,63 @@
+/*
+ * Frog.cpp
+ *
+ *  Created on: 16.08.2019
+ *      Author: Trait
+ */
+
+#include "Frog.h"
+#include "xil_io.h"
+#include "definitions.h"
+
+Frog::Frog(uint16_t posX, uint16_t posY, uint8_t speed) : GameObject(60, 60, posX, posY, speed)
+{
+	this->desired_x = posX;
+	this->desired_y = posY;
+}
+void Frog::updatePos(){
+	if(desired_x < pos_x)
+		pos_x -= speed;
+	else if(desired_x > pos_x)
+		pos_x += speed;
+
+	if(desired_y < pos_y)
+		pos_y -= speed;
+	else if(desired_y > pos_y)
+		pos_y += speed;
+}
+
+void Frog::draw(){
+	uint8_t index = 1;
+	uint8_t module_id = 1;
+	uint32_t obj_data;
+	pos_x &= 0x7FF; //11bits
+	pos_y &= 0x3FF; //10bits
+	index &= 0x3F; //6bits
+	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
+}
+
+//TODO Collisions
+bool Frog::IsColliding(){
+
+}
+
+uint16_t Frog::getDesiredX() const {
+	return desired_x;
+}
+
+void Frog::setDesiredX(uint16_t desiredX) {
+	this->desired_x = desiredX;
+}
+
+uint16_t Frog::getDesiredY() const {
+	return desired_y;
+}
+
+void Frog::setDesiredY(uint16_t desiredY) {
+	this->desired_y = desiredY;
+}
+
+enum Frog::State Frog::getFrogAction() const {
+	return frog_action;
+}

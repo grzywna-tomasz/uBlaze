@@ -1,0 +1,37 @@
+/*
+ * Frog.cpp
+ *
+ *  Created on: 16.08.2019
+ *      Author: Trait
+ */
+
+#include "Frog.h"
+
+Frog::Frog(uint16_t posX, uint16_t posY, uint8_t speed) : GameObject(60, 60, posX, posY, speed)
+{
+	// TODO Auto-generated constructor stub
+
+}
+void Frog::updatePos(){
+
+}
+
+bool Frog::IsColliding(){
+
+}
+
+uint16_t Frog::getDesiredX() const {
+	return desired_x;
+}
+
+void Frog::setDesiredX(uint16_t desiredX) {
+	desired_x = desiredX;
+}
+
+uint16_t Frog::getDesiredY() const {
+	return desired_y;
+}
+
+void Frog::setDesiredY(uint16_t desiredY) {
+	desired_y = desiredY;
+}

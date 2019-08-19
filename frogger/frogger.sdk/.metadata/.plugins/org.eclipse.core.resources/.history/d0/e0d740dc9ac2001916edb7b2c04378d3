@@ -1,0 +1,50 @@
+/*
+ * GameObject.h
+ *
+ *  Created on: 19.08.2019
+ *      Author: Trait
+ */
+
+#ifndef SRC_OBJECTS_GAMEOBJECT_H_
+#define SRC_OBJECTS_GAMEOBJECT_H_
+
+class GameObject {
+public:
+	GameObject(uint16_t height = 50, uint16_t width = 50, uint16_t pos_x = 500, uint16_t pos_y = 500, uint8_t speed = 1);
+
+	//Object will move when tile transition is on
+	void tileTransition();
+
+	uint16_t getHeight() const;
+	void setHeight(uint16_t height);
+
+	uint16_t getWidth() const;
+	void setWidth(uint16_t width);
+
+	uint16_t getPosX() const;
+	void setPosX(uint16_t posX);
+
+	uint16_t getPosY() const;
+	void setPosY(uint16_t posY);
+
+	uint8_t getSpeed() const;
+	void setSpeed(uint8_t speed);
+
+	uint8_t getTransSpd() const;
+
+private:
+
+	uint16_t pos_y;
+	uint16_t width;
+	uint16_t height;
+
+	uint8_t trans_spd; //speed when tile transition
+
+protected:
+	uint16_t pos_x;
+	uint8_t speed;
+
+
+};
+
+#endif /* SRC_OBJECTS_GAMEOBJECT_H_ */

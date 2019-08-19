@@ -1,0 +1,73 @@
+/*
+ * GameObject.cpp
+ *
+ *  Created on: 19.08.2019
+ *      Author: Trait
+ */
+
+#include "GameObject.h"
+
+GameObject::GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t pos_y) {
+
+	if(width < 10) 		this->width = 10;
+	else if (width > 700) 	this->height = 700;
+	else 				this->width = width;
+
+	if (height < 10) 		this->height = 10;
+	else if (height > 100) 	this->height = 100;
+	else					this->height = height;
+
+	this->pos_x = pos_x;
+	this->pos_y = pos_y;
+
+}
+
+uint16_t GameObject::getHeight() const {
+	return height;
+}
+
+void GameObject::setHeight(uint16_t height) {
+	if (height < 10) 		this->height = 10;
+	else if (height > 100) 	this->height = 100;
+	else					this->height = height;
+}
+
+uint16_t GameObject::getPosX() const {
+	return pos_x;
+}
+
+void GameObject::setPosX(uint16_t posX) {
+	pos_x = posX;
+}
+
+uint16_t GameObject::getPosY() const {
+	return pos_y;
+}
+
+void GameObject::setPosY(uint16_t posY) {
+	pos_y = posY;
+}
+
+uint8_t GameObject::getSpeed() const {
+	return speed;
+}
+
+void GameObject::setSpeed(uint8_t speed) {
+	this->speed = speed;
+}
+
+uint8_t GameObject::getTransSpd() const {
+	return trans_spd;
+}
+
+void GameObject::setTransSpd(uint8_t transSpd) {
+	trans_spd = transSpd;
+}
+
+uint16_t GameObject::getWidth() const {
+	return width;
+}
+
+void GameObject::setWidth(uint16_t width) {
+	this->width = width;
+}

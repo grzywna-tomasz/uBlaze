@@ -9,28 +9,33 @@
 #define SRC_FROG_H_
 
 #include "xil_types.h"
+#include "GameObject.h"
 
-class Frog
+class Frog : public GameObject
 {
 	public:
 
-	Frog();
-	~Frog();
+	enum State {Idle, Moving};
+
+	Frog(uint16_t posX, uint16_t posY, uint8_t speed);
 
 	void updatePos();
-	//TODO create proper mechanism for Collision check
-	bool checkCollisions();
+	void draw();
+	bool IsColliding();
+
+	uint16_t getDesiredX() const;
+	void setDesiredX(uint16_t _desiredX);
+
+	uint16_t getDesiredY() const;
+	void setDesiredY(uint16_t _desiredY);
+
+	enum State getFrogAction() const;
 
 	private:
 
-	uint16_t width;
-	uint16_t height;
-	uint16_t pos_x;
-	uint16_t pos_y;
+	enum State frog_action;
 	uint16_t desired_x;
 	uint16_t desired_y;
-	uint16_t speed;
-	uint16_t trans_spd; //speed when tile transition
 
 };
 

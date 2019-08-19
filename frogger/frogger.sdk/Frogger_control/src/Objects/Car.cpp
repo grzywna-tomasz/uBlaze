@@ -7,12 +7,6 @@
 
 #include "Car.h"
 
-Car::Car() {
-	// TODO Auto-generated constructor stub
+Car::Car(uint16_t posX, uint16_t posY, uint8_t speed) : GameObject(80, 80, posX, posY, speed){
 
 }
-
-Car::~Car() {
-	// TODO Auto-generated destructor stub
-}
-

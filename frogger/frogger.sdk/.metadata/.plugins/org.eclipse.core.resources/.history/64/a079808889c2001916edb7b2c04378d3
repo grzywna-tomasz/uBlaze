@@ -1,0 +1,78 @@
+/*
+ * Controls.cpp
+ *
+ *  Created on: 19.08.2019
+ *      Author: Trait
+ */
+
+#include "Controls.h"
+
+#define LEFT 1
+#define RIGHT 4
+#define UP 2
+#define DOWN 8
+#define ENTER 16
+#define MOVING 255
+#define HEIGHT 100
+
+Controls::Controls() {
+	XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+}
+
+void Controls::checkKeyboardAction() {
+	switch(key) {
+
+	case 0:
+		key = XGpio_DiscreteRead(&input, 1);
+		break;
+
+	case LEFT:
+		key = MOVING;
+		moving = LEFT;
+		start_pos = frog_x;
+		break;
+
+	case UP:
+		key = MOVING;
+		moving = UP;
+		start_pos = frog_y;
+		break;
+
+	case RIGHT:
+		key = MOVING;
+		moving = RIGHT;
+		start_pos = frog_x;
+		break;
+
+	case DOWN:
+		key = MOVING;
+		moving = DOWN;
+		start_pos = frog_y;
+		break;
+
+	case MOVING:
+
+		switch(moving) {
+		case LEFT:
+			if ((frog_x > start_pos - HEIGHT) && (start_pos > HEIGHT)) frog_x -=1;
+			else key = 0;
+			break;
+
+		case RIGHT:
+			if ((frog_x < start_pos + HEIGHT) && (start_pos < 912)) frog_x +=1;
+			else key = 0;
+			break;
+
+		case UP:
+			if ((frog_y > start_pos - HEIGHT) && (start_pos > HEIGHT)) frog_y -=1;
+			else key = 0;
+			break;
+
+		case DOWN:
+			if ((frog_y < start_pos + HEIGHT) && (start_pos < 656)) frog_y +=1;
+			else key = 0;
+			break;
+		}
+
+	}
+}
