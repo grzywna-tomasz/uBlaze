@@ -1,0 +1,110 @@
+/*
+ * Empty C++ Application
+ */
+
+
+#include "xparameters.h"
+#include "xil_io.h"
+#include "sleep.h"
+
+//Used object classes
+#include "Objects/Frog.h"
+#include "Objects/GameObject.h"
+#include "Objects/Controls.h"
+#include "Objects/Background.h"
+
+#include "definitions.h"
+
+//#include "Objects/background_old.h"
+/*
+uint16_t bg_type1 = HIGHWAY_TILE;
+uint16_t bg_type2 = GRASS_TILE;
+uint16_t bg_type3 = HIGHWAY_TILE;
+uint16_t bg_type4 = HIGHWAY_TILE;
+uint16_t bg_type5 = WATER_TILE;
+uint16_t bg_type6 = TRAINWAY_TILE;
+uint16_t bg_type7 = GRASS_TILE;
+uint16_t bg_nxt = TRAINWAY_TILE;
+uint16_t bg_nxt2 = 0;
+
+uint16_t bgy = 256;
+uint16_t desiredbgy = 0;
+uint8_t bgcounter = 0;
+
+uint16_t car0_y = TILE3_HEIGHT_OFFSET+82;
+uint16_t car1_y = TILE1_HEIGHT_OFFSET+82;
+uint16_t car2_y = TILE4_HEIGHT_OFFSET+82;
+uint16_t car3_y = TILE4_HEIGHT_OFFSET+82;
+uint16_t car4_y = TILE3_HEIGHT_OFFSET+82;
+*/
+
+int main()
+{
+
+	Frog objFrog = Frog(446,690, playerBg,1); //args: uint16_t posX, uint16_t posY, uint8_t speed);
+	Frog *playerFrog = &objFrog;
+
+	Background objBg = Background();
+	Background *playerBg = &objBg;
+
+	Controls objKeyboard = Controls(playerFrog, playerBg); //args: Frog* ptr
+	Controls *playerKeyboard = &objKeyboard;
+
+	GameObject car1 = GameObject(64, 64, 20, TILE1_HEIGHT_OFFSET+82, 1, 1, 2, GameObject::Right, playerBg);
+	GameObject car2 = GameObject(64, 64, 350, TILE1_HEIGHT_OFFSET+82, 1, 2, 2, GameObject::Right, playerBg);
+	GameObject car3 = GameObject(64, 64, 700, TILE3_HEIGHT_OFFSET+82, 1, 3, 2, GameObject::Left, playerBg);
+	GameObject car4 = GameObject(64, 64, 80, TILE3_HEIGHT_OFFSET+82, 1, 4, 2, GameObject::Left, playerBg);
+	GameObject car5 = GameObject(64, 64, 450, TILE4_HEIGHT_OFFSET+82, 1, 5, 2, GameObject::Right, playerBg);
+
+	GameObject* gameObjects[] = {&car1, &car2, &car3, &car4, &car5};
+
+	while(1){
+
+		for( int i = 0; i<5; i++){
+			gameObjects[i]->draw();
+			gameObjects[i]->updatePos();
+		}
+
+		/*
+		if(car0_x != 0) car0_x -= 1;
+		else car0_x = 1200;
+
+		if(car1_x != 1200) car1_x += 1;
+		else car1_x = 0;
+
+		if(car2_x != 1200) car2_x += 1;
+		else car2_x = 0;
+
+		if(car3_x != 1200) car3_x += 1;
+		else car3_x = 0;
+
+		if(car4_x != 0) car4_x -= 1;
+		else car4_x = 1200;
+		*/
+
+		playerKeyboard->getKeyboardAction();
+		playerFrog->updatePos();
+		playerFrog->draw();
+
+		playerBg->update();
+		playerBg->draw();
+
+		//if(playerFrog->IsColliding(gameObjects, 5))
+		//	playerFrog->reset();
+
+		/*
+		setupCar(car0_x,car0_y, 1, 1);
+		setupTruck(car1_x,car1_y, 1, 0);
+		setupCar(car2_x,car2_y, 2, 0);
+		setupCar(car3_x,car3_y, 3, 0);
+		setupTruck(car4_x,car4_y, 2, 1);
+		*/
+
+		//setupBackground();
+
+		//bgcounter += 1;
+
+		usleep(2000);
+
+	}
+}

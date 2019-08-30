@@ -2,12 +2,12 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sat Aug 10 18:41:03 2019
-# Process ID: 14688
-# Current directory: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1
+# Start of session at: Wed Aug 28 21:28:19 2019
+# Process ID: 3020
+# Current directory: C:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1
 # Command line: vivado.exe -log microblaze_Video_Controller_4regs_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_Video_Controller_4regs_0_0.tcl
-# Log file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1/microblaze_Video_Controller_4regs_0_0.vds
-# Journal file: C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1\vivado.jou
+# Log file: C:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1/microblaze_Video_Controller_4regs_0_0.vds
+# Journal file: C:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source microblaze_Video_Controller_4regs_0_0.tcl -notrace
 Command: synth_design -top microblaze_Video_Controller_4regs_0_0 -part xc7a35tcpg236-1 -mode out_of_context
@@ -15,22 +15,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11124 
+INFO: Helper process launched with PID 4232 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 343.176 ; gain = 93.988
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 342.875 ; gain = 95.438
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'microblaze_Video_Controller_4regs_0_0' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/synth/microblaze_Video_Controller_4regs_0_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'Video_Controller_4regs_v1' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Video_Controller_4regs_v1.v:4]
+INFO: [Synth 8-638] synthesizing module 'microblaze_Video_Controller_4regs_0_0' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/synth/microblaze_Video_Controller_4regs_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'Video_Controller_4regs_v1' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Video_Controller_4regs_v1.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'Video_Controller_4regs_v1_S00_AXI' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Video_Controller_4regs_v1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'Video_Controller_4regs_v1_S00_AXI' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Video_Controller_4regs_v1_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Video_Controller_4regs_v1_S00_AXI.v:277]
-INFO: [Synth 8-226] default block is never used [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Video_Controller_4regs_v1_S00_AXI.v:438]
-INFO: [Synth 8-638] synthesizing module 'Timing_counter' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Timing_counter.v:16]
+INFO: [Synth 8-226] default block is never used [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Video_Controller_4regs_v1_S00_AXI.v:251]
+INFO: [Synth 8-226] default block is never used [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Video_Controller_4regs_v1_S00_AXI.v:392]
+INFO: [Synth 8-638] synthesizing module 'Timing_counter' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Timing_counter.v:16]
 	Parameter HOR_BLANK_START bound to: 1024 - type: integer 
 	Parameter HOR_BLANK_TIME bound to: 320 - type: integer 
 	Parameter HOR_SYNC_START bound to: 1048 - type: integer 
@@ -39,32 +39,49 @@ INFO: [Synth 8-638] synthesizing module 'Timing_counter' [c:/Users/Trait/Documen
 	Parameter VER_BLANK_TIME bound to: 38 - type: integer 
 	Parameter VER_SYNC_START bound to: 771 - type: integer 
 	Parameter VER_SYNC_TIME bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Timing_counter' (1#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Timing_counter.v:16]
-INFO: [Synth 8-638] synthesizing module 'Background_drawer' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Background_drawer.v:12]
-	Parameter HEIGHT bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Timing_counter' (1#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Timing_counter.v:16]
+INFO: [Synth 8-638] synthesizing module 'Background_drawer' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Background_drawer.v:12]
+	Parameter OBJ_ID bound to: 4 - type: integer 
 	Parameter FRAME_OFFSET bound to: 56 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Background_drawer' (2#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Background_drawer.v:12]
-INFO: [Synth 8-638] synthesizing module 'Frog_drawer' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Frog_drawer.v:11]
-	Parameter OBJ_ID bound to: 1 - type: integer 
-	Parameter WIDTH bound to: 100 - type: integer 
 	Parameter HEIGHT bound to: 100 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Frog_drawer.v:49]
-INFO: [Synth 8-256] done synthesizing module 'Frog_drawer' (3#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Frog_drawer.v:11]
-INFO: [Synth 8-638] synthesizing module 'Car_drawer' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Car_drawer.v:11]
+INFO: [Synth 8-3876] $readmem data file '../../../trawa_32.data' is read successfully [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Background_drawer.v:63]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Background_drawer.v:86]
+INFO: [Synth 8-256] done synthesizing module 'Background_drawer' (2#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Background_drawer.v:12]
+INFO: [Synth 8-638] synthesizing module 'Frog_drawer' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Frog_drawer.v:11]
+	Parameter OBJ_ID bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter HEIGHT bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file '../../../zaba_32.data' is read successfully [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Frog_drawer.v:46]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Frog_drawer.v:66]
+INFO: [Synth 8-256] done synthesizing module 'Frog_drawer' (3#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Frog_drawer.v:11]
+INFO: [Synth 8-638] synthesizing module 'Car_drawer' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Car_drawer.v:11]
 	Parameter OBJ_ID bound to: 2 - type: integer 
-	Parameter WIDTH bound to: 80 - type: integer 
-	Parameter HEIGHT bound to: 80 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Car_drawer.v:62]
-INFO: [Synth 8-256] done synthesizing module 'Car_drawer' (4#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Car_drawer.v:11]
-INFO: [Synth 8-638] synthesizing module 'Truck_drawer' [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Truck_drawer.v:12]
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter HEIGHT bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file '../../../samochod.data' is read successfully [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Car_drawer.v:100]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Car_drawer.v:115]
+INFO: [Synth 8-256] done synthesizing module 'Car_drawer' (4#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Car_drawer.v:11]
+INFO: [Synth 8-638] synthesizing module 'Truck_drawer' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Truck_drawer.v:12]
 	Parameter OBJ_ID bound to: 3 - type: integer 
-	Parameter WIDTH bound to: 180 - type: integer 
-	Parameter HEIGHT bound to: 80 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Truck_drawer.v:63]
-INFO: [Synth 8-256] done synthesizing module 'Truck_drawer' (5#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Truck_drawer.v:12]
-INFO: [Synth 8-256] done synthesizing module 'Video_Controller_4regs_v1_S00_AXI' (6#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Video_Controller_4regs_v1_S00_AXI.v:4]
-INFO: [Synth 8-256] done synthesizing module 'Video_Controller_4regs_v1' (7#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/f563/hdl/Video_Controller_4regs_v1.v:4]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_Video_Controller_4regs_0_0' (8#1) [c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/synth/microblaze_Video_Controller_4regs_0_0.v:57]
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter HEIGHT bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file '../../../truck.data' is read successfully [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Truck_drawer.v:101]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Truck_drawer.v:116]
+INFO: [Synth 8-256] done synthesizing module 'Truck_drawer' (5#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Truck_drawer.v:12]
+INFO: [Synth 8-256] done synthesizing module 'Video_Controller_4regs_v1_S00_AXI' (6#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Video_Controller_4regs_v1_S00_AXI.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Video_Controller_4regs_v1' (7#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Video_Controller_4regs_v1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_Video_Controller_4regs_0_0' (8#1) [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/synth/microblaze_Video_Controller_4regs_0_0.v:57]
+WARNING: [Synth 8-3331] design Truck_drawer has unconnected port reg_in[26]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port hcount[10]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port hcount[9]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port hcount[8]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port hcount[7]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port hcount[6]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port reg_in[31]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port reg_in[30]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port reg_in[29]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port reg_in[28]
+WARNING: [Synth 8-3331] design Background_drawer has unconnected port reg_in[27]
 WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_AWPROT[0]
@@ -72,7 +89,7 @@ WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected
 WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 385.258 ; gain = 136.070
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 627.434 ; gain = 379.996
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -82,7 +99,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 385.258 ; gain = 136.070
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 627.434 ; gain = 379.996
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -94,48 +111,45 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 687.223 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 862.371 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 687.223 ; gain = 438.035
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 862.371 ; gain = 614.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 687.223 ; gain = 438.035
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 862.371 ; gain = 614.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 687.223 ; gain = 438.035
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 862.371 ; gain = 614.934
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "vc" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "hc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "lane0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane0_buff" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane4" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane6" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane7" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lane0_buff" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg3" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg4" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg5" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg6" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg7" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg8" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg9" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg10" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg3" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg4" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg5" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg6" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg7" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg8" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg9" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "obj_reg10" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "obj_reg1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg2" won't be mapped to RAM because it is too sparse
@@ -147,6 +161,8 @@ INFO: [Synth 8-5546] ROM "obj_reg7" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5546] ROM "obj_reg8" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg9" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg10" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "obj_reg1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg3" won't be mapped to RAM because it is too sparse
@@ -157,47 +173,56 @@ INFO: [Synth 8-5546] ROM "obj_reg7" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5546] ROM "obj_reg8" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg9" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "obj_reg10" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "nxt_pixel" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "bg_filled" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "bg_filled" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "bg_reg0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'nxt_pixel_reg' [c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ipshared/a9f1/hdl/Background_drawer.v:123]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 687.223 ; gain = 438.035
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 976.914 ; gain = 729.477
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+---------------------------------------+------------+----------+
+|      |RTL Partition                          |Replication |Instances |
++------+---------------------------------------+------------+----------+
+|1     |Car_drawer__GB0                        |           1|     29008|
+|2     |Car_drawer__GB1                        |           1|      6142|
+|3     |Truck_drawer__GB0                      |           1|     28442|
+|4     |Truck_drawer__GB1                      |           1|     12102|
+|5     |Truck_drawer__GB2                      |           1|     12457|
+|6     |Truck_drawer__GB3                      |           1|     13176|
+|7     |Video_Controller_4regs_v1_S00_AXI__GC0 |           1|      7516|
++------+---------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     13 Bit       Adders := 21    
-	   3 Input     12 Bit       Adders := 21    
+	   3 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 4     
+	   3 Input     12 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 2     
+	   3 Input      7 Bit       Adders := 20    
+	   3 Input      6 Bit       Adders := 48    
+	   3 Input      5 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 11    
-	               21 Bit    Registers := 42    
+	               32 Bit    Registers := 5     
+	               22 Bit    Registers := 40    
+	               21 Bit    Registers := 18    
 	               12 Bit    Registers := 5     
-	               11 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
+	               11 Bit    Registers := 9     
+	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 4     
 	   4 Input     32 Bit        Muxes := 5     
-	   2 Input     12 Bit        Muxes := 5     
-	   5 Input     12 Bit        Muxes := 1     
-	   3 Input     12 Bit        Muxes := 1     
-	  11 Input     12 Bit        Muxes := 2     
-	   2 Input     11 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 9     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 101   
+	   5 Input     12 Bit        Muxes := 8     
+	   5 Input     11 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
 	  12 Input      1 Bit        Muxes := 20    
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+	   8 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -205,6 +230,33 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module Car_drawer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
+	   3 Input      6 Bit       Adders := 30    
++---Registers : 
+	               22 Bit    Registers := 20    
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 41    
+	   5 Input     11 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 10    
+Module Truck_drawer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
+	   3 Input      7 Bit       Adders := 20    
+	   3 Input      6 Bit       Adders := 10    
++---Registers : 
+	               22 Bit    Registers := 20    
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 41    
+	   5 Input     11 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 10    
 Module Timing_counter 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -216,63 +268,44 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 3     
 Module Background_drawer 
 Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      6 Bit       Adders := 8     
 +---Registers : 
+	               21 Bit    Registers := 16    
 	               12 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-	   5 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 15    
+	   5 Input     12 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 9     
 Module Frog_drawer 
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     13 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 2     
 +---Registers : 
 	               21 Bit    Registers := 2     
 	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
 +---Muxes : 
-	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 1     
-Module Car_drawer 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     13 Bit       Adders := 10    
-	   3 Input     12 Bit       Adders := 10    
-+---Registers : 
-	               21 Bit    Registers := 20    
-	               12 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-	  11 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 1     
-	  12 Input      1 Bit        Muxes := 10    
-Module Truck_drawer 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     13 Bit       Adders := 10    
-	   3 Input     12 Bit       Adders := 10    
-+---Registers : 
-	               21 Bit    Registers := 20    
-	               12 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-	  11 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 1     
-	  12 Input      1 Bit        Muxes := 10    
 Module Video_Controller_4regs_v1_S00_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 11    
+	               32 Bit    Registers := 5     
 	               12 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 4     
 	   4 Input     32 Bit        Muxes := 5     
 	   2 Input     12 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -285,107 +318,228 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "hc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "vc" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "bg_filled" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design Video_Controller_4regs_v1_S00_AXI has unconnected port S_AXI_ARPROT[0]
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_pixel_reg[1]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_pixel_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_pixel_reg[2]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_pixel_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_pixel_reg[4]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_pixel_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[9]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[3]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[6]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_pixel_reg[9]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_pixel_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_pixel_reg[3]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_pixel_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_pixel_reg[6]' (FDR) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_pixel_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[9]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[3]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[8]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[0]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[1]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[2]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[5]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[6]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/_rgb_pixel_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Video_Controller_4regs_v1_S00_AXI_inst /player_frog/\_rgb_pixel_reg[4] )
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Video_Controller_4regs_v1_S00_AXI_inst /\axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Video_Controller_4regs_v1_S00_AXI_inst /\axi_bresp_reg[1] )
-WARNING: [Synth 8-3332] Sequential element (_rgb_pixel_reg[4]) is unused and will be removed from module Frog_drawer.
-WARNING: [Synth 8-3332] Sequential element (axi_bresp_reg[1]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[1]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[0]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[1]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[0]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (axi_rresp_reg[1]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[31]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[30]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[29]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[28]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[27]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[26]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[25]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[24]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[23]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[22]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[21]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[20]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[19]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[18]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[17]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[16]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[15]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[14]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[13]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[12]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[11]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[10]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[9]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[8]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[7]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[6]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[5]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
-WARNING: [Synth 8-3332] Sequential element (bg_reg5_reg[4]) is unused and will be removed from module Video_Controller_4regs_v1_S00_AXI.
+INFO: [Synth 8-5546] ROM "lane0_buff" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pixel_counter/hc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pixel_counter/vc" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design microblaze_Video_Controller_4regs_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design microblaze_Video_Controller_4regs_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design microblaze_Video_Controller_4regs_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design microblaze_Video_Controller_4regs_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design microblaze_Video_Controller_4regs_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design microblaze_Video_Controller_4regs_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[0]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[1]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[2]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[3]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[4]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[5]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[6]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[7]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[8]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[9]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/frogger_background/vcountd_reg[10]' (FD) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/player_frog/vcountd_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/axi_rresp_reg[0]' (FDRE) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Controller_4regs_v1_S00_AXI_insti_6/\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Video_Controller_4regs_v1_S00_AXI_insti_6/axi_bresp_reg[0]' (FDRE) to 'Video_Controller_4regs_v1_S00_AXI_insti_6/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Controller_4regs_v1_S00_AXI_insti_6/\axi_bresp_reg[1] )
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 687.223 ; gain = 438.035
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:02:08 . Memory (MB): peak = 976.914 ; gain = 729.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------------------------------+------------+---------------+----------------+
+|Module Name                           | RTL Object | Depth x Width | Implemented As | 
++--------------------------------------+------------+---------------+----------------+
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Frog_drawer                           | p_0_out    | 1024x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 64x12         | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Car_drawer                            | p_0_out    | 4096x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 128x12        | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|Truck_drawer                          | p_0_out    | 8192x12       | LUT            | 
+|microblaze_Video_Controller_4regs_0_0 | p_0_out    | 4096x12       | LUT            | 
+|microblaze_Video_Controller_4regs_0_0 | p_0_out    | 4096x12       | LUT            | 
+|microblaze_Video_Controller_4regs_0_0 | p_0_out    | 4096x12       | LUT            | 
+|microblaze_Video_Controller_4regs_0_0 | p_0_out    | 4096x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|Background_drawer                     | p_0_out    | 1024x12       | LUT            | 
+|microblaze_Video_Controller_4regs_0_0 | p_0_out    | 1024x12       | LUT            | 
++--------------------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+---------------------------------------+------------+----------+
+|      |RTL Partition                          |Replication |Instances |
++------+---------------------------------------+------------+----------+
+|1     |Car_drawer__GB0                        |           1|      6007|
+|2     |Car_drawer__GB1                        |           1|       556|
+|3     |Truck_drawer__GB0                      |           1|      2160|
+|4     |Truck_drawer__GB1                      |           1|      2519|
+|5     |Truck_drawer__GB2                      |           1|       745|
+|6     |Truck_drawer__GB3                      |           1|      1659|
+|7     |Video_Controller_4regs_v1_S00_AXI__GC0 |           1|      5350|
++------+---------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 687.223 ; gain = 438.035
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:02:23 . Memory (MB): peak = 976.914 ; gain = 729.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'car_obstaclei_0/_rgb_pixel_reg[5]' (FDR) to 'car_obstaclei_0/_rgb_pixel_reg[10]'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 687.766 ; gain = 438.578
+Finished Timing Optimization : Time (s): cpu = 00:01:43 ; elapsed = 00:02:24 . Memory (MB): peak = 976.914 ; gain = 729.477
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+---------------------------------------+------------+----------+
+|      |RTL Partition                          |Replication |Instances |
++------+---------------------------------------+------------+----------+
+|1     |Car_drawer__GB0                        |           1|      5984|
+|2     |Car_drawer__GB1                        |           1|       556|
+|3     |Truck_drawer__GB0                      |           1|      2149|
+|4     |Truck_drawer__GB1                      |           1|      2519|
+|5     |Truck_drawer__GB2                      |           1|       745|
+|6     |Truck_drawer__GB3                      |           1|      1659|
+|7     |Video_Controller_4regs_v1_S00_AXI__GC0 |           1|      5350|
++------+---------------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[0]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[1]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[2]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[3]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[0]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[1]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[2]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[3]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[5]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[4]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[6]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[5]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[4]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[6]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[1]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[0]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[3]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[2]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[5]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[4]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[0]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[1]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[2]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[3]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[4]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[5]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[6]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[8]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[10]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[7]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/hcountd_reg[9]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[8]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[10]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[7]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/player_frog/vcountd_reg[9]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[6]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[7]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[10]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[9]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/vcountd_reg[8]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[10]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[8]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[9]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/hcountd_reg[7]' (FD) to 'inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hcountd_reg[7]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished Technology Mapping : Time (s): cpu = 00:01:48 ; elapsed = 00:02:29 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -409,7 +563,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished IO Insertion : Time (s): cpu = 00:01:50 ; elapsed = 00:02:31 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -422,7 +576,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:50 ; elapsed = 00:02:31 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,39 +588,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:50 ; elapsed = 00:02:31 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:02:31 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:02:32 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+--------------------------------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name                           | RTL Name                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+--------------------------------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|microblaze_Video_Controller_4regs_0_0 | inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg4_reg[31] | 5      | 28    | YES          | NO                 | YES               | 28     | 0       | 
-+--------------------------------------+-------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:02:32 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -482,53 +622,56 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |   210|
-|2     |LUT1   |    66|
-|3     |LUT2   |   508|
-|4     |LUT3   |    81|
-|5     |LUT4   |   697|
-|6     |LUT5   |    58|
-|7     |LUT6   |   129|
-|8     |SRL16E |    28|
-|9     |FDRE   |  1206|
-|10    |FDSE   |     1|
+|1     |CARRY4 |   306|
+|2     |LUT1   |    44|
+|3     |LUT2   |   591|
+|4     |LUT3   |   378|
+|5     |LUT4   |  1051|
+|6     |LUT5   |  1834|
+|7     |LUT6   |  1562|
+|8     |MUXF7  |   555|
+|9     |MUXF8  |   216|
+|10    |FDRE   |  1587|
+|11    |FDSE   |     1|
+|12    |LD     |    12|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-------------------------------------------+----------------------------------+------+
 |      |Instance                                   |Module                            |Cells |
 +------+-------------------------------------------+----------------------------------+------+
-|1     |top                                        |                                  |  2984|
-|2     |  inst                                     |Video_Controller_4regs_v1         |  2984|
-|3     |    Video_Controller_4regs_v1_S00_AXI_inst |Video_Controller_4regs_v1_S00_AXI |  2974|
-|4     |      frogger_background                   |Background_drawer                 |    23|
-|5     |      car_obstacle                         |Car_drawer                        |   670|
-|6     |      pixel_counter                        |Timing_counter                    |  1088|
-|7     |      player_frog                          |Frog_drawer                       |    96|
-|8     |      truck_obstacle                       |Truck_drawer                      |   709|
+|1     |top                                        |                                  |  8137|
+|2     |  inst                                     |Video_Controller_4regs_v1         |  8137|
+|3     |    Video_Controller_4regs_v1_S00_AXI_inst |Video_Controller_4regs_v1_S00_AXI |  8137|
+|4     |      car_obstacle                         |Car_drawer                        |  1461|
+|5     |      frogger_background                   |Background_drawer                 |   603|
+|6     |      pixel_counter                        |Timing_counter                    |  2875|
+|7     |      player_frog                          |Frog_drawer                       |   128|
+|8     |      truck_obstacle                       |Truck_drawer                      |  2724|
 +------+-------------------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:02:32 . Memory (MB): peak = 1000.160 ; gain = 752.723
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 709.578 ; gain = 158.426
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 709.578 ; gain = 460.391
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:31 ; elapsed = 00:02:27 . Memory (MB): peak = 1000.160 ; gain = 517.785
+Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:02:34 . Memory (MB): peak = 1000.160 ; gain = 752.723
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 210 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1089 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 12 instances were transformed.
+  LD => LDCE: 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-107 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+156 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 711.543 ; gain = 470.379
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1/microblaze_Video_Controller_4regs_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Trait/Documents/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0.xci
+synth_design: Time (s): cpu = 00:01:56 ; elapsed = 00:02:39 . Memory (MB): peak = 1000.160 ; gain = 760.926
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1/microblaze_Video_Controller_4regs_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/microblaze_Video_Controller_4regs_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Trait/Documents/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1/microblaze_Video_Controller_4regs_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Grzywna/Desktop/uBlaze/frogger/frogger.runs/microblaze_Video_Controller_4regs_0_0_synth_1/microblaze_Video_Controller_4regs_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file microblaze_Video_Controller_4regs_0_0_utilization_synth.rpt -pb microblaze_Video_Controller_4regs_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 711.543 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Aug 10 18:42:11 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1000.160 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 28 21:31:15 2019...

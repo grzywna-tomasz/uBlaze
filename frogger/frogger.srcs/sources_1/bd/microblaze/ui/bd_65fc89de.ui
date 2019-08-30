@@ -5,13 +5,13 @@
 preplace port PS2Clk -pg 1 -y 400 -defaultsOSRD
 preplace port uart_rtl -pg 1 -y 70 -defaultsOSRD
 preplace port Vsync -pg 1 -y 640 -defaultsOSRD
-preplace port clk_100MHz -pg 1 -y 360 -defaultsOSRD
 preplace port up -pg 1 -y 100 -defaultsOSRD
+preplace port clk_100MHz -pg 1 -y 360 -defaultsOSRD
 preplace port left -pg 1 -y 60 -defaultsOSRD
 preplace port enter -pg 1 -y 40 -defaultsOSRD
 preplace port right -pg 1 -y 80 -defaultsOSRD
-preplace port Hsync -pg 1 -y 620 -defaultsOSRD
 preplace port down -pg 1 -y 20 -defaultsOSRD
+preplace port Hsync -pg 1 -y 620 -defaultsOSRD
 preplace port PS2Data -pg 1 -y 380 -defaultsOSRD
 preplace port reset_rtl_0 -pg 1 -y 570 -defaultsOSRD
 preplace portBus VGA_RGB -pg 1 -y 600 -defaultsOSRD
@@ -22,8 +22,8 @@ preplace inst xlconcat_0 -pg 1 -lvl 2 -y 380 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 6 -y 210 -defaultsOSRD
 preplace inst keyboard_reciever_0 -pg 1 -lvl 1 -y 380 -defaultsOSRD
 preplace inst mdm_1 -pg 1 -lvl 3 -y 480 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 4 -y 470 -defaultsOSRD
 preplace inst Video_Controller_4regs_0 -pg 1 -lvl 6 -y 620 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -y 470 -defaultsOSRD
 preplace inst axi_uartlite_0 -pg 1 -lvl 6 -y 80 -defaultsOSRD
 preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 480 -defaultsOSRD
 preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 580 -defaultsOSRD

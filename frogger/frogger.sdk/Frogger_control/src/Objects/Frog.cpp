@@ -9,12 +9,13 @@
 #include "xil_io.h"
 #include "../definitions.h"
 
-Frog::Frog(uint16_t posX, uint16_t posY, uint8_t speed) : GameObject(60, 60, posX, posY, speed)
+Frog::Frog(uint16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed) : GameObject(32, 32, posX, posY, bgPtr, speed, 1, 1, GameObject::None)
 {
 	this->desired_x = posX;
 	this->desired_y = posY;
 	this->frog_action = Idle;
 }
+
 void Frog::updatePos(){
 	if(desired_x == pos_x && desired_y==pos_y)
 		this->frog_action = Idle;
@@ -31,24 +32,36 @@ void Frog::updatePos(){
 		else if(desired_y > pos_y)
 			pos_y += speed;
 	}
-
-
 }
-
-void Frog::draw(){
-	uint8_t index = 1;
-	uint8_t module_id = 1;
-	uint32_t obj_data;
-	pos_x &= 0x7FF; //11bits
-	pos_y &= 0x3FF; //10bits
-	index &= 0x3F; //6bits
-	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
+void Frog::reset(){
+	pos_x = desired_x = 446;
+	pos_y = desired_y = 690;
 }
 
 //TODO Collisions
-bool Frog::IsColliding(){
+bool Frog::IsColliding(GameObject **gameObjects, uint8_t objectsCount){
+	for(int i=0; i<objectsCount; i++){
+		uint16_t objPosX = gameObjects[i]->getPosX();
+		uint16_t objPosY = gameObjects[i]->getPosY();
+		uint16_t objWidth = gameObjects[i]->getWidth();
+		uint16_t objHeight = gameObjects[i]->getHeight();
 
+		int16_t vectorX = (pos_x + width/2) - ((objPosX-objWidth) + objWidth/2);
+		int16_t vectorY = (pos_y + height/2) - ((objPosY-objHeight) + objHeight/2);
+
+		int16_t halfWidth = width/2 + objWidth/2;
+		int16_t halfHeight = height/2 + objHeight/2;
+
+		if(vectorX < 0)
+			vectorX = -vectorX;
+
+		if(vectorY < 0)
+			vectorY = -vectorY;
+
+		if(vectorX < halfWidth && vectorY < halfHeight)
+			return true;
+	}
+	return false;
 }
 
 uint16_t Frog::getDesiredX() const {

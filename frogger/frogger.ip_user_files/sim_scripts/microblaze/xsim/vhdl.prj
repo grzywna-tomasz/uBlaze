@@ -9,5 +9,6 @@ vhdl xil_defaultlib  \
 "../../../bd/microblaze/ip/microblaze_ilmb_v10_2/sim/microblaze_ilmb_v10_2.vhd" \
 "../../../bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_2/sim/microblaze_dlmb_bram_if_cntlr_2.vhd" \
 "../../../bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_2/sim/microblaze_ilmb_bram_if_cntlr_2.vhd" \
+"../../../bd/microblaze/ip/microblaze_proc_sys_reset_0_0/sim/microblaze_proc_sys_reset_0_0.vhd" \
 
 nosort

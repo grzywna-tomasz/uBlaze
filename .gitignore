@@ -31,7 +31,6 @@
 
 # [dir]
 *.cache
-*.data
 *.ipdefs
 .Xil
 *.hw

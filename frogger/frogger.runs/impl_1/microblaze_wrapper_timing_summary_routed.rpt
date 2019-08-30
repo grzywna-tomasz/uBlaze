@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Mon Aug 19 18:59:08 2019
-| Host         : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
+| Date         : Wed Aug 28 21:37:09 2019
+| Host         : DESKTOP-RDBCQBE running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file microblaze_wrapper_timing_summary_routed.rpt -warn_on_violation -rpx microblaze_wrapper_timing_summary_routed.rpx
 | Design       : microblaze_wrapper
 | Device       : 7a35t-cpg236
@@ -52,7 +52,187 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 0 register/latch pins with no clock.
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane0_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane1_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane2_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane3_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane4_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane5_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane6_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/lane7_buff_reg[9]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[0]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[10]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[1]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[2]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[3]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[4]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[5]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[6]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[7]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[8]/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[9]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -67,7 +247,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 0 pins that are not constrained for maximum delay.
+ There are 12 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -126,10 +306,10 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     -0.049       -0.099                      2                 8216        0.053        0.000                      0                 8216        3.000        0.000                       0                  3127  
+      0.148        0.000                      0                 8891        0.038        0.000                      0                 8891        3.000        0.000                       0                  3480  
 
 
-Timing constraints are not met.
+All user specified timing constraints are met.
 
 
 ------------------------------------------------------------------------------------------------
@@ -155,11 +335,11 @@ microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {0.000 16.666}    
 Clock                                                             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                                                             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 clk_100MHz                                                                                                                                                                                                      3.000        0.000                       0                     1  
-  clk_out1_microblaze_clk_wiz_1_0                                   1.343        0.000                      0                 6701        0.053        0.000                      0                 6701        3.750        0.000                       0                  2201  
+  clk_out1_microblaze_clk_wiz_1_0                                   0.657        0.000                      0                 6796        0.038        0.000                      0                 6796        3.750        0.000                       0                  2276  
   clkfbout_microblaze_clk_wiz_1_0                                                                                                                                                                               7.845        0.000                       0                     3  
-  pclk_microblaze_clk_wiz_1_0                                       4.117        0.000                      0                  745        0.077        0.000                      0                  745        5.687        0.000                       0                   632  
-microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK         13.814        0.000                      0                  244        0.131        0.000                      0                  244       15.686        0.000                       0                   249  
-microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE       11.474        0.000                      0                   48        0.150        0.000                      0                   48       16.166        0.000                       0                    41  
+  pclk_microblaze_clk_wiz_1_0                                       1.449        0.000                      0                 1129        0.122        0.000                      0                 1129        5.687        0.000                       0                   910  
+microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK         13.190        0.000                      0                  244        0.067        0.000                      0                  244       15.686        0.000                       0                   249  
+microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE        8.803        0.000                      0                   48        0.286        0.000                      0                   48       16.166        0.000                       0                    41  
 
 
 ------------------------------------------------------------------------------------------------
@@ -169,7 +349,7 @@ microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE       11.474       
 
 From Clock                       To Clock                             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
 ----------                       --------                             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
-clk_out1_microblaze_clk_wiz_1_0  pclk_microblaze_clk_wiz_1_0           -0.049       -0.099                      2                  515        0.082        0.000                      0                  515  
+clk_out1_microblaze_clk_wiz_1_0  pclk_microblaze_clk_wiz_1_0            0.148        0.000                      0                  767        0.120        0.000                      0                  767  
 
 
 ------------------------------------------------------------------------------------------------
@@ -179,7 +359,7 @@ clk_out1_microblaze_clk_wiz_1_0  pclk_microblaze_clk_wiz_1_0           -0.049   
 
 Path Group                                                    From Clock                                                    To Clock                                                          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
 ----------                                                    ----------                                                    --------                                                          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
-**async_default**                                             microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE       14.193        0.000                      0                    1       17.384        0.000                      0                    1  
+**async_default**                                             microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE       13.567        0.000                      0                    1       17.651        0.000                      0                    1  
 
 
 ------------------------------------------------------------------------------------------------
@@ -217,27 +397,27 @@ High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000 
 From Clock:  clk_out1_microblaze_clk_wiz_1_0
   To Clock:  clk_out1_microblaze_clk_wiz_1_0
 
-Setup :            0  Failing Endpoints,  Worst Slack        1.343ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.053ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.657ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.038ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             1.343ns  (required time - arrival time)
-  Source:                 microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/EX_ALU_Op_reg[0]/C
+Slack (MET) :             0.657ns  (required time - arrival time)
+  Source:                 microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/msr_reg_i/OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I/Using_FPGA.Native/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[4]
+  Destination:            microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[9]
                             (rising edge-triggered cell RAMB36E1 clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk_out1_microblaze_clk_wiz_1_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (clk_out1_microblaze_clk_wiz_1_0 rise@10.000ns - clk_out1_microblaze_clk_wiz_1_0 rise@0.000ns)
-  Data Path Delay:        7.936ns  (logic 1.767ns (22.265%)  route 6.169ns (77.735%))
-  Logic Levels:           4  (CARRY4=2 LUT3=1 LUT6=1)
-  Clock Path Skew:        -0.081ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.512ns = ( 8.488 - 10.000 ) 
-    Source Clock Delay      (SCD):    -0.948ns
+  Data Path Delay:        8.543ns  (logic 1.867ns (21.853%)  route 6.676ns (78.147%))
+  Logic Levels:           5  (CARRY4=4 LUT3=1)
+  Clock Path Skew:        -0.159ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.516ns = ( 8.484 - 10.000 ) 
+    Source Clock Delay      (SCD):    -0.874ns
     Clock Pessimism Removal (CPR):    0.484ns
   Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -256,22 +436,26 @@ Slack (MET) :             1.343ns  (required time - arrival time)
                                                      -6.961    -4.269 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -2.608    microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  microblaze_i/clk_wiz_1/inst/clkout1_buf/O
-                         net (fo=2199, routed)        1.564    -0.948    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Clk
-    SLICE_X47Y11         FDRE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/EX_ALU_Op_reg[0]/C
+                         net (fo=2274, routed)        1.638    -0.874    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/msr_reg_i/OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I/Clk
+    SLICE_X64Y4          FDRE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/msr_reg_i/OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I/Using_FPGA.Native/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X47Y11         FDRE (Prop_fdre_C_Q)         0.456    -0.492 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/EX_ALU_Op_reg[0]/Q
-                         net (fo=65, routed)          1.381     0.890    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[29].ALU_Bit_I1/Not_Last_Bit.I_ALU_LUT_V5/Using_FPGA.Native/I1
-    SLICE_X45Y5          LUT6 (Prop_lut6_I1_O)        0.124     1.014 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[29].ALU_Bit_I1/Not_Last_Bit.I_ALU_LUT_V5/Using_FPGA.Native/LUT6/O
-                         net (fo=1, routed)           0.000     1.014    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[30].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/lopt_3
-    SLICE_X45Y5          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     1.564 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[30].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/Using_FPGA.Native_I1_CARRY4/CO[3]
-                         net (fo=1, routed)           0.000     1.564    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[26].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/LO
-    SLICE_X45Y6          CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     1.898 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[26].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/Using_FPGA.Native_I1_CARRY4/O[1]
-                         net (fo=34, routed)          1.110     3.008    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/jump_logic_I1/MUXCY_JUMP_CARRY6/D[6]
-    SLICE_X53Y8          LUT3 (Prop_lut3_I0_O)        0.303     3.311 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/jump_logic_I1/MUXCY_JUMP_CARRY6/Instr_Addr[25]_INST_0/O
-                         net (fo=33, routed)          3.677     6.989    microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/addrb[4]
-    RAMB36_X0Y10         RAMB36E1                                     r  microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[4]
+    SLICE_X64Y4          FDRE (Prop_fdre_C_Q)         0.518    -0.356 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/msr_reg_i/OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I/Using_FPGA.Native/Q
+                         net (fo=7, routed)           1.013     0.658    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_DAXI_ALU_Carry.Direct_MUXCY_I/ex_MSR[0]
+    SLICE_X51Y3          CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.580     1.238 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_DAXI_ALU_Carry.Direct_MUXCY_I/Using_FPGA.Native_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     1.238    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[30].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/LO
+    SLICE_X51Y4          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.352 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[30].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/Using_FPGA.Native_I1_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     1.352    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[26].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/LO
+    SLICE_X51Y5          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     1.466 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[26].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/Using_FPGA.Native_I1_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     1.466    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[22].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/LO
+    SLICE_X51Y6          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     1.705 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/Using_FPGA.ALL_Bits[22].ALU_Bit_I1/Not_Last_Bit.MUXCY_XOR_I/Using_FPGA.Native_I1_CARRY4/O[2]
+                         net (fo=34, routed)          1.419     3.123    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/jump_logic_I1/MUXCY_JUMP_CARRY6/D[11]
+    SLICE_X59Y5          LUT3 (Prop_lut3_I0_O)        0.302     3.425 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/jump_logic_I1/MUXCY_JUMP_CARRY6/Instr_Addr[20]_INST_0/O
+                         net (fo=33, routed)          4.245     7.670    microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addrb[9]
+    RAMB36_X0Y12         RAMB36E1                                     r  microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/ADDRBWRADDR[9]
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_microblaze_clk_wiz_1_0 rise edge)
@@ -284,17 +468,17 @@ Slack (MET) :             1.343ns  (required time - arrival time)
                                                      -7.217     5.332 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581     6.914    microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.005 r  microblaze_i/clk_wiz_1/inst/clkout1_buf/O
-                         net (fo=2199, routed)        1.483     8.488    microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/clkb
-    RAMB36_X0Y10         RAMB36E1                                     r  microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKBWRCLK
-                         clock pessimism              0.484     8.971    
-                         clock uncertainty           -0.074     8.897    
-    RAMB36_X0Y10         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[4])
-                                                     -0.566     8.331    microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram
+                         net (fo=2274, routed)        1.479     8.484    microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/clkb
+    RAMB36_X0Y12         RAMB36E1                                     r  microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKBWRCLK
+                         clock pessimism              0.484     8.967    
+                         clock uncertainty           -0.074     8.893    
+    RAMB36_X0Y12         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[9])
+                                                     -0.566     8.327    microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram
   -------------------------------------------------------------------
-                         required time                          8.331    
-                         arrival time                          -6.989    
+                         required time                          8.327    
+                         arrival time                          -7.670    
   -------------------------------------------------------------------
-                         slack                                  1.343    
+                         slack                                  0.657    
 
 
 
@@ -302,20 +486,20 @@ Slack (MET) :             1.343ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.053ns  (arrival time - required time)
-  Source:                 microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/slv_reg3_reg[27]/C
+Slack (MET) :             0.038ns  (arrival time - required time)
+  Source:                 microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/serial_Data_reg/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r/D
-                            (rising edge-triggered cell SRL16E clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX_reg/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             clk_out1_microblaze_clk_wiz_1_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out1_microblaze_clk_wiz_1_0 rise@0.000ns - clk_out1_microblaze_clk_wiz_1_0 rise@0.000ns)
-  Data Path Delay:        0.267ns  (logic 0.141ns (52.761%)  route 0.126ns (47.239%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.031ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.869ns
-    Source Clock Delay      (SCD):    -0.625ns
-    Clock Pessimism Removal (CPR):    -0.274ns
+  Data Path Delay:        0.393ns  (logic 0.186ns (47.381%)  route 0.207ns (52.619%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.859ns
+    Source Clock Delay      (SCD):    -0.618ns
+    Clock Pessimism Removal (CPR):    -0.503ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -329,12 +513,14 @@ Slack (MET) :             0.053ns  (arrival time - required time)
                                                      -2.360    -1.693 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  microblaze_i/clk_wiz_1/inst/clkout1_buf/O
-                         net (fo=2199, routed)        0.556    -0.625    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/s00_axi_aclk
-    SLICE_X33Y18         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/slv_reg3_reg[27]/C
+                         net (fo=2274, routed)        0.563    -0.618    microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/s_axi_aclk
+    SLICE_X36Y5          FDRE                                         r  microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/serial_Data_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X33Y18         FDRE (Prop_fdre_C_Q)         0.141    -0.484 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/slv_reg3_reg[27]/Q
-                         net (fo=2, routed)           0.126    -0.358    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/slv_reg3[27]
-    SLICE_X34Y19         SRL16E                                       r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r/D
+    SLICE_X36Y5          FDRE (Prop_fdre_C_Q)         0.141    -0.477 r  microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/serial_Data_reg/Q
+                         net (fo=1, routed)           0.207    -0.271    microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/serial_Data
+    SLICE_X35Y6          LUT3 (Prop_lut3_I2_O)        0.045    -0.226 r  microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX_i_1/O
+                         net (fo=1, routed)           0.000    -0.226    microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX0
+    SLICE_X35Y6          FDSE                                         r  microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_microblaze_clk_wiz_1_0 rise edge)
@@ -347,16 +533,15 @@ Slack (MET) :             0.053ns  (arrival time - required time)
                                                      -3.142    -2.248 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -1.718    microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  microblaze_i/clk_wiz_1/inst/clkout1_buf/O
-                         net (fo=2199, routed)        0.821    -0.869    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/s00_axi_aclk
-    SLICE_X34Y19         SRL16E                                       r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r/CLK
-                         clock pessimism              0.274    -0.594    
-    SLICE_X34Y19         SRL16E (Hold_srl16e_CLK_D)
-                                                      0.183    -0.411    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg2_reg[27]_srl3___inst_Video_Controller_4regs_v1_S00_AXI_inst_bg_reg2_reg_r
+                         net (fo=2274, routed)        0.831    -0.859    microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/s_axi_aclk
+    SLICE_X35Y6          FDSE                                         r  microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX_reg/C
+                         clock pessimism              0.503    -0.355    
+    SLICE_X35Y6          FDSE (Hold_fdse_C_D)         0.092    -0.263    microblaze_i/axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX_reg
   -------------------------------------------------------------------
-                         required time                          0.411    
-                         arrival time                          -0.358    
+                         required time                          0.263    
+                         arrival time                          -0.226    
   -------------------------------------------------------------------
-                         slack                                  0.053    
+                         slack                                  0.038    
 
 
 
@@ -370,10 +555,10 @@ Period(ns):         10.000
 Sources:            { microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y10     microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y1      microblaze_i/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKARDCLK
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       10.000      203.360    MMCME2_ADV_X1Y0  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
-Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X42Y10     microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[10].ram32m_i/Using_FPGA.Native/RAMA/CLK
-High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y15     microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[0].ram32m_i/Using_FPGA.Native/RAMA/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X54Y9      microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[5].ram32m_i/Using_FPGA.Native/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X56Y9      microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[4].ram32m_i/Using_FPGA.Native/RAMB_D1/CLK
 
 
 
@@ -404,28 +589,28 @@ Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       10.000     
 From Clock:  pclk_microblaze_clk_wiz_1_0
   To Clock:  pclk_microblaze_clk_wiz_1_0
 
-Setup :            0  Failing Endpoints,  Worst Slack        4.117ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.077ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        1.449ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.122ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        5.687ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             4.117ns  (required time - arrival time)
-  Source:                 microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/hc_reg[0]/C
+Slack (MET) :             1.449ns  (required time - arrival time)
+  Source:                 microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by pclk_microblaze_clk_wiz_1_0  {rise@0.000ns fall@6.667ns period=13.333ns})
-  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[8]/D
+  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[10]/D
                             (rising edge-triggered cell FDRE clocked by pclk_microblaze_clk_wiz_1_0  {rise@0.000ns fall@6.667ns period=13.333ns})
   Path Group:             pclk_microblaze_clk_wiz_1_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            13.333ns  (pclk_microblaze_clk_wiz_1_0 rise@13.333ns - pclk_microblaze_clk_wiz_1_0 rise@0.000ns)
-  Data Path Delay:        9.113ns  (logic 1.908ns (20.937%)  route 7.205ns (79.063%))
-  Logic Levels:           6  (CARRY4=2 LUT4=3 LUT6=1)
-  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+  Data Path Delay:        11.848ns  (logic 2.674ns (22.570%)  route 9.174ns (77.430%))
+  Logic Levels:           10  (CARRY4=1 LUT4=2 LUT5=4 LUT6=3)
+  Clock Path Skew:        -0.038ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    -1.562ns = ( 11.771 - 13.333 ) 
-    Source Clock Delay      (SCD):    -0.964ns
-    Clock Pessimism Removal (CPR):    0.492ns
+    Source Clock Delay      (SCD):    -0.961ns
+    Clock Pessimism Removal (CPR):    0.564ns
   Clock Uncertainty:      0.078ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.138ns
@@ -443,26 +628,33 @@ Slack (MET) :             4.117ns  (required time - arrival time)
                                                      -6.961    -4.269 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.661    -2.608    microblaze_i/clk_wiz_1/inst/pclk_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  microblaze_i/clk_wiz_1/inst/clkout2_buf/O
-                         net (fo=630, routed)         1.548    -0.964    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/pclk
-    SLICE_X38Y27         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/hc_reg[0]/C
+                         net (fo=908, routed)         1.551    -0.961    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/pclk
+    SLICE_X32Y21         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y27         FDRE (Prop_fdre_C_Q)         0.518    -0.446 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/hc_reg[0]/Q
-                         net (fo=94, routed)          3.242     2.797    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/hc_reg[10]_0[0]
-    SLICE_X61Y28         LUT4 (Prop_lut4_I0_O)        0.124     2.921 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/_rgb_pixel[5]_i_54/O
-                         net (fo=1, routed)           0.000     2.921    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/_rgb_pixel[5]_i_54_n_0
-    SLICE_X61Y28         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532     3.453 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/_rgb_pixel_reg[5]_i_19__0/CO[3]
-                         net (fo=1, routed)           0.000     3.453    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/_rgb_pixel_reg[5]_i_19__0_n_0
-    SLICE_X61Y29         CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     3.610 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/_rgb_pixel_reg[5]_i_5__0/CO[1]
-                         net (fo=1, routed)           1.290     4.899    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/hc_reg[10]_6[0]
-    SLICE_X50Y29         LUT4 (Prop_lut4_I2_O)        0.329     5.228 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[5]_i_2__0/O
-                         net (fo=10, routed)          1.878     7.106    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[5]_i_2__0_n_0
-    SLICE_X30Y32         LUT4 (Prop_lut4_I1_O)        0.124     7.230 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[8]_i_3__0/O
-                         net (fo=2, routed)           0.795     8.025    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[8]_i_3__0_n_0
-    SLICE_X34Y30         LUT6 (Prop_lut6_I3_O)        0.124     8.149 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[8]_i_1__0/O
-                         net (fo=1, routed)           0.000     8.149    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[8]_i_1__0_n_0
-    SLICE_X34Y30         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[8]/D
+    SLICE_X32Y21         FDRE (Prop_fdre_C_Q)         0.456    -0.505 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd_reg[6]/Q
+                         net (fo=181, routed)         1.728     1.223    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/vcountd[6]
+    SLICE_X55Y26         LUT6 (Prop_lut6_I3_O)        0.124     1.347 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[10]_i_60__0/O
+                         net (fo=1, routed)           0.330     1.677    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[10]_i_60__0_n_0
+    SLICE_X55Y25         CARRY4 (Prop_carry4_DI[0]_CO[1])
+                                                      0.465     2.142 f  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[10]_i_13/CO[1]
+                         net (fo=10, routed)          1.144     3.286    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/nxt_pixel343_in
+    SLICE_X50Y30         LUT4 (Prop_lut4_I1_O)        0.329     3.615 f  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[6]_i_26/O
+                         net (fo=6, routed)           0.625     4.241    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/nxt_pixel146_out
+    SLICE_X51Y31         LUT5 (Prop_lut5_I4_O)        0.124     4.365 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[10]_i_124/O
+                         net (fo=3, routed)           0.767     5.132    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[10]_i_124_n_0
+    SLICE_X41Y35         LUT5 (Prop_lut5_I0_O)        0.124     5.256 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[8]_i_32/O
+                         net (fo=5, routed)           0.607     5.863    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[8]_i_32_n_0
+    SLICE_X42Y32         LUT4 (Prop_lut4_I1_O)        0.124     5.987 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[11]_i_74/O
+                         net (fo=5, routed)           0.817     6.804    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[11]_i_74_n_0
+    SLICE_X43Y27         LUT5 (Prop_lut5_I0_O)        0.118     6.922 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[7]_i_17/O
+                         net (fo=1, routed)           1.152     8.074    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[7]_i_17_n_0
+    SLICE_X32Y32         LUT5 (Prop_lut5_I0_O)        0.354     8.428 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[7]_i_5__0/O
+                         net (fo=12, routed)          1.043     9.471    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[3]_5
+    SLICE_X31Y29         LUT6 (Prop_lut6_I4_O)        0.332     9.803 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel[10]_i_6__0/O
+                         net (fo=1, routed)           0.960    10.763    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/obj_buff9_reg[21]_3
+    SLICE_X34Y30         LUT6 (Prop_lut6_I2_O)        0.124    10.887 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/_rgb_pixel[10]_i_2__0/O
+                         net (fo=1, routed)           0.000    10.887    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/D[1]
+    SLICE_X34Y30         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock pclk_microblaze_clk_wiz_1_0 rise edge)
@@ -475,16 +667,16 @@ Slack (MET) :             4.117ns  (required time - arrival time)
                                                      -7.217     8.666 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.581    10.247    microblaze_i/clk_wiz_1/inst/pclk_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    10.338 r  microblaze_i/clk_wiz_1/inst/clkout2_buf/O
-                         net (fo=630, routed)         1.433    11.771    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/pclk
-    SLICE_X34Y30         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[8]/C
-                         clock pessimism              0.492    12.263    
-                         clock uncertainty           -0.078    12.185    
-    SLICE_X34Y30         FDRE (Setup_fdre_C_D)        0.081    12.266    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[8]
+                         net (fo=908, routed)         1.433    11.771    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/pclk
+    SLICE_X34Y30         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[10]/C
+                         clock pessimism              0.564    12.335    
+                         clock uncertainty           -0.078    12.257    
+    SLICE_X34Y30         FDRE (Setup_fdre_C_D)        0.079    12.336    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[10]
   -------------------------------------------------------------------
-                         required time                         12.266    
-                         arrival time                          -8.149    
+                         required time                         12.336    
+                         arrival time                         -10.887    
   -------------------------------------------------------------------
-                         slack                                  4.117    
+                         slack                                  1.449    
 
 
 
@@ -492,20 +684,20 @@ Slack (MET) :             4.117ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.077ns  (arrival time - required time)
-  Source:                 microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_exr_reg/C
+Slack (MET) :             0.122ns  (arrival time - required time)
+  Source:                 microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
                             (rising edge-triggered cell FDRE clocked by pclk_microblaze_clk_wiz_1_0  {rise@0.000ns fall@6.667ns period=13.333ns})
-  Destination:            microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_int_reg/D
+  Destination:            microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/D
                             (rising edge-triggered cell FDRE clocked by pclk_microblaze_clk_wiz_1_0  {rise@0.000ns fall@6.667ns period=13.333ns})
   Path Group:             pclk_microblaze_clk_wiz_1_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pclk_microblaze_clk_wiz_1_0 rise@0.000ns - pclk_microblaze_clk_wiz_1_0 rise@0.000ns)
-  Data Path Delay:        0.432ns  (logic 0.186ns (43.018%)  route 0.246ns (56.982%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.857ns
-    Source Clock Delay      (SCD):    -0.617ns
-    Clock Pessimism Removal (CPR):    -0.503ns
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.823ns
+    Source Clock Delay      (SCD):    -0.585ns
+    Clock Pessimism Removal (CPR):    -0.237ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -519,14 +711,12 @@ Slack (MET) :             0.077ns  (arrival time - required time)
                                                      -2.360    -1.693 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.486    -1.207    microblaze_i/clk_wiz_1/inst/pclk_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  microblaze_i/clk_wiz_1/inst/clkout2_buf/O
-                         net (fo=630, routed)         0.564    -0.617    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/slowest_sync_clk
-    SLICE_X40Y0          FDRE                                         r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_exr_reg/C
+                         net (fo=908, routed)         0.596    -0.585    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/slowest_sync_clk
+    SLICE_X1Y0           FDRE                                         r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X40Y0          FDRE (Prop_fdre_C_Q)         0.141    -0.476 r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_exr_reg/Q
-                         net (fo=2, routed)           0.246    -0.230    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_exr
-    SLICE_X31Y0          LUT4 (Prop_lut4_I3_O)        0.045    -0.185 r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_int0/O
-                         net (fo=1, routed)           0.000    -0.185    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_int0__0
-    SLICE_X31Y0          FDRE                                         r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_int_reg/D
+    SLICE_X1Y0           FDRE (Prop_fdre_C_Q)         0.141    -0.444 r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/Q
+                         net (fo=1, routed)           0.056    -0.388    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/s_level_out_d1_cdc_to
+    SLICE_X1Y0           FDRE                                         r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/D
   -------------------------------------------------------------------    -------------------
 
                          (clock pclk_microblaze_clk_wiz_1_0 rise edge)
@@ -539,15 +729,15 @@ Slack (MET) :             0.077ns  (arrival time - required time)
                                                      -3.142    -2.248 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.530    -1.718    microblaze_i/clk_wiz_1/inst/pclk_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  microblaze_i/clk_wiz_1/inst/clkout2_buf/O
-                         net (fo=630, routed)         0.833    -0.857    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/slowest_sync_clk
-    SLICE_X31Y0          FDRE                                         r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_int_reg/C
-                         clock pessimism              0.503    -0.353    
-    SLICE_X31Y0          FDRE (Hold_fdre_C_D)         0.091    -0.262    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/lpf_int_reg
+                         net (fo=908, routed)         0.867    -0.823    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/slowest_sync_clk
+    SLICE_X1Y0           FDRE                                         r  microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/C
+                         clock pessimism              0.237    -0.585    
+    SLICE_X1Y0           FDRE (Hold_fdre_C_D)         0.075    -0.510    microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2
   -------------------------------------------------------------------
-                         required time                          0.262    
-                         arrival time                          -0.185    
+                         required time                          0.510    
+                         arrival time                          -0.388    
   -------------------------------------------------------------------
-                         slack                                  0.077    
+                         slack                                  0.122    
 
 
 
@@ -563,8 +753,8 @@ Sources:            { microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1 }
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
 Min Period        n/a     BUFG/I              n/a            2.155         13.333      11.178     BUFGCTRL_X0Y1    microblaze_i/clk_wiz_1/inst/clkout2_buf/I
 Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       13.333      200.027    MMCME2_ADV_X1Y0  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
-Low Pulse Width   Slow    SRL16E/CLK          n/a            0.980         6.667       5.687      SLICE_X30Y0      microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/POR_SRL_I/CLK
-High Pulse Width  Slow    SRL16E/CLK          n/a            0.980         6.667       5.687      SLICE_X30Y0      microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/POR_SRL_I/CLK
+Low Pulse Width   Fast    SRL16E/CLK          n/a            0.980         6.667       5.687      SLICE_X8Y1       microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/POR_SRL_I/CLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.980         6.667       5.687      SLICE_X8Y1       microblaze_i/rst_pclk_75MHz/U0/EXT_LPF/POR_SRL_I/CLK
 
 
 
@@ -572,28 +762,28 @@ High Pulse Width  Slow    SRL16E/CLK          n/a            0.980         6.667
 From Clock:  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
   To Clock:  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
 
-Setup :            0  Failing Endpoints,  Worst Slack       13.814ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.131ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       13.190ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.067ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       15.686ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             13.814ns  (required time - arrival time)
-  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native/C
-                            (falling edge-triggered cell FDRE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK  {rise@0.000ns fall@16.667ns period=33.333ns})
-  Destination:            microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.shift_count_reg[6]/D
+Slack (MET) :             13.190ns  (required time - arrival time)
+  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_reg[1]/C
                             (rising edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native/CE
+                            (falling edge-triggered cell FDRE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK  {rise@0.000ns fall@16.667ns period=33.333ns})
   Path Group:             microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            16.667ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise@33.333ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK fall@16.667ns)
-  Data Path Delay:        2.738ns  (logic 0.707ns (25.824%)  route 2.031ns (74.176%))
-  Logic Levels:           2  (LUT4=1 LUT6=1)
-  Clock Path Skew:        -0.108ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    3.181ns = ( 36.514 - 33.333 ) 
-    Source Clock Delay      (SCD):    3.573ns = ( 20.240 - 16.667 ) 
-    Clock Pessimism Removal (CPR):    0.284ns
+  Requirement:            16.667ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK fall@16.667ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise@0.000ns)
+  Data Path Delay:        3.214ns  (logic 0.704ns (21.905%)  route 2.510ns (78.095%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.177ns = ( 19.844 - 16.667 ) 
+    Source Clock Delay      (SCD):    3.570ns
+    Clock Pessimism Removal (CPR):    0.368ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -602,38 +792,38 @@ Slack (MET) :             13.814ns  (required time - arrival time)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
+                         (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
+                         net (fo=1, routed)           1.908     1.908    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     2.004 r  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
+                         net (fo=248, routed)         1.566     3.570    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.PORT_Selector_reg[0]
+    SLICE_X39Y1          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y1          FDCE (Prop_fdce_C_Q)         0.456     4.026 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_reg[1]/Q
+                         net (fo=4, routed)           1.002     5.028    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/tdi_shifter_reg[0][6]
+    SLICE_X39Y0          LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native_i_2/O
+                         net (fo=1, routed)           0.879     6.031    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native_i_2_n_0
+    SLICE_X39Y0          LUT5 (Prop_lut5_I0_O)        0.124     6.155 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native_i_1/O
+                         net (fo=1, routed)           0.629     6.784    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/CE
+    SLICE_X37Y0          FDRE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native/CE
+  -------------------------------------------------------------------    -------------------
+
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK fall edge)
                                                      16.667    16.667 f  
     BSCAN_X0Y1           BSCANE2                      0.000    16.667 f  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
-                         net (fo=1, routed)           1.912    18.578    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
-    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096    18.674 f  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
-                         net (fo=248, routed)         1.565    20.240    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Use_BSCAN.PORT_Selector_reg[0]
-    SLICE_X33Y3          FDRE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native/C  (IS_INVERTED)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X33Y3          FDRE (Prop_fdre_C_Q)         0.459    20.699 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native/Q
-                         net (fo=5, routed)           0.446    21.144    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/sync
-    SLICE_X30Y3          LUT6 (Prop_lut6_I0_O)        0.124    21.268 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Dbg_Shift_31_INST_0/O
-                         net (fo=16, routed)          1.585    22.853    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Dbg_Shift
-    SLICE_X45Y2          LUT4 (Prop_lut4_I0_O)        0.124    22.977 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.shift_count[6]_i_1/O
-                         net (fo=1, routed)           0.000    22.977    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/p_0_in[6]
-    SLICE_X45Y2          FDCE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.shift_count_reg[6]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise edge)
-                                                     33.333    33.333 r  
-    BSCAN_X0Y1           BSCANE2                      0.000    33.333 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
-                         net (fo=1, routed)           1.641    34.974    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
-    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    35.065 r  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
-                         net (fo=248, routed)         1.449    36.514    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Dbg_Clk
-    SLICE_X45Y2          FDCE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.shift_count_reg[6]/C
-                         clock pessimism              0.284    36.798    
-                         clock uncertainty           -0.035    36.763    
-    SLICE_X45Y2          FDCE (Setup_fdce_C_D)        0.029    36.792    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.shift_count_reg[6]
+                         net (fo=1, routed)           1.640    18.306    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091    18.397 f  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
+                         net (fo=248, routed)         1.446    19.844    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Use_BSCAN.PORT_Selector_reg[0]
+    SLICE_X37Y0          FDRE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native/C  (IS_INVERTED)
+                         clock pessimism              0.368    20.212    
+                         clock uncertainty           -0.035    20.177    
+    SLICE_X37Y0          FDRE (Setup_fdre_C_CE)      -0.202    19.975    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.SYNC_FDRE/Using_FPGA.Native
   -------------------------------------------------------------------
-                         required time                         36.792    
-                         arrival time                         -22.977    
+                         required time                         19.975    
+                         arrival time                          -6.784    
   -------------------------------------------------------------------
-                         slack                                 13.814    
+                         slack                                 13.190    
 
 
 
@@ -641,50 +831,51 @@ Slack (MET) :             13.814ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.131ns  (arrival time - required time)
-  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10]/C
-                            (rising edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK  {rise@0.000ns fall@16.667ns period=33.333ns})
-  Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]/D
+Slack (MET) :             0.067ns  (arrival time - required time)
+  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]/C
                             (rising edge-triggered cell FDPE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2/D
+                            (rising edge-triggered cell SRL16E clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK  {rise@0.000ns fall@16.667ns period=33.333ns})
   Path Group:             microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise@0.000ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise@0.000ns)
-  Data Path Delay:        0.206ns  (logic 0.141ns (68.336%)  route 0.065ns (31.664%))
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
   Logic Levels:           0  
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.734ns
-    Source Clock Delay      (SCD):    1.341ns
-    Clock Pessimism Removal (CPR):    0.393ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.752ns
+    Source Clock Delay      (SCD):    1.360ns
+    Clock Pessimism Removal (CPR):    0.379ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise edge)
                                                       0.000     0.000 r  
     BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
-                         net (fo=1, routed)           0.755     0.755    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
-    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     0.781 r  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
-                         net (fo=248, routed)         0.561     1.341    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]_0
-    SLICE_X28Y10         FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10]/C
+                         net (fo=1, routed)           0.769     0.769    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     0.795 r  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
+                         net (fo=248, routed)         0.565     1.360    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]_0
+    SLICE_X47Y0          FDPE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X28Y10         FDCE (Prop_fdce_C_Q)         0.141     1.482 r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10]/Q
-                         net (fo=1, routed)           0.065     1.548    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_n_0_[10]
-    SLICE_X28Y10         FDPE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]/D
+    SLICE_X47Y0          FDPE (Prop_fdpe_C_Q)         0.141     1.501 r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]/Q
+                         net (fo=1, routed)           0.056     1.556    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg_n_0_[9]
+    SLICE_X46Y0          SRL16E                                       r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2/D
   -------------------------------------------------------------------    -------------------
 
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK rise edge)
                                                       0.000     0.000 r  
     BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
-                         net (fo=1, routed)           0.875     0.875    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
-    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     0.904 r  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
-                         net (fo=248, routed)         0.831     1.734    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]_0
-    SLICE_X28Y10         FDPE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]/C
-                         clock pessimism             -0.393     1.341    
-    SLICE_X28Y10         FDPE (Hold_fdpe_C_D)         0.075     1.416    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[9]
+                         net (fo=1, routed)           0.888     0.888    microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/drck_i
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029     0.917 r  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O
+                         net (fo=248, routed)         0.835     1.752    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[0]_0
+    SLICE_X46Y0          SRL16E                                       r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2/CLK
+                         clock pessimism             -0.379     1.373    
+    SLICE_X46Y0          SRL16E (Hold_srl16e_CLK_D)
+                                                      0.117     1.490    microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.Config_Reg_reg[5]_srl4_MDM_Core_I1_Use_BSCAN.Config_Reg_reg_c_2
   -------------------------------------------------------------------
-                         required time                         -1.416    
-                         arrival time                           1.548    
+                         required time                         -1.490    
+                         arrival time                           1.556    
   -------------------------------------------------------------------
-                         slack                                  0.131    
+                         slack                                  0.067    
 
 
 
@@ -699,8 +890,8 @@ Sources:            { microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK
 
 Check Type        Corner  Lib Pin     Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
 Min Period        n/a     BUFG/I      n/a            2.155         33.333      31.178     BUFGCTRL_X0Y2  microblaze_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/I
-Low Pulse Width   Fast    SRL16E/CLK  n/a            0.980         16.666      15.686     SLICE_X42Y1    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.SRL16E_1/Use_unisim.MB_SRL16E_I1/CLK
-High Pulse Width  Slow    SRL16E/CLK  n/a            0.980         16.666      15.686     SLICE_X30Y13   microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_Config_SRL16E.SRL16E_1/Use_unisim.MB_SRL16E_I1/CLK
+Low Pulse Width   Fast    SRL16E/CLK  n/a            0.980         16.666      15.686     SLICE_X52Y0    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.SRL16E_1/Use_unisim.MB_SRL16E_I1/CLK
+High Pulse Width  Slow    SRL16E/CLK  n/a            0.980         16.666      15.686     SLICE_X52Y0    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.SRL16E_1/Use_unisim.MB_SRL16E_I1/CLK
 
 
 
@@ -708,28 +899,28 @@ High Pulse Width  Slow    SRL16E/CLK  n/a            0.980         16.666      1
 From Clock:  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
   To Clock:  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
 
-Setup :            0  Failing Endpoints,  Worst Slack       11.474ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.150ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        8.803ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.286ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       16.166ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             11.474ns  (required time - arrival time)
-  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[1]/C
+Slack (MET) :             8.803ns  (required time - arrival time)
+  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C
                             (falling edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
-  Destination:            microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.command_reg_reg[0]/CE
+  Destination:            microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.control_reg_reg[8]/CE
                             (rising edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
   Path Group:             microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            16.667ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise@33.333ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall@16.667ns)
-  Data Path Delay:        5.309ns  (logic 0.966ns (18.197%)  route 4.343ns (81.803%))
+  Data Path Delay:        7.025ns  (logic 1.200ns (17.081%)  route 5.825ns (82.919%))
   Logic Levels:           3  (LUT3=1 LUT4=1 LUT5=1)
-  Clock Path Skew:        0.446ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.711ns = ( 36.044 - 33.333 ) 
-    Source Clock Delay      (SCD):    2.527ns = ( 19.194 - 16.667 ) 
-    Clock Pessimism Removal (CPR):    0.262ns
+  Clock Path Skew:        -0.505ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.861ns = ( 35.194 - 33.333 ) 
+    Source Clock Delay      (SCD):    2.489ns = ( 19.155 - 16.667 ) 
+    Clock Pessimism Removal (CPR):    0.123ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -741,33 +932,33 @@ Slack (MET) :             11.474ns  (required time - arrival time)
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall edge)
                                                      16.667    16.667 f  
     BSCAN_X0Y1           BSCANE2                      0.000    16.667 f  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          2.527    19.194    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
-    SLICE_X30Y3          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[1]/C  (IS_INVERTED)
+                         net (fo=41, routed)          2.489    19.155    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/CLK
+    SLICE_X38Y3          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C  (IS_INVERTED)
   -------------------------------------------------------------------    -------------------
-    SLICE_X30Y3          FDCE (Prop_fdce_C_Q)         0.362    19.556 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[1]/Q
-                         net (fo=9, routed)           1.027    20.583    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_BSCAN.command_reg[0][6]
-    SLICE_X30Y5          LUT3 (Prop_lut3_I2_O)        0.124    20.707 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Dbg_Reg_En_0[1]_INST_0/O
-                         net (fo=3, routed)           0.798    21.506    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Dbg_Reg_En[1]
-    SLICE_X33Y3          LUT4 (Prop_lut4_I0_O)        0.153    21.659 f  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.dbg_wakeup_i_i_3/O
-                         net (fo=4, routed)           1.667    23.326    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.dbg_wakeup_i_i_3_n_0
-    SLICE_X46Y2          LUT5 (Prop_lut5_I4_O)        0.327    23.653 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.command_reg[0]_i_1/O
-                         net (fo=2, routed)           0.849    24.502    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Command_Reg_En
-    SLICE_X52Y2          FDCE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.command_reg_reg[0]/CE
+    SLICE_X38Y3          FDCE (Prop_fdce_C_Q)         0.362    19.517 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/Q
+                         net (fo=18, routed)          1.181    20.698    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Q_1
+    SLICE_X41Y0          LUT3 (Prop_lut3_I1_O)        0.152    20.850 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Dbg_Reg_En_0[4]_INST_0/O
+                         net (fo=3, routed)           0.989    21.839    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Dbg_Reg_En[4]
+    SLICE_X43Y0          LUT4 (Prop_lut4_I2_O)        0.354    22.193 f  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.dbg_wakeup_i_i_3/O
+                         net (fo=4, routed)           1.353    23.546    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.dbg_wakeup_i_i_3_n_0
+    SLICE_X48Y2          LUT5 (Prop_lut5_I3_O)        0.332    23.878 r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.dbg_wakeup_i_i_1/O
+                         net (fo=8, routed)           2.302    26.181    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En
+    SLICE_X55Y16         FDCE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.control_reg_reg[8]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise edge)
                                                      33.333    33.333 r  
     BSCAN_X0Y1           BSCANE2                      0.000    33.333 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          2.711    36.044    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Dbg_Update
-    SLICE_X52Y2          FDCE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.command_reg_reg[0]/C
-                         clock pessimism              0.262    36.306    
-                         clock uncertainty           -0.035    36.271    
-    SLICE_X52Y2          FDCE (Setup_fdce_C_CE)      -0.295    35.976    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.command_reg_reg[0]
+                         net (fo=41, routed)          1.861    35.194    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Dbg_Update
+    SLICE_X55Y16         FDCE                                         r  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.control_reg_reg[8]/C
+                         clock pessimism              0.123    35.317    
+                         clock uncertainty           -0.035    35.281    
+    SLICE_X55Y16         FDCE (Setup_fdce_C_CE)      -0.298    34.983    microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.control_reg_reg[8]
   -------------------------------------------------------------------
-                         required time                         35.976    
-                         arrival time                         -24.502    
+                         required time                         34.983    
+                         arrival time                         -26.181    
   -------------------------------------------------------------------
-                         slack                                 11.474    
+                         slack                                  8.803    
 
 
 
@@ -775,48 +966,48 @@ Slack (MET) :             11.474ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.150ns  (arrival time - required time)
-  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[3]/C
-                            (falling edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
-  Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[0]/CE
-                            (falling edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
+Slack (MET) :             0.286ns  (arrival time - required time)
+  Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
   Path Group:             microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall@16.667ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall@16.667ns)
-  Data Path Delay:        0.663ns  (logic 0.157ns (23.663%)  route 0.506ns (76.337%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.587ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.188ns = ( 17.855 - 16.667 ) 
-    Source Clock Delay      (SCD):    0.526ns = ( 17.192 - 16.667 ) 
-    Clock Pessimism Removal (CPR):    0.076ns
+  Requirement:            0.000ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise@0.000ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise@0.000ns)
+  Data Path Delay:        0.341ns  (logic 0.157ns (46.081%)  route 0.184ns (53.919%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.330ns
+    Source Clock Delay      (SCD):    1.150ns
+    Clock Pessimism Removal (CPR):    0.180ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall edge)
-                                                     16.667    16.667 f  
-    BSCAN_X0Y1           BSCANE2                      0.000    16.667 f  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          0.526    17.192    microblaze_i/mdm_1/U0/MDM_Core_I1/CLK
-    SLICE_X28Y4          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[3]/C  (IS_INVERTED)
+                         (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
+                         net (fo=41, routed)          1.150     1.150    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
+    SLICE_X36Y2          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X28Y4          FDCE (Prop_fdce_C_Q)         0.112    17.304 f  microblaze_i/mdm_1/U0/MDM_Core_I1/Use_BSCAN.PORT_Selector_reg[3]/Q
-                         net (fo=7, routed)           0.325    17.629    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.PORT_Selector_reg[3][3]
-    SLICE_X28Y4          LUT5 (Prop_lut5_I3_O)        0.045    17.674 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command[0]_i_1/O
-                         net (fo=9, routed)           0.181    17.855    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command[0]_i_1_n_0
-    SLICE_X30Y3          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[0]/CE
+    SLICE_X36Y2          FDCE (Prop_fdce_C_Q)         0.112     1.262 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]/Q
+                         net (fo=2, routed)           0.184     1.446    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/completion_ctrl
+    SLICE_X36Y2          LUT3 (Prop_lut3_I2_O)        0.045     1.491 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/completion_ctrl[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.491    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I_n_38
+    SLICE_X36Y2          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall edge)
-                                                     16.667    16.667 f  
-    BSCAN_X0Y1           BSCANE2                      0.000    16.667 f  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          1.188    17.855    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
-    SLICE_X30Y3          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[0]/C  (IS_INVERTED)
-                         clock pessimism             -0.076    17.779    
-    SLICE_X30Y3          FDCE (Hold_fdce_C_CE)       -0.073    17.706    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[0]
+                         (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise edge)
+                                                      0.000     0.000 r  
+    BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
+                         net (fo=41, routed)          1.330     1.330    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
+    SLICE_X36Y2          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]/C
+                         clock pessimism             -0.180     1.150    
+    SLICE_X36Y2          FDCE (Hold_fdce_C_D)         0.055     1.205    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/completion_ctrl_reg[0]
   -------------------------------------------------------------------
-                         required time                        -17.706    
-                         arrival time                          17.855    
+                         required time                         -1.205    
+                         arrival time                           1.491    
   -------------------------------------------------------------------
-                         slack                                  0.150    
+                         slack                                  0.286    
 
 
 
@@ -829,10 +1020,10 @@ Waveform(ns):       { 0.000 16.667 }
 Period(ns):         33.333
 Sources:            { microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE }
 
-Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location     Pin
-Min Period        n/a     FDCE/C   n/a            1.000         33.333      32.333     SLICE_X36Y2  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Debug_Rst_i_reg/C
-Low Pulse Width   Fast    FDCE/C   n/a            0.500         16.666      16.166     SLICE_X51Y8  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.control_reg_reg[8]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         16.666      16.166     SLICE_X36Y2  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Debug_Rst_i_reg/C
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     FDCE/C   n/a            1.000         33.333      32.333     SLICE_X45Y16  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.command_reg_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         16.666      16.166     SLICE_X55Y16  microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Serial_Dbg_Intf.control_reg_reg[8]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         16.666      16.166     SLICE_X39Y2   microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.command_reg[1]/C
 
 
 
@@ -840,26 +1031,26 @@ High Pulse Width  Fast    FDCE/C   n/a            0.500         16.666      16.1
 From Clock:  clk_out1_microblaze_clk_wiz_1_0
   To Clock:  pclk_microblaze_clk_wiz_1_0
 
-Setup :            2  Failing Endpoints,  Worst Slack       -0.049ns,  Total Violation       -0.099ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.082ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.148ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.120ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -0.049ns  (required time - arrival time)
+Slack (MET) :             0.148ns  (required time - arrival time)
   Source:                 microblaze_i/rst_clk_100MHz/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[4]/R
+  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/_rgb_out_reg[4]/R
                             (rising edge-triggered cell FDRE clocked by pclk_microblaze_clk_wiz_1_0  {rise@0.000ns fall@6.667ns period=13.333ns})
   Path Group:             pclk_microblaze_clk_wiz_1_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            3.333ns  (pclk_microblaze_clk_wiz_1_0 rise@13.333ns - clk_out1_microblaze_clk_wiz_1_0 rise@10.000ns)
-  Data Path Delay:        2.456ns  (logic 0.580ns (23.617%)  route 1.876ns (76.383%))
+  Data Path Delay:        2.261ns  (logic 0.580ns (25.657%)  route 1.681ns (74.343%))
   Logic Levels:           1  (LUT1=1)
-  Clock Path Skew:        -0.205ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.562ns = ( 11.771 - 13.333 ) 
-    Source Clock Delay      (SCD):    -0.959ns = ( 9.041 - 10.000 ) 
+  Clock Path Skew:        -0.203ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.565ns = ( 11.768 - 13.333 ) 
+    Source Clock Delay      (SCD):    -0.964ns = ( 9.036 - 10.000 ) 
     Clock Pessimism Removal (CPR):    0.398ns
   Clock Uncertainty:      0.198ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -878,14 +1069,14 @@ Slack (VIOLATED) :        -0.049ns  (required time - arrival time)
                                                      -6.961     5.731 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661     7.392    microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.488 r  microblaze_i/clk_wiz_1/inst/clkout1_buf/O
-                         net (fo=2199, routed)        1.553     9.041    microblaze_i/rst_clk_100MHz/U0/slowest_sync_clk
-    SLICE_X35Y31         FDRE                                         r  microblaze_i/rst_clk_100MHz/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                         net (fo=2274, routed)        1.548     9.036    microblaze_i/rst_clk_100MHz/U0/slowest_sync_clk
+    SLICE_X32Y22         FDRE                                         r  microblaze_i/rst_clk_100MHz/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X35Y31         FDRE (Prop_fdre_C_Q)         0.456     9.497 f  microblaze_i/rst_clk_100MHz/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
-                         net (fo=27, routed)          0.796    10.293    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/s00_axi_aresetn
-    SLICE_X35Y31         LUT1 (Prop_lut1_I0_O)        0.124    10.417 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/car_obstacle/_rgb_out[11]_i_1/O
-                         net (fo=249, routed)         1.080    11.497    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/p_0_in
-    SLICE_X34Y30         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[4]/R
+    SLICE_X32Y22         FDRE (Prop_fdre_C_Q)         0.456     9.492 f  microblaze_i/rst_clk_100MHz/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=24, routed)          0.496     9.989    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/s00_axi_aresetn
+    SLICE_X31Y22         LUT1 (Prop_lut1_I0_O)        0.124    10.113 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/_rgb_out[11]_i_1/O
+                         net (fo=214, routed)         1.184    11.297    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/p_0_in0
+    SLICE_X30Y23         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/_rgb_out_reg[4]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock pclk_microblaze_clk_wiz_1_0 rise edge)
@@ -898,16 +1089,16 @@ Slack (VIOLATED) :        -0.049ns  (required time - arrival time)
                                                      -7.217     8.666 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.581    10.247    microblaze_i/clk_wiz_1/inst/pclk_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    10.338 r  microblaze_i/clk_wiz_1/inst/clkout2_buf/O
-                         net (fo=630, routed)         1.433    11.771    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/pclk
-    SLICE_X34Y30         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[4]/C
-                         clock pessimism              0.398    12.170    
-                         clock uncertainty           -0.198    11.972    
-    SLICE_X34Y30         FDRE (Setup_fdre_C_R)       -0.524    11.448    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/_rgb_pixel_reg[4]
+                         net (fo=908, routed)         1.430    11.768    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pclk
+    SLICE_X30Y23         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/_rgb_out_reg[4]/C
+                         clock pessimism              0.398    12.167    
+                         clock uncertainty           -0.198    11.969    
+    SLICE_X30Y23         FDRE (Setup_fdre_C_R)       -0.524    11.445    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/_rgb_out_reg[4]
   -------------------------------------------------------------------
-                         required time                         11.448    
-                         arrival time                         -11.497    
+                         required time                         11.445    
+                         arrival time                         -11.297    
   -------------------------------------------------------------------
-                         slack                                 -0.049    
+                         slack                                  0.148    
 
 
 
@@ -915,19 +1106,19 @@ Slack (VIOLATED) :        -0.049ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.082ns  (arrival time - required time)
-  Source:                 microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg1_reg[3]/C
+Slack (MET) :             0.120ns  (arrival time - required time)
+  Source:                 microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_reg10_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_microblaze_clk_wiz_1_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/bg_type_reg[3]/D
+  Destination:            microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_buff10_reg[7]/D
                             (rising edge-triggered cell FDRE clocked by pclk_microblaze_clk_wiz_1_0  {rise@0.000ns fall@6.667ns period=13.333ns})
   Path Group:             pclk_microblaze_clk_wiz_1_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pclk_microblaze_clk_wiz_1_0 rise@0.000ns - clk_out1_microblaze_clk_wiz_1_0 rise@0.000ns)
-  Data Path Delay:        0.683ns  (logic 0.231ns (33.838%)  route 0.452ns (66.162%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        0.311ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.873ns
-    Source Clock Delay      (SCD):    -0.628ns
+  Data Path Delay:        0.691ns  (logic 0.141ns (20.415%)  route 0.550ns (79.585%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.313ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.874ns
+    Source Clock Delay      (SCD):    -0.631ns
     Clock Pessimism Removal (CPR):    -0.555ns
   Clock Uncertainty:      0.198ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -946,16 +1137,12 @@ Slack (MET) :             0.082ns  (arrival time - required time)
                                                      -2.360    -1.693 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -1.207    microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  microblaze_i/clk_wiz_1/inst/clkout1_buf/O
-                         net (fo=2199, routed)        0.553    -0.628    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/s00_axi_aclk
-    SLICE_X37Y22         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg1_reg[3]/C
+                         net (fo=2274, routed)        0.550    -0.631    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/s00_axi_aclk
+    SLICE_X37Y24         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_reg10_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X37Y22         FDRE (Prop_fdre_C_Q)         0.141    -0.487 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/bg_reg1_reg[3]/Q
-                         net (fo=2, routed)           0.258    -0.230    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/bg_reg1_reg[3][3]
-    SLICE_X37Y22         LUT6 (Prop_lut6_I2_O)        0.045    -0.185 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/bg_type[3]_i_3/O
-                         net (fo=1, routed)           0.194     0.009    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/bg_type[3]_i_3_n_0
-    SLICE_X37Y23         LUT5 (Prop_lut5_I0_O)        0.045     0.054 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/pixel_counter/bg_type[3]_i_2/O
-                         net (fo=1, routed)           0.000     0.054    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/D[3]
-    SLICE_X37Y23         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/bg_type_reg[3]/D
+    SLICE_X37Y24         FDRE (Prop_fdre_C_Q)         0.141    -0.490 r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_reg10_reg[7]/Q
+                         net (fo=1, routed)           0.550     0.059    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_reg10_reg_n_0_[7]
+    SLICE_X36Y24         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_buff10_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock pclk_microblaze_clk_wiz_1_0 rise edge)
@@ -968,16 +1155,16 @@ Slack (MET) :             0.082ns  (arrival time - required time)
                                                      -3.142    -2.248 r  microblaze_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.530    -1.718    microblaze_i/clk_wiz_1/inst/pclk_microblaze_clk_wiz_1_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  microblaze_i/clk_wiz_1/inst/clkout2_buf/O
-                         net (fo=630, routed)         0.817    -0.873    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/pclk
-    SLICE_X37Y23         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/bg_type_reg[3]/C
-                         clock pessimism              0.555    -0.318    
-                         clock uncertainty            0.198    -0.120    
-    SLICE_X37Y23         FDRE (Hold_fdre_C_D)         0.092    -0.028    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/frogger_background/bg_type_reg[3]
+                         net (fo=908, routed)         0.816    -0.874    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/pclk
+    SLICE_X36Y24         FDRE                                         r  microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_buff10_reg[7]/C
+                         clock pessimism              0.555    -0.319    
+                         clock uncertainty            0.198    -0.121    
+    SLICE_X36Y24         FDRE (Hold_fdre_C_D)         0.060    -0.061    microblaze_i/Video_Controller_4regs_0/inst/Video_Controller_4regs_v1_S00_AXI_inst/truck_obstacle/obj_buff10_reg[7]
   -------------------------------------------------------------------
-                         required time                          0.028    
-                         arrival time                           0.054    
+                         required time                          0.061    
+                         arrival time                           0.059    
   -------------------------------------------------------------------
-                         slack                                  0.082    
+                         slack                                  0.120    
 
 
 
@@ -988,14 +1175,14 @@ Path Group:  **async_default**
 From Clock:  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
   To Clock:  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
 
-Setup :            0  Failing Endpoints,  Worst Slack       14.193ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack       17.384ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       13.567ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack       17.651ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             14.193ns  (required time - arrival time)
+Slack (MET) :             13.567ns  (required time - arrival time)
   Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C
                             (falling edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
   Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR
@@ -1003,12 +1190,12 @@ Slack (MET) :             14.193ns  (required time - arrival time)
   Path Group:             **async_default**
   Path Type:              Recovery (Max at Slow Process Corner)
   Requirement:            16.667ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise@33.333ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall@16.667ns)
-  Data Path Delay:        2.063ns  (logic 0.464ns (22.495%)  route 1.599ns (77.505%))
+  Data Path Delay:        1.853ns  (logic 0.486ns (26.232%)  route 1.367ns (73.768%))
   Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.122ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.644ns = ( 34.977 - 33.333 ) 
-    Source Clock Delay      (SCD):    1.761ns = ( 18.428 - 16.667 ) 
-    Clock Pessimism Removal (CPR):    0.240ns
+  Clock Path Skew:        -0.713ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.564ns = ( 34.897 - 33.333 ) 
+    Source Clock Delay      (SCD):    2.489ns = ( 19.155 - 16.667 ) 
+    Clock Pessimism Removal (CPR):    0.212ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -1020,29 +1207,29 @@ Slack (MET) :             14.193ns  (required time - arrival time)
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall edge)
                                                      16.667    16.667 f  
     BSCAN_X0Y1           BSCANE2                      0.000    16.667 f  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          1.761    18.428    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/CLK
-    SLICE_X31Y5          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C  (IS_INVERTED)
+                         net (fo=41, routed)          2.489    19.155    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/CLK
+    SLICE_X38Y3          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C  (IS_INVERTED)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y5          FDCE (Prop_fdce_C_Q)         0.340    18.768 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/Q
-                         net (fo=18, routed)          0.841    19.609    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Q_1
-    SLICE_X31Y4          LUT2 (Prop_lut2_I1_O)        0.124    19.733 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2/O
-                         net (fo=1, routed)           0.757    20.491    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2_n_0
-    SLICE_X31Y4          FDCE                                         f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR
+    SLICE_X38Y3          FDCE (Prop_fdce_C_Q)         0.362    19.517 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/Q
+                         net (fo=18, routed)          0.833    20.350    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Q_1
+    SLICE_X40Y1          LUT2 (Prop_lut2_I1_O)        0.124    20.474 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2/O
+                         net (fo=1, routed)           0.534    21.008    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2_n_0
+    SLICE_X40Y1          FDCE                                         f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR
   -------------------------------------------------------------------    -------------------
 
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise edge)
                                                      33.333    33.333 r  
     BSCAN_X0Y1           BSCANE2                      0.000    33.333 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          1.644    34.977    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
-    SLICE_X31Y4          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/C
-                         clock pessimism              0.240    35.217    
-                         clock uncertainty           -0.035    35.181    
-    SLICE_X31Y4          FDCE (Recov_fdce_C_CLR)     -0.498    34.683    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg
+                         net (fo=41, routed)          1.564    34.897    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
+    SLICE_X40Y1          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/C
+                         clock pessimism              0.212    35.109    
+                         clock uncertainty           -0.035    35.073    
+    SLICE_X40Y1          FDCE (Recov_fdce_C_CLR)     -0.498    34.575    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg
   -------------------------------------------------------------------
-                         required time                         34.683    
-                         arrival time                         -20.491    
+                         required time                         34.575    
+                         arrival time                         -21.008    
   -------------------------------------------------------------------
-                         slack                                 14.193    
+                         slack                                 13.567    
 
 
 
@@ -1050,7 +1237,7 @@ Slack (MET) :             14.193ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             17.384ns  (arrival time - required time)
+Slack (MET) :             17.651ns  (arrival time - required time)
   Source:                 microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C
                             (falling edge-triggered cell FDCE clocked by microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE  {rise@0.000ns fall@16.667ns period=33.333ns})
   Destination:            microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR
@@ -1058,12 +1245,12 @@ Slack (MET) :             17.384ns  (arrival time - required time)
   Path Group:             **async_default**
   Path Type:              Removal (Min at Fast Process Corner)
   Requirement:            -16.667ns  (microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise@0.000ns - microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall@16.667ns)
-  Data Path Delay:        0.730ns  (logic 0.157ns (21.515%)  route 0.573ns (78.485%))
+  Data Path Delay:        0.664ns  (logic 0.163ns (24.559%)  route 0.501ns (75.441%))
   Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.104ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.913ns
-    Source Clock Delay      (SCD):    0.708ns = ( 17.375 - 16.667 ) 
-    Clock Pessimism Removal (CPR):    0.100ns
+  Clock Path Skew:        -0.228ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.899ns
+    Source Clock Delay      (SCD):    1.033ns = ( 17.699 - 16.667 ) 
+    Clock Pessimism Removal (CPR):    0.094ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Total Input Jitter      (TIJ):    0.000ns
@@ -1075,29 +1262,29 @@ Slack (MET) :             17.384ns  (arrival time - required time)
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE fall edge)
                                                      16.667    16.667 f  
     BSCAN_X0Y1           BSCANE2                      0.000    16.667 f  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          0.708    17.375    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/CLK
-    SLICE_X31Y5          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C  (IS_INVERTED)
+                         net (fo=41, routed)          1.033    17.699    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/CLK
+    SLICE_X38Y3          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/C  (IS_INVERTED)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y5          FDCE (Prop_fdce_C_Q)         0.112    17.487 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/Q
-                         net (fo=18, routed)          0.310    17.797    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Q_1
-    SLICE_X31Y4          LUT2 (Prop_lut2_I1_O)        0.045    17.842 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2/O
-                         net (fo=1, routed)           0.262    18.105    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2_n_0
-    SLICE_X31Y4          FDCE                                         f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR
+    SLICE_X38Y3          FDCE (Prop_fdce_C_Q)         0.118    17.817 r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Using_FPGA.Native/Q
+                         net (fo=18, routed)          0.321    18.138    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Q_1
+    SLICE_X40Y1          LUT2 (Prop_lut2_I1_O)        0.045    18.183 f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2/O
+                         net (fo=1, routed)           0.180    18.363    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_i_2_n_0
+    SLICE_X40Y1          FDCE                                         f  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR
   -------------------------------------------------------------------    -------------------
 
                          (clock microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE rise edge)
                                                       0.000     0.000 r  
     BSCAN_X0Y1           BSCANE2                      0.000     0.000 r  microblaze_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE
-                         net (fo=41, routed)          0.913     0.913    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
-    SLICE_X31Y4          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/C
-                         clock pessimism             -0.100     0.813    
-                         clock uncertainty            0.035     0.848    
-    SLICE_X31Y4          FDCE (Remov_fdce_C_CLR)     -0.128     0.720    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg
+                         net (fo=41, routed)          0.899     0.899    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/CLK
+    SLICE_X40Y1          FDCE                                         r  microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/C
+                         clock pessimism             -0.094     0.805    
+                         clock uncertainty            0.035     0.840    
+    SLICE_X40Y1          FDCE (Remov_fdce_C_CLR)     -0.128     0.712    microblaze_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg
   -------------------------------------------------------------------
-                         required time                         -0.720    
-                         arrival time                          18.105    
+                         required time                         -0.712    
+                         arrival time                          18.363    
   -------------------------------------------------------------------
-                         slack                                 17.384    
+                         slack                                 17.651    
 
 
 

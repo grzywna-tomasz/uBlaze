@@ -10,14 +10,17 @@
 
 #include "xil_types.h"
 #include "xgpio.h"
+
 #include "Frog.h"
+#include "Background.h"
 
 class Controls {
 public:
-	Controls(Frog *frogPtr);
+	Controls(Frog *frogPtr, Background *bgPtr);
 	void getKeyboardAction();
 
 private:
+	Background *background;
 	Frog *player;
 	XGpio input;
 	uint8_t key;

@@ -6,113 +6,53 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "sleep.h"
-//#include "xgpio.h"
 
 //Used object classes
 #include "Objects/Frog.h"
-#include "Objects/Car.h"
+#include "Objects/GameObject.h"
 #include "Objects/Controls.h"
+#include "Objects/Background.h"
 
-//Used definitions and constants
 #include "definitions.h"
-
-//Temporary functions
-
-void setupBackground(){
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, TRAINWAY_TILE); //tile7
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile6
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, WATER_TILE); //tile5
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile4
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile3
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, GRASS_TILE); //tile2
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, HIGHWAY_TILE); //tile1
-}
-/*
-void setupFrog(uint16_t pos_x, uint16_t pos_y, uint8_t index){
-	uint8_t module_id = 1;
-	uint32_t obj_data;
-	pos_x &= 0x7FF; //11bits
-	pos_y &= 0x3FF; //10bits
-	index &= 0x3F; //6bits
-	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
-  	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
-}
-*/
-
-void setupCar(uint16_t pos_x, uint16_t pos_y, uint8_t index){
-	uint8_t module_id = 2;
-	uint32_t obj_data;
-	pos_x &= 0x7FF; //11bits
-	pos_y &= 0x3FF; //10bits
-	index &= 0x3F; //6bits
-	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
-  	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
-}
-
-void setupTruck(uint16_t pos_x, uint16_t pos_y, uint8_t index){
-	uint8_t module_id = 3;
-	uint32_t obj_data;
-	pos_x &= 0x7FF; //11bits
-	pos_y &= 0x3FF; //10bits
-	index &= 0x3F; //6bits
-	obj_data = (module_id<<27) | (index<<21) | (pos_x<<10) | pos_y;
-  	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
-}
-
-void setupAllOnBlank(){
-	//setupFrog(VOID_X, VOID_Y, 1);
-	for(uint8_t i = 1; i<11; i++){
-		setupCar(VOID_X,VOID_Y, i);
-		setupTruck(VOID_X,VOID_Y, i);
-	}
-}
-
-//XGpio input;
 
 int main()
 {
+	Background objBg = Background();
+	Background *playerBg = &objBg;
 
-	Frog objFrog = Frog(412,656,1); //args: uint16_t posX, uint16_t posY, uint8_t speed);
+	//Frog(uint16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed);
+	Frog objFrog = Frog(446,690,playerBg,1);
 	Frog *playerFrog = &objFrog;
 
-	Controls objKeyboard = Controls(playerFrog); //args: Frog* ptr
+	//Controls(Frog *frogPtr, Background *bgPtr)
+	Controls objKeyboard = Controls(playerFrog, playerBg);
 	Controls *playerKeyboard = &objKeyboard;
 
-	uint16_t car0_x = FRAME_SIZE_OFFSET+10;
-	uint16_t car1_x = FRAME_SIZE_OFFSET+110;
-	uint16_t car2_x = FRAME_SIZE_OFFSET+210;
-	uint16_t car3_x = FRAME_SIZE_OFFSET+610;
-	uint16_t car4_x = FRAME_SIZE_OFFSET+510;
+	//GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t pos_y, Background *bgPtr, uint8_t speed, uint8_t objIndex, uint8_t moduleId, enum Direction _direction)
+	GameObject car1 = GameObject(64, 64, 20, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 1, 2, GameObject::Right);
+	GameObject car2 = GameObject(64, 64, 350, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 2, 2, GameObject::Right);
+	GameObject car3 = GameObject(64, 64, 700, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 3, 2, GameObject::Left);
+	GameObject car4 = GameObject(64, 64, 80, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 4, 2, GameObject::Left);
+	GameObject car5 = GameObject(64, 64, 450, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 5, 2, GameObject::Right);
 
-	setupBackground();
-	setupAllOnBlank();
+	GameObject* gameObjects[] = {&car1, &car2, &car3, &car4, &car5};
 
 	while(1){
 
-		if(car0_x != 0) car0_x -= 1;
-		else car0_x = 1112;
-
-		if(car1_x != 1112) car1_x += 1;
-		else car1_x = 0;
-
-		if(car2_x != 1112) car2_x += 1;
-		else car2_x = 0;
-
-		if(car3_x != 1112) car3_x += 1;
-		else car3_x = 0;
-
-		if(car4_x != 0) car4_x -= 1;
-		else car4_x = 1112;
+		for( int i = 0; i<5; i++){
+			gameObjects[i]->draw();
+			gameObjects[i]->updatePos();
+		}
 
 		playerKeyboard->getKeyboardAction();
 		playerFrog->updatePos();
 		playerFrog->draw();
 
-		setupCar(car0_x,TILE3_HEIGHT_OFFSET+10, 1);
-		setupTruck(car1_x,TILE1_HEIGHT_OFFSET+10, 1);
-		setupCar(car2_x,TILE4_HEIGHT_OFFSET+10, 2);
-		setupCar(car3_x,TILE4_HEIGHT_OFFSET+10, 3);
-		setupTruck(car4_x,TILE3_HEIGHT_OFFSET+10, 2);
+		playerBg->update();
+		playerBg->draw();
+
+		if(playerFrog->IsColliding(gameObjects, 5))
+			playerFrog->reset();
 
 		usleep(2000);
 	}
