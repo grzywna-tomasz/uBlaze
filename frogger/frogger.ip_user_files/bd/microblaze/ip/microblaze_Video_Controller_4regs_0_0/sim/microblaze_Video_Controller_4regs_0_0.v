@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Video_Controller_4regs:1
-// IP Revision: 66
+// IP Revision: 70
 
 `timescale 1ns/1ps
 

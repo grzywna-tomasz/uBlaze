@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Aug 28 21:37:09 2019
+| Date             : Mon Sep  2 01:11:53 2019
 | Host             : DESKTOP-RDBCQBE running 64-bit major release  (build 9200)
 | Command          : report_power -file microblaze_wrapper_power_routed.rpt -pb microblaze_wrapper_power_summary_routed.pb -rpx microblaze_wrapper_power_routed.rpx
 | Design           : microblaze_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.288        |
+| Total On-Chip Power (W)  | 0.305        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.214        |
+| Dynamic (W)              | 0.231        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 83.6         |
-| Junction Temperature (C) | 26.4         |
+| Max Ambient (C)          | 83.5         |
+| Junction Temperature (C) | 26.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.015 |        8 |       --- |             --- |
-| Slice Logic              |     0.033 |    12630 |       --- |             --- |
-|   LUT as Logic           |     0.030 |     5993 |     20800 |           28.81 |
-|   F7/F8 Muxes            |     0.001 |      872 |     32600 |            2.67 |
+| Clocks                   |     0.016 |        8 |       --- |             --- |
+| Slice Logic              |     0.039 |    14535 |       --- |             --- |
+|   LUT as Logic           |     0.036 |     7251 |     20800 |           34.86 |
+|   F7/F8 Muxes            |     0.002 |     1450 |     32600 |            4.45 |
 |   LUT as Distributed RAM |    <0.001 |       64 |      9600 |            0.67 |
 |   CARRY4                 |    <0.001 |      369 |      8150 |            4.53 |
-|   Register               |    <0.001 |     3156 |     41600 |            7.59 |
+|   Register               |    <0.001 |     3400 |     41600 |            8.17 |
 |   LUT as Shift Register  |    <0.001 |       91 |      9600 |            0.95 |
-|   Others                 |    <0.001 |      568 |       --- |             --- |
-| Signals                  |     0.029 |     8379 |       --- |             --- |
+|   Others                 |    <0.001 |      572 |       --- |             --- |
+| Signals                  |     0.035 |     9061 |       --- |             --- |
 | Block RAM                |     0.015 |       32 |        50 |           64.00 |
 | MMCM                     |     0.121 |        1 |         5 |           20.00 |
-| I/O                      |     0.001 |       23 |       106 |           21.70 |
+| I/O                      |     0.004 |       23 |       106 |           21.70 |
 | Static Power             |     0.074 |          |           |                 |
-| Total                    |     0.288 |          |           |                 |
+| Total                    |     0.305 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,9 +76,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.102 |       0.091 |      0.011 |
+| Vccint    |       1.000 |     0.116 |       0.105 |      0.011 |
 | Vccaux    |       1.800 |     0.080 |       0.067 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -150,15 +150,19 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| microblaze_wrapper                                                                 |     0.214 |
-|   microblaze_i                                                                     |     0.213 |
-|     Video_Controller_4regs_0                                                       |     0.057 |
-|       inst                                                                         |     0.057 |
-|         Video_Controller_4regs_v1_S00_AXI_inst                                     |     0.057 |
+| microblaze_wrapper                                                                 |     0.231 |
+|   microblaze_i                                                                     |     0.226 |
+|     RandomNumberGenerator_0                                                        |     0.001 |
+|       inst                                                                         |     0.001 |
+|         RandomNumberGenerator_v1_S00_AXI_inst                                      |     0.001 |
+|           random_generator                                                         |    <0.001 |
+|     Video_Controller_4regs_0                                                       |     0.069 |
+|       inst                                                                         |     0.069 |
+|         Video_Controller_4regs_v1_S00_AXI_inst                                     |     0.069 |
 |           car_obstacle                                                             |     0.006 |
-|           frogger_background                                                       |     0.002 |
-|           pixel_counter                                                            |     0.033 |
-|           player_frog                                                              |    <0.001 |
+|           frogger_background                                                       |     0.014 |
+|           pixel_counter                                                            |     0.023 |
+|           player_frog                                                              |     0.002 |
 |           truck_obstacle                                                           |     0.012 |
 |     axi_gpio_0                                                                     |    <0.001 |
 |       U0                                                                           |    <0.001 |
@@ -411,7 +415,7 @@ Table of Contents
 |                 Gen_Bits[7].MEM_EX_Result_Inst                                     |    <0.001 |
 |                 Gen_Bits[8].MEM_EX_Result_Inst                                     |    <0.001 |
 |                 Gen_Bits[9].MEM_EX_Result_Inst                                     |    <0.001 |
-|               Operand_Select_I                                                     |     0.001 |
+|               Operand_Select_I                                                     |     0.002 |
 |                 Gen_Bit[0].MUXF7_I1                                                |    <0.001 |
 |                 Gen_Bit[10].MUXF7_I1                                               |    <0.001 |
 |                 Gen_Bit[11].MUXF7_I1                                               |    <0.001 |
@@ -984,11 +988,11 @@ Table of Contents
 |         U0                                                                         |    <0.001 |
 |       ilmb_v10                                                                     |     0.000 |
 |         U0                                                                         |     0.000 |
-|       lmb_bram                                                                     |     0.015 |
-|         U0                                                                         |     0.015 |
-|           inst_blk_mem_gen                                                         |     0.015 |
-|             gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen                  |     0.015 |
-|               valid.cstr                                                           |     0.015 |
+|       lmb_bram                                                                     |     0.016 |
+|         U0                                                                         |     0.016 |
+|           inst_blk_mem_gen                                                         |     0.016 |
+|             gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen                  |     0.016 |
+|               valid.cstr                                                           |     0.016 |
 |                 ramloop[0].ram.r                                                   |    <0.001 |
 |                   prim_noinit.ram                                                  |    <0.001 |
 |                 ramloop[10].ram.r                                                  |    <0.001 |

@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER RandomNumberGenerator
+	OPTION supported_peripherals = (RandomNumberGenerator);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = RandomNumberGenerator;
+END DRIVER

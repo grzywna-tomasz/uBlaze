@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="microblaze" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1567020493"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1567020493"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1567020493"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1567020493"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1567378942"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1567378942"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1567378942"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1567378942"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="microblaze_sim_netlist.vhdl" Type="VHDL">
         <Properties IsEditable="true" IsVisible="true" Timestamp="1565373568" IsTrackable="true" IsStatusTracked="false"/>
@@ -184,6 +184,14 @@
       </File>
       <File Name="ip\microblaze_proc_sys_reset_0_0\microblaze_proc_sys_reset_0_0.xci" Type="IP">
         <Instance HierarchyPath="rst_pclk_75MHz"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\microblaze_RandomNumberGenerator_0_1\microblaze_RandomNumberGenerator_0_1.xci" Type="IP">
+        <Instance HierarchyPath="RandomNumberGenerator_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

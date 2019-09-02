@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Aug 28 21:35:45 2019
+| Date         : Mon Sep  2 01:10:06 2019
 | Host         : DESKTOP-RDBCQBE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file microblaze_wrapper_control_sets_placed.rpt
 | Design       : microblaze_wrapper
@@ -21,7 +21,7 @@ Table of Contents
 +-------------------------------+-------+
 |             Status            | Count |
 +-------------------------------+-------+
-| Number of unique control sets |   145 |
+| Number of unique control sets |   166 |
 +-------------------------------+-------+
 
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             291 |          115 |
+| No           | No                    | No                     |             292 |          116 |
 | No           | No                    | Yes                    |              30 |           12 |
-| No           | Yes                   | No                     |             427 |          188 |
-| Yes          | No                    | No                     |            1512 |          581 |
+| No           | Yes                   | No                     |             470 |          211 |
+| Yes          | No                    | No                     |            1521 |          652 |
 | Yes          | No                    | Yes                    |              15 |            8 |
-| Yes          | Yes                   | No                     |             880 |          278 |
+| Yes          | Yes                   | No                     |            1071 |          319 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
