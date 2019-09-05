@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-//Date        : Mon Sep  2 01:02:21 2019
-//Host        : DESKTOP-RDBCQBE running 64-bit major release  (build 9200)
+//Date        : Mon Sep  2 14:36:20 2019
+//Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 //Command     : generate_target microblaze.bd
 //Design      : microblaze
 //Purpose     : IP block netlist

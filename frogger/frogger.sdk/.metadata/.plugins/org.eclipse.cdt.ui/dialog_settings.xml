@@ -10,7 +10,7 @@
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="stubSelected1"/>
-		<item value="false" key="stubVirtual1"/>
+		<item value="true" key="stubVirtual1"/>
 		<item value="false" key="namespaceSelected"/>
 		<item value="false" key="stubInline0"/>
 		<item value="false" key="stubInline1"/>

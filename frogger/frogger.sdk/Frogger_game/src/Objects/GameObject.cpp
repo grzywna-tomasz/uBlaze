@@ -58,7 +58,7 @@ void GameObject::updatePos(){
 			break;
 
 		case GameObject::Right:
-			if(pos_x + width + speed <= 1124)
+			if(pos_x + speed <= 1140)
 				pos_x += speed;
 			else
 				pos_x = 0;
@@ -68,8 +68,6 @@ void GameObject::updatePos(){
 		case GameObject::None:
 			break;
 	}
-
-	//tileTransition();
 }
 
 void GameObject::draw(){
@@ -86,10 +84,9 @@ void GameObject::draw(){
 	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
 }
 
-/*void GameObject::tileTransition(){
-	if(background->isTransitionOn())
-		pos_y++;
-}*/
+void GameObject::transitionY(){
+	pos_y++;
+}
 
 uint16_t GameObject::getHeight() const {
 

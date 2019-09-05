@@ -6,7 +6,6 @@
  */
 
 #include "Controls.h"
-#include "background_old.h"
 
 
 #define NONE 0
@@ -15,8 +14,6 @@
 #define UP 2
 #define DOWN 8
 #define ENTER 16
-
-extern uint16_t desiredbgy;
 
 #define FROG_STEP 100
 

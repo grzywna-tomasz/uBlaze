@@ -11,12 +11,6 @@
 
 #define HEIGHT 100
 
-//Background tiles
-#define GRASS_TILE 1
-#define HIGHWAY_TILE 2
-#define WATER_TILE 3
-//#define TRAINWAY_TILE 4
-
 Background::Background() {
 	this->transitionOn = false;
 	this->current_transition_offset = 56;
@@ -27,7 +21,7 @@ Background::Background() {
 	this->bg_tile3 = Highway;
 	this->bg_tile4 = Highway;
 	this->bg_tile5 = Water;
-	this->bg_tile6 = Highway;
+	this->bg_tile6 = Grass;
 	this->bg_tile7 = Grass;
 	this->bg_nxt = Highway;
 }
@@ -75,14 +69,12 @@ void Background::update() {
 enum Background::tileType Background::getRandomTile() {
 	uint32_t random = Xil_In32(RNG_BASEADDR);
 
-	if(random <= 64)
+	if(random <= 85)
 		return Background::Grass;
-	else if(random <= 128)
+	else if(random <= 171)
 		return Background::Highway;
-	else if(random <= 192)
-		return Background::Water;
 	else
-		return Background::Trainway;
+		return Background::Water;
 }
 
 uint8_t Background::getDesiredTransitionOffset() const {
@@ -97,6 +89,6 @@ bool Background::isTransitionOn() const {
 	return transitionOn;
 }
 
-enum Background::tileType Background::getBG_nxt(){
+enum Background::tileType Background::getBgNxt() const {
 	return bg_nxt;
 }

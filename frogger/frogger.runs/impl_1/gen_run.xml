@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1567379193">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1567428036">
   <File Type="PWROPT-DCP" Name="microblaze_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="microblaze_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="microblaze_wrapper.tcl"/>
@@ -103,12 +103,6 @@
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/zaba.mem">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

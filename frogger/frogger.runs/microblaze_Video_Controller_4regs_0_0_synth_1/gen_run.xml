@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="microblaze_Video_Controller_4regs_0_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1567378944">
+<GenRun Id="microblaze_Video_Controller_4regs_0_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1567427785">
   <File Type="PA-TCL" Name="microblaze_Video_Controller_4regs_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="microblaze_Video_Controller_4regs_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="microblaze_Video_Controller_4regs_0_0_reports.tcl"/>

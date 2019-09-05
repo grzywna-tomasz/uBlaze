@@ -38,7 +38,6 @@ void Frog::reset(){
 	pos_y = desired_y = 690;
 }
 
-//TODO Collisions
 bool Frog::IsColliding(GameObject **gameObjects, uint8_t objectsCount){
 	for(int i=0; i<objectsCount; i++){
 		uint16_t objPosX = gameObjects[i]->getPosX();

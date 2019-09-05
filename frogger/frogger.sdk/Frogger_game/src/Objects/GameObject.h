@@ -16,11 +16,13 @@ public:
 
 	enum Direction {Left, Right, None};
 
-	GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t pos_y, Background *bgPtr, uint8_t speed = 1, uint8_t objIndex = 0, uint8_t moduleId = 0, enum Direction _direction = None);
+	GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t pos_y, Background *bgPtr, uint8_t speed, uint8_t objIndex, uint8_t moduleId, enum Direction _direction);
 	virtual ~GameObject();
 
 	virtual void updatePos();
 	virtual void draw();
+
+	virtual void transitionY();
 
 	uint16_t getHeight() const;
 	void setHeight(uint16_t height);
@@ -53,9 +55,6 @@ protected:
 
 	uint8_t speed;
 	uint8_t trans_spd; //speed when tile transition
-
-	//Object will move when tile transition is on
-	//void tileTransition();
 };
 
 #endif /* SRC_OBJECTS_GAMEOBJECT_H_ */

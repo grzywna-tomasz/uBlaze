@@ -12,6 +12,8 @@
 #include "Objects/GameObject.h"
 #include "Objects/Controls.h"
 #include "Objects/Background.h"
+#include "Objects/Car.h"
+#include "Objects/Truck.h"
 
 #include "definitions.h"
 
@@ -21,13 +23,11 @@ void tileTransition(GameObject **gameObjects, Background objBg){
 	if(objBg.isTransitionOn()){
 		for (int i = 0; i<10; i++){
 			if (gameObjects[i]->getPosY() < 856)
-				gameObjects[i]->setPosY(gameObjects[i]->getPosY() + 1);
-			//if (pos_y < 856)
-				//pos_y++;
+				gameObjects[i]->transitionY();
 		}
 	}
 	else {
-		if (objBg.getBG_nxt() == Background::Highway){
+		if (objBg.getBgNxt() == Background::Highway){
 			while (stop){
 				if (gameObjects[cnt]->getPosY() == 40)
 					stop = 0;
@@ -61,32 +61,24 @@ int main()
 	Controls objKeyboard = Controls(playerFrog, playerBg);
 	Controls *playerKeyboard = &objKeyboard;
 
-	//GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t pos_y, Background *bgPtr, uint8_t speed, uint8_t objIndex, uint8_t moduleId, enum Direction _direction)
-	GameObject car1 = GameObject(64, 64, 620, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 1, 2, GameObject::Right);
-	GameObject car2 = GameObject(64, 64, 350, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 2, 2, GameObject::Right);
-	GameObject car3 = GameObject(64, 64, 700, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 3, 2, GameObject::Left);
-	GameObject car4 = GameObject(64, 64, 80, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 4, 2, GameObject::Left);
-	GameObject car5 = GameObject(64, 64, 450, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 5, 2, GameObject::Right);
-	GameObject car6 = GameObject(64, 64, 130, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 6, 2, GameObject::Right);
-	GameObject car7 = GameObject(64, 64, 80, TILE_OUTSIDE_OFFSET, playerBg, 1, 7, 2, GameObject::Left);
-	GameObject car8 = GameObject(64, 64, 450, TILE_OUTSIDE_OFFSET, playerBg, 1, 8, 2, GameObject::Left);
-	GameObject car9 = GameObject(64, 64, 510, TILE_OUTSIDE_OFFSET, playerBg, 1, 9, 2, GameObject::Right);
-	GameObject car10 = GameObject(64, 64, 700, TILE_OUTSIDE_OFFSET, playerBg, 1, 10, 2, GameObject::Right);
+	Car car1 = Car(620, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 1, GameObject::Right);
+	//Car car2 = Car(350, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 2, GameObject::Right);
+	Car car3 = Car(700, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 3, GameObject::Right);
+	Car car4 = Car(80, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 4, GameObject::Right);
+	Car car5 = Car(50, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 5, GameObject::Right);
+	//Car car6 = Car(130, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 6, GameObject::Right);
+	Car car7 = Car(80, TILE_OUTSIDE_OFFSET, playerBg, 1, 7, GameObject::Left);
+	Car car8 = Car(450, TILE_OUTSIDE_OFFSET, playerBg, 1, 8, GameObject::Left);
+	Car car9 = Car(510, TILE_OUTSIDE_OFFSET, playerBg, 1, 9, GameObject::Right);
+	Car car10 = Car(700, TILE_OUTSIDE_OFFSET, playerBg, 1, 10, GameObject::Right);
 
-	GameObject* gameObjects[] = {&car1, &car2, &car3, &car4, &car5, &car6, &car7, &car8, &car9, &car10};
+	Truck truck1 = Truck(250, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 1, GameObject::Right);
+	Truck truck2 = Truck(400, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 2, GameObject::Right);
 
-	//GameObject testSubject = GameObject(64, 64, 1200, TILE6_HEIGHT_OFFSET+82, playerBg, 1, 6, 2, GameObject::None);
 
-	//GameObject* gameObjects[] = {&car1, &car2, &car3, &car4, &car5, &testSubject};
-
-	uint32_t random = 0;
+	GameObject* gameObjects[] = {&car1, &truck1, &car3, &car4, &car5, &truck2, &car7, &car8, &car9, &car10};
 
 	while(1){
-
-		//RNG test
-
-		//random = Xil_In32(RNG_BASEADDR);
-		//testSubject.setPosX(300+random);
 
 		for( int i = 0; i<10; i++){
 			gameObjects[i]->draw();

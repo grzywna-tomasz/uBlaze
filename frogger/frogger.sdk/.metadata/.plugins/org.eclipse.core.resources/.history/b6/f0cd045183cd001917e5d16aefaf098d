@@ -1,0 +1,17 @@
+/*
+ * Truck.h
+ *
+ *  Created on: 02.09.2019
+ *      Author: Trait
+ */
+
+#ifndef SRC_OBJECTS_TRUCK_H_
+#define SRC_OBJECTS_TRUCK_H_
+
+class Truck {
+public:
+	Truck();
+	virtual ~Truck();
+};
+
+#endif /* SRC_OBJECTS_TRUCK_H_ */

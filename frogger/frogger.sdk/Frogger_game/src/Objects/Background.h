@@ -16,7 +16,7 @@ public:
 
 	Background();
 
-	enum tileType getBG_nxt();
+	//enum tileType getBG_nxt();
 
 	void update();
 	void draw();
@@ -27,6 +27,8 @@ public:
 	uint8_t getDesiredTransitionOffset() const;
 	void setDesiredTransitionOffset(uint8_t desiredTransitionOffset);
 	bool isTransitionOn() const;
+
+	enum tileType getBgNxt() const;
 
 private:
 
