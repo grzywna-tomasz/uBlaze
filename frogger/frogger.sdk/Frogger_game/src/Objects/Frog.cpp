@@ -9,18 +9,18 @@
 #include "xil_io.h"
 #include "../definitions.h"
 
-Frog::Frog(uint16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed) : GameObject(32, 32, posX, posY, bgPtr, speed, 1, 1, GameObject::None)
+Frog::Frog(int16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed) : GameObject(32, 32, posX, posY, bgPtr, speed, 1, GameObject::Frog, GameObject::None)
 {
 	this->desired_x = posX;
 	this->desired_y = posY;
 	this->frog_action = Idle;
 }
 
-void Frog::updatePos(){
+void Frog::update(){
 	if(desired_x == pos_x && desired_y==pos_y)
-		this->frog_action = Idle;
+		frog_action = Idle;
 	else {
-		this->frog_action = Moving;
+		frog_action = Moving;
 
 		if(desired_x < pos_x)
 			pos_x -= speed;
@@ -34,14 +34,17 @@ void Frog::updatePos(){
 	}
 }
 void Frog::reset(){
-	pos_x = desired_x = 446;
-	pos_y = desired_y = 690;
+	frog_action = Idle;
+	pos_x = 446;
+	desired_x = 446;
+	pos_y = 690;
+	desired_y = 690;
 }
 
 bool Frog::IsColliding(GameObject **gameObjects, uint8_t objectsCount){
 	for(int i=0; i<objectsCount; i++){
-		uint16_t objPosX = gameObjects[i]->getPosX();
-		uint16_t objPosY = gameObjects[i]->getPosY();
+		int16_t objPosX = gameObjects[i]->getPosX();
+		int16_t objPosY = gameObjects[i]->getPosY();
 		uint16_t objWidth = gameObjects[i]->getWidth();
 		uint16_t objHeight = gameObjects[i]->getHeight();
 

@@ -6,47 +6,18 @@
 #include "xparameters.h"
 #include "xil_io.h"
 #include "sleep.h"
-
-//Used object classes
-#include "Objects/Frog.h"
-#include "Objects/GameObject.h"
-#include "Objects/Controls.h"
-#include "Objects/Background.h"
-#include "Objects/Car.h"
-#include "Objects/Truck.h"
-
+#include "rand.h"
 #include "definitions.h"
 
-void tileTransition(GameObject **gameObjects, Background objBg){
-	uint8_t stop = 1;
-	uint8_t cnt = 0;
-	if(objBg.isTransitionOn()){
-		for (int i = 0; i<10; i++){
-			if (gameObjects[i]->getPosY() < 856)
-				gameObjects[i]->transitionY();
-		}
-	}
-	else {
-		if (objBg.getBgNxt() == Background::Highway){
-			while (stop){
-				if (gameObjects[cnt]->getPosY() == 40)
-					stop = 0;
-				else{
-					if (gameObjects[cnt]->getPosY() >= 856){
-						gameObjects[cnt]->setPosY(40);
-						gameObjects[cnt+1]->setPosY(40);
-						stop = 0;
-					}
-					else if (cnt == 12)
-						stop = 0;
-					else
-						cnt = cnt + 2;
-				}
-			}
-		}
-	}
+//Used object classes
+#include "Objects/Background.h"
+#include "Objects/PlayerControls.h"
+#include "Objects/GameObject.h"
+#include "Objects/Frog.h"
+#include "Objects/Car.h"
+#include "Objects/Truck.h"
+#include "Objects/GameController.h"
 
-}
 
 int main()
 {
@@ -58,44 +29,61 @@ int main()
 	Frog *playerFrog = &objFrog;
 
 	//Controls(Frog *frogPtr, Background *bgPtr)
-	Controls objKeyboard = Controls(playerFrog, playerBg);
-	Controls *playerKeyboard = &objKeyboard;
+	PlayerControls objKeyboard = PlayerControls(playerFrog, playerBg);
+	PlayerControls *playerKeyboard = &objKeyboard;
 
-	Car car1 = Car(620, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 1, GameObject::Right);
-	//Car car2 = Car(350, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 2, GameObject::Right);
-	Car car3 = Car(700, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 3, GameObject::Right);
-	Car car4 = Car(80, TILE3_HEIGHT_OFFSET+82, playerBg, 1, 4, GameObject::Right);
-	Car car5 = Car(50, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 5, GameObject::Right);
-	//Car car6 = Car(130, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 6, GameObject::Right);
-	Car car7 = Car(80, TILE_OUTSIDE_OFFSET, playerBg, 1, 7, GameObject::Left);
-	Car car8 = Car(450, TILE_OUTSIDE_OFFSET, playerBg, 1, 8, GameObject::Left);
-	Car car9 = Car(510, TILE_OUTSIDE_OFFSET, playerBg, 1, 9, GameObject::Right);
-	Car car10 = Car(700, TILE_OUTSIDE_OFFSET, playerBg, 1, 10, GameObject::Right);
+	//Stack solution due to lack of memory for dynamic allocation
+	Car car1 = Car(playerBg, 1);
+	Car car2 = Car(playerBg, 2);
+	Car car3 = Car(playerBg, 3);
+	Car car4 = Car(playerBg, 4);
+	Car car5 = Car(playerBg, 5);
+	Car car6 = Car(playerBg, 6);
+	Car car7 = Car(playerBg, 7);
+	Car car8 = Car(playerBg, 8);
+	Car car9 = Car(playerBg, 9);
+	Car car10 = Car(playerBg, 10);
 
-	Truck truck1 = Truck(250, TILE1_HEIGHT_OFFSET+82, playerBg, 1, 1, GameObject::Right);
-	Truck truck2 = Truck(400, TILE4_HEIGHT_OFFSET+82, playerBg, 1, 2, GameObject::Right);
+	Truck truck1 = Truck(playerBg, 1);
+	Truck truck2 = Truck(playerBg, 2);
+	Truck truck3 = Truck(playerBg, 3);
+	Truck truck4 = Truck(playerBg, 4);
+	Truck truck5 = Truck(playerBg, 5);
+	Truck truck6 = Truck(playerBg, 6);
+	Truck truck7 = Truck(playerBg, 7);
+	Truck truck8 = Truck(playerBg, 8);
+	Truck truck9 = Truck(playerBg, 9);
+	Truck truck10 = Truck(playerBg, 10);
 
+	const uint8_t objCount = 20;
+	GameObject* gameObjects[objCount] = {&car1, &car2, &car3, &car4, &car5, &car6, &car7, &car8, &car9, &car10,
+			&truck1, &truck2, &truck3, &truck4, &truck5, &truck6, &truck7, &truck8, &truck9, &truck10};
 
-	GameObject* gameObjects[] = {&car1, &truck1, &car3, &car4, &car5, &truck2, &car7, &car8, &car9, &car10};
+	//GameController(Background *bgPtr, GameObject** _gameObjects, uint8_t objectsCount);
+	GameController objCtrl = GameController(playerBg, gameObjects, objCount);
+	GameController *gameControl = &objCtrl;
 
 	while(1){
 
-		for( int i = 0; i<10; i++){
+		for( int i = 0; i<20; i++){
 			gameObjects[i]->draw();
-			gameObjects[i]->updatePos();
+			gameObjects[i]->update();
 		}
-
-		tileTransition(gameObjects, objBg);
-
-		playerKeyboard->getKeyboardAction();
-		playerFrog->updatePos();
-		playerFrog->draw();
 
 		playerBg->update();
 		playerBg->draw();
 
-		if(playerFrog->IsColliding(gameObjects, 10))
+		gameControl->setupOffScreenVehicles();
+		gameControl->tileTransition();
+
+		playerKeyboard->getKeyboardAction();
+		playerFrog->update();
+		playerFrog->draw();
+
+		if(playerFrog->IsColliding(gameObjects, 20)) {
 			playerFrog->reset();
+			gameControl->reset();
+		}
 
 		usleep(2000);
 	}

@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:RandomNumberGenerator:1
-// IP Revision: 2
+// IP Revision: 4
 
 (* X_CORE_INFO = "RandomNumberGenerator_v1,Vivado 2017.3" *)
 (* CHECK_LICENSE_TYPE = "microblaze_RandomNumberGenerator_0_1,RandomNumberGenerator_v1,{}" *)
-(* CORE_GENERATION_INFO = "microblaze_RandomNumberGenerator_0_1,RandomNumberGenerator_v1,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=RandomNumberGenerator,x_ipVersion=1,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "microblaze_RandomNumberGenerator_0_1,RandomNumberGenerator_v1,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=RandomNumberGenerator,x_ipVersion=1,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module microblaze_RandomNumberGenerator_0_1 (
   s00_axi_awaddr,

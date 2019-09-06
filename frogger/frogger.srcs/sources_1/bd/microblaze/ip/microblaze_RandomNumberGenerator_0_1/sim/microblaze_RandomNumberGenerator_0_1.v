@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:RandomNumberGenerator:1
-// IP Revision: 2
+// IP Revision: 4
 
 `timescale 1ns/1ps
 

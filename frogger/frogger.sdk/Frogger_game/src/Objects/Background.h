@@ -16,10 +16,9 @@ public:
 
 	Background();
 
-	//enum tileType getBG_nxt();
-
 	void update();
 	void draw();
+	void reset();
 
 	void tileTransition();
 	void addTile();
@@ -29,22 +28,22 @@ public:
 	bool isTransitionOn() const;
 
 	enum tileType getBgNxt() const;
+	const enum tileType* getTileArray() const;
+
+	bool isNxtBgLoaded() const;
+	void setNxtBgLoaded(bool nxtBgLoaded);
 
 private:
 
 	void setupTileBackground(uint16_t bg_type, uint16_t pos_y, uint8_t index);
 	enum tileType getRandomTile();
 
-	enum tileType bg_nxt;
-	enum tileType bg_tile1;
-	enum tileType bg_tile2;
-	enum tileType bg_tile3;
-	enum tileType bg_tile4;
-	enum tileType bg_tile5;
-	enum tileType bg_tile6;
-	enum tileType bg_tile7;
+	enum tileType tileArray[8];
 
 	bool transitionOn;
+	bool nxtBgLoaded;
+
+	uint8_t tileRepetitionCount;
 
 	uint8_t current_transition_offset;
 	uint8_t desired_transition_offset;

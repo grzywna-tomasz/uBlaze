@@ -14,9 +14,9 @@ verilog xil_defaultlib --include "../../../../frogger.srcs/sources_1/bd/microbla
 "../../../bd/microblaze/ip/microblaze_xlconcat_0_0/sim/microblaze_xlconcat_0_0.v" \
 "../../../bd/microblaze/ip/microblaze_xbar_1/sim/microblaze_xbar_1.v" \
 "../../../bd/microblaze/ip/microblaze_lmb_bram_2/sim/microblaze_lmb_bram_2.v" \
-"../../../bd/microblaze/ipshared/61b4/hdl/LFSR_Plus.v" \
-"../../../bd/microblaze/ipshared/61b4/hdl/RandomNumberGenerator_v1_S00_AXI.v" \
-"../../../bd/microblaze/ipshared/61b4/hdl/RandomNumberGenerator_v1.v" \
+"../../../bd/microblaze/ipshared/ad78/hdl/LFSR_Plus.v" \
+"../../../bd/microblaze/ipshared/ad78/hdl/RandomNumberGenerator_v1_S00_AXI.v" \
+"../../../bd/microblaze/ipshared/ad78/hdl/RandomNumberGenerator_v1.v" \
 "../../../bd/microblaze/ip/microblaze_RandomNumberGenerator_0_1/sim/microblaze_RandomNumberGenerator_0_1.v" \
 
 verilog xil_defaultlib "glbl.v"

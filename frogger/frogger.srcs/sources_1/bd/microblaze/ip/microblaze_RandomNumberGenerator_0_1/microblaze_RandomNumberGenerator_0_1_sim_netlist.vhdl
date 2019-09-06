@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Sun Sep  1 01:28:36 2019
+-- Date        : Wed Sep  4 19:56:14 2019
 -- Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_RandomNumberGenerator_0_1/microblaze_RandomNumberGenerator_0_1_sim_netlist.vhdl
+--               C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_RandomNumberGenerator_0_1/microblaze_RandomNumberGenerator_0_1_sim_netlist.vhdl
 -- Design      : microblaze_RandomNumberGenerator_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,13 +17,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_RandomNumberGenerator_0_1_LFSR_Plus is
   port (
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     S_AXI_WREADY : in STD_LOGIC;
     S_AXI_AWREADY : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_axi_aresetn : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -53,15 +53,23 @@ architecture STRUCTURE of microblaze_RandomNumberGenerator_0_1_LFSR_Plus is
   signal \rand_en_ff_reg_n_0_[7]\ : STD_LOGIC;
   signal \rand_en_ff_reg_n_0_[8]\ : STD_LOGIC;
   signal \rand_en_ff_reg_n_0_[9]\ : STD_LOGIC;
-  signal rand_ff : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal rand_ff : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \rand_out_reg_n_0_[0]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[10]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[11]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[12]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[13]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[14]\ : STD_LOGIC;
   signal \rand_out_reg_n_0_[1]\ : STD_LOGIC;
   signal \rand_out_reg_n_0_[2]\ : STD_LOGIC;
   signal \rand_out_reg_n_0_[3]\ : STD_LOGIC;
   signal \rand_out_reg_n_0_[4]\ : STD_LOGIC;
   signal \rand_out_reg_n_0_[5]\ : STD_LOGIC;
   signal \rand_out_reg_n_0_[6]\ : STD_LOGIC;
-  signal u_noise_out : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \rand_out_reg_n_0_[7]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[8]\ : STD_LOGIC;
+  signal \rand_out_reg_n_0_[9]\ : STD_LOGIC;
+  signal u_noise_out : STD_LOGIC_VECTOR ( 15 downto 0 );
 begin
   SR(0) <= \^sr\(0);
 axi_awready_i_1: unisim.vcomponents.LUT1
@@ -78,7 +86,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
     )
         port map (
       I0 => rand_ff(0),
-      I1 => rand_ff(4),
+      I1 => \rand_out_reg_n_0_[6]\,
       I2 => rand_ff(3),
       I3 => rand_ff(2),
       O => \p_0_out_inferred__0/i__n_0\
@@ -244,6 +252,46 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       Q => rand_ff(0),
       S => \^sr\(0)
     );
+\rand_ff_reg[10]\: unisim.vcomponents.FDSE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \rand_out_reg_n_0_[12]\,
+      Q => rand_ff(10),
+      S => \^sr\(0)
+    );
+\rand_ff_reg[12]\: unisim.vcomponents.FDSE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(13),
+      Q => rand_ff(12),
+      S => \^sr\(0)
+    );
+\rand_ff_reg[13]\: unisim.vcomponents.FDSE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(14),
+      Q => rand_ff(13),
+      S => \^sr\(0)
+    );
+\rand_ff_reg[14]\: unisim.vcomponents.FDSE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(15),
+      Q => rand_ff(14),
+      S => \^sr\(0)
+    );
+\rand_ff_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \p_0_out_inferred__0/i__n_0\,
+      Q => rand_ff(15),
+      R => \^sr\(0)
+    );
 \rand_ff_reg[2]\: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
@@ -272,8 +320,16 @@ axi_awready_i_1: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => \p_0_out_inferred__0/i__n_0\,
+      D => \rand_out_reg_n_0_[9]\,
       Q => rand_ff(7),
+      S => \^sr\(0)
+    );
+\rand_ff_reg[9]\: unisim.vcomponents.FDSE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(10),
+      Q => rand_ff(9),
       S => \^sr\(0)
     );
 \rand_out_reg[0]\: unisim.vcomponents.FDRE
@@ -282,6 +338,54 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       CE => '1',
       D => rand_ff(0),
       Q => \rand_out_reg_n_0_[0]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(10),
+      Q => \rand_out_reg_n_0_[10]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \rand_out_reg_n_0_[12]\,
+      Q => \rand_out_reg_n_0_[11]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(12),
+      Q => \rand_out_reg_n_0_[12]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(13),
+      Q => \rand_out_reg_n_0_[13]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(14),
+      Q => \rand_out_reg_n_0_[14]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(15),
+      Q => p_1_in0,
       R => \^sr\(0)
     );
 \rand_out_reg[1]\: unisim.vcomponents.FDRE
@@ -328,7 +432,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => p_1_in0,
+      D => \rand_out_reg_n_0_[7]\,
       Q => \rand_out_reg_n_0_[6]\,
       R => \^sr\(0)
     );
@@ -337,7 +441,23 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       C => s00_axi_aclk,
       CE => '1',
       D => rand_ff(7),
-      Q => p_1_in0,
+      Q => \rand_out_reg_n_0_[7]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \rand_out_reg_n_0_[9]\,
+      Q => \rand_out_reg_n_0_[8]\,
+      R => \^sr\(0)
+    );
+\rand_out_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => rand_ff(9),
+      Q => \rand_out_reg_n_0_[9]\,
       R => \^sr\(0)
     );
 \slv_reg0[0]_i_1\: unisim.vcomponents.LUT6
@@ -352,6 +472,84 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       I4 => s00_axi_wvalid,
       I5 => s00_axi_wdata(0),
       O => D(0)
+    );
+\slv_reg0[10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(10),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(10),
+      O => D(10)
+    );
+\slv_reg0[11]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(11),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(11),
+      O => D(11)
+    );
+\slv_reg0[12]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(12),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(12),
+      O => D(12)
+    );
+\slv_reg0[13]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(13),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(13),
+      O => D(13)
+    );
+\slv_reg0[14]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(14),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(14),
+      O => D(14)
+    );
+\slv_reg0[15]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(15),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(15),
+      O => D(15)
     );
 \slv_reg0[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -444,12 +642,86 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       I5 => s00_axi_wdata(7),
       O => D(7)
     );
+\slv_reg0[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(8),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(8),
+      O => D(8)
+    );
+\slv_reg0[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => u_noise_out(9),
+      I1 => S_AXI_WREADY,
+      I2 => S_AXI_AWREADY,
+      I3 => s00_axi_awvalid,
+      I4 => s00_axi_wvalid,
+      I5 => s00_axi_wdata(9),
+      O => D(9)
+    );
 \u_noise_out_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => p_0_in,
       D => \rand_out_reg_n_0_[0]\,
       Q => u_noise_out(0),
+      R => '0'
+    );
+\u_noise_out_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[10]\,
+      Q => u_noise_out(10),
+      R => '0'
+    );
+\u_noise_out_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[11]\,
+      Q => u_noise_out(11),
+      R => '0'
+    );
+\u_noise_out_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[12]\,
+      Q => u_noise_out(12),
+      R => '0'
+    );
+\u_noise_out_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[13]\,
+      Q => u_noise_out(13),
+      R => '0'
+    );
+\u_noise_out_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[14]\,
+      Q => u_noise_out(14),
+      R => '0'
+    );
+\u_noise_out_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => p_1_in0,
+      Q => u_noise_out(15),
       R => '0'
     );
 \u_noise_out_reg[1]\: unisim.vcomponents.FDRE
@@ -504,8 +776,24 @@ axi_awready_i_1: unisim.vcomponents.LUT1
      port map (
       C => s00_axi_aclk,
       CE => p_0_in,
-      D => p_1_in0,
+      D => \rand_out_reg_n_0_[7]\,
       Q => u_noise_out(7),
+      R => '0'
+    );
+\u_noise_out_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[8]\,
+      Q => u_noise_out(8),
+      R => '0'
+    );
+\u_noise_out_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => p_0_in,
+      D => \rand_out_reg_n_0_[9]\,
+      Q => u_noise_out(9),
       R => '0'
     );
 end STRUCTURE;
@@ -555,7 +843,7 @@ architecture STRUCTURE of microblaze_RandomNumberGenerator_0_1_RandomNumberGener
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 7 );
-  signal p_2_in : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal p_2_in : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal random_generator_n_0 : STD_LOGIC;
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s00_axi_bvalid\ : STD_LOGIC;
@@ -1459,24 +1747,24 @@ axi_wready_reg: unisim.vcomponents.FDRE
     );
 random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
-      D(7 downto 0) => p_2_in(7 downto 0),
+      D(15 downto 0) => p_2_in(15 downto 0),
       SR(0) => random_generator_n_0,
       S_AXI_AWREADY => \^s_axi_awready\,
       S_AXI_WREADY => \^s_axi_wready\,
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
       s00_axi_awvalid => s00_axi_awvalid,
-      s00_axi_wdata(7 downto 0) => s00_axi_wdata(7 downto 0),
+      s00_axi_wdata(15 downto 0) => s00_axi_wdata(15 downto 0),
       s00_axi_wvalid => s00_axi_wvalid
     );
 \slv_reg0[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0004"
+      INIT => X"FF02"
     )
         port map (
-      I0 => axi_awaddr(3),
-      I1 => s00_axi_wstrb(1),
-      I2 => axi_awaddr(2),
+      I0 => s00_axi_wstrb(1),
+      I1 => axi_awaddr(2),
+      I2 => axi_awaddr(3),
       I3 => \slv_reg3[31]_i_2_n_0\,
       O => \slv_reg0[15]_i_1_n_0\
     );
@@ -1525,7 +1813,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(10),
+      D => p_2_in(10),
       Q => slv_reg0(10),
       R => random_generator_n_0
     );
@@ -1533,7 +1821,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(11),
+      D => p_2_in(11),
       Q => slv_reg0(11),
       R => random_generator_n_0
     );
@@ -1541,7 +1829,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(12),
+      D => p_2_in(12),
       Q => slv_reg0(12),
       R => random_generator_n_0
     );
@@ -1549,7 +1837,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(13),
+      D => p_2_in(13),
       Q => slv_reg0(13),
       R => random_generator_n_0
     );
@@ -1557,7 +1845,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(14),
+      D => p_2_in(14),
       Q => slv_reg0(14),
       R => random_generator_n_0
     );
@@ -1565,7 +1853,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(15),
+      D => p_2_in(15),
       Q => slv_reg0(15),
       R => random_generator_n_0
     );
@@ -1757,7 +2045,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(8),
+      D => p_2_in(8),
       Q => slv_reg0(8),
       R => random_generator_n_0
     );
@@ -1765,7 +2053,7 @@ random_generator: entity work.microblaze_RandomNumberGenerator_0_1_LFSR_Plus
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg0[15]_i_1_n_0\,
-      D => s00_axi_wdata(9),
+      D => p_2_in(9),
       Q => slv_reg0(9),
       R => random_generator_n_0
     );

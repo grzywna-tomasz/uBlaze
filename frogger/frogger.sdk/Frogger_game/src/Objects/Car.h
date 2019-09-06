@@ -14,7 +14,8 @@
 class Car : public GameObject
 {
 public:
-	Car(uint16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed, uint8_t objIndex, enum GameObject::Direction direction);
+	//Car(int16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed, uint8_t objIndex, enum GameObject::Direction direction);
+	Car(Background *bgPtr, uint8_t objIndex);
 	virtual ~Car();
 };
 

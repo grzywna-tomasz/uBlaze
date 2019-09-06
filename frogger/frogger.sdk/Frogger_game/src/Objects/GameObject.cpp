@@ -9,7 +9,7 @@
 #include "xil_io.h"
 #include "../definitions.h"
 
-GameObject::GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t pos_y, Background *bgPtr, uint8_t speed, uint8_t objIndex, uint8_t moduleId, enum Direction _direction) {
+GameObject::GameObject(uint16_t height, uint16_t width, int16_t pos_x, int16_t pos_y, Background *bgPtr, uint8_t speed, uint8_t objIndex, enum Type _type, enum Direction _direction) {
 
 	if(width < 10)
 		this->width = 10;
@@ -25,7 +25,6 @@ GameObject::GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t
 	else
 		this->height = height;
 
-	//TODO Not sure what speed limitation should be
 	if (speed < 1)
 		this->speed = 1;
 	else if (speed > 30)
@@ -33,59 +32,76 @@ GameObject::GameObject(uint16_t height, uint16_t width, uint16_t pos_x, uint16_t
 	else
 		this->speed = speed;
 
-	//TODO Not sure what transition speed should be
 	this->background = bgPtr;
 	this->obj_index = objIndex;
-	this->module_id = moduleId;
+	this->type = _type;
 	this->direction = _direction;
-	this->trans_spd = 1;
 	this->pos_x = pos_x;
 	this->pos_y = pos_y;
+	this->nxt_vehicle_distance = 0;
+	this->nxt_vehicle = Blank;
 }
 
 GameObject::~GameObject() {}
 
-void GameObject::updatePos(){
+void GameObject::update(){
 
 	switch(direction){
-
-		case GameObject::Left:
+		case Left:
 			if(pos_x - speed >= 0)
 				pos_x -= speed;
-			else
-				pos_x = 1012 + width;
-				//direction = GameObject::None;
+			else {
+				direction = GameObject::None;
+				pos_x = 0;
+				pos_y = 0;
+			}
+
 			break;
 
-		case GameObject::Right:
+		case Right:
 			if(pos_x + speed <= 1140)
 				pos_x += speed;
-			else
+			else {
+				direction = GameObject::None;
 				pos_x = 0;
-				//direction = GameObject::None;
+				pos_y = 0;
+			}
 			break;
 
-		case GameObject::None:
+		case None:
 			break;
+	}
+
+	if(pos_y >= 856) {
+		direction = GameObject::None;
+		pos_x = 0;
+		pos_y = 0;
 	}
 }
 
 void GameObject::draw(){
-	uint32_t obj_data;
-	uint8_t ucdirection;
-	if (direction == Left)
-		ucdirection = 1;
-	else
-		ucdirection = 0;
+	uint32_t objData;
+	uint8_t module_id = (uint8_t)type;
+
 	pos_x &= 0x7FF; //11bits
 	pos_y &= 0x3FF; //10bits
 	obj_index &= 0x3F; //6bits
-	obj_data = (ucdirection << 31) | (module_id<<27) | (obj_index<<21) | (pos_x<<10) | pos_y;
-	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, obj_data);
+
+	objData = ((uint8_t)direction << 31) | (module_id<<27) | (obj_index<<21) | (pos_x<<10) | pos_y;
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG2_OFFSET, objData);
+}
+
+void GameObject::reset(){
+	pos_x = 0;
+	pos_y = 0;
+	direction = None;
+	nxt_vehicle_distance = 0;
+	nxt_vehicle = Blank;
 }
 
 void GameObject::transitionY(){
-	pos_y++;
+	if(direction != GameObject::None)
+		pos_y++;
 }
 
 uint16_t GameObject::getHeight() const {
@@ -118,22 +134,22 @@ void GameObject::setWidth(uint16_t width) {
 		this->width = width;
 }
 
-uint16_t GameObject::getPosX() const {
+int16_t GameObject::getPosX() const {
 
 	return pos_x;
 }
 
-void GameObject::setPosX(uint16_t posX) {
+void GameObject::setPosX(int16_t posX) {
 
 	pos_x = posX;
 }
 
-uint16_t GameObject::getPosY() const {
+int16_t GameObject::getPosY() const {
 
 	return pos_y;
 }
 
-void GameObject::setPosY(uint16_t posY) {
+void GameObject::setPosY(int16_t posY) {
 
 	pos_y = posY;
 }
@@ -153,8 +169,30 @@ void GameObject::setSpeed(uint8_t speed) {
 		this->speed = speed;
 }
 
-uint8_t GameObject::getTransSpd() const {
-
-	return trans_spd;
+enum GameObject::Direction GameObject::getDirection() const {
+	return direction;
 }
 
+void GameObject::setDirection(enum Direction direction) {
+	this->direction = direction;
+}
+
+enum GameObject::Type GameObject::getType() const {
+	return type;
+}
+
+enum GameObject::Type GameObject::getNxtVehicle() const {
+	return nxt_vehicle;
+}
+
+void GameObject::setNxtVehicle(enum Type nxtVehicle) {
+	nxt_vehicle = nxtVehicle;
+}
+
+uint16_t GameObject::getNxtVehicleDistance() const {
+	return nxt_vehicle_distance;
+}
+
+void GameObject::setNxtVehicleDistance(uint16_t nxtVehicleDistance) {
+	nxt_vehicle_distance = nxtVehicleDistance;
+}

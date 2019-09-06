@@ -14,7 +14,8 @@
 class Truck : public GameObject
 {
 public:
-	Truck(uint16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed, uint8_t objIndex, enum GameObject::Direction direction);
+	//Truck(int16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed, uint8_t objIndex, enum GameObject::Direction direction);
+	Truck(Background *bgPtr, uint8_t objIndex);
 	virtual ~Truck();
 };
 

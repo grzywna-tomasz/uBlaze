@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Sun Sep  1 01:28:36 2019
+// Date        : Wed Sep  4 19:56:14 2019
 // Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_RandomNumberGenerator_0_1/microblaze_RandomNumberGenerator_0_1_sim_netlist.v
+//               C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_RandomNumberGenerator_0_1/microblaze_RandomNumberGenerator_0_1_sim_netlist.v
 // Design      : microblaze_RandomNumberGenerator_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -115,16 +115,16 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
     s00_axi_wdata,
     s00_axi_aresetn);
   output [0:0]SR;
-  output [7:0]D;
+  output [15:0]D;
   input s00_axi_aclk;
   input S_AXI_WREADY;
   input S_AXI_AWREADY;
   input s00_axi_awvalid;
   input s00_axi_wvalid;
-  input [7:0]s00_axi_wdata;
+  input [15:0]s00_axi_wdata;
   input s00_axi_aresetn;
 
-  wire [7:0]D;
+  wire [15:0]D;
   wire [0:0]SR;
   wire S_AXI_AWREADY;
   wire S_AXI_WREADY;
@@ -149,20 +149,28 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
   wire \rand_en_ff_reg_n_0_[7] ;
   wire \rand_en_ff_reg_n_0_[8] ;
   wire \rand_en_ff_reg_n_0_[9] ;
-  wire [7:0]rand_ff;
+  wire [15:0]rand_ff;
   wire \rand_out_reg_n_0_[0] ;
+  wire \rand_out_reg_n_0_[10] ;
+  wire \rand_out_reg_n_0_[11] ;
+  wire \rand_out_reg_n_0_[12] ;
+  wire \rand_out_reg_n_0_[13] ;
+  wire \rand_out_reg_n_0_[14] ;
   wire \rand_out_reg_n_0_[1] ;
   wire \rand_out_reg_n_0_[2] ;
   wire \rand_out_reg_n_0_[3] ;
   wire \rand_out_reg_n_0_[4] ;
   wire \rand_out_reg_n_0_[5] ;
   wire \rand_out_reg_n_0_[6] ;
+  wire \rand_out_reg_n_0_[7] ;
+  wire \rand_out_reg_n_0_[8] ;
+  wire \rand_out_reg_n_0_[9] ;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
   wire s00_axi_awvalid;
-  wire [7:0]s00_axi_wdata;
+  wire [15:0]s00_axi_wdata;
   wire s00_axi_wvalid;
-  wire [7:0]u_noise_out;
+  wire [15:0]u_noise_out;
 
   LUT1 #(
     .INIT(2'h1)) 
@@ -173,7 +181,7 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
     .INIT(16'h6996)) 
     \p_0_out_inferred__0/i_ 
        (.I0(rand_ff[0]),
-        .I1(rand_ff[4]),
+        .I1(\rand_out_reg_n_0_[6] ),
         .I2(rand_ff[3]),
         .I3(rand_ff[2]),
         .O(\p_0_out_inferred__0/i__n_0 ));
@@ -297,6 +305,36 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
         .D(\rand_out_reg_n_0_[2] ),
         .Q(rand_ff[0]),
         .S(SR));
+  FDSE \rand_ff_reg[10] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\rand_out_reg_n_0_[12] ),
+        .Q(rand_ff[10]),
+        .S(SR));
+  FDSE \rand_ff_reg[12] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[13]),
+        .Q(rand_ff[12]),
+        .S(SR));
+  FDSE \rand_ff_reg[13] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[14]),
+        .Q(rand_ff[13]),
+        .S(SR));
+  FDSE \rand_ff_reg[14] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[15]),
+        .Q(rand_ff[14]),
+        .S(SR));
+  FDRE \rand_ff_reg[15] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\p_0_out_inferred__0/i__n_0 ),
+        .Q(rand_ff[15]),
+        .R(SR));
   FDSE \rand_ff_reg[2] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
@@ -318,14 +356,56 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
   FDSE \rand_ff_reg[7] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(\p_0_out_inferred__0/i__n_0 ),
+        .D(\rand_out_reg_n_0_[9] ),
         .Q(rand_ff[7]),
+        .S(SR));
+  FDSE \rand_ff_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[10]),
+        .Q(rand_ff[9]),
         .S(SR));
   FDRE \rand_out_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(rand_ff[0]),
         .Q(\rand_out_reg_n_0_[0] ),
+        .R(SR));
+  FDRE \rand_out_reg[10] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[10]),
+        .Q(\rand_out_reg_n_0_[10] ),
+        .R(SR));
+  FDRE \rand_out_reg[11] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\rand_out_reg_n_0_[12] ),
+        .Q(\rand_out_reg_n_0_[11] ),
+        .R(SR));
+  FDRE \rand_out_reg[12] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[12]),
+        .Q(\rand_out_reg_n_0_[12] ),
+        .R(SR));
+  FDRE \rand_out_reg[13] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[13]),
+        .Q(\rand_out_reg_n_0_[13] ),
+        .R(SR));
+  FDRE \rand_out_reg[14] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[14]),
+        .Q(\rand_out_reg_n_0_[14] ),
+        .R(SR));
+  FDRE \rand_out_reg[15] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[15]),
+        .Q(p_1_in0),
         .R(SR));
   FDRE \rand_out_reg[1] 
        (.C(s00_axi_aclk),
@@ -360,14 +440,26 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
   FDRE \rand_out_reg[6] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(p_1_in0),
+        .D(\rand_out_reg_n_0_[7] ),
         .Q(\rand_out_reg_n_0_[6] ),
         .R(SR));
   FDRE \rand_out_reg[7] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(rand_ff[7]),
-        .Q(p_1_in0),
+        .Q(\rand_out_reg_n_0_[7] ),
+        .R(SR));
+  FDRE \rand_out_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(\rand_out_reg_n_0_[9] ),
+        .Q(\rand_out_reg_n_0_[8] ),
+        .R(SR));
+  FDRE \rand_out_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(rand_ff[9]),
+        .Q(\rand_out_reg_n_0_[9] ),
         .R(SR));
   LUT6 #(
     .INIT(64'hEAAAAAAA2AAAAAAA)) 
@@ -379,6 +471,66 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
         .I4(s00_axi_wvalid),
         .I5(s00_axi_wdata[0]),
         .O(D[0]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[10]_i_1 
+       (.I0(u_noise_out[10]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[10]),
+        .O(D[10]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[11]_i_1 
+       (.I0(u_noise_out[11]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[11]),
+        .O(D[11]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[12]_i_1 
+       (.I0(u_noise_out[12]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[12]),
+        .O(D[12]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[13]_i_1 
+       (.I0(u_noise_out[13]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[13]),
+        .O(D[13]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[14]_i_1 
+       (.I0(u_noise_out[14]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[14]),
+        .O(D[14]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[15]_i_2 
+       (.I0(u_noise_out[15]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[15]),
+        .O(D[15]));
   LUT6 #(
     .INIT(64'hEAAAAAAA2AAAAAAA)) 
     \slv_reg0[1]_i_1 
@@ -449,11 +601,67 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
         .I4(s00_axi_wvalid),
         .I5(s00_axi_wdata[7]),
         .O(D[7]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[8]_i_1 
+       (.I0(u_noise_out[8]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[8]),
+        .O(D[8]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg0[9]_i_1 
+       (.I0(u_noise_out[9]),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_awvalid),
+        .I4(s00_axi_wvalid),
+        .I5(s00_axi_wdata[9]),
+        .O(D[9]));
   FDRE \u_noise_out_reg[0] 
        (.C(s00_axi_aclk),
         .CE(p_0_in),
         .D(\rand_out_reg_n_0_[0] ),
         .Q(u_noise_out[0]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[10] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[10] ),
+        .Q(u_noise_out[10]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[11] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[11] ),
+        .Q(u_noise_out[11]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[12] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[12] ),
+        .Q(u_noise_out[12]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[13] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[13] ),
+        .Q(u_noise_out[13]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[14] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[14] ),
+        .Q(u_noise_out[14]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[15] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(p_1_in0),
+        .Q(u_noise_out[15]),
         .R(1'b0));
   FDRE \u_noise_out_reg[1] 
        (.C(s00_axi_aclk),
@@ -494,8 +702,20 @@ module microblaze_RandomNumberGenerator_0_1_LFSR_Plus
   FDRE \u_noise_out_reg[7] 
        (.C(s00_axi_aclk),
         .CE(p_0_in),
-        .D(p_1_in0),
+        .D(\rand_out_reg_n_0_[7] ),
         .Q(u_noise_out[7]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[8] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[8] ),
+        .Q(u_noise_out[8]),
+        .R(1'b0));
+  FDRE \u_noise_out_reg[9] 
+       (.C(s00_axi_aclk),
+        .CE(p_0_in),
+        .D(\rand_out_reg_n_0_[9] ),
+        .Q(u_noise_out[9]),
         .R(1'b0));
 endmodule
 
@@ -628,7 +848,7 @@ module microblaze_RandomNumberGenerator_0_1_RandomNumberGenerator_v1_S00_AXI
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0;
   wire [31:7]p_1_in;
-  wire [7:0]p_2_in;
+  wire [15:0]p_2_in;
   wire random_generator_n_0;
   wire [31:0]reg_data_out;
   wire s00_axi_aclk;
@@ -1334,14 +1554,14 @@ module microblaze_RandomNumberGenerator_0_1_RandomNumberGenerator_v1_S00_AXI
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
         .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_wdata(s00_axi_wdata[7:0]),
+        .s00_axi_wdata(s00_axi_wdata[15:0]),
         .s00_axi_wvalid(s00_axi_wvalid));
   LUT4 #(
-    .INIT(16'h0004)) 
+    .INIT(16'hFF02)) 
     \slv_reg0[15]_i_1 
-       (.I0(axi_awaddr[3]),
-        .I1(s00_axi_wstrb[1]),
-        .I2(axi_awaddr[2]),
+       (.I0(s00_axi_wstrb[1]),
+        .I1(axi_awaddr[2]),
+        .I2(axi_awaddr[3]),
         .I3(\slv_reg3[31]_i_2_n_0 ),
         .O(\slv_reg0[15]_i_1_n_0 ));
   LUT4 #(
@@ -1377,37 +1597,37 @@ module microblaze_RandomNumberGenerator_0_1_RandomNumberGenerator_v1_S00_AXI
   FDRE \slv_reg0_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[10]),
+        .D(p_2_in[10]),
         .Q(slv_reg0[10]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[11]),
+        .D(p_2_in[11]),
         .Q(slv_reg0[11]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[12]),
+        .D(p_2_in[12]),
         .Q(slv_reg0[12]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[13]),
+        .D(p_2_in[13]),
         .Q(slv_reg0[13]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[14]),
+        .D(p_2_in[14]),
         .Q(slv_reg0[14]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[15]),
+        .D(p_2_in[15]),
         .Q(slv_reg0[15]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[16] 
@@ -1551,13 +1771,13 @@ module microblaze_RandomNumberGenerator_0_1_RandomNumberGenerator_v1_S00_AXI
   FDRE \slv_reg0_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[8]),
+        .D(p_2_in[8]),
         .Q(slv_reg0[8]),
         .R(random_generator_n_0));
   FDRE \slv_reg0_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
-        .D(s00_axi_wdata[9]),
+        .D(p_2_in[9]),
         .Q(slv_reg0[9]),
         .R(random_generator_n_0));
   LUT4 #(

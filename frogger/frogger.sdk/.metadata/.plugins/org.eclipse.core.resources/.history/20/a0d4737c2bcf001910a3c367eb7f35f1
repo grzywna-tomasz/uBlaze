@@ -1,0 +1,16 @@
+/*
+ * GameController.h
+ *
+ *  Created on: 04.09.2019
+ *      Author: Trait
+ */
+
+#ifndef SRC_OBJECTS_GAMECONTROLLER_H_
+#define SRC_OBJECTS_GAMECONTROLLER_H_
+
+class GameController {
+public:
+	GameController();
+};
+
+#endif /* SRC_OBJECTS_GAMECONTROLLER_H_ */

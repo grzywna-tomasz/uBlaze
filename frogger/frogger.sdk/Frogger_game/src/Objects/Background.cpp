@@ -13,17 +13,41 @@
 
 Background::Background() {
 	this->transitionOn = false;
+	this->nxtBgLoaded = true;
+	this->tileRepetitionCount = 0;
+
 	this->current_transition_offset = 56;
 	this->desired_transition_offset = 56;
 
-	this->bg_tile1 = Highway;
-	this->bg_tile2 = Grass;
-	this->bg_tile3 = Highway;
-	this->bg_tile4 = Highway;
-	this->bg_tile5 = Water;
-	this->bg_tile6 = Grass;
-	this->bg_tile7 = Grass;
-	this->bg_nxt = Highway;
+	this->tileArray[7] = Grass;
+
+	for(int8_t i=6; i>=0; i--){
+		enum Background::tileType nxtRandom = getRandomTile();
+
+		if(nxtRandom == tileArray[i+1])
+			this->tileRepetitionCount++;
+		else
+			this->tileRepetitionCount = 0;
+
+		if(tileRepetitionCount == 2) {
+			while(tileArray[i+1] == nxtRandom){
+				nxtRandom = getRandomTile();
+			}
+		}
+		this->tileArray[i] = nxtRandom;
+	}
+
+	this->tileRepetitionCount = 0;
+
+	/*
+	this->tileArray[0] = Highway;
+	this->tileArray[1] = Highway;
+	this->tileArray[2] = Grass;
+	this->tileArray[3] = Highway;
+	this->tileArray[4] = Highway;
+	this->tileArray[5] = Grass;
+	this->tileArray[6] = Grass;
+	*/
 }
 
 void Background::setupTileBackground(uint16_t bg_type, uint16_t pos_y, uint8_t index){
@@ -37,14 +61,9 @@ void Background::setupTileBackground(uint16_t bg_type, uint16_t pos_y, uint8_t i
 }
 
 void Background::draw(){
-	setupTileBackground((uint8_t)bg_nxt, current_transition_offset, 0);
-	setupTileBackground((uint8_t)bg_tile1, current_transition_offset + HEIGHT,1);
-	setupTileBackground((uint8_t)bg_tile2, current_transition_offset + 2*HEIGHT,2);
-	setupTileBackground((uint8_t)bg_tile3, current_transition_offset + 3*HEIGHT,3);
-	setupTileBackground((uint8_t)bg_tile4, current_transition_offset + 4*HEIGHT,4);
-	setupTileBackground((uint8_t)bg_tile5, current_transition_offset + 5*HEIGHT,5);
-	setupTileBackground((uint8_t)bg_tile6, current_transition_offset + 6*HEIGHT,6);
-	setupTileBackground((uint8_t)bg_tile7, current_transition_offset + 7*HEIGHT,7);
+	for(uint8_t i = 0; i<8; i++){
+		setupTileBackground((uint8_t)tileArray[i], current_transition_offset + i*HEIGHT, i);
+	}
 }
 
 void Background::update() {
@@ -53,25 +72,71 @@ void Background::update() {
 		transitionOn = true;
 	}
 	else if(current_transition_offset == 156){
-		bg_tile7 = bg_tile6;
-		bg_tile6 = bg_tile5;
-		bg_tile5 = bg_tile4;
-		bg_tile4 = bg_tile3;
-		bg_tile3 = bg_tile2;
-		bg_tile2 = bg_tile1;
-		bg_tile1 = bg_nxt;
-		bg_nxt = getRandomTile();
+		tileArray[7] = tileArray[6];
+		tileArray[6] = tileArray[5];
+		tileArray[5] = tileArray[4];
+		tileArray[4] = tileArray[3];
+		tileArray[3] = tileArray[2];
+		tileArray[2] = tileArray[1];
+		tileArray[1] = tileArray[0];
+
+		enum Background::tileType nxtRandom = getRandomTile();
+
+		if(tileArray[1] == nxtRandom)
+			tileRepetitionCount++;
+		else
+			tileRepetitionCount = 0;
+
+		if(tileRepetitionCount >= 2) {
+			while(tileArray[1] == nxtRandom){
+				nxtRandom = getRandomTile();
+			}
+		}
+		tileArray[0] = nxtRandom;
+
 		current_transition_offset = desired_transition_offset = 56;
+
+		nxtBgLoaded = true;
 		transitionOn = false;
 	}
 }
 
-enum Background::tileType Background::getRandomTile() {
-	uint32_t random = Xil_In32(RNG_BASEADDR);
+void Background::reset(){
+	tileRepetitionCount = 0;
+	tileArray[7] = Grass;
 
-	if(random <= 85)
+	for(int8_t i=6; i>=0; i--){
+		enum Background::tileType nxtRandom = getRandomTile();
+
+		if(nxtRandom == tileArray[i+1])
+			tileRepetitionCount++;
+		else
+			tileRepetitionCount = 0;
+
+		if(tileRepetitionCount == 2) {
+			while(tileArray[i+1] == nxtRandom){
+				nxtRandom = getRandomTile();
+			}
+		}
+		tileArray[i] = nxtRandom;
+	}
+	tileRepetitionCount = 0;
+
+	transitionOn = false;
+	nxtBgLoaded = false;
+	current_transition_offset = desired_transition_offset = 56;
+}
+
+enum Background::tileType Background::getBgNxt() const {
+	return tileArray[0];
+}
+
+enum Background::tileType Background::getRandomTile() {
+	uint32_t random = Xil_In32(RNG_BASEADDR)%100;
+
+	if(random <= 44)
 		return Background::Grass;
-	else if(random <= 171)
+	else if(random <= 88)
 		return Background::Highway;
 	else
 		return Background::Water;
@@ -89,6 +154,14 @@ bool Background::isTransitionOn() const {
 	return transitionOn;
 }
 
-enum Background::tileType Background::getBgNxt() const {
-	return bg_nxt;
+const enum Background::tileType* Background::getTileArray() const {
+	return tileArray;
+}
+
+bool Background::isNxtBgLoaded() const {
+	return nxtBgLoaded;
+}
+
+void Background::setNxtBgLoaded(bool nxtBgLoaded) {
+	this->nxtBgLoaded = nxtBgLoaded;
 }

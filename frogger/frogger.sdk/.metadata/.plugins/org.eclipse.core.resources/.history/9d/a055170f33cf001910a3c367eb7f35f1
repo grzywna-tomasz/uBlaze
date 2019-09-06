@@ -1,0 +1,13 @@
+/*
+ * rand.cpp
+ *
+ *  Created on: 04.09.2019
+ *      Author: Trait
+ */
+
+uint32_t getRandomNumber(){
+
+}
+
+
+

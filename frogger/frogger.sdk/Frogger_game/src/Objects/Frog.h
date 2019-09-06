@@ -17,11 +17,11 @@ class Frog : public GameObject
 
 	enum State {Idle, Moving};
 
-	Frog(uint16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed);
+	Frog(int16_t posX, uint16_t posY, Background *bgPtr, uint8_t speed);
 
 	void reset(); //temporary
 
-	void updatePos();
+	void update();
 
 	bool IsColliding(GameObject **gameObjects, uint8_t objectsCount);
 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Mon Sep  2 14:45:56 2019
+| Date             : Wed Sep  4 20:02:28 2019
 | Host             : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 | Command          : report_power -file microblaze_wrapper_power_routed.rpt -pb microblaze_wrapper_power_summary_routed.pb -rpx microblaze_wrapper_power_routed.rpx
 | Design           : microblaze_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.305        |
+| Total On-Chip Power (W)  | 0.306        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.231        |
+| Dynamic (W)              | 0.233        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.5         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |        8 |       --- |             --- |
-| Slice Logic              |     0.039 |    14535 |       --- |             --- |
-|   LUT as Logic           |     0.036 |     7251 |     20800 |           34.86 |
+| Clocks                   |     0.017 |        8 |       --- |             --- |
+| Slice Logic              |     0.039 |    14565 |       --- |             --- |
+|   LUT as Logic           |     0.036 |     7257 |     20800 |           34.89 |
 |   F7/F8 Muxes            |     0.002 |     1450 |     32600 |            4.45 |
 |   LUT as Distributed RAM |    <0.001 |       64 |      9600 |            0.67 |
 |   CARRY4                 |    <0.001 |      369 |      8150 |            4.53 |
-|   Register               |    <0.001 |     3400 |     41600 |            8.17 |
+|   Register               |    <0.001 |     3422 |     41600 |            8.23 |
 |   LUT as Shift Register  |    <0.001 |       91 |      9600 |            0.95 |
 |   Others                 |    <0.001 |      572 |       --- |             --- |
-| Signals                  |     0.035 |     9061 |       --- |             --- |
+| Signals                  |     0.036 |     9085 |       --- |             --- |
 | Block RAM                |     0.015 |       32 |        50 |           64.00 |
 | MMCM                     |     0.121 |        1 |         5 |           20.00 |
 | I/O                      |     0.004 |       23 |       106 |           21.70 |
 | Static Power             |     0.074 |          |           |                 |
-| Total                    |     0.305 |          |           |                 |
+| Total                    |     0.306 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.116 |       0.105 |      0.011 |
+| Vccint    |       1.000 |     0.117 |       0.107 |      0.011 |
 | Vccaux    |       1.800 |     0.080 |       0.067 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,18 +150,18 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| microblaze_wrapper                                                                 |     0.231 |
-|   microblaze_i                                                                     |     0.226 |
-|     RandomNumberGenerator_0                                                        |     0.001 |
-|       inst                                                                         |     0.001 |
-|         RandomNumberGenerator_v1_S00_AXI_inst                                      |     0.001 |
+| microblaze_wrapper                                                                 |     0.233 |
+|   microblaze_i                                                                     |     0.228 |
+|     RandomNumberGenerator_0                                                        |     0.002 |
+|       inst                                                                         |     0.002 |
+|         RandomNumberGenerator_v1_S00_AXI_inst                                      |     0.002 |
 |           random_generator                                                         |    <0.001 |
-|     Video_Controller_4regs_0                                                       |     0.069 |
-|       inst                                                                         |     0.069 |
-|         Video_Controller_4regs_v1_S00_AXI_inst                                     |     0.069 |
+|     Video_Controller_4regs_0                                                       |     0.070 |
+|       inst                                                                         |     0.070 |
+|         Video_Controller_4regs_v1_S00_AXI_inst                                     |     0.070 |
 |           car_obstacle                                                             |     0.006 |
-|           frogger_background                                                       |     0.014 |
-|           pixel_counter                                                            |     0.023 |
+|           frogger_background                                                       |     0.015 |
+|           pixel_counter                                                            |     0.024 |
 |           player_frog                                                              |     0.002 |
 |           truck_obstacle                                                           |     0.012 |
 |     axi_gpio_0                                                                     |    <0.001 |
@@ -246,10 +246,10 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I        |     0.000 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I        |     0.000 |
 |         Use_E2.BSCAN_I                                                             |    <0.001 |
-|     microblaze_0                                                                   |     0.015 |
-|       U0                                                                           |     0.015 |
-|         MicroBlaze_Core_I                                                          |     0.015 |
-|           Performance.Core                                                         |     0.015 |
+|     microblaze_0                                                                   |     0.016 |
+|       U0                                                                           |     0.016 |
+|         MicroBlaze_Core_I                                                          |     0.016 |
+|           Performance.Core                                                         |     0.016 |
 |             Data_Flow_I                                                            |     0.007 |
 |               ALU_I                                                                |     0.002 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                  |    <0.001 |

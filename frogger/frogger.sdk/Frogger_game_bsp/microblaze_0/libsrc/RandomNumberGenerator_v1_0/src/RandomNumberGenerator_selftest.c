@@ -2,7 +2,6 @@
 /***************************** Include Files *******************************/
 #include "RandomNumberGenerator.h"
 #include "xparameters.h"
-#include "stdio.h"
 #include "xil_io.h"
 
 /************************** Constant Definitions ***************************/
@@ -28,12 +27,13 @@
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
+
+/*
 XStatus RANDOMNUMBERGENERATOR_Reg_SelfTest(void * baseaddr_p)
 {
 	u32 baseaddr;
 	int write_loop_index;
 	int read_loop_index;
-	int Index;
 
 	baseaddr = (u32) baseaddr_p;
 
@@ -41,9 +41,7 @@ XStatus RANDOMNUMBERGENERATOR_Reg_SelfTest(void * baseaddr_p)
 	xil_printf("* User Peripheral Self Test\n\r");
 	xil_printf("******************************\n\n\r");
 
-	/*
-	 * Write to user logic slave module register(s) and read back
-	 */
+	//Write to user logic slave module register(s) and read back
 	xil_printf("User logic slave module test...\n\r");
 
 	for (write_loop_index = 0 ; write_loop_index < 4; write_loop_index++)
@@ -58,3 +56,4 @@ XStatus RANDOMNUMBERGENERATOR_Reg_SelfTest(void * baseaddr_p)
 
 	return XST_SUCCESS;
 }
+*/
