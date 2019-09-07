@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Sep  4 19:56:47 2019
-# Process ID: 4752
+# Start of session at: Sat Sep  7 15:48:51 2019
+# Process ID: 228
 # Current directory: C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1
 # Command line: vivado.exe -log microblaze_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_wrapper.tcl
 # Log file: C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/microblaze_wrapper.vds
@@ -19,38 +19,38 @@ WARNING: [IP_Flow 19-3664] IP 'microblaze_mdm_1_1' generated file not found 'c:/
 WARNING: [IP_Flow 19-3664] IP 'microblaze_rst_clk_wiz_1_100M_1' generated file not found 'c:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_1/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'microblaze_dlmb_v10_2' generated file not found 'c:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_2/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'microblaze_ilmb_v10_2' generated file not found 'c:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_2/stats.txt'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 275.500 ; gain = 39.219
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 275.504 ; gain = 39.094
 Command: synth_design -top microblaze_wrapper -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15428 
+INFO: Helper process launched with PID 11884 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 378.691 ; gain = 95.238
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 380.059 ; gain = 95.602
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'microblaze_wrapper' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/hdl/microblaze_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'microblaze' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:701]
-INFO: [Synth 8-638] synthesizing module 'microblaze_RandomNumberGenerator_0_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_RandomNumberGenerator_0_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_RandomNumberGenerator_0_1' (1#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_RandomNumberGenerator_0_1_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'microblaze_Video_Controller_4regs_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_Video_Controller_4regs_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_Video_Controller_4regs_0_0' (2#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_Video_Controller_4regs_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'microblaze_axi_gpio_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_axi_gpio_0_0' (3#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'microblaze_axi_uartlite_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_axi_uartlite_0_0' (4#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_RandomNumberGenerator_0_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_RandomNumberGenerator_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_RandomNumberGenerator_0_1' (1#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_RandomNumberGenerator_0_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_Video_Controller_4regs_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_Video_Controller_4regs_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_Video_Controller_4regs_0_0' (2#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_Video_Controller_4regs_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_axi_gpio_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_axi_gpio_0_0' (3#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_axi_uartlite_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_axi_uartlite_0_0' (4#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_axi_uartlite_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_uartlite_0' of module 'microblaze_axi_uartlite_0_0' requires 22 connections, but only 21 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:985]
-INFO: [Synth 8-638] synthesizing module 'microblaze_clk_wiz_1_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_clk_wiz_1_0' (5#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'microblaze_clk_wiz_1_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_clk_wiz_1_0' (5#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_clk_wiz_1_0_stub.v:5]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1013]
-INFO: [Synth 8-638] synthesizing module 'microblaze_keyboard_reciever_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_keyboard_reciever_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_keyboard_reciever_0_0' (6#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_keyboard_reciever_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_keyboard_reciever_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_keyboard_reciever_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_keyboard_reciever_0_0' (6#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_keyboard_reciever_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'keyboard_reciever_0' of module 'microblaze_keyboard_reciever_0_0' requires 8 connections, but only 3 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1013]
-INFO: [Synth 8-638] synthesizing module 'microblaze_mdm_1_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_mdm_1_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_mdm_1_1' (7#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_mdm_1_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_mdm_1_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_mdm_1_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_mdm_1_1' (7#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_mdm_1_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'mdm_1' of module 'microblaze_mdm_1_1' requires 30 connections, but only 29 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1017]
-INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_microblaze_0_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_microblaze_0_1' (8#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_microblaze_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_microblaze_0_1' (8#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_microblaze_0_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'microblaze_0' of module 'microblaze_microblaze_0_1' requires 52 connections, but only 51 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1049]
 INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_axi_periph_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1529]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_2SZHJX' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:12]
@@ -67,36 +67,36 @@ INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_SYAVRW' [C:/Users/Trai
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_SYAVRW' (14#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:2565]
 INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_3OA1I2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:2711]
 INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_3OA1I2' (15#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:2711]
-INFO: [Synth 8-638] synthesizing module 'microblaze_xbar_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_xbar_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_xbar_1' (16#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_xbar_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_xbar_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_xbar_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_xbar_1' (16#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_xbar_1_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_microblaze_0_axi_periph_1' (17#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1529]
 WARNING: [Synth 8-350] instance 'microblaze_0_axi_periph' of module 'microblaze_microblaze_0_axi_periph_1' requires 143 connections, but only 135 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1101]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_HPR3PZ' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1295]
-INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_bram_if_cntlr_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_dlmb_bram_if_cntlr_2' (18#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_v10_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_v10_2_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_dlmb_v10_2' (19#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_v10_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_bram_if_cntlr_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_dlmb_bram_if_cntlr_2' (18#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_v10_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_v10_2_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_dlmb_v10_2' (19#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_dlmb_v10_2_stub.v:6]
 WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'microblaze_dlmb_v10_2' requires 25 connections, but only 24 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1441]
-INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_bram_if_cntlr_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_ilmb_bram_if_cntlr_2' (20#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_v10_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_v10_2_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_ilmb_v10_2' (21#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_v10_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_bram_if_cntlr_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_ilmb_bram_if_cntlr_2' (20#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_v10_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_v10_2_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_ilmb_v10_2' (21#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_ilmb_v10_2_stub.v:6]
 WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'microblaze_ilmb_v10_2' requires 25 connections, but only 24 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1487]
-INFO: [Synth 8-638] synthesizing module 'microblaze_lmb_bram_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_lmb_bram_2_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_lmb_bram_2' (22#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_lmb_bram_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_lmb_bram_2' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_lmb_bram_2_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_lmb_bram_2' (22#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_lmb_bram_2_stub.v:6]
 WARNING: [Synth 8-350] instance 'lmb_bram' of module 'microblaze_lmb_bram_2' requires 16 connections, but only 14 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1512]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_HPR3PZ' (23#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1295]
-INFO: [Synth 8-638] synthesizing module 'microblaze_rst_clk_wiz_1_100M_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_rst_clk_wiz_1_100M_1_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_rst_clk_wiz_1_100M_1' (24#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_rst_clk_wiz_1_100M_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_rst_clk_wiz_1_100M_1' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_rst_clk_wiz_1_100M_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_rst_clk_wiz_1_100M_1' (24#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_rst_clk_wiz_1_100M_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_clk_100MHz' of module 'microblaze_rst_clk_wiz_1_100M_1' requires 10 connections, but only 9 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1259]
-INFO: [Synth 8-638] synthesizing module 'microblaze_proc_sys_reset_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_proc_sys_reset_0_0' (25#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_proc_sys_reset_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_proc_sys_reset_0_0' (25#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_proc_sys_reset_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_pclk_75MHz' of module 'microblaze_proc_sys_reset_0_0' requires 10 connections, but only 6 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1269]
-INFO: [Synth 8-638] synthesizing module 'microblaze_v_tc_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_v_tc_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_v_tc_0_0' (26#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_v_tc_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_v_tc_0_0' (26#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_v_tc_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_tc_0' of module 'microblaze_v_tc_0_0' requires 10 connections, but only 9 given [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:1276]
-INFO: [Synth 8-638] synthesizing module 'microblaze_xlconcat_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_xlconcat_0_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_xlconcat_0_0' (27#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/realtime/microblaze_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'microblaze_xlconcat_0_0' [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_xlconcat_0_0' (27#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/realtime/microblaze_xlconcat_0_0_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'microblaze' (28#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/synth/microblaze.v:701]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_wrapper' (29#1) [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/sources_1/bd/microblaze/hdl/microblaze_wrapper.v:12]
 WARNING: [Synth 8-3331] design s01_couplers_imp_3OA1I2 has unconnected port M_ACLK
@@ -128,7 +128,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_2SZHJX has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_2SZHJX has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_2SZHJX has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 422.152 ; gain = 138.699
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 422.520 ; gain = 138.063
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -138,49 +138,49 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 422.152 ; gain = 138.699
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 422.520 ; gain = 138.063
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc] for cell 'microblaze_i/clk_wiz_1'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc] for cell 'microblaze_i/clk_wiz_1'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp39/microblaze_axi_uartlite_0_0_in_context.xdc] for cell 'microblaze_i/axi_uartlite_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp39/microblaze_axi_uartlite_0_0_in_context.xdc] for cell 'microblaze_i/axi_uartlite_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp41/microblaze_Video_Controller_4regs_0_0_in_context.xdc] for cell 'microblaze_i/Video_Controller_4regs_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp41/microblaze_Video_Controller_4regs_0_0_in_context.xdc] for cell 'microblaze_i/Video_Controller_4regs_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp43/microblaze_v_tc_0_0_in_context.xdc] for cell 'microblaze_i/v_tc_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp43/microblaze_v_tc_0_0_in_context.xdc] for cell 'microblaze_i/v_tc_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp45/microblaze_keyboard_reciever_0_0_in_context.xdc] for cell 'microblaze_i/keyboard_reciever_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp45/microblaze_keyboard_reciever_0_0_in_context.xdc] for cell 'microblaze_i/keyboard_reciever_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp47/microblaze_axi_gpio_0_0_in_context.xdc] for cell 'microblaze_i/axi_gpio_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp47/microblaze_axi_gpio_0_0_in_context.xdc] for cell 'microblaze_i/axi_gpio_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp49/microblaze_xlconcat_0_0_in_context.xdc] for cell 'microblaze_i/xlconcat_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp49/microblaze_xlconcat_0_0_in_context.xdc] for cell 'microblaze_i/xlconcat_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp51/microblaze_microblaze_0_1_in_context.xdc] for cell 'microblaze_i/microblaze_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp51/microblaze_microblaze_0_1_in_context.xdc] for cell 'microblaze_i/microblaze_0'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp53/microblaze_mdm_1_0_in_context.xdc] for cell 'microblaze_i/mdm_1'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp53/microblaze_mdm_1_0_in_context.xdc] for cell 'microblaze_i/mdm_1'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp55/microblaze_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'microblaze_i/rst_clk_100MHz'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp55/microblaze_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'microblaze_i/rst_clk_100MHz'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp57/microblaze_xbar_1_in_context.xdc] for cell 'microblaze_i/microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp57/microblaze_xbar_1_in_context.xdc] for cell 'microblaze_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp59/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp59/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp61/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp61/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp63/microblaze_dlmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp63/microblaze_dlmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp65/microblaze_ilmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp65/microblaze_ilmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp67/microblaze_lmb_bram_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp67/microblaze_lmb_bram_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp69/microblaze_proc_sys_reset_0_0_in_context.xdc] for cell 'microblaze_i/rst_pclk_75MHz'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp69/microblaze_proc_sys_reset_0_0_in_context.xdc] for cell 'microblaze_i/rst_pclk_75MHz'
-Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp71/microblaze_RandomNumberGenerator_0_1_in_context.xdc] for cell 'microblaze_i/RandomNumberGenerator_0'
-Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp71/microblaze_RandomNumberGenerator_0_1_in_context.xdc] for cell 'microblaze_i/RandomNumberGenerator_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc] for cell 'microblaze_i/clk_wiz_1'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc] for cell 'microblaze_i/clk_wiz_1'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp39/microblaze_axi_uartlite_0_0_in_context.xdc] for cell 'microblaze_i/axi_uartlite_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp39/microblaze_axi_uartlite_0_0_in_context.xdc] for cell 'microblaze_i/axi_uartlite_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp41/microblaze_Video_Controller_4regs_0_0_in_context.xdc] for cell 'microblaze_i/Video_Controller_4regs_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp41/microblaze_Video_Controller_4regs_0_0_in_context.xdc] for cell 'microblaze_i/Video_Controller_4regs_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp43/microblaze_v_tc_0_0_in_context.xdc] for cell 'microblaze_i/v_tc_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp43/microblaze_v_tc_0_0_in_context.xdc] for cell 'microblaze_i/v_tc_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp45/microblaze_keyboard_reciever_0_0_in_context.xdc] for cell 'microblaze_i/keyboard_reciever_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp45/microblaze_keyboard_reciever_0_0_in_context.xdc] for cell 'microblaze_i/keyboard_reciever_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp47/microblaze_axi_gpio_0_0_in_context.xdc] for cell 'microblaze_i/axi_gpio_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp47/microblaze_axi_gpio_0_0_in_context.xdc] for cell 'microblaze_i/axi_gpio_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp49/microblaze_xlconcat_0_0_in_context.xdc] for cell 'microblaze_i/xlconcat_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp49/microblaze_xlconcat_0_0_in_context.xdc] for cell 'microblaze_i/xlconcat_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp51/microblaze_microblaze_0_1_in_context.xdc] for cell 'microblaze_i/microblaze_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp51/microblaze_microblaze_0_1_in_context.xdc] for cell 'microblaze_i/microblaze_0'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp53/microblaze_mdm_1_0_in_context.xdc] for cell 'microblaze_i/mdm_1'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp53/microblaze_mdm_1_0_in_context.xdc] for cell 'microblaze_i/mdm_1'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp55/microblaze_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'microblaze_i/rst_clk_100MHz'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp55/microblaze_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'microblaze_i/rst_clk_100MHz'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp57/microblaze_xbar_1_in_context.xdc] for cell 'microblaze_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp57/microblaze_xbar_1_in_context.xdc] for cell 'microblaze_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp59/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp59/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp61/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp61/microblaze_dlmb_v10_0_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp63/microblaze_dlmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp63/microblaze_dlmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp65/microblaze_ilmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp65/microblaze_ilmb_bram_if_cntlr_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp67/microblaze_lmb_bram_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp67/microblaze_lmb_bram_2_in_context.xdc] for cell 'microblaze_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp69/microblaze_proc_sys_reset_0_0_in_context.xdc] for cell 'microblaze_i/rst_pclk_75MHz'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp69/microblaze_proc_sys_reset_0_0_in_context.xdc] for cell 'microblaze_i/rst_pclk_75MHz'
+Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp71/microblaze_RandomNumberGenerator_0_1_in_context.xdc] for cell 'microblaze_i/RandomNumberGenerator_0'
+Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp71/microblaze_RandomNumberGenerator_0_1_in_context.xdc] for cell 'microblaze_i/RandomNumberGenerator_0'
 Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/constrs_1/new/microblaze.xdc]
 Finished Parsing XDC File [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/constrs_1/new/microblaze.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Trait/Desktop/uBlaze/frogger/frogger.srcs/constrs_1/new/microblaze.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/microblaze_wrapper_propImpl.xdc].
@@ -192,23 +192,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 696.617 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 696.867 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'microblaze_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-4752-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/.Xil/Vivado-228-DESKTOP-JNP2NQV/dcp37/microblaze_clk_wiz_1_0_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for microblaze_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for microblaze_i/RandomNumberGenerator_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for microblaze_i/Video_Controller_4regs_0. (constraint file  auto generated constraint, line ).
@@ -230,10 +230,10 @@ Applied set_property DONT_TOUCH = true for microblaze_i/rst_pclk_75MHz. (constra
 Applied set_property DONT_TOUCH = true for microblaze_i/v_tc_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for microblaze_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -282,7 +282,7 @@ WARNING: [Synth 8-3331] design microblaze_microblaze_0_axi_periph_1 has unconnec
 WARNING: [Synth 8-3331] design microblaze_microblaze_0_axi_periph_1 has unconnected port S01_ACLK
 WARNING: [Synth 8-3331] design microblaze_microblaze_0_axi_periph_1 has unconnected port S01_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,13 +301,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'microblaze_i/microblaze_0
 INFO: [Synth 8-5578] Moved timing constraint from pin 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'microblaze_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -319,7 +319,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -343,7 +343,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -356,7 +356,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -368,25 +368,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -452,11 +452,11 @@ Report Instance Areas:
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_HPR3PZ |   496|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 696.617 ; gain = 138.699
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 696.617 ; gain = 413.164
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 696.867 ; gain = 138.063
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 696.867 ; gain = 412.410
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -468,8 +468,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 82 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 702.781 ; gain = 427.281
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 703.094 ; gain = 427.590
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Trait/Desktop/uBlaze/frogger/frogger.runs/synth_1/microblaze_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file microblaze_wrapper_utilization_synth.rpt -pb microblaze_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 702.781 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  4 19:57:56 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 703.094 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  7 15:50:01 2019...

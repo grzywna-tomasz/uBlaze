@@ -2,6 +2,7 @@
 /***************************** Include Files *******************************/
 #include "RandomNumberGenerator.h"
 #include "xparameters.h"
+#include "stdio.h"
 #include "xil_io.h"
 
 /************************** Constant Definitions ***************************/
@@ -27,13 +28,13 @@
  * @note    Self test may fail if data memory and device are not on the same bus.
  *
  */
-
 /*
 XStatus RANDOMNUMBERGENERATOR_Reg_SelfTest(void * baseaddr_p)
 {
 	u32 baseaddr;
 	int write_loop_index;
 	int read_loop_index;
+	int Index;
 
 	baseaddr = (u32) baseaddr_p;
 

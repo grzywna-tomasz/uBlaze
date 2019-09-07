@@ -81,6 +81,10 @@ int main()
 		playerFrog->draw();
 
 		if(playerFrog->IsColliding(gameObjects, 20)) {
+
+			playerBg->resetScore();
+			playerBg->setMiddle(0);
+
 			playerFrog->reset();
 			gameControl->reset();
 		}

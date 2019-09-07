@@ -34,6 +34,12 @@ public:
 	enum transStates getTransitionState() const;
 	void setTransitionState(enum transStates transitionState);
 
+	void setScore();
+	void resetScore();
+
+	void setMiddle(uint8_t);
+	uint8_t getMiddle();
+
 private:
 
 	void setupTileBackground(uint16_t bg_type, uint16_t pos_y, uint8_t index);
@@ -46,6 +52,9 @@ private:
 
 	uint8_t current_transition_offset;
 	uint8_t desired_transition_offset;
+
+	uint16_t score;
+	uint8_t middle;
 };
 
 #endif /* SRC_OBJECTS_BACKGROUND_H_ */

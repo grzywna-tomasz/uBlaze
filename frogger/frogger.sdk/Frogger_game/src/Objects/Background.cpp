@@ -19,6 +19,9 @@ Background::Background() {
 	this->current_transition_offset = 56;
 	this->desired_transition_offset = 56;
 
+	this->score = 0;
+	this->middle = 0;
+
 	this->tileArray[7] = Grass;
 	this->tileArray[6] = Grass;
 
@@ -87,6 +90,8 @@ void Background::update() {
 
 		current_transition_offset = desired_transition_offset = 56;
 
+		setScore();
+
 		transitionState = Generating;
 	}
 	else {
@@ -152,4 +157,34 @@ enum Background::transStates Background::getTransitionState() const {
 
 void Background::setTransitionState(enum transStates transitionState) {
 	this->transitionState = transitionState;
+}
+
+void Background::resetScore(){
+	score = 1000;
+	setScore();
+}
+void Background::setScore(){
+	if (score == 1000)
+		score = 0;
+	else
+		score++;
+
+	uint8_t module_id = 5;
+	uint32_t obj_data;
+	uint8_t digit0 = score%10;
+	uint8_t digit1 = (score%100) / 10;
+	uint8_t digit2 = score / 100;
+	digit0 &= 0xF;
+	digit1 &= 0xF;
+	digit2 &= 0xF;
+	obj_data = (module_id<<27) | (digit2 << 8) | (digit1 << 4) | (digit0);
+	Xil_Out32(VGA_CONTROL_BASEADDR + REG3_OFFSET, obj_data);
+}
+
+void Background::setMiddle(uint8_t set){
+	middle = set;
+}
+
+uint8_t Background::getMiddle(){
+	return middle;
 }

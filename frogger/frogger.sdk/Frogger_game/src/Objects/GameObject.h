@@ -16,7 +16,7 @@ public:
 
 	enum Type {Blank, Frog, Car, Truck};
 
-	enum Direction {Right, Left, None}; //TODO changed from Left Right None could cause problems
+	enum Direction {Right, Left, None};
 
 	GameObject(uint16_t height, uint16_t width, int16_t pos_x, int16_t pos_y, Background *bgPtr, uint8_t speed, uint8_t objIndex, enum Type _type, enum Direction _direction);
 	virtual ~GameObject();

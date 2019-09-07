@@ -2,23 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="setNxtBgLoaded" key="selection"/>
-		<item value="true" key="casesensitive"/>
+		<item value="tile" key="selection"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="setNxtBgLoaded"/>
-			<item value="tileTransition()"/>
-			<item value="spawnVehiclesOnTile"/>
-			<item value="car"/>
-			<item value="Car"/>
-			<item value="TILE_OUTSIDE_OFFSET"/>
 			<item value="type"/>
 		</list>
 		<list key="replacehistory">
-			<item value="truck"/>
-			<item value="Truck"/>
 			<item value="tile"/>
 		</list>
 	</section>
@@ -26,7 +18,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1252" key="DIALOG_X_ORIGIN"/>
-		<item value="201" key="DIALOG_Y_ORIGIN"/>
+		<item value="829" key="DIALOG_X_ORIGIN"/>
+		<item value="180" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -7,7 +7,6 @@
 
 #include "PlayerControls.h"
 
-
 #define NONE 0
 #define LEFT 1
 #define RIGHT 4
@@ -19,6 +18,7 @@
 
 PlayerControls::PlayerControls(Frog *frogPtr, Background *bgPtr) {
 	XGpio_Initialize(&input, XPAR_AXI_GPIO_0_DEVICE_ID);
+	//TODO add protection against NullPtr
 	this->background = bgPtr;
 	this->player = frogPtr;
 	this->key = 0;
@@ -44,10 +44,16 @@ void PlayerControls::getKeyboardAction() {
 				break;
 
 			case UP:
-				if(player_y-FROG_STEP >= 300)
+				if(player_y-FROG_STEP >= 300){
+					if(background->getMiddle() ==  0){
+						background->setScore();
+					}
 					player->setDesiredY(player_y-FROG_STEP);
-				else
+				}
+				else{
 					background->setDesiredTransitionOffset(156);
+					background->setMiddle(1);
+				}
 				break;
 
 			case DOWN:
