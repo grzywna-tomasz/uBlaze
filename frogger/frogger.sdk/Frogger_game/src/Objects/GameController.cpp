@@ -46,9 +46,6 @@ uint16_t GameController::getRandomDistance(){
 		return GameObject::Truck;
 }
 
-
-//return 0 if not any free object found, else return type needed or opposite when lack of needed type
-
 GameObject* GameController::getFreeVehicle(enum GameObject::Type type){
 	GameObject* tempNone = 0;
 
@@ -64,7 +61,7 @@ GameObject* GameController::getFreeVehicle(enum GameObject::Type type){
 	return tempNone;
 }
 
-//TODO Bug probably due to twice running on the same line
+//TODO Bug located somewhere here
 
 void GameController::spawnVehiclesOnTile(uint8_t tileIndex){
 
@@ -149,8 +146,6 @@ void GameController::spawnVehiclesOnTile(uint8_t tileIndex){
 	}
 }
 
-
-
 void GameController::initializeObjects(){
 	const enum Background::tileType* tileArray = background->getTileArray();
 
@@ -162,48 +157,23 @@ void GameController::initializeObjects(){
 }
 
 void GameController::tileTransition(){
-	if(background->isTransitionOn()) {
-		for (int i = 0; i<objCount; i++)
-			gameObjects[i]->transitionY();
-	}
-	else if(background->isNxtBgLoaded()){
-		if (background->getBgNxt() == Background::Highway) {
-			spawnVehiclesOnTile(0);
-		}
-		background->setNxtBgLoaded(false);
-	}
-}
-/*
-void GameController::tileTransition(){
-	uint8_t stop = 1;
-	uint8_t cnt = 0;
-	if(background->isTransitionOn()){
-		for (int i = 0; i<objCount; i++){
-			if (gameObjects[i]->getPosY() < 856)
+	switch(background->getTransitionState()){
+
+		case Background::Transition:
+			for (int i = 0; i<objCount; i++)
 				gameObjects[i]->transitionY();
-		}
-	}
-	else {
-		if (background->getBgNxt() == Background::Highway){
-			while (stop){
-				if (gameObjects[cnt]->getPosY() == 40)
-					stop = 0;
-				else{
-					if (gameObjects[cnt]->getPosY() >= 856){
-						gameObjects[cnt]->setPosY(40);
-						gameObjects[cnt+1]->setPosY(40);
-						stop = 0;
-					}
-					else if (cnt == objCount)
-						stop = 0;
-					else
-						cnt = cnt + 2;
-				}
-			}
-		}
+			break;
+
+		case Background::Generating:
+			if(background->getBgNxt() == Background::Highway)
+				spawnVehiclesOnTile(0);
+			break;
+
+		case Background::Waiting:
+			break;
 	}
 }
-*/
+
 void GameController::setupOffScreenVehicles() {
 	for(uint8_t i = 0; i<objCount; i++){
 
@@ -217,7 +187,7 @@ void GameController::setupOffScreenVehicles() {
 		int16_t objWidth = gameObjects[i]->getWidth();
 		int16_t nxtObjDist = gameObjects[i]->getNxtVehicleDistance();
 
-		if(nxtObjDist != 0){
+		if(nxtObjDist >= 0){
 			int16_t nxtVehicleWidth = 0;
 
 			//TODO Add protection against nullPtr

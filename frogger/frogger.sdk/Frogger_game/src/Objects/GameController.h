@@ -17,7 +17,6 @@ public:
 	GameController(Background *bgPtr, GameObject** _gameObjects, uint8_t objectsCount);
 
 	void reset();
-
 	void tileTransition();
 	void setupOffScreenVehicles();
 

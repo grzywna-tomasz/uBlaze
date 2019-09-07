@@ -14,6 +14,8 @@ class Background {
 public:
 	enum tileType {None, Grass, Highway, Water, Trainway};
 
+	enum transStates {Transition, Generating, Waiting};
+
 	Background();
 
 	void update();
@@ -25,13 +27,12 @@ public:
 
 	uint8_t getDesiredTransitionOffset() const;
 	void setDesiredTransitionOffset(uint8_t desiredTransitionOffset);
-	bool isTransitionOn() const;
 
 	enum tileType getBgNxt() const;
 	const enum tileType* getTileArray() const;
 
-	bool isNxtBgLoaded() const;
-	void setNxtBgLoaded(bool nxtBgLoaded);
+	enum transStates getTransitionState() const;
+	void setTransitionState(enum transStates transitionState);
 
 private:
 
@@ -39,9 +40,7 @@ private:
 	enum tileType getRandomTile();
 
 	enum tileType tileArray[8];
-
-	bool transitionOn;
-	bool nxtBgLoaded;
+	enum transStates transitionState;
 
 	uint8_t tileRepetitionCount;
 

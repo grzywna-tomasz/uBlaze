@@ -12,16 +12,17 @@
 #define HEIGHT 100
 
 Background::Background() {
-	this->transitionOn = false;
-	this->nxtBgLoaded = true;
-	this->tileRepetitionCount = 0;
+	this->transitionState = Waiting;
+
+	this->tileRepetitionCount = 1;
 
 	this->current_transition_offset = 56;
 	this->desired_transition_offset = 56;
 
 	this->tileArray[7] = Grass;
+	this->tileArray[6] = Grass;
 
-	for(int8_t i=6; i>=0; i--){
+	for(int8_t i=5; i>=0; i--){
 		enum Background::tileType nxtRandom = getRandomTile();
 
 		if(nxtRandom == tileArray[i+1])
@@ -38,16 +39,6 @@ Background::Background() {
 	}
 
 	this->tileRepetitionCount = 0;
-
-	/*
-	this->tileArray[0] = Highway;
-	this->tileArray[1] = Highway;
-	this->tileArray[2] = Grass;
-	this->tileArray[3] = Highway;
-	this->tileArray[4] = Highway;
-	this->tileArray[5] = Grass;
-	this->tileArray[6] = Grass;
-	*/
 }
 
 void Background::setupTileBackground(uint16_t bg_type, uint16_t pos_y, uint8_t index){
@@ -67,9 +58,9 @@ void Background::draw(){
 }
 
 void Background::update() {
-	if(current_transition_offset < desired_transition_offset) { //To change if not working as intended
-		current_transition_offset++;
-		transitionOn = true;
+	if(current_transition_offset < desired_transition_offset) {
+		current_transition_offset += 1;
+		transitionState = Transition;
 	}
 	else if(current_transition_offset == 156){
 		tileArray[7] = tileArray[6];
@@ -96,16 +87,19 @@ void Background::update() {
 
 		current_transition_offset = desired_transition_offset = 56;
 
-		nxtBgLoaded = true;
-		transitionOn = false;
+		transitionState = Generating;
+	}
+	else {
+		transitionState = Waiting;
 	}
 }
 
 void Background::reset(){
-	tileRepetitionCount = 0;
+	tileRepetitionCount = 1;
 	tileArray[7] = Grass;
+	tileArray[6] = Grass;
 
-	for(int8_t i=6; i>=0; i--){
+	for(int8_t i=5; i>=0; i--){
 		enum Background::tileType nxtRandom = getRandomTile();
 
 		if(nxtRandom == tileArray[i+1])
@@ -122,8 +116,6 @@ void Background::reset(){
 	}
 	tileRepetitionCount = 0;
 
-	transitionOn = false;
-	nxtBgLoaded = false;
 	current_transition_offset = desired_transition_offset = 56;
 }
 
@@ -150,18 +142,14 @@ void Background::setDesiredTransitionOffset(uint8_t desiredTransitionOffset) {
 	desired_transition_offset = desiredTransitionOffset;
 }
 
-bool Background::isTransitionOn() const {
-	return transitionOn;
-}
-
 const enum Background::tileType* Background::getTileArray() const {
 	return tileArray;
 }
 
-bool Background::isNxtBgLoaded() const {
-	return nxtBgLoaded;
+enum Background::transStates Background::getTransitionState() const {
+	return transitionState;
 }
 
-void Background::setNxtBgLoaded(bool nxtBgLoaded) {
-	this->nxtBgLoaded = nxtBgLoaded;
+void Background::setTransitionState(enum transStates transitionState) {
+	this->transitionState = transitionState;
 }
