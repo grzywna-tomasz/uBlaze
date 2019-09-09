@@ -257,10 +257,10 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $clk_100MHz
-  set reset_rtl_0 [ create_bd_port -dir I -type rst reset_rtl_0 ]
+  set reset [ create_bd_port -dir I -type rst reset ]
   set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_LOW} \
- ] $reset_rtl_0
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $reset
 
   # Create instance: RandomNumberGenerator_0, and set properties
   set RandomNumberGenerator_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:RandomNumberGenerator:1 RandomNumberGenerator_0 ]
@@ -296,8 +296,8 @@ proc create_root_design { parentCell } {
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {2} \
    CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
-   CONFIG.RESET_PORT {resetn} \
-   CONFIG.RESET_TYPE {ACTIVE_LOW} \
+   CONFIG.RESET_PORT {reset} \
+   CONFIG.RESET_TYPE {ACTIVE_HIGH} \
    CONFIG.SECONDARY_IN_FREQ {100.000} \
    CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
    CONFIG.USE_INCLK_SWITCHOVER {false} \
@@ -410,7 +410,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins rst_clk_100MHz/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins RandomNumberGenerator_0/s00_axi_aclk] [get_bd_pins Video_Controller_4regs_0/s00_axi_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_axi_periph/S01_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_100MHz/slowest_sync_clk]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins rst_pclk_75MHz/peripheral_aresetn] [get_bd_pins v_tc_0/resetn]
-  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset_rtl_0] [get_bd_pins clk_wiz_1/resetn] [get_bd_pins rst_clk_100MHz/ext_reset_in] [get_bd_pins rst_pclk_75MHz/ext_reset_in]
+  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset] [get_bd_pins clk_wiz_1/reset] [get_bd_pins rst_clk_100MHz/ext_reset_in] [get_bd_pins rst_pclk_75MHz/ext_reset_in]
   connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_100MHz/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_interconnect_aresetn [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins rst_clk_100MHz/interconnect_aresetn]
   connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_100MHz/mb_reset]

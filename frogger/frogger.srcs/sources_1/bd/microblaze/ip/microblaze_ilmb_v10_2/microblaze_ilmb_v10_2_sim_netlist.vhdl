@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Sat Jul 13 16:22:08 2019
--- Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
+-- Date        : Mon Sep  9 17:20:09 2019
+-- Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_ilmb_v10_2 -prefix
---               microblaze_ilmb_v10_2_ microblaze_dlmb_v10_0_sim_netlist.vhdl
--- Design      : microblaze_dlmb_v10_0
+--               microblaze_ilmb_v10_2_ microblaze_dlmb_v10_2_sim_netlist.vhdl
+-- Design      : microblaze_dlmb_v10_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a35tcpg236-1
@@ -138,7 +138,7 @@ entity microblaze_ilmb_v10_2 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of microblaze_ilmb_v10_2 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of microblaze_ilmb_v10_2 : entity is "microblaze_dlmb_v10_0,lmb_v10,{}";
+  attribute CHECK_LICENSE_TYPE of microblaze_ilmb_v10_2 : entity is "microblaze_dlmb_v10_2,lmb_v10,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_ilmb_v10_2 : entity is "yes";
   attribute x_core_info : string;

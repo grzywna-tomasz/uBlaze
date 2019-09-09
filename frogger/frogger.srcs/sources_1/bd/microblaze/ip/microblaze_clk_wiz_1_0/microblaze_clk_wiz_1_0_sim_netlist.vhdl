@@ -1,8 +1,8 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Wed Jul 17 20:55:55 2019
--- Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
+-- Date        : Mon Sep  9 16:21:24 2019
+-- Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_clk_wiz_1_0 -prefix
 --               microblaze_clk_wiz_1_0_ microblaze_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : microblaze_clk_wiz_1_0
@@ -18,7 +18,7 @@ entity microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     pclk : out STD_LOGIC;
-    resetn : in STD_LOGIC;
+    reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -30,7 +30,6 @@ architecture STRUCTURE of microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz 
   signal clkfbout_buf_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clkfbout_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal pclk_microblaze_clk_wiz_1_0 : STD_LOGIC;
-  signal reset_high : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
@@ -166,15 +165,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       PSEN => '0',
       PSINCDEC => '0',
       PWRDWN => '0',
-      RST => reset_high
-    );
-mmcm_adv_inst_i_1: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => resetn,
-      O => reset_high
+      RST => reset
     );
 end STRUCTURE;
 library IEEE;
@@ -185,7 +176,7 @@ entity microblaze_clk_wiz_1_0 is
   port (
     clk_out1 : out STD_LOGIC;
     pclk : out STD_LOGIC;
-    resetn : in STD_LOGIC;
+    reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -201,6 +192,6 @@ inst: entity work.microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz
       clk_out1 => clk_out1,
       locked => locked,
       pclk => pclk,
-      resetn => resetn
+      reset => reset
     );
 end STRUCTURE;

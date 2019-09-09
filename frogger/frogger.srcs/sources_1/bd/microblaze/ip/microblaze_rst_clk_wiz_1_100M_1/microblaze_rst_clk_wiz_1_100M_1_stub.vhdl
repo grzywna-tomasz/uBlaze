@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Sat Jul 13 16:22:09 2019
--- Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
+-- Date        : Mon Sep  9 16:21:28 2019
+-- Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_rst_clk_wiz_1_100M_1 -prefix
---               microblaze_rst_clk_wiz_1_100M_1_ microblaze_rst_clk_wiz_1_100M_0_stub.vhdl
--- Design      : microblaze_rst_clk_wiz_1_100M_0
+--               microblaze_rst_clk_wiz_1_100M_1_ microblaze_rst_clk_wiz_1_100M_1_stub.vhdl
+-- Design      : microblaze_rst_clk_wiz_1_100M_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
 -- --------------------------------------------------------------------------------

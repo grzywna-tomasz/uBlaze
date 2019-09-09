@@ -73,7 +73,7 @@ module microblaze_clk_wiz_1_0_clk_wiz
   output        clk_out1,
   output        pclk,
   // Status and control signals
-  input         resetn,
+  input         reset,
   output        locked,
   input         clk_in1
  );
@@ -182,7 +182,7 @@ wire clk_in2_microblaze_clk_wiz_1_0;
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
     .RST                 (reset_high));
-  assign reset_high = ~resetn; 
+  assign reset_high = reset; 
 
   assign locked = locked_int;
 // Clock Monitor clock assigning

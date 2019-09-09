@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Sep  9 03:11:29 2019" VIVADOVERSION="2017.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Sep  9 17:17:47 2019" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="microblaze" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="uart_rtl_rxd" SIGIS="undef"/>
     <PORT DIR="O" NAME="uart_rtl_txd" SIGIS="undef"/>
-    <PORT DIR="I" NAME="reset_rtl_0" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_1" PORT="resetn"/>
         <CONNECTION INSTANCE="rst_clk_100MHz" PORT="ext_reset_in"/>
         <CONNECTION INSTANCE="rst_pclk_75MHz" PORT="ext_reset_in"/>
+        <CONNECTION INSTANCE="clk_wiz_1" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_100MHz" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
@@ -1227,7 +1227,7 @@
         <PARAMETER NAME="C_SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
         <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
         <PARAMETER NAME="C_USE_RESET" VALUE="1"/>
-        <PARAMETER NAME="C_RESET_LOW" VALUE="1"/>
+        <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
         <PARAMETER NAME="C_USE_LOCKED" VALUE="1"/>
         <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
         <PARAMETER NAME="C_USE_CLKFB_STOPPED" VALUE="0"/>
@@ -1386,7 +1386,7 @@
         <PARAMETER NAME="C_CLK_OUT5_PORT" VALUE="clk_out5"/>
         <PARAMETER NAME="C_CLK_OUT6_PORT" VALUE="clk_out6"/>
         <PARAMETER NAME="C_CLK_OUT7_PORT" VALUE="clk_out7"/>
-        <PARAMETER NAME="C_RESET_PORT" VALUE="resetn"/>
+        <PARAMETER NAME="C_RESET_PORT" VALUE="reset"/>
         <PARAMETER NAME="C_LOCKED_PORT" VALUE="locked"/>
         <PARAMETER NAME="C_CLKFB_IN_PORT" VALUE="clkfb_in"/>
         <PARAMETER NAME="C_CLKFB_IN_P_PORT" VALUE="clkfb_in_p"/>
@@ -1615,7 +1615,7 @@
         <PARAMETER NAME="USE_CLK_VALID" VALUE="false"/>
         <PARAMETER NAME="USE_INCLK_STOPPED" VALUE="false"/>
         <PARAMETER NAME="USE_CLKFB_STOPPED" VALUE="false"/>
-        <PARAMETER NAME="RESET_PORT" VALUE="resetn"/>
+        <PARAMETER NAME="RESET_PORT" VALUE="reset"/>
         <PARAMETER NAME="LOCKED_PORT" VALUE="locked"/>
         <PARAMETER NAME="POWER_DOWN_PORT" VALUE="power_down"/>
         <PARAMETER NAME="CLK_VALID_PORT" VALUE="CLK_VALID"/>
@@ -1697,7 +1697,7 @@
         <PARAMETER NAME="PLL_CLKOUT5_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="PLL_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="PLL_CLKOUT5_PHASE" VALUE="0.000"/>
-        <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_LOW"/>
+        <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_HIGH"/>
         <PARAMETER NAME="USE_SAFE_CLOCK_STARTUP" VALUE="false"/>
         <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="false"/>
         <PARAMETER NAME="CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
@@ -1740,9 +1740,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk_100MHz">
@@ -5547,7 +5547,7 @@
         <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
         <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="1"/>
         <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
         <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
@@ -5564,9 +5564,9 @@
             <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
@@ -5626,7 +5626,7 @@
         <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
         <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="1"/>
         <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
         <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
@@ -5643,9 +5643,9 @@
             <CONNECTION INSTANCE="clk_wiz_1" PORT="pclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="External_Ports_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>

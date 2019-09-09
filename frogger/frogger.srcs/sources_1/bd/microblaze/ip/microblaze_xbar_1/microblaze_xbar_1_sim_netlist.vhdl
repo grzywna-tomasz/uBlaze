@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Mon Sep  9 03:14:15 2019
+-- Date        : Mon Sep  9 16:20:15 2019
 -- Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Trait/Desktop/Frogger/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_xbar_1/microblaze_xbar_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_xbar_1 -prefix
+--               microblaze_xbar_1_ microblaze_xbar_1_sim_netlist.vhdl
 -- Design      : microblaze_xbar_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -80,8 +80,6 @@ entity microblaze_xbar_1_axi_crossbar_v2_1_15_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_xbar_1_axi_crossbar_v2_1_15_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_15_addr_arbiter_sasd";
 end microblaze_xbar_1_axi_crossbar_v2_1_15_addr_arbiter_sasd;
 
 architecture STRUCTURE of microblaze_xbar_1_axi_crossbar_v2_1_15_addr_arbiter_sasd is
@@ -2925,8 +2923,6 @@ entity microblaze_xbar_1_axi_crossbar_v2_1_15_decerr_slave is
     \m_atarget_enc_reg[0]_1\ : in STD_LOGIC;
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_xbar_1_axi_crossbar_v2_1_15_decerr_slave : entity is "axi_crossbar_v2_1_15_decerr_slave";
 end microblaze_xbar_1_axi_crossbar_v2_1_15_decerr_slave;
 
 architecture STRUCTURE of microblaze_xbar_1_axi_crossbar_v2_1_15_decerr_slave is
@@ -3128,8 +3124,6 @@ entity microblaze_xbar_1_axi_crossbar_v2_1_15_splitter is
     \m_ready_d_reg[0]_2\ : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_xbar_1_axi_crossbar_v2_1_15_splitter : entity is "axi_crossbar_v2_1_15_splitter";
 end microblaze_xbar_1_axi_crossbar_v2_1_15_splitter;
 
 architecture STRUCTURE of microblaze_xbar_1_axi_crossbar_v2_1_15_splitter is
@@ -3419,8 +3413,6 @@ entity microblaze_xbar_1_axi_register_slice_v2_1_14_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_xbar_1_axi_register_slice_v2_1_14_axic_register_slice : entity is "axi_register_slice_v2_1_14_axic_register_slice";
 end microblaze_xbar_1_axi_register_slice_v2_1_14_axic_register_slice;
 
 architecture STRUCTURE of microblaze_xbar_1_axi_register_slice_v2_1_14_axic_register_slice is
@@ -5560,8 +5552,6 @@ entity microblaze_xbar_1_axi_crossbar_v2_1_15_crossbar_sasd is
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_xbar_1_axi_crossbar_v2_1_15_crossbar_sasd : entity is "axi_crossbar_v2_1_15_crossbar_sasd";
 end microblaze_xbar_1_axi_crossbar_v2_1_15_crossbar_sasd;
 
 architecture STRUCTURE of microblaze_xbar_1_axi_crossbar_v2_1_15_crossbar_sasd is
@@ -6116,8 +6106,6 @@ entity microblaze_xbar_1_axi_crossbar_v2_1_15_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of microblaze_xbar_1_axi_crossbar_v2_1_15_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000001";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of microblaze_xbar_1_axi_crossbar_v2_1_15_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_xbar_1_axi_crossbar_v2_1_15_axi_crossbar : entity is "axi_crossbar_v2_1_15_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of microblaze_xbar_1_axi_crossbar_v2_1_15_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

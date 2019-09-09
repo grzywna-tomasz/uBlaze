@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-//Date        : Mon Sep  9 03:11:28 2019
+//Date        : Mon Sep  9 17:17:43 2019
 //Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 //Command     : generate_target microblaze_wrapper.bd
 //Design      : microblaze_wrapper
@@ -16,7 +16,7 @@ module microblaze_wrapper
     VGA_RGB,
     Vsync,
     clk_100MHz,
-    reset_rtl_0,
+    reset,
     uart_rtl_rxd,
     uart_rtl_txd);
   output Hsync;
@@ -25,7 +25,7 @@ module microblaze_wrapper
   output [11:0]VGA_RGB;
   output Vsync;
   input clk_100MHz;
-  input reset_rtl_0;
+  input reset;
   input uart_rtl_rxd;
   output uart_rtl_txd;
 
@@ -35,7 +35,7 @@ module microblaze_wrapper
   wire [11:0]VGA_RGB;
   wire Vsync;
   wire clk_100MHz;
-  wire reset_rtl_0;
+  wire reset;
   wire uart_rtl_rxd;
   wire uart_rtl_txd;
 
@@ -46,7 +46,7 @@ module microblaze_wrapper
         .VGA_RGB(VGA_RGB),
         .Vsync(Vsync),
         .clk_100MHz(clk_100MHz),
-        .reset_rtl_0(reset_rtl_0),
+        .reset(reset),
         .uart_rtl_rxd(uart_rtl_rxd),
         .uart_rtl_txd(uart_rtl_txd));
 endmodule

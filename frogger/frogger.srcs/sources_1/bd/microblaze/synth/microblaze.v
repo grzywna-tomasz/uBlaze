@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-//Date        : Mon Sep  9 03:11:28 2019
+//Date        : Mon Sep  9 17:17:43 2019
 //Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 //Command     : generate_target microblaze.bd
 //Design      : microblaze
@@ -697,7 +697,7 @@ module m04_couplers_imp_J4O1C4
   assign m04_couplers_to_m04_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "microblaze,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=microblaze,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=9,da_clkrst_cnt=7,da_mb_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "microblaze.hwdef" *) 
+(* CORE_GENERATION_INFO = "microblaze,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=microblaze,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=9,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=10,da_clkrst_cnt=7,da_mb_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "microblaze.hwdef" *) 
 module microblaze
    (Hsync,
     PS2Clk,
@@ -705,7 +705,7 @@ module microblaze
     VGA_RGB,
     Vsync,
     clk_100MHz,
-    reset_rtl_0,
+    reset,
     uart_rtl_rxd,
     uart_rtl_txd);
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.HSYNC DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.HSYNC, LAYERED_METADATA undef" *) output Hsync;
@@ -714,7 +714,7 @@ module microblaze
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.VGA_RGB DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.VGA_RGB, LAYERED_METADATA undef" *) output [11:0]VGA_RGB;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.VSYNC DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.VSYNC, LAYERED_METADATA undef" *) output Vsync;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN microblaze_clk_100MHz, FREQ_HZ 100000000, PHASE 0.000" *) input clk_100MHz;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_HIGH" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl RxD" *) input uart_rtl_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl TxD" *) output uart_rtl_txd;
 
@@ -891,7 +891,7 @@ module microblaze
   assign Vsync = Video_Controller_4regs_0_vsync_out;
   assign axi_uartlite_0_UART_RxD = uart_rtl_rxd;
   assign clk_100MHz_1 = clk_100MHz;
-  assign reset_rtl_0_1 = reset_rtl_0;
+  assign reset_rtl_0_1 = reset;
   assign uart_rtl_txd = axi_uartlite_0_UART_TxD;
   microblaze_RandomNumberGenerator_0_1 RandomNumberGenerator_0
        (.s00_axi_aclk(microblaze_0_Clk),
@@ -994,7 +994,7 @@ module microblaze
         .clk_out1(microblaze_0_Clk),
         .locked(clk_wiz_1_locked),
         .pclk(clk_wiz_1_pclk),
-        .resetn(reset_rtl_0_1));
+        .reset(reset_rtl_0_1));
   microblaze_keyboard_reciever_0_0 keyboard_reciever_0
        (.Down(keyboard_reciever_0_Down),
         .Enter(keyboard_reciever_0_Enter),

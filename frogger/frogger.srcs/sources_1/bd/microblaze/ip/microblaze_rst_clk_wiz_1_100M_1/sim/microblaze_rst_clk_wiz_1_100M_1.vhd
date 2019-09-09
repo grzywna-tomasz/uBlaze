@@ -115,7 +115,7 @@ ARCHITECTURE microblaze_rst_clk_wiz_1_100M_1_arch OF microblaze_rst_clk_wiz_1_10
   ATTRIBUTE X_INTERFACE_INFO OF mb_debug_sys_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 dbg_reset RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF aux_reset_in: SIGNAL IS "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW";
   ATTRIBUTE X_INTERFACE_INFO OF aux_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 aux_reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF ext_reset_in: SIGNAL IS "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ext_reset_in: SIGNAL IS "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_HIGH";
   ATTRIBUTE X_INTERFACE_INFO OF ext_reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 ext_reset RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF slowest_sync_clk: SIGNAL IS "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1";
   ATTRIBUTE X_INTERFACE_INFO OF slowest_sync_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clock CLK";
@@ -125,7 +125,7 @@ BEGIN
       C_FAMILY => "artix7",
       C_EXT_RST_WIDTH => 4,
       C_AUX_RST_WIDTH => 4,
-      C_EXT_RESET_HIGH => '0',
+      C_EXT_RESET_HIGH => '1',
       C_AUX_RESET_HIGH => '0',
       C_NUM_BUS_RST => 1,
       C_NUM_PERP_RST => 1,

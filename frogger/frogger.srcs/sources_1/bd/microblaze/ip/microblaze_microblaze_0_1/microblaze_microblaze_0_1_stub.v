@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Sep  9 03:15:43 2019
+// Date        : Mon Sep  9 16:21:50 2019
 // Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/Trait/Desktop/Frogger/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_microblaze_0_1/microblaze_microblaze_0_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top microblaze_microblaze_0_1 -prefix
+//               microblaze_microblaze_0_1_ microblaze_microblaze_0_1_stub.v
 // Design      : microblaze_microblaze_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

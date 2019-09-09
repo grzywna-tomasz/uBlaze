@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Sep  9 03:17:11 2019
+// Date        : Mon Sep  9 16:23:23 2019
 // Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/Trait/Desktop/Frogger/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_2/microblaze_lmb_bram_2_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top microblaze_lmb_bram_2 -prefix
+//               microblaze_lmb_bram_2_ microblaze_lmb_bram_2_sim_netlist.v
 // Design      : microblaze_lmb_bram_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -222,7 +222,6 @@ module microblaze_lmb_bram_2
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module microblaze_lmb_bram_2_blk_mem_gen_generic_cstr
    (douta,
     doutb,
@@ -798,7 +797,6 @@ module microblaze_lmb_bram_2_blk_mem_gen_generic_cstr
         .web(web[1]));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module microblaze_lmb_bram_2_blk_mem_gen_prim_width
    (douta,
     doutb,
@@ -3062,7 +3060,6 @@ module microblaze_lmb_bram_2_blk_mem_gen_prim_width__parameterized9
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module microblaze_lmb_bram_2_blk_mem_gen_prim_wrapper
    (douta,
     doutb,
@@ -11772,7 +11769,6 @@ module microblaze_lmb_bram_2_blk_mem_gen_prim_wrapper__parameterized9
         .WEBWE({1'b0,1'b0,1'b0,1'b0,web,web,web,web}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module microblaze_lmb_bram_2_blk_mem_gen_top
    (douta,
     doutb,
@@ -11867,7 +11863,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) 
 (* C_WRITE_DEPTH_A = "32768" *) (* C_WRITE_DEPTH_B = "32768" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module microblaze_lmb_bram_2_blk_mem_gen_v8_4_0
    (clka,
     rsta,
@@ -12153,7 +12149,6 @@ module microblaze_lmb_bram_2_blk_mem_gen_v8_4_0
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_0_synth" *) 
 module microblaze_lmb_bram_2_blk_mem_gen_v8_4_0_synth
    (douta,
     doutb,

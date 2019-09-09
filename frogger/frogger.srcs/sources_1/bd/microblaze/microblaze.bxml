@@ -2,30 +2,30 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="microblaze" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1567991489"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1567991489"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1567991489"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1567991489"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1568042268"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1568042268"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1568042268"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1568042268"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="microblaze_sim_netlist.vhdl" Type="VHDL">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1565373568" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="true" IsVisible="true" Timestamp="1567964244" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
         <UsedIn Val="SINGLE_LANGUAGE"/>
       </File>
       <File Name="microblaze_sim_netlist.v" Type="Verilog">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1565373562" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="true" IsVisible="true" Timestamp="1567964244" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
         <UsedIn Val="SINGLE_LANGUAGE"/>
       </File>
       <File Name="microblaze_stub.vhdl" Type="VHDL">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1565373560" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="true" IsVisible="true" Timestamp="1567964244" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTH_BLACKBOX_STUB"/>
       </File>
       <File Name="microblaze_stub.v" Type="Verilog">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1565373560" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="true" IsVisible="true" Timestamp="1567964244" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTH_BLACKBOX_STUB"/>
       </File>
@@ -111,6 +111,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\microblaze_microblaze_0_axi_periph_1\microblaze_microblaze_0_axi_periph_1.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

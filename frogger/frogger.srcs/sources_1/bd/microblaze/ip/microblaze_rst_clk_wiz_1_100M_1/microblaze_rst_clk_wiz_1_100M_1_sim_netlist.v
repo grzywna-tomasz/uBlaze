@@ -1,11 +1,11 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Sat Jul 13 16:22:09 2019
-// Host        : DESKTOP-JNGC152 running 64-bit major release  (build 9200)
+// Date        : Mon Sep  9 16:21:28 2019
+// Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_rst_clk_wiz_1_100M_1 -prefix
-//               microblaze_rst_clk_wiz_1_100M_1_ microblaze_rst_clk_wiz_1_100M_0_sim_netlist.v
-// Design      : microblaze_rst_clk_wiz_1_100M_0
+//               microblaze_rst_clk_wiz_1_100M_1_ microblaze_rst_clk_wiz_1_100M_1_sim_netlist.v
+// Design      : microblaze_rst_clk_wiz_1_100M_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a35tcpg236-1
@@ -13,6 +13,96 @@
 `timescale 1 ps / 1 ps
 
 module microblaze_rst_clk_wiz_1_100M_1_cdc_sync
+   (lpf_exr_reg,
+    scndry_out,
+    lpf_exr,
+    p_3_out,
+    ext_reset_in,
+    mb_debug_sys_rst,
+    slowest_sync_clk);
+  output lpf_exr_reg;
+  output scndry_out;
+  input lpf_exr;
+  input [2:0]p_3_out;
+  input ext_reset_in;
+  input mb_debug_sys_rst;
+  input slowest_sync_clk;
+
+  wire exr_d1;
+  wire ext_reset_in;
+  wire lpf_exr;
+  wire lpf_exr_reg;
+  wire mb_debug_sys_rst;
+  wire [2:0]p_3_out;
+  wire s_level_out_d1_cdc_to;
+  wire s_level_out_d2;
+  wire s_level_out_d3;
+  wire scndry_out;
+  wire slowest_sync_clk;
+
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(exr_d1),
+        .Q(s_level_out_d1_cdc_to),
+        .R(1'b0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
+       (.I0(ext_reset_in),
+        .I1(mb_debug_sys_rst),
+        .O(exr_d1));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d1_cdc_to),
+        .Q(s_level_out_d2),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d2),
+        .Q(s_level_out_d3),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(s_level_out_d3),
+        .Q(scndry_out),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hEAAAAAA8)) 
+    lpf_exr_i_1
+       (.I0(lpf_exr),
+        .I1(p_3_out[0]),
+        .I2(scndry_out),
+        .I3(p_3_out[1]),
+        .I4(p_3_out[2]),
+        .O(lpf_exr_reg));
+endmodule
+
+(* ORIG_REF_NAME = "cdc_sync" *) 
+module microblaze_rst_clk_wiz_1_100M_1_cdc_sync_0
    (lpf_asr_reg,
     scndry_out,
     lpf_asr,
@@ -56,7 +146,7 @@ module microblaze_rst_clk_wiz_1_100M_1_cdc_sync
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
        (.I0(aux_reset_in),
         .O(asr_d1));
   (* ASYNC_REG *) 
@@ -103,112 +193,22 @@ module microblaze_rst_clk_wiz_1_100M_1_cdc_sync
         .O(lpf_asr_reg));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
-module microblaze_rst_clk_wiz_1_100M_1_cdc_sync_0
-   (lpf_exr_reg,
-    scndry_out,
-    lpf_exr,
-    p_3_out,
-    mb_debug_sys_rst,
-    ext_reset_in,
-    slowest_sync_clk);
-  output lpf_exr_reg;
-  output scndry_out;
-  input lpf_exr;
-  input [2:0]p_3_out;
-  input mb_debug_sys_rst;
-  input ext_reset_in;
-  input slowest_sync_clk;
-
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ;
-  wire ext_reset_in;
-  wire lpf_exr;
-  wire lpf_exr_reg;
-  wire mb_debug_sys_rst;
-  wire [2:0]p_3_out;
-  wire s_level_out_d1_cdc_to;
-  wire s_level_out_d2;
-  wire s_level_out_d3;
-  wire scndry_out;
-  wire slowest_sync_clk;
-
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ),
-        .Q(s_level_out_d1_cdc_to),
-        .R(1'b0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
-       (.I0(mb_debug_sys_rst),
-        .I1(ext_reset_in),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d1_cdc_to),
-        .Q(s_level_out_d2),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d2),
-        .Q(s_level_out_d3),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(s_level_out_d3),
-        .Q(scndry_out),
-        .R(1'b0));
-  LUT5 #(
-    .INIT(32'hEAAAAAA8)) 
-    lpf_exr_i_1
-       (.I0(lpf_exr),
-        .I1(p_3_out[0]),
-        .I2(scndry_out),
-        .I3(p_3_out[1]),
-        .I4(p_3_out[2]),
-        .O(lpf_exr_reg));
-endmodule
-
 module microblaze_rst_clk_wiz_1_100M_1_lpf
    (lpf_int,
     slowest_sync_clk,
     dcm_locked,
-    aux_reset_in,
+    ext_reset_in,
     mb_debug_sys_rst,
-    ext_reset_in);
+    aux_reset_in);
   output lpf_int;
   input slowest_sync_clk;
   input dcm_locked;
-  input aux_reset_in;
-  input mb_debug_sys_rst;
   input ext_reset_in;
+  input mb_debug_sys_rst;
+  input aux_reset_in;
 
+  wire \ACTIVE_HIGH_EXT.ACT_HI_EXT_n_0 ;
   wire \ACTIVE_LOW_AUX.ACT_LO_AUX_n_0 ;
-  wire \ACTIVE_LOW_EXT.ACT_LO_EXT_n_0 ;
   wire Q;
   wire [0:0]asr_lpf;
   wire aux_reset_in;
@@ -225,7 +225,15 @@ module microblaze_rst_clk_wiz_1_100M_1_lpf
   wire [3:0]p_3_out;
   wire slowest_sync_clk;
 
-  microblaze_rst_clk_wiz_1_100M_1_cdc_sync \ACTIVE_LOW_AUX.ACT_LO_AUX 
+  microblaze_rst_clk_wiz_1_100M_1_cdc_sync \ACTIVE_HIGH_EXT.ACT_HI_EXT 
+       (.ext_reset_in(ext_reset_in),
+        .lpf_exr(lpf_exr),
+        .lpf_exr_reg(\ACTIVE_HIGH_EXT.ACT_HI_EXT_n_0 ),
+        .mb_debug_sys_rst(mb_debug_sys_rst),
+        .p_3_out(p_3_out[2:0]),
+        .scndry_out(p_3_out[3]),
+        .slowest_sync_clk(slowest_sync_clk));
+  microblaze_rst_clk_wiz_1_100M_1_cdc_sync_0 \ACTIVE_LOW_AUX.ACT_LO_AUX 
        (.asr_lpf(asr_lpf),
         .aux_reset_in(aux_reset_in),
         .lpf_asr(lpf_asr),
@@ -233,14 +241,6 @@ module microblaze_rst_clk_wiz_1_100M_1_lpf
         .p_1_in(p_1_in),
         .p_2_in(p_2_in),
         .scndry_out(p_3_in1_in),
-        .slowest_sync_clk(slowest_sync_clk));
-  microblaze_rst_clk_wiz_1_100M_1_cdc_sync_0 \ACTIVE_LOW_EXT.ACT_LO_EXT 
-       (.ext_reset_in(ext_reset_in),
-        .lpf_exr(lpf_exr),
-        .lpf_exr_reg(\ACTIVE_LOW_EXT.ACT_LO_EXT_n_0 ),
-        .mb_debug_sys_rst(mb_debug_sys_rst),
-        .p_3_out(p_3_out[2:0]),
-        .scndry_out(p_3_out[3]),
         .slowest_sync_clk(slowest_sync_clk));
   FDRE #(
     .INIT(1'b0)) 
@@ -317,7 +317,7 @@ module microblaze_rst_clk_wiz_1_100M_1_lpf
     lpf_exr_reg
        (.C(slowest_sync_clk),
         .CE(1'b1),
-        .D(\ACTIVE_LOW_EXT.ACT_LO_EXT_n_0 ),
+        .D(\ACTIVE_HIGH_EXT.ACT_HI_EXT_n_0 ),
         .Q(lpf_exr),
         .R(1'b0));
   LUT4 #(
@@ -338,7 +338,7 @@ module microblaze_rst_clk_wiz_1_100M_1_lpf
         .R(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_rst_clk_wiz_1_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.3" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_rst_clk_wiz_1_100M_1,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.3" *) 
 (* NotValidForBitStream *)
 module microblaze_rst_clk_wiz_1_100M_1
    (slowest_sync_clk,
@@ -352,7 +352,7 @@ module microblaze_rst_clk_wiz_1_100M_1
     interconnect_aresetn,
     peripheral_aresetn);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1" *) input slowest_sync_clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW" *) input ext_reset_in;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_HIGH" *) input ext_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 aux_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW" *) input aux_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 dbg_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH" *) input mb_debug_sys_rst;
   input dcm_locked;
@@ -375,7 +375,7 @@ module microblaze_rst_clk_wiz_1_100M_1
 
   (* C_AUX_RESET_HIGH = "1'b0" *) 
   (* C_AUX_RST_WIDTH = "4" *) 
-  (* C_EXT_RESET_HIGH = "1'b0" *) 
+  (* C_EXT_RESET_HIGH = "1'b1" *) 
   (* C_EXT_RST_WIDTH = "4" *) 
   (* C_FAMILY = "artix7" *) 
   (* C_NUM_BUS_RST = "1" *) 
@@ -395,7 +395,7 @@ module microblaze_rst_clk_wiz_1_100M_1
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
+(* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b1" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "artix7" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
 module microblaze_rst_clk_wiz_1_100M_1_proc_sys_reset

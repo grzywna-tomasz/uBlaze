@@ -74,7 +74,7 @@ module microblaze_clk_wiz_1_0
   output        clk_out1,
   output        pclk,
   // Status and control signals
-  input         resetn,
+  input         reset,
   output        locked,
  // Clock in ports
   input         clk_in1
@@ -86,7 +86,7 @@ module microblaze_clk_wiz_1_0
   .clk_out1(clk_out1),
   .pclk(pclk),
   // Status and control signals               
-  .resetn(resetn), 
+  .reset(reset), 
   .locked(locked),
  // Clock in ports
   .clk_in1(clk_in1)

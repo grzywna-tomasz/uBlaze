@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Mon Sep  9 03:17:11 2019
+-- Date        : Mon Sep  9 16:23:23 2019
 -- Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/Trait/Desktop/Frogger/frogger/frogger.srcs/sources_1/bd/microblaze/ip/microblaze_lmb_bram_2/microblaze_lmb_bram_2_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_lmb_bram_2 -prefix
+--               microblaze_lmb_bram_2_ microblaze_lmb_bram_2_stub.vhdl
 -- Design      : microblaze_lmb_bram_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
