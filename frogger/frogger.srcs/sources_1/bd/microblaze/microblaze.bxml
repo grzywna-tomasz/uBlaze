@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="microblaze" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1567863848"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1567863848"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1567863848"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1567863848"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1567991489"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1567991489"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1567991489"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1567991489"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="microblaze_sim_netlist.vhdl" Type="VHDL">
         <Properties IsEditable="true" IsVisible="true" Timestamp="1565373568" IsTrackable="true" IsStatusTracked="false"/>
@@ -111,7 +111,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\microblaze_microblaze_0_axi_periph_1\microblaze_microblaze_0_axi_periph_1.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

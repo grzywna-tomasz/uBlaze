@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-//Date        : Sat Sep  7 15:44:07 2019
-//Host        : DESKTOP-JNP2NQV running 64-bit major release  (build 9200)
+//Date        : Sun Sep  8 16:27:16 2019
+//Host        : DESKTOP-RDBCQBE running 64-bit major release  (build 9200)
 //Command     : generate_target microblaze.bd
 //Design      : microblaze
 //Purpose     : IP block netlist
@@ -705,28 +705,18 @@ module microblaze
     VGA_RGB,
     Vsync,
     clk_100MHz,
-    down,
-    enter,
-    left,
     reset_rtl_0,
-    right,
     uart_rtl_rxd,
-    uart_rtl_txd,
-    up);
+    uart_rtl_txd);
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.HSYNC DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.HSYNC, LAYERED_METADATA undef" *) output Hsync;
   input PS2Clk;
   input PS2Data;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.VGA_RGB DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.VGA_RGB, LAYERED_METADATA undef" *) output [11:0]VGA_RGB;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.VSYNC DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.VSYNC, LAYERED_METADATA undef" *) output Vsync;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, CLK_DOMAIN microblaze_clk_100MHz, FREQ_HZ 100000000, PHASE 0.000" *) input clk_100MHz;
-  input down;
-  input enter;
-  input left;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, POLARITY ACTIVE_LOW" *) input reset_rtl_0;
-  input right;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl RxD" *) input uart_rtl_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl TxD" *) output uart_rtl_txd;
-  input up;
 
   wire PS2Clk_1;
   wire PS2Data_1;
@@ -738,9 +728,11 @@ module microblaze
   wire clk_100MHz_1;
   wire clk_wiz_1_locked;
   wire clk_wiz_1_pclk;
-  wire down_1;
-  wire enter_1;
-  wire left_1;
+  wire keyboard_reciever_0_Down;
+  wire keyboard_reciever_0_Enter;
+  wire keyboard_reciever_0_Left;
+  wire keyboard_reciever_0_Right;
+  wire keyboard_reciever_0_Up;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_axi_dp_ARADDR;
@@ -881,12 +873,10 @@ module microblaze
   wire microblaze_0_mdm_axi_WVALID;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire reset_rtl_0_1;
-  wire right_1;
   wire [0:0]rst_clk_wiz_1_100M_bus_struct_reset;
   wire [0:0]rst_clk_wiz_1_100M_interconnect_aresetn;
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn1;
-  wire up_1;
   wire [0:0]v_tc_0_fsync_out;
   wire v_tc_0_hblank_out;
   wire v_tc_0_hsync_out;
@@ -901,13 +891,8 @@ module microblaze
   assign Vsync = Video_Controller_4regs_0_vsync_out;
   assign axi_uartlite_0_UART_RxD = uart_rtl_rxd;
   assign clk_100MHz_1 = clk_100MHz;
-  assign down_1 = down;
-  assign enter_1 = enter;
-  assign left_1 = left;
   assign reset_rtl_0_1 = reset_rtl_0;
-  assign right_1 = right;
   assign uart_rtl_txd = axi_uartlite_0_UART_TxD;
-  assign up_1 = up;
   microblaze_RandomNumberGenerator_0_1 RandomNumberGenerator_0
        (.s00_axi_aclk(microblaze_0_Clk),
         .s00_axi_araddr(microblaze_0_axi_periph_M04_AXI_ARADDR[3:0]),
@@ -1011,8 +996,13 @@ module microblaze
         .pclk(clk_wiz_1_pclk),
         .resetn(reset_rtl_0_1));
   microblaze_keyboard_reciever_0_0 keyboard_reciever_0
-       (.PS2Clk(PS2Clk_1),
+       (.Down(keyboard_reciever_0_Down),
+        .Enter(keyboard_reciever_0_Enter),
+        .Left(keyboard_reciever_0_Left),
+        .PS2Clk(PS2Clk_1),
         .PS2Data(PS2Data_1),
+        .Right(keyboard_reciever_0_Right),
+        .Up(keyboard_reciever_0_Up),
         .clk(clk_100MHz_1));
   microblaze_mdm_1_1 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
@@ -1284,11 +1274,11 @@ module microblaze
         .vblank_out(v_tc_0_vblank_out),
         .vsync_out(v_tc_0_vsync_out));
   microblaze_xlconcat_0_0 xlconcat_0
-       (.In0(left_1),
-        .In1(up_1),
-        .In2(right_1),
-        .In3(down_1),
-        .In4(enter_1),
+       (.In0(keyboard_reciever_0_Left),
+        .In1(keyboard_reciever_0_Up),
+        .In2(keyboard_reciever_0_Right),
+        .In3(keyboard_reciever_0_Down),
+        .In4(keyboard_reciever_0_Enter),
         .dout(xlconcat_0_dout));
 endmodule
 

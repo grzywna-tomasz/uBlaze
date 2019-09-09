@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Video_Controller_4regs:1
-// IP Revision: 85
+// IP Revision: 94
 
 (* X_CORE_INFO = "Video_Controller_4regs_v1,Vivado 2017.3" *)
 (* CHECK_LICENSE_TYPE = "microblaze_Video_Controller_4regs_0_0,Video_Controller_4regs_v1,{}" *)
-(* CORE_GENERATION_INFO = "microblaze_Video_Controller_4regs_0_0,Video_Controller_4regs_v1,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Video_Controller_4regs,x_ipVersion=1,x_ipCoreRevision=85,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "microblaze_Video_Controller_4regs_0_0,Video_Controller_4regs_v1,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Video_Controller_4regs,x_ipVersion=1,x_ipCoreRevision=94,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module microblaze_Video_Controller_4regs_0_0 (
   rgb_out,

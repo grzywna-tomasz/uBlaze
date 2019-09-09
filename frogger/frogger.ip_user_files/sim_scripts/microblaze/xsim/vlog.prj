@@ -1,14 +1,15 @@
 verilog xil_defaultlib --include "../../../../frogger.srcs/sources_1/bd/microblaze/ipshared/5123" --include "../../../../frogger.srcs/sources_1/bd/microblaze/ipshared/ec67/hdl" \
 "../../../bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_clk_wiz.v" \
 "../../../bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Background_drawer.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Car_drawer.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Frog_drawer.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Timing_counter.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Truck_drawer.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Video_Controller_4regs_v1_S00_AXI.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/score.v" \
-"../../../bd/microblaze/ipshared/f06e/hdl/Video_Controller_4regs_v1.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Background_drawer.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Car_drawer.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Frog_drawer.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Timing_counter.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Truck_drawer.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Video_Controller_4regs_v1_S00_AXI.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/loose_screen.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/score.v" \
+"../../../bd/microblaze/ipshared/59a2/hdl/Video_Controller_4regs_v1.v" \
 "../../../bd/microblaze/ip/microblaze_Video_Controller_4regs_0_0/sim/microblaze_Video_Controller_4regs_0_0.v" \
 "../../../bd/microblaze/sim/microblaze.v" \
 "../../../bd/microblaze/ip/microblaze_keyboard_reciever_0_0/sim/microblaze_keyboard_reciever_0_0.v" \

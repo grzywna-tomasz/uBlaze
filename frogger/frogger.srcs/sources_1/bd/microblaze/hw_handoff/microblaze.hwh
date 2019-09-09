@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Sep  7 15:44:08 2019" VIVADOVERSION="2017.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Sep  9 03:11:29 2019" VIVADOVERSION="2017.3">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="microblaze" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -42,31 +42,6 @@
     <PORT DIR="I" NAME="PS2Clk" SIGIS="undef" SIGNAME="External_Ports_PS2Clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="keyboard_reciever_0" PORT="PS2Clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="left" SIGIS="undef" SIGNAME="External_Ports_left">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="up" SIGIS="undef" SIGNAME="External_Ports_up">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="right" SIGIS="undef" SIGNAME="External_Ports_right">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="down" SIGIS="undef" SIGNAME="External_Ports_down">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconcat_0" PORT="In3"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="enter" SIGIS="undef" SIGNAME="External_Ports_enter">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconcat_0" PORT="In4"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1782,6 +1757,8 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="Clk"/>
             <CONNECTION INSTANCE="mdm_1" PORT="S_AXI_ACLK"/>
             <CONNECTION INSTANCE="rst_clk_100MHz" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="RandomNumberGenerator_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="Video_Controller_4regs_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M00_ACLK"/>
@@ -1794,8 +1771,6 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="S01_ACLK"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M04_ACLK"/>
-            <CONNECTION INSTANCE="RandomNumberGenerator_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="Video_Controller_4regs_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="75000000" DIR="O" NAME="pclk" SIGIS="clk" SIGNAME="clk_wiz_1_pclk">
@@ -1836,11 +1811,31 @@
             <CONNECTION INSTANCE="External_Ports" PORT="PS2Clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="Left" SIGIS="undef"/>
-        <PORT DIR="O" NAME="Up" SIGIS="undef"/>
-        <PORT DIR="O" NAME="Right" SIGIS="undef"/>
-        <PORT DIR="O" NAME="Down" SIGIS="undef"/>
-        <PORT DIR="O" NAME="Enter" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Left" SIGIS="undef" SIGNAME="keyboard_reciever_0_Left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Up" SIGIS="undef" SIGNAME="keyboard_reciever_0_Up">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Right" SIGIS="undef" SIGNAME="keyboard_reciever_0_Right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Down" SIGIS="undef" SIGNAME="keyboard_reciever_0_Down">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Enter" SIGIS="undef" SIGNAME="keyboard_reciever_0_Enter">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In4"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -5609,6 +5604,8 @@
             <CONNECTION INSTANCE="mdm_1" PORT="S_AXI_ARESETN"/>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="RandomNumberGenerator_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="Video_Controller_4regs_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M01_ARESETN"/>
@@ -5616,8 +5613,6 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M03_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M04_ARESETN"/>
-            <CONNECTION INSTANCE="RandomNumberGenerator_0" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="Video_Controller_4regs_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5945,29 +5940,29 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_left">
+        <PORT DIR="I" LEFT="0" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="keyboard_reciever_0_Left">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="left"/>
+            <CONNECTION INSTANCE="keyboard_reciever_0" PORT="Left"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_up">
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="keyboard_reciever_0_Up">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="up"/>
+            <CONNECTION INSTANCE="keyboard_reciever_0" PORT="Up"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_right">
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="keyboard_reciever_0_Right">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="keyboard_reciever_0" PORT="Right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_down">
+        <PORT DIR="I" LEFT="0" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="keyboard_reciever_0_Down">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="down"/>
+            <CONNECTION INSTANCE="keyboard_reciever_0" PORT="Down"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="In4" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_enter">
+        <PORT DIR="I" LEFT="0" NAME="In4" RIGHT="0" SIGIS="undef" SIGNAME="keyboard_reciever_0_Enter">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="enter"/>
+            <CONNECTION INSTANCE="keyboard_reciever_0" PORT="Enter"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="4" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
